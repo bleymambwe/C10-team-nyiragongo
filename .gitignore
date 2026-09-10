@@ -10,6 +10,8 @@ gemma_latent_toxicity_probe.ipynb
 gemma_latent_toxicity_probe_explained.md
 CLAUDE.md
 AGENTS.md
+AUDIT_LOG.md
+PROJECT_PROPOSAL.md
 
 # Research and publication assets that should stay private unless explicitly curated
 *.pdf
@@ -24,6 +26,7 @@ AGENTS.md
 !docs/data_card.pdf
 !docs/impact_statement_card.pdf
 !docs/stakeholder_engagement.pdf
+!paper/preprint.pdf
 
 # Media and rendered outputs
 *.mp3

@@ -59,6 +59,17 @@ python -m pytest tests -q
 
 The guided notebook is [`gemma_latent_toxicity_probe_competition.ipynb`](gemma_latent_toxicity_probe_competition.ipynb). Gemma access may require accepting its licence and supplying a personal Hugging Face token through the runtime secret manager. Never commit tokens.
 
+## Organizer submission map
+
+| Item | Location |
+|---|---|
+| Final pipeline | [`src/probe/`](src/probe/) and [`run_kaggle.py`](run_kaggle.py) |
+| Reproduction notebook | [`gemma_latent_toxicity_probe_competition.ipynb`](gemma_latent_toxicity_probe_competition.ipynb) |
+| Exact prediction archive and score records | [`artifacts/`](artifacts/) |
+| Four Cohort Challenge PDFs | [`docs/`](docs/) |
+| Editable submission overview deck | [`presentation/latent_probing_submission_overview.pptx`](presentation/latent_probing_submission_overview.pptx) |
+| Related interpretability preprint (not the competition methods report) | [`paper/preprint.pdf`](paper/preprint.pdf) |
+
 ## Responsible use
 
 Toxicity labels reflect dataset policies, annotator judgments, and context. Performance can degrade across dialects, languages, identities, and emerging euphemisms. Use human review, appeals, subgroup audits, drift monitoring, and locally agreed thresholds. Never use this prototype as the sole basis for sanctions or access decisions.
@@ -72,8 +83,6 @@ Toxicity labels reflect dataset policies, annotator judgments, and context. Perf
 - **Mentor:** Moses - <guymodscientist@gmail.com>
 
 All four team contributors receive equal contribution credit for this submission. Hamna Kaleem is also a member of another team; her participation with Team Latent Lens was limited to the shared research and Cohort Challenge work and does not imply exclusive team membership.
-
-Required documents: [Problem Statement](docs/problem_statement.pdf), [Data Card](docs/data_card.pdf), [Impact Statement Card](docs/impact_statement_card.pdf), and [Stakeholder Engagement](docs/stakeholder_engagement.pdf).
 
 ## References
 

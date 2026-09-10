@@ -14,6 +14,8 @@ Due date from the competition email: **12 September 2026**.
 - [x] `docs/data_card.pdf`
 - [x] `docs/impact_statement_card.pdf`
 - [x] `docs/stakeholder_engagement.pdf`
+- [x] Editable organizer briefing: `presentation/latent_probing_submission_overview.pptx`
+- [x] Related preprint: `paper/preprint.pdf` (clearly separated from the competition methods)
 - [x] Code configuration aligned with the final CodaBench submission
 - [x] Team leader listed as Blessings Mambwe
 - [x] Team members listed as Fafemi Adeola, Musonda Musunga, and Hamna Kaleem
@@ -29,6 +31,8 @@ Due date from the competition email: **12 September 2026**.
 - Development accuracy: `0.8976470588` (1,526 / 1,700)
 - Archive: `artifacts/kaggle/select/submissions/best_single.zip`
 - SHA-256: `0bd11ac11c0a09a8b38d834e06c558f0e17236dae680c215a5e33af8c746a601`
+- Presentation: `presentation/latent_probing_submission_overview.pptx`
+- Related preprint: `paper/preprint.pdf`
 
 ## Manual handoff
 
