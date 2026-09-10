@@ -2,47 +2,49 @@
 
 **Team Latent Lens submission - AI Saturdays Lagos, Cohort 10**
 
-This project detects toxic or hostile text by probing hidden representations from Gemma 2 2B. It converts an intermediate transformer activation into a compact linear decision rule, providing a reproducible baseline for studying what language models encode about toxicity.
+This project detects toxic or hostile text by probing hidden representations from a frozen Gemma model. It provides a reproducible, compact baseline for studying what language models encode about toxicity.
 
 ## Results
 
-| Split | Accuracy | Correct |
-|---|---:|---:|
-| CodaBench development | 89.76% | 1,526 / 1,700 |
-| CodaBench testing | **92.35%** | **1,256 / 1,360** |
+| Split | Role | Accuracy | Correct |
+|---|---|---:|---:|
+| CodaBench development | Candidate comparison | 89.76% | 1,526 / 1,700 |
+| CodaBench testing | Final held-out evaluation | **92.35%** | **1,256 / 1,360** |
 
-The final submitted artifact is [`artifacts/kaggle/select/submissions/best_single.zip`](artifacts/kaggle/select/submissions/best_single.zip). Its SHA-256 digest is `0bd11ac11c0a09a8b38d834e06c558f0e17236dae680c215a5e33af8c746a601`.
+Final artifact: [`artifacts/kaggle/select/submissions/best_single.zip`](artifacts/kaggle/select/submissions/best_single.zip). SHA-256: `0bd11ac11c0a09a8b38d834e06c558f0e17236dae680c215a5e33af8c746a601`.
 
-## Problem and approach
+## Model architecture and framework
 
-Online abuse is contextual, culturally variable, and costly to moderate at scale. Keyword filters miss implicit hostility and can over-flag reclaimed or quoted language. We test whether a frozen language model's latent state contains a useful toxicity signal.
+- **Backbone:** `google/gemma-2-2b`, a frozen decoder-only Gemma 2 Transformer with 26 decoder blocks and hidden width 2,304.
+- **Framework:** PyTorch and Hugging Face Transformers for tokenization and activation extraction; NumPy/scikit-learn-compatible code for probe selection and fitting.
+- **Representation:** masked mean of hidden state index 14 (the input to decoder block 14), with inputs truncated to 64 tokens.
+- **Probe:** one standardized linear discriminant head with covariance shrinkage `lambda = 0.6`.
+- **Decision rule:** rank scores and label the top `12/17` (70.588%) of each competition batch positive. This is a quota rule, not a 17-model ensemble.
 
-The pipeline tokenizes each text to at most 64 tokens, extracts the mean-pooled hidden state from Gemma 2 2B layer 14, standardizes the 2,304-dimensional representation, and fits a shrinkage linear discriminant probe. The selected configuration uses shrinkage `lambda = 0.6` and a 12-of-17 quota ensemble.
+Gemma's weights remain frozen. Shrinkage LDA uses a closed-form covariance estimate and linear solve, so **learning rate, optimizer, and gradient-training epochs are not applicable**. Candidate selection evaluates five LDA shrinkage values (`0.02`, `0.1`, `0.3`, `0.6`, `0.9`) and other registered linear-probe recipes. The selected probe is then fitted once on all 108,468 prepared training examples.
 
-## Dataset
+## Dataset and splits
 
-We harmonize 149,528 records from 13 public sources, then clean and deduplicate them to 108,468 examples spanning 12 sources and nine dataset families. Sources include Civil Comments, toxic/offensive Twitter corpora, Wikipedia talk-page attacks, Berkeley D-Lab hate speech, RealToxicityPrompts, Aegis Safety, Offensive Language, HateCheck, and ToxicChat.
+We extracted 149,528 records from 13 public sources and retained 108,468 examples from 12 sources across nine dataset families after cleaning and source hygiene. Sources include Civil Comments, Twitter toxicity/offensiveness corpora, Wikipedia attacks, Berkeley hate speech, RealToxicityPrompts, Aegis Safety, Offensive Language, HateCheck, and ToxicChat. Labels are binary: `1` toxic/hostile and `0` non-toxic.
 
-Labels are mapped to a binary task: `1` for toxic/hostile and `0` for non-toxic. Raw text is not committed because of licensing, size, and safety constraints; the extraction command downloads or reconstructs the permitted sources. See the [Data Card](docs/data_card.pdf) for provenance, risks, and exclusions.
+| Stage | Rows | Use |
+|---|---:|---|
+| Final probe training | 108,468 | Fit standardization and one LDA head |
+| Internal validation | 9 family-held-out folds | Select robust recipe; each selection training fold capped at 40,000 rows |
+| CodaBench development | 1,700 | Compare packaged candidates; never fit coefficients |
+| CodaBench testing | 1,360 | Final evaluation only |
 
-## Training pipeline
-
-1. `extract` loads, normalizes, and deduplicates the public datasets.
-2. Gemma 2 2B produces layer-14 mean-pooled activations.
-3. `select` compares reproducible linear-probe configurations.
-4. The selected model produces the exact CodaBench submission archive.
-
-The language model remains frozen; only the compact probe is fitted. Fixed seeds, saved configuration, parity checks, and archive hashing support reproducibility.
+Raw text and activations are excluded because of licensing, size, and safety constraints. The extraction command downloads or reconstructs permitted sources. See the [Data Card](docs/data_card.pdf).
 
 ## Evaluation and quality assurance
 
-Selection uses source-aware validation rather than relying only on a random split. Leave-one-source-out evaluation achieved pooled accuracy `0.795946` and AUROC `0.832204`, exposing domain-transfer weaknesses that a single aggregate score could hide. The repository also checks schema, row count, label domain, deterministic selection, archive integrity, and parity between notebook and script outputs.
+Family-held-out evaluation achieved pooled accuracy `0.795946` and AUROC `0.832204`, showing that domain transfer is harder than the competition split. Checks cover model contract, deterministic extraction, label domain, row count, source hygiene, archive contents, quota behavior, and parity between the fitted head and submitted classifier.
 
-Accuracy is the official leaderboard metric. It should be read alongside per-source behavior and false-positive/false-negative analysis; the system is a research prototype, not an autonomous moderation decision-maker.
+Accuracy is the official competition metric. It should be read with per-source errors and false-positive/false-negative analysis.
 
 ## Reproduction
 
-Python 3.10+ and a CUDA-capable GPU are recommended for activation extraction.
+Python 3.10+ and a CUDA-capable GPU are recommended. Activation extraction uses batch size 64.
 
 ```bash
 python -m venv .venv
@@ -55,28 +57,23 @@ python run_kaggle.py pull select --out artifacts/kaggle
 python -m pytest tests -q
 ```
 
-For a guided cloud run, open [`gemma_latent_toxicity_probe_competition.ipynb`](gemma_latent_toxicity_probe_competition.ipynb). Access to the gated Gemma checkpoint may require accepting its Hugging Face licence and supplying a personal token through the runtime's secret manager; never commit tokens.
-
-## Repository guide
-
-- `src/probe/` - corpus, embedding, probe, and selection code
-- `run_kaggle.py` - reproducible orchestration entry point
-- `experiments/` - transfer and model-selection experiments
-- `tests/` - competition and submission-parity checks
-- `docs/` - the four required Cohort Challenge documents
-- `artifacts/` - curated score records and final submission archive
+The guided notebook is [`gemma_latent_toxicity_probe_competition.ipynb`](gemma_latent_toxicity_probe_competition.ipynb). Gemma access may require accepting its licence and supplying a personal Hugging Face token through the runtime secret manager. Never commit tokens.
 
 ## Responsible use
 
-Toxicity labels reflect dataset policies, annotator judgments, and social context. Performance can degrade across dialects, languages, identities, and emerging euphemisms. Use human review, appeals, subgroup audits, drift monitoring, and locally agreed thresholds. Do not use this prototype as the sole basis for sanctions or access decisions.
+Toxicity labels reflect dataset policies, annotator judgments, and context. Performance can degrade across dialects, languages, identities, and emerging euphemisms. Use human review, appeals, subgroup audits, drift monitoring, and locally agreed thresholds. Never use this prototype as the sole basis for sanctions or access decisions.
 
-## Appendix: contributors and mentor
+## Team, mentor, and contribution statement
 
-- **Blessing Mambwe** - research, implementation, experimentation, evaluation, and submission engineering
-- **Adeola Fafemi** - behavioural-science research, benchmark synthesis, quality assurance, and stakeholder framing
-- **Moses Olafenwa** - assigned Cohort 10 mentor
+- **Team leader:** Blessings Mambwe - <bleymambwe@gmail.com>
+- **Team member:** Fafemi Adeola - <adeola5678@gmail.com>
+- **Team member:** Musonda Musunga - <mamusonda@gmail.com>
+- **Research and challenge collaborator:** Hamna Kaleem - <hamnanmah@gmail.com>
+- **Mentor:** Moses - <guymodscientist@gmail.com>
 
-Required challenge documents: [Problem Statement](docs/problem_statement.pdf), [Data Card](docs/data_card.pdf), [Impact Statement Card](docs/impact_statement_card.pdf), and [Stakeholder Engagement](docs/stakeholder_engagement.pdf).
+All four team contributors receive equal contribution credit for this submission. Hamna Kaleem is also a member of another team; her participation with Team Latent Lens was limited to the shared research and Cohort Challenge work and does not imply exclusive team membership.
+
+Required documents: [Problem Statement](docs/problem_statement.pdf), [Data Card](docs/data_card.pdf), [Impact Statement Card](docs/impact_statement_card.pdf), and [Stakeholder Engagement](docs/stakeholder_engagement.pdf).
 
 ## References
 

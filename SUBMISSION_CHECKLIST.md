@@ -15,8 +15,12 @@ Due date from the competition email: **12 September 2026**.
 - [x] `docs/impact_statement_card.pdf`
 - [x] `docs/stakeholder_engagement.pdf`
 - [x] Code configuration aligned with the final CodaBench submission
-- [x] Team listed as Blessing Mambwe and Adeola Fafemi
-- [x] Assigned mentor listed as Moses Olafenwa
+- [x] Team leader listed as Blessings Mambwe
+- [x] Team members listed as Fafemi Adeola, Musonda Musunga, and Hamna Kaleem
+- [x] Hamna's cross-team research/challenge disclaimer included
+- [x] Equal-contribution statement included
+- [x] Mentor listed as Moses
+- [x] Model architecture, framework, training method, splits, and non-applicable optimizer settings documented
 
 ## Final submission record
 

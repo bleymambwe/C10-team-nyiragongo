@@ -2,7 +2,7 @@
 
 ## Latent Probing for Toxicity Detection
 
-**Team:** Latent Lens | **Contributors:** Blessing Mambwe and Adeola Fafemi | **Mentor:** Moses Olafenwa
+**Team:** Latent Lens | **Programme:** AI Saturdays Lagos, Cohort 10
 
 ## Intended positive impact
 
@@ -60,3 +60,9 @@ Do not use this prototype as the sole basis for account termination, employment 
 Track false-positive and false-negative rates, per-source performance, subgroup and identity-term slices, reviewer overrides, appeals, latency, coverage, and drift. Review metrics with affected users and deploying organizations. Any pilot should define owners, escalation routes, stop conditions, and a date for reassessment before launch.
 
 Stakeholder engagement described in the accompanying plan is proposed governance work; it has not been represented as completed field research.
+
+## Team and contacts
+
+**Mentor:** Moses (guymodscientist@gmail.com). **Team leader:** Blessings Mambwe (bleymambwe@gmail.com). **Team members:** Fafemi Adeola (adeola5678@gmail.com), Musonda Musunga (mamusonda@gmail.com), and research/challenge collaborator Hamna Kaleem (hamnanmah@gmail.com).
+
+All four team contributors receive equal contribution credit. Hamna is also in another team; her Team Latent Lens role covered shared research and Cohort Challenge work and does not imply exclusive membership.

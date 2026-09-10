@@ -4,7 +4,7 @@
 
 Team Latent Lens studies whether a compact probe can recover a binary toxicity signal from the hidden representations of a frozen language model.
 
-The competition pipeline uses Gemma 2 2B layer-14 mean-pooled activations, standardization, and a shrinkage linear discriminant probe. The selected configuration achieved 89.76% accuracy on the CodaBench development split and 92.35% on the testing split.
+The competition pipeline uses a frozen `google/gemma-2-2b` decoder-only Transformer, hidden-state index 14 masked-mean activations, standardization, and one shrinkage linear discriminant head. The selected configuration uses lambda 0.6 and a top-12/17 quota. Because LDA is fitted analytically, it has no learning rate, optimizer, or gradient-training epochs. The head was refitted once on 108,468 prepared rows after nine family-held-out validation folds. It achieved 89.76% accuracy on the 1,700-row CodaBench development split and 92.35% on the 1,360-row testing split.
 
 The public release contains:
 
@@ -23,6 +23,10 @@ This is a research and benchmarking prototype, not a production moderation servi
 
 ## Team
 
-- Blessing Mambwe
-- Adeola Fafemi
-- Mentor: Moses Olafenwa
+- Team leader: Blessings Mambwe - bleymambwe@gmail.com
+- Fafemi Adeola - adeola5678@gmail.com
+- Musonda Musunga - mamusonda@gmail.com
+- Hamna Kaleem - hamnanmah@gmail.com
+- Mentor: Moses - guymodscientist@gmail.com
+
+All four team contributors receive equal contribution credit. Hamna Kaleem is also in another team; her work with Team Latent Lens was limited to shared research and Cohort Challenge activities.

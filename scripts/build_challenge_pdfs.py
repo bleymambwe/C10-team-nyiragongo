@@ -162,7 +162,20 @@ def build_one(source: Path, output: Path) -> None:
     title = raw[0].removeprefix("# ").strip()
     content = raw[1:]
     s = styles()
-    story = [Spacer(1, 12 * mm), Paragraph(inline_markup(title), s["title"])]
+    top_space = 12 * mm
+    if source.name == "problem_statement.md":
+        # Keep the concise statement and its contributor declaration together.
+        top_space = 5 * mm
+        s["title"].fontSize = 22
+        s["title"].leading = 25
+        s["h2"].fontSize = 13.5
+        s["h2"].leading = 16
+        s["h2"].spaceBefore = 8
+        s["h2"].spaceAfter = 4
+        s["body"].fontSize = 8.7
+        s["body"].leading = 12
+        s["body"].spaceAfter = 4
+    story = [Spacer(1, top_space), Paragraph(inline_markup(title), s["title"])]
     story.extend(
         [
             Paragraph("Latent Probing for Toxicity Detection", s["subtitle"]),
@@ -207,7 +220,7 @@ def build_one(source: Path, output: Path) -> None:
         topMargin=18 * mm,
         bottomMargin=18 * mm,
         title=title,
-        author="Blessing Mambwe and Adeola Fafemi",
+        author="Blessings Mambwe, Fafemi Adeola, Musonda Musunga, and Hamna Kaleem",
         subject="AI Saturdays Lagos Cohort 10 Challenge Submission",
     )
     doc.build(story, onFirstPage=header_footer, onLaterPages=header_footer)

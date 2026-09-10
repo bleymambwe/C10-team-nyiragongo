@@ -208,7 +208,9 @@ Cohort 10 competition package for Team Latent Lens.
 notebook, source-aware evaluation, tests, exact CodaBench archive, verified
 development and testing score records, and the four required challenge PDFs.
 The README is below the 6,000-character limit before references and names
-Blessing Mambwe and Adeola Fafemi as contributors and Moses Olafenwa as mentor.
+Blessings Mambwe, Fafemi Adeola, Musonda Musunga, and Hamna Kaleem as equal
+contributors, and Moses as mentor. Hamna's cross-team research and challenge
+role is disclosed in the public documents.
 
 **Excluded.** Raw corpus text, large activation arrays, authenticated browser
 state, competition email exports, course archives, local caches, media, and
