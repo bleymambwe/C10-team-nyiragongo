@@ -2,11 +2,12 @@
 
 # Existing local project artifacts
 Research/
+competition context/
+tmp/
 index.html
 gemma_latent_probing_tutorial.html
 gemma_latent_toxicity_probe.ipynb
 gemma_latent_toxicity_probe_explained.md
-requirements-gemma-probe.txt
 CLAUDE.md
 AGENTS.md
 
@@ -17,6 +18,12 @@ AGENTS.md
 *.sqlite
 *.csv
 *.jsonl
+
+# Required Cohort 10 submission documents
+!docs/problem_statement.pdf
+!docs/data_card.pdf
+!docs/impact_statement_card.pdf
+!docs/stakeholder_engagement.pdf
 
 # Media and rendered outputs
 *.mp3
@@ -54,6 +61,7 @@ coverage/
 # Environment and secrets
 .env
 .env.*
+*.env
 *.key
 *.pem
 *.token
@@ -64,3 +72,23 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# Experiment caches and logs (2026-08-24)
+# rtp_balanced.json is a local cache of RealToxicityPrompts and contains toxic
+# text by construction. It is regenerable from the public dataset and must not
+# be published as a repository artifact.
+results/cache/
+results/logs/
+
+# results/data/*.json IS the evidence behind every figure and is deliberately
+# NOT ignored. Screenshots are covered by the *.png rule above.
+
+# Playwright MCP scratch output
+.playwright-mcp/
+
+# Rendered video, stills and Remotion build output (large binaries)
+out/
+stills/
+paper-video/node_modules/
+paper-video/public/audio/
+paper-video/.remotion/

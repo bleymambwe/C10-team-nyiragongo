@@ -1,0 +1,17 @@
+{
+  "checked_utc": "2026-09-10T09:05:27+00:00",
+  "submission_id": 921106,
+  "phase": 29479,
+  "phase_name": "Testing Phase",
+  "filename": "best_single.zip",
+  "owner": "bleymambwe",
+  "created_when": "2026-09-10T08:54:49.354180Z",
+  "status": "Finished",
+  "status_details": "scoring_hostname-worker4",
+  "scores": {
+    "accuracy": "0.9235294118",
+    "duration": "0.0520865917"
+  },
+  "leaderboard": 19655,
+  "phase_verified": true
+}

@@ -1,84 +1,28 @@
-# Project Proposal
+# Project Summary
 
-## Title
+## Latent Probing for Toxicity Detection
 
-Latent Probing for Toxicity
+Team Latent Lens studies whether a compact probe can recover a binary toxicity signal from the hidden representations of a frozen language model.
 
-## Date
+The competition pipeline uses Gemma 2 2B layer-14 mean-pooled activations, standardization, and a shrinkage linear discriminant probe. The selected configuration achieved 89.76% accuracy on the CodaBench development split and 92.35% on the testing split.
 
-2026-08-15
+The public release contains:
 
-## Objective
+- reproducible data extraction and cleaning code;
+- activation extraction and source-aware selection code;
+- a cloud notebook and pinned dependency ranges;
+- the exact final competition archive and verified score records;
+- automated schema, parity, routing, and probe tests; and
+- the four required Cohort 10 challenge documents.
 
-Build a small, reproducible software package for studying whether a simple linear probe can recover a narrowly defined toxicity label from hidden representations of a frozen language model.
+Raw text, activation matrices, course exports, authenticated browser data, and large research media remain outside version control because of licensing, safety, privacy, or size.
 
-The immediate target is a Gemma-based workflow that:
+## Scope
 
-- loads a frozen causal language model,
-- extracts hidden states layer by layer,
-- applies a simple pooling rule to obtain per-example representations,
-- trains linear probes on those representations,
-- compares layerwise results against basic controls,
-- records enough metadata to support reproducibility and later audit.
+This is a research and benchmarking prototype, not a production moderation service. A binary toxicity label cannot fully represent intent, quotation, counterspeech, severity, target, culture, or policy. Operational use would require local validation, subgroup audits, calibrated thresholds, human review, appeals, security controls, and drift monitoring.
 
-## Research question
+## Team
 
-The software is intended to support the narrow question:
-
-Can a simple linear classifier predict a small, explicitly defined toxicity label from internal vectors of a frozen language model?
-
-## Intended software scope
-
-The planned software will eventually provide:
-
-- deterministic data preparation for a small labelled demonstration dataset,
-- hidden-state extraction from a frozen model,
-- layerwise linear-probe training,
-- baseline and shuffled-label controls,
-- metric reporting,
-- artifact export for fitted probes and metadata,
-- simple audit outputs describing inputs, configuration, and results.
-
-## Non-goals
-
-This project does not currently claim to provide:
-
-- a production moderation system,
-- a causal account of toxic behaviour,
-- fairness or deployment readiness,
-- benchmark-grade empirical conclusions,
-- a proof that any decodable direction is used by the model mechanistically.
-
-## Publication scope for this repository
-
-This public repository is intentionally limited to proposal-stage materials and audit scaffolding.
-
-It does not publish:
-
-- local research archives,
-- rendered videos,
-- audio files,
-- course materials,
-- unrelated papers or PDFs,
-- large experimental artifacts,
-- notebooks or media not explicitly curated for public release.
-
-## Initial audit requirements
-
-Future public software releases should preserve:
-
-- model identifier and revision,
-- dependency versions,
-- pooling rule and probe configuration,
-- train/test split policy,
-- random seed configuration,
-- control definitions,
-- artifact manifest for outputs included in a release.
-
-## Expected next repository milestones
-
-1. Define a stable package layout.
-2. Separate reusable code from notebook-only experimentation.
-3. Add reproducible configuration files and testable entry points.
-4. Add release-safe example artifacts.
-5. Add JOSS paper assets once the software scope is stable.
+- Blessing Mambwe
+- Adeola Fafemi
+- Mentor: Moses Olafenwa
