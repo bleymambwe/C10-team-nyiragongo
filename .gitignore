@@ -22,10 +22,8 @@ PROJECT_PROPOSAL.md
 *.jsonl
 
 # Required Cohort 10 submission documents
-!docs/problem_statement.pdf
-!docs/data_card.pdf
-!docs/impact_statement_card.pdf
-!docs/stakeholder_engagement.pdf
+!doc/
+!doc/*.pdf
 !paper/preprint.pdf
 
 # Media and rendered outputs

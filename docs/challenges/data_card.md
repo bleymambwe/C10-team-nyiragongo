@@ -2,7 +2,7 @@
 
 ## Latent Probing for Toxicity Detection
 
-**Team:** Latent Lens | **Programme:** AI Saturdays Lagos, Cohort 10
+**Team:** nyriagongo | **Programme:** AI Saturdays Lagos, Cohort 10
 
 ## Dataset summary
 
@@ -67,4 +67,4 @@ Record upstream versions, extraction date, checksum, mapping changes, and known 
 
 **Mentor:** Moses (guymodscientist@gmail.com). **Team leader:** Blessings Mambwe (bleymambwe@gmail.com). **Team members:** Fafemi Adeola (adeola5678@gmail.com), Musonda Musunga (mamusonda@gmail.com), and research/challenge collaborator Hamna Kaleem (hamnanmah@gmail.com).
 
-All four team contributors receive equal contribution credit. Hamna is also in another team; her Team Latent Lens role covered shared research and Cohort Challenge work and does not imply exclusive membership.
+All four team contributors receive equal contribution credit. Hamna is also in another team; her role with team nyriagongo covered shared research and Cohort Challenge work and does not imply exclusive membership.

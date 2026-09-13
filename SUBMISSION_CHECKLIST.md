@@ -4,19 +4,22 @@ Due date from the competition email: **12 September 2026**.
 
 ## Required package
 
-- [x] Public GitHub repository: <https://github.com/bleymambwe/latent-probing-for-toxicity>
+- [x] Public GitHub repository: <https://github.com/bleymambwe/C10-nyriagongo>
+- [x] Repository name follows the required `C10-team-name` format: `C10-nyriagongo`
 - [x] README below 6,000 characters before references
 - [x] README covers dataset, training pipeline, evaluation, reproduction, contributors, and mentor
 - [x] Reproduction code and dependency file
 - [x] Cloud notebook for the competition pipeline
 - [x] Exact final CodaBench archive and score records
-- [x] `docs/problem_statement.pdf`
-- [x] `docs/data_card.pdf`
-- [x] `docs/impact_statement_card.pdf`
-- [x] `docs/stakeholder_engagement.pdf`
+- [x] `doc/problem_statement.pdf`
+- [x] `doc/data_card.pdf`
+- [x] `doc/impact_statement_card.pdf`
+- [x] `doc/stakeholder_engagement.pdf`
+- [x] Dataset access documented in `doc/DATASETS.md`; raw data omitted for size, licensing, and safety reasons
 - [x] Editable organizer briefing: `presentation/latent_probing_submission_overview.pptx`
 - [x] Related preprint: `paper/preprint.pdf` (clearly separated from the competition methods)
 - [x] Code configuration aligned with the final CodaBench submission
+- [x] Team name listed as nyriagongo
 - [x] Team leader listed as Blessings Mambwe
 - [x] Team members listed as Fafemi Adeola, Musonda Musunga, and Hamna Kaleem
 - [x] Hamna's cross-team research/challenge disclaimer included
