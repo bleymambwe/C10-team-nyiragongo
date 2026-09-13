@@ -4,8 +4,8 @@ Due date from the competition email: **12 September 2026**.
 
 ## Required package
 
-- [x] Public GitHub repository: <https://github.com/bleymambwe/C10-nyriagongo>
-- [x] Repository name follows the required `C10-team-name` format: `C10-nyriagongo`
+- [x] Public GitHub repository: <https://github.com/bleymambwe/C10-team-nyriagongo>
+- [x] Repository name follows the required `C10-team-name` format: `C10-team-nyriagongo`
 - [x] README below 6,000 characters before references
 - [x] README covers dataset, training pipeline, evaluation, reproduction, contributors, and mentor
 - [x] Reproduction code and dependency file
