@@ -4,8 +4,12 @@ Due date from the competition email: **12 September 2026**.
 
 ## Required package
 
-- [x] Public GitHub repository: <https://github.com/bleymambwe/C10-team-nyriagongo>
-- [x] Repository name follows the required `C10-team-name` format: `C10-team-nyriagongo`
+- [x] Public GitHub repository: <https://github.com/bleymambwe/C10-team-nyiragongo>
+- [x] Repository name follows the required `C10-team-name` format: `C10-team-nyiragongo`
+  - Submitted to the programme as `C10-team-nyriagongo` (misspelled). Renamed on
+    GitHub on 23 September 2026 to correct the spelling to Nyiragongo, after the
+    testing-phase submission was already graded. The old URL 301-redirects to
+    the new one, so the link on file with the programme still resolves.
 - [x] README below 6,000 characters before references
 - [x] README covers dataset, training pipeline, evaluation, reproduction, contributors, and mentor
 - [x] Reproduction code and dependency file

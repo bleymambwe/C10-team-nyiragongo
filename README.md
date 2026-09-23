@@ -1,4 +1,4 @@
-# C10-team-nyriagongo: Latent Probing for Toxicity Detection
+# C10-team-nyiragongo: Latent Probing for Toxicity Detection
 
 **Team:** Nyiragongo
 **Programme:** AI Saturdays Lagos, Cohort 10
