@@ -1,6 +1,6 @@
 # C10-team-nyriagongo: Latent Probing for Toxicity Detection
 
-**Team:** nyriagongo
+**Team:** Nyiragongo
 **Programme:** AI Saturdays Lagos, Cohort 10
 
 This project tests whether a frozen language model representation contains a

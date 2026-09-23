@@ -149,10 +149,10 @@ def header_footer(canvas, doc):
     canvas.rect(0, height - 10.5 * mm, width, 1.5 * mm, fill=1, stroke=0)
     canvas.setFont(FONT_BOLD, 7.5)
     canvas.setFillColor(colors.white)
-    canvas.drawString(18 * mm, height - 6 * mm, "NYRIAGONGO  /  COHORT 10 SUBMISSION")
+    canvas.drawString(18 * mm, height - 6 * mm, "NYIRAGONGO  /  COHORT 10 SUBMISSION")
     canvas.setFont(FONT, 7.5)
     canvas.setFillColor(MUTED)
-    canvas.drawString(18 * mm, 10 * mm, "AI Saturdays Lagos - nyriagongo - Latent Probing for Toxicity Detection")
+    canvas.drawString(18 * mm, 10 * mm, "AI Saturdays Lagos - Nyiragongo - Latent Probing for Toxicity Detection")
     canvas.drawRightString(width - 18 * mm, 10 * mm, f"Page {doc.page}")
     canvas.restoreState()
 
