@@ -1,0 +1,767 @@
+[
+ {
+  "held_family": "berkeley",
+  "seed": 17,
+  "n": 1700,
+  "baseline_train_n": 92468,
+  "teacher_train_n": 41844,
+  "baseline": {
+   "accuracy": 0.8482352941176471,
+   "auroc": 0.9017666666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.8435294117647059,
+   "auroc": 0.8849633333333333,
+   "gains": 52,
+   "losses": 60
+  },
+  "paradetox_only": {
+   "accuracy": 0.7976470588235294,
+   "auroc": 0.8362533333333333,
+   "gains": 89,
+   "losses": 175
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.8458823529411764,
+   "auroc": 0.9011866666666667,
+   "gains": 7,
+   "losses": 11
+  }
+ },
+ {
+  "held_family": "berkeley",
+  "seed": 29,
+  "n": 1700,
+  "baseline_train_n": 92468,
+  "teacher_train_n": 41844,
+  "baseline": {
+   "accuracy": 0.8552941176470589,
+   "auroc": 0.9027533333333333,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.8388235294117647,
+   "auroc": 0.8864533333333333,
+   "gains": 41,
+   "losses": 69
+  },
+  "paradetox_only": {
+   "accuracy": 0.8011764705882353,
+   "auroc": 0.8420266666666667,
+   "gains": 77,
+   "losses": 169
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.8552941176470589,
+   "auroc": 0.9018566666666666,
+   "gains": 6,
+   "losses": 6
+  }
+ },
+ {
+  "held_family": "berkeley",
+  "seed": 41,
+  "n": 1700,
+  "baseline_train_n": 92468,
+  "teacher_train_n": 41844,
+  "baseline": {
+   "accuracy": 0.8729411764705882,
+   "auroc": 0.9157333333333333,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.8447058823529412,
+   "auroc": 0.8960216666666667,
+   "gains": 34,
+   "losses": 82
+  },
+  "paradetox_only": {
+   "accuracy": 0.8047058823529412,
+   "auroc": 0.8488166666666667,
+   "gains": 69,
+   "losses": 185
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.8717647058823529,
+   "auroc": 0.914505,
+   "gains": 6,
+   "losses": 8
+  }
+ },
+ {
+  "held_family": "chat",
+  "seed": 17,
+  "n": 984,
+  "baseline_train_n": 107078,
+  "teacher_train_n": 52348,
+  "baseline": {
+   "accuracy": 0.8414634146341463,
+   "auroc": 0.9078389883249111,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.8313008130081301,
+   "auroc": 0.8849368947748376,
+   "gains": 52,
+   "losses": 62
+  },
+  "paradetox_only": {
+   "accuracy": 0.6626016260162602,
+   "auroc": 0.6452266560454059,
+   "gains": 82,
+   "losses": 258
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.8414634146341463,
+   "auroc": 0.9035473351422668,
+   "gains": 9,
+   "losses": 9
+  }
+ },
+ {
+  "held_family": "chat",
+  "seed": 29,
+  "n": 984,
+  "baseline_train_n": 107078,
+  "teacher_train_n": 52348,
+  "baseline": {
+   "accuracy": 0.8516260162601627,
+   "auroc": 0.9056782255856215,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.8313008130081301,
+   "auroc": 0.8764680988772996,
+   "gains": 50,
+   "losses": 70
+  },
+  "paradetox_only": {
+   "accuracy": 0.6686991869918699,
+   "auroc": 0.660670633043738,
+   "gains": 76,
+   "losses": 256
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.8516260162601627,
+   "auroc": 0.9020387841975555,
+   "gains": 9,
+   "losses": 9
+  }
+ },
+ {
+  "held_family": "chat",
+  "seed": 41,
+  "n": 984,
+  "baseline_train_n": 107078,
+  "teacher_train_n": 52348,
+  "baseline": {
+   "accuracy": 0.8414634146341463,
+   "auroc": 0.8919668417515123,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.8252032520325203,
+   "auroc": 0.8757660999228299,
+   "gains": 53,
+   "losses": 69
+  },
+  "paradetox_only": {
+   "accuracy": 0.6686991869918699,
+   "auroc": 0.640058748848672,
+   "gains": 83,
+   "losses": 253
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.8414634146341463,
+   "auroc": 0.8854795748176545,
+   "gains": 8,
+   "losses": 8
+  }
+ },
+ {
+  "held_family": "chat_aegis",
+  "seed": 17,
+  "n": 1700,
+  "baseline_train_n": 102316,
+  "teacher_train_n": 51608,
+  "baseline": {
+   "accuracy": 0.768235294117647,
+   "auroc": 0.8090166666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.731764705882353,
+   "auroc": 0.7648033333333333,
+   "gains": 63,
+   "losses": 125
+  },
+  "paradetox_only": {
+   "accuracy": 0.6588235294117647,
+   "auroc": 0.649905,
+   "gains": 189,
+   "losses": 375
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.7694117647058824,
+   "auroc": 0.8097266666666667,
+   "gains": 16,
+   "losses": 14
+  }
+ },
+ {
+  "held_family": "chat_aegis",
+  "seed": 29,
+  "n": 1700,
+  "baseline_train_n": 102316,
+  "teacher_train_n": 51608,
+  "baseline": {
+   "accuracy": 0.7552941176470588,
+   "auroc": 0.7887,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.7258823529411764,
+   "auroc": 0.7468583333333333,
+   "gains": 63,
+   "losses": 113
+  },
+  "paradetox_only": {
+   "accuracy": 0.6729411764705883,
+   "auroc": 0.64409,
+   "gains": 197,
+   "losses": 337
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.7517647058823529,
+   "auroc": 0.7874533333333333,
+   "gains": 11,
+   "losses": 17
+  }
+ },
+ {
+  "held_family": "chat_aegis",
+  "seed": 41,
+  "n": 1700,
+  "baseline_train_n": 102316,
+  "teacher_train_n": 51608,
+  "baseline": {
+   "accuracy": 0.7505882352941177,
+   "auroc": 0.782845,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.731764705882353,
+   "auroc": 0.75001,
+   "gains": 70,
+   "losses": 102
+  },
+  "paradetox_only": {
+   "accuracy": 0.6576470588235294,
+   "auroc": 0.631895,
+   "gains": 199,
+   "losses": 357
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.7470588235294118,
+   "auroc": 0.78115,
+   "gains": 14,
+   "losses": 20
+  }
+ },
+ {
+  "held_family": "civil",
+  "seed": 17,
+  "n": 1700,
+  "baseline_train_n": 82250,
+  "teacher_train_n": 44210,
+  "baseline": {
+   "accuracy": 0.7941176470588235,
+   "auroc": 0.8537383333333334,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.8176470588235294,
+   "auroc": 0.8730416666666667,
+   "gains": 103,
+   "losses": 63
+  }
+ },
+ {
+  "held_family": "civil",
+  "seed": 29,
+  "n": 1700,
+  "baseline_train_n": 82250,
+  "teacher_train_n": 44210,
+  "baseline": {
+   "accuracy": 0.8094117647058824,
+   "auroc": 0.85979,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.8129411764705883,
+   "auroc": 0.8740266666666666,
+   "gains": 74,
+   "losses": 68
+  }
+ },
+ {
+  "held_family": "civil",
+  "seed": 41,
+  "n": 1700,
+  "baseline_train_n": 82250,
+  "teacher_train_n": 44210,
+  "baseline": {
+   "accuracy": 0.8058823529411765,
+   "auroc": 0.8615566666666666,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.8176470588235294,
+   "auroc": 0.8711883333333333,
+   "gains": 88,
+   "losses": 68
+  }
+ },
+ {
+  "held_family": "hatecheck",
+  "seed": 17,
+  "n": 1647,
+  "baseline_train_n": 106142,
+  "teacher_train_n": 51572,
+  "baseline": {
+   "accuracy": 0.7595628415300546,
+   "auroc": 0.7849907264626251,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.6854887674559805,
+   "auroc": 0.6830919608024275,
+   "gains": 34,
+   "losses": 156
+  },
+  "paradetox_only": {
+   "accuracy": 0.652701882210079,
+   "auroc": 0.6018277040711184,
+   "gains": 126,
+   "losses": 302
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.7607771706132362,
+   "auroc": 0.7855236883807196,
+   "gains": 18,
+   "losses": 16
+  }
+ },
+ {
+  "held_family": "hatecheck",
+  "seed": 29,
+  "n": 1647,
+  "baseline_train_n": 106142,
+  "teacher_train_n": 51572,
+  "baseline": {
+   "accuracy": 0.742562234365513,
+   "auroc": 0.7737363472921982,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.684274438372799,
+   "auroc": 0.6762949198069967,
+   "gains": 44,
+   "losses": 140
+  },
+  "paradetox_only": {
+   "accuracy": 0.6478445658773527,
+   "auroc": 0.5928490722909545,
+   "gains": 143,
+   "losses": 299
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.7437765634486946,
+   "auroc": 0.7720628468693816,
+   "gains": 17,
+   "losses": 15
+  }
+ },
+ {
+  "held_family": "hatecheck",
+  "seed": 41,
+  "n": 1647,
+  "baseline_train_n": 106142,
+  "teacher_train_n": 51572,
+  "baseline": {
+   "accuracy": 0.7656344869459624,
+   "auroc": 0.8056572131065994,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.7012750455373407,
+   "auroc": 0.7092408490438663,
+   "gains": 36,
+   "losses": 142
+  },
+  "paradetox_only": {
+   "accuracy": 0.6672738312082575,
+   "auroc": 0.6362748093772873,
+   "gains": 134,
+   "losses": 296
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.7644201578627808,
+   "auroc": 0.8068013046907755,
+   "gains": 13,
+   "losses": 15
+  }
+ },
+ {
+  "held_family": "offensivelang",
+  "seed": 17,
+  "n": 1700,
+  "baseline_train_n": 104972,
+  "teacher_train_n": 52348,
+  "baseline": {
+   "accuracy": 0.6341176470588236,
+   "auroc": 0.5974883333333333,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.6211764705882353,
+   "auroc": 0.57161,
+   "gains": 98,
+   "losses": 120
+  },
+  "paradetox_only": {
+   "accuracy": 0.591764705882353,
+   "auroc": 0.5095283333333334,
+   "gains": 293,
+   "losses": 365
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.6305882352941177,
+   "auroc": 0.596645,
+   "gains": 13,
+   "losses": 19
+  }
+ },
+ {
+  "held_family": "offensivelang",
+  "seed": 29,
+  "n": 1700,
+  "baseline_train_n": 104972,
+  "teacher_train_n": 52348,
+  "baseline": {
+   "accuracy": 0.648235294117647,
+   "auroc": 0.6112,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.6317647058823529,
+   "auroc": 0.5914783333333333,
+   "gains": 93,
+   "losses": 121
+  },
+  "paradetox_only": {
+   "accuracy": 0.5964705882352941,
+   "auroc": 0.506085,
+   "gains": 295,
+   "losses": 383
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.6458823529411765,
+   "auroc": 0.6089566666666667,
+   "gains": 12,
+   "losses": 16
+  }
+ },
+ {
+  "held_family": "offensivelang",
+  "seed": 41,
+  "n": 1700,
+  "baseline_train_n": 104972,
+  "teacher_train_n": 52348,
+  "baseline": {
+   "accuracy": 0.6305882352941177,
+   "auroc": 0.5990183333333333,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.6270588235294118,
+   "auroc": 0.57146,
+   "gains": 107,
+   "losses": 113
+  },
+  "paradetox_only": {
+   "accuracy": 0.5776470588235294,
+   "auroc": 0.4982333333333333,
+   "gains": 284,
+   "losses": 374
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.6294117647058823,
+   "auroc": 0.5978033333333334,
+   "gains": 12,
+   "losses": 14
+  }
+ },
+ {
+  "held_family": "rtp",
+  "seed": 17,
+  "n": 1700,
+  "baseline_train_n": 94468,
+  "teacher_train_n": 45728,
+  "baseline": {
+   "accuracy": 0.8952941176470588,
+   "auroc": 0.9513366666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.8847058823529412,
+   "auroc": 0.947585,
+   "gains": 58,
+   "losses": 76
+  },
+  "paradetox_only": {
+   "accuracy": 0.7964705882352942,
+   "auroc": 0.8600216666666667,
+   "gains": 122,
+   "losses": 290
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.8988235294117647,
+   "auroc": 0.9550333333333333,
+   "gains": 18,
+   "losses": 12
+  }
+ },
+ {
+  "held_family": "rtp",
+  "seed": 29,
+  "n": 1700,
+  "baseline_train_n": 94468,
+  "teacher_train_n": 45728,
+  "baseline": {
+   "accuracy": 0.8858823529411765,
+   "auroc": 0.9474183333333334,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.8905882352941177,
+   "auroc": 0.9507933333333334,
+   "gains": 69,
+   "losses": 61
+  },
+  "paradetox_only": {
+   "accuracy": 0.7964705882352942,
+   "auroc": 0.860565,
+   "gains": 135,
+   "losses": 287
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.8929411764705882,
+   "auroc": 0.9517316666666666,
+   "gains": 24,
+   "losses": 12
+  }
+ },
+ {
+  "held_family": "rtp",
+  "seed": 41,
+  "n": 1700,
+  "baseline_train_n": 94468,
+  "teacher_train_n": 45728,
+  "baseline": {
+   "accuracy": 0.8917647058823529,
+   "auroc": 0.9508666666666666,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.8929411764705882,
+   "auroc": 0.9511783333333333,
+   "gains": 79,
+   "losses": 77
+  },
+  "paradetox_only": {
+   "accuracy": 0.7988235294117647,
+   "auroc": 0.8659933333333333,
+   "gains": 112,
+   "losses": 270
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.8941176470588236,
+   "auroc": 0.95407,
+   "gains": 14,
+   "losses": 10
+  }
+ },
+ {
+  "held_family": "twitter",
+  "seed": 17,
+  "n": 1700,
+  "baseline_train_n": 80896,
+  "teacher_train_n": 36384,
+  "baseline": {
+   "accuracy": 0.7247058823529412,
+   "auroc": 0.7434916666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.7376470588235294,
+   "auroc": 0.76484,
+   "gains": 118,
+   "losses": 96
+  },
+  "paradetox_only": {
+   "accuracy": 0.7364705882352941,
+   "auroc": 0.7592633333333333,
+   "gains": 211,
+   "losses": 191
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.7258823529411764,
+   "auroc": 0.7454383333333333,
+   "gains": 23,
+   "losses": 21
+  }
+ },
+ {
+  "held_family": "twitter",
+  "seed": 29,
+  "n": 1700,
+  "baseline_train_n": 80896,
+  "teacher_train_n": 36384,
+  "baseline": {
+   "accuracy": 0.7258823529411764,
+   "auroc": 0.7438366666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.7435294117647059,
+   "auroc": 0.76712,
+   "gains": 130,
+   "losses": 100
+  },
+  "paradetox_only": {
+   "accuracy": 0.7505882352941177,
+   "auroc": 0.7795083333333334,
+   "gains": 232,
+   "losses": 190
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.7294117647058823,
+   "auroc": 0.7485683333333333,
+   "gains": 19,
+   "losses": 13
+  }
+ },
+ {
+  "held_family": "twitter",
+  "seed": 41,
+  "n": 1700,
+  "baseline_train_n": 80896,
+  "teacher_train_n": 36384,
+  "baseline": {
+   "accuracy": 0.7211764705882353,
+   "auroc": 0.7374516666666666,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.7341176470588235,
+   "auroc": 0.7540833333333333,
+   "gains": 127,
+   "losses": 105
+  },
+  "paradetox_only": {
+   "accuracy": 0.7388235294117647,
+   "auroc": 0.749035,
+   "gains": 222,
+   "losses": 192
+  },
+  "paradetox_augmented": {
+   "accuracy": 0.7270588235294118,
+   "auroc": 0.7416933333333333,
+   "gains": 23,
+   "losses": 13
+  }
+ },
+ {
+  "held_family": "wiki",
+  "seed": 17,
+  "n": 1700,
+  "baseline_train_n": 97154,
+  "teacher_train_n": 42742,
+  "baseline": {
+   "accuracy": 0.8929411764705882,
+   "auroc": 0.949035,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.9094117647058824,
+   "auroc": 0.960595,
+   "gains": 60,
+   "losses": 32
+  }
+ },
+ {
+  "held_family": "wiki",
+  "seed": 29,
+  "n": 1700,
+  "baseline_train_n": 97154,
+  "teacher_train_n": 42742,
+  "baseline": {
+   "accuracy": 0.8847058823529412,
+   "auroc": 0.9443666666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.9094117647058824,
+   "auroc": 0.9641216666666667,
+   "gains": 70,
+   "losses": 28
+  }
+ },
+ {
+  "held_family": "wiki",
+  "seed": 41,
+  "n": 1700,
+  "baseline_train_n": 97154,
+  "teacher_train_n": 42742,
+  "baseline": {
+   "accuracy": 0.8929411764705882,
+   "auroc": 0.9482283333333333,
+   "gains": 0,
+   "losses": 0
+  },
+  "teacher_agreement": {
+   "accuracy": 0.908235294117647,
+   "auroc": 0.96323,
+   "gains": 61,
+   "losses": 35
+  }
+ }
+]

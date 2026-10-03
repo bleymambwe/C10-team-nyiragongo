@@ -1,0 +1,141 @@
+{
+  "sampleRate": 24000,
+  "voice": "af_heart",
+  "speed": 0.98,
+  "totalSec": 743.58,
+  "scenes": [
+    {
+      "index": 0,
+      "id": "title",
+      "file": "audio/00_title.wav",
+      "durationSec": 9.3,
+      "words": 22
+    },
+    {
+      "index": 1,
+      "id": "problem",
+      "file": "audio/01_problem.wav",
+      "durationSec": 26.5,
+      "words": 72
+    },
+    {
+      "index": 2,
+      "id": "two_geometries",
+      "file": "audio/02_two_geometries.wav",
+      "durationSec": 48.35,
+      "words": 120
+    },
+    {
+      "index": 3,
+      "id": "certificate",
+      "file": "audio/03_certificate.wav",
+      "durationSec": 20.85,
+      "words": 52
+    },
+    {
+      "index": 4,
+      "id": "regions",
+      "file": "audio/04_regions.wav",
+      "durationSec": 29.4,
+      "words": 71
+    },
+    {
+      "index": 5,
+      "id": "theorem",
+      "file": "audio/05_theorem.wav",
+      "durationSec": 46.925,
+      "words": 117
+    },
+    {
+      "index": 6,
+      "id": "leakage",
+      "file": "audio/06_leakage.wav",
+      "durationSec": 41.75,
+      "words": 112
+    },
+    {
+      "index": 7,
+      "id": "lowrank",
+      "file": "audio/07_lowrank.wav",
+      "durationSec": 35.9,
+      "words": 90
+    },
+    {
+      "index": 8,
+      "id": "gpt2",
+      "file": "audio/08_gpt2.wav",
+      "durationSec": 42.375,
+      "words": 111
+    },
+    {
+      "index": 9,
+      "id": "notcircular",
+      "file": "audio/09_notcircular.wav",
+      "durationSec": 45.375,
+      "words": 113
+    },
+    {
+      "index": 10,
+      "id": "independence",
+      "file": "audio/10_independence.wav",
+      "durationSec": 43.975,
+      "words": 120
+    },
+    {
+      "index": 11,
+      "id": "realdata",
+      "file": "audio/11_realdata.wav",
+      "durationSec": 42.4,
+      "words": 100
+    },
+    {
+      "index": 12,
+      "id": "trained",
+      "file": "audio/12_trained.wav",
+      "durationSec": 29.5,
+      "words": 79
+    },
+    {
+      "index": 13,
+      "id": "budget",
+      "file": "audio/13_budget.wav",
+      "durationSec": 37.0,
+      "words": 91
+    },
+    {
+      "index": 14,
+      "id": "failures",
+      "file": "audio/14_failures.wav",
+      "durationSec": 88.3,
+      "words": 231
+    },
+    {
+      "index": 15,
+      "id": "limitations",
+      "file": "audio/15_limitations.wav",
+      "durationSec": 58.2,
+      "words": 167
+    },
+    {
+      "index": 16,
+      "id": "safety",
+      "file": "audio/16_safety.wav",
+      "durationSec": 20.325,
+      "words": 51
+    },
+    {
+      "index": 17,
+      "id": "next",
+      "file": "audio/17_next.wav",
+      "durationSec": 55.65,
+      "words": 131
+    },
+    {
+      "index": 18,
+      "id": "close",
+      "file": "audio/18_close.wav",
+      "durationSec": 21.5,
+      "words": 48
+    }
+  ]
+}

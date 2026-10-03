@@ -1,0 +1,5456 @@
+[
+ {
+  "held_family": "berkeley",
+  "prior": 0.5,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 92468,
+  "chosen": "pooled",
+  "chosen_source_only": "twitter",
+  "distances": {
+   "chat": 0.2300589009467909,
+   "chat_aegis": 0.17389577783358204,
+   "civil": 0.08858185037947465,
+   "hatecheck": 0.1794652850482228,
+   "offensivelang": 0.21700644617394707,
+   "rtp": 0.186037945262253,
+   "twitter": 0.05798923763777665,
+   "wiki": 0.11218802758843699,
+   "pooled": 0.04897676428127546
+  },
+  "distance_auc_spearman": -0.9761904761904763,
+  "pooled": {
+   "accuracy": 0.8447058823529412,
+   "auroc": 0.922481660899654,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8447058823529412,
+   "auroc": 0.922481660899654,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.84,
+   "auroc": 0.9190934256055363,
+   "gains": 81,
+   "losses": 89
+  },
+  "clean_pool": {
+   "accuracy": 0.8411764705882353,
+   "auroc": 0.9191916955017301,
+   "gains": 20,
+   "losses": 26
+  },
+  "source_results": {
+   "chat": {
+    "accuracy": 0.6823529411764706,
+    "auroc": 0.7571570934256056,
+    "gains": 81,
+    "losses": 357
+   },
+   "chat_aegis": {
+    "accuracy": 0.8058823529411765,
+    "auroc": 0.8861951557093426,
+    "gains": 67,
+    "losses": 133
+   },
+   "civil": {
+    "accuracy": 0.8247058823529412,
+    "auroc": 0.9050214532871972,
+    "gains": 45,
+    "losses": 79
+   },
+   "hatecheck": {
+    "accuracy": 0.731764705882353,
+    "auroc": 0.8112705882352941,
+    "gains": 140,
+    "losses": 332
+   },
+   "offensivelang": {
+    "accuracy": 0.7364705882352941,
+    "auroc": 0.8110435986159169,
+    "gains": 101,
+    "losses": 285
+   },
+   "rtp": {
+    "accuracy": 0.8047058823529412,
+    "auroc": 0.8835017301038063,
+    "gains": 45,
+    "losses": 113
+   },
+   "twitter": {
+    "accuracy": 0.84,
+    "auroc": 0.9190934256055363,
+    "gains": 81,
+    "losses": 89
+   },
+   "wiki": {
+    "accuracy": 0.8058823529411765,
+    "auroc": 0.8999280276816609,
+    "gains": 65,
+    "losses": 131
+   },
+   "pooled": {
+    "accuracy": 0.8447058823529412,
+    "auroc": 0.922481660899654,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "berkeley",
+  "prior": 0.5,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 92468,
+  "chosen": "pooled",
+  "chosen_source_only": "twitter",
+  "distances": {
+   "chat": 0.22946854261020622,
+   "chat_aegis": 0.1716341590780075,
+   "civil": 0.08711110396950772,
+   "hatecheck": 0.17937485962155103,
+   "offensivelang": 0.21812117580209087,
+   "rtp": 0.18525000476700437,
+   "twitter": 0.05927853403558271,
+   "wiki": 0.11088356303379614,
+   "pooled": 0.04874363232102469
+  },
+  "distance_auc_spearman": -0.9285714285714287,
+  "pooled": {
+   "accuracy": 0.8270588235294117,
+   "auroc": 0.9144678200692041,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8270588235294117,
+   "auroc": 0.9144678200692041,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.8211764705882353,
+   "auroc": 0.9065522491349481,
+   "gains": 82,
+   "losses": 92
+  },
+  "clean_pool": {
+   "accuracy": 0.8258823529411765,
+   "auroc": 0.9118228373702422,
+   "gains": 28,
+   "losses": 30
+  },
+  "source_results": {
+   "chat": {
+    "accuracy": 0.6894117647058824,
+    "auroc": 0.758476124567474,
+    "gains": 86,
+    "losses": 320
+   },
+   "chat_aegis": {
+    "accuracy": 0.8011764705882353,
+    "auroc": 0.879919723183391,
+    "gains": 75,
+    "losses": 119
+   },
+   "civil": {
+    "accuracy": 0.8129411764705883,
+    "auroc": 0.9018615916955017,
+    "gains": 55,
+    "losses": 79
+   },
+   "hatecheck": {
+    "accuracy": 0.7247058823529412,
+    "auroc": 0.7925397923875432,
+    "gains": 141,
+    "losses": 315
+   },
+   "offensivelang": {
+    "accuracy": 0.7411764705882353,
+    "auroc": 0.8177868512110726,
+    "gains": 114,
+    "losses": 260
+   },
+   "rtp": {
+    "accuracy": 0.7964705882352942,
+    "auroc": 0.8778491349480969,
+    "gains": 57,
+    "losses": 109
+   },
+   "twitter": {
+    "accuracy": 0.8211764705882353,
+    "auroc": 0.9065522491349481,
+    "gains": 82,
+    "losses": 92
+   },
+   "wiki": {
+    "accuracy": 0.8105882352941176,
+    "auroc": 0.8909010380622837,
+    "gains": 68,
+    "losses": 96
+   },
+   "pooled": {
+    "accuracy": 0.8270588235294117,
+    "auroc": 0.9144678200692041,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "berkeley",
+  "prior": 0.5,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 92468,
+  "chosen": "pooled",
+  "chosen_source_only": "twitter",
+  "distances": {
+   "chat": 0.2288504271915318,
+   "chat_aegis": 0.17088398499942004,
+   "civil": 0.08562096514040514,
+   "hatecheck": 0.18245325261020623,
+   "offensivelang": 0.21600001313113212,
+   "rtp": 0.1842861006630811,
+   "twitter": 0.056002326867376134,
+   "wiki": 0.10743651950014727,
+   "pooled": 0.04664446367843764
+  },
+  "distance_auc_spearman": -0.880952380952381,
+  "pooled": {
+   "accuracy": 0.8270588235294117,
+   "auroc": 0.9084124567474049,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8270588235294117,
+   "auroc": 0.9084124567474049,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.8294117647058824,
+   "auroc": 0.9112581314878893,
+   "gains": 95,
+   "losses": 91
+  },
+  "clean_pool": {
+   "accuracy": 0.8270588235294117,
+   "auroc": 0.9071377162629758,
+   "gains": 19,
+   "losses": 19
+  },
+  "source_results": {
+   "chat": {
+    "accuracy": 0.6811764705882353,
+    "auroc": 0.7528650519031141,
+    "gains": 89,
+    "losses": 337
+   },
+   "chat_aegis": {
+    "accuracy": 0.7858823529411765,
+    "auroc": 0.8696138408304498,
+    "gains": 61,
+    "losses": 131
+   },
+   "civil": {
+    "accuracy": 0.8070588235294117,
+    "auroc": 0.8920124567474048,
+    "gains": 41,
+    "losses": 75
+   },
+   "hatecheck": {
+    "accuracy": 0.711764705882353,
+    "auroc": 0.7768429065743945,
+    "gains": 148,
+    "losses": 344
+   },
+   "offensivelang": {
+    "accuracy": 0.7364705882352941,
+    "auroc": 0.8093467128027682,
+    "gains": 114,
+    "losses": 268
+   },
+   "rtp": {
+    "accuracy": 0.7835294117647059,
+    "auroc": 0.8744553633217993,
+    "gains": 42,
+    "losses": 116
+   },
+   "twitter": {
+    "accuracy": 0.8294117647058824,
+    "auroc": 0.9112581314878893,
+    "gains": 95,
+    "losses": 91
+   },
+   "wiki": {
+    "accuracy": 0.8047058823529412,
+    "auroc": 0.8913868512110726,
+    "gains": 59,
+    "losses": 97
+   },
+   "pooled": {
+    "accuracy": 0.8270588235294117,
+    "auroc": 0.9084124567474049,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "berkeley",
+  "prior": 0.7058823529411765,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 92468,
+  "chosen": "pooled",
+  "chosen_source_only": "twitter",
+  "distances": {
+   "chat": 0.2498323803807122,
+   "chat_aegis": 0.20398452366911324,
+   "civil": 0.10057736298582445,
+   "hatecheck": 0.19777737571342582,
+   "offensivelang": 0.24308456402051476,
+   "rtp": 0.18900276540288108,
+   "twitter": 0.06416877924293024,
+   "wiki": 0.09868334979575254,
+   "pooled": 0.05548889067708914
+  },
+  "distance_auc_spearman": -0.9047619047619048,
+  "pooled": {
+   "accuracy": 0.8482352941176471,
+   "auroc": 0.9017666666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8482352941176471,
+   "auroc": 0.9017666666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.8494117647058823,
+   "auroc": 0.9001533333333334,
+   "gains": 77,
+   "losses": 75
+  },
+  "clean_pool": {
+   "accuracy": 0.8411764705882353,
+   "auroc": 0.9015483333333333,
+   "gains": 15,
+   "losses": 27
+  },
+  "source_results": {
+   "chat": {
+    "accuracy": 0.731764705882353,
+    "auroc": 0.739255,
+    "gains": 75,
+    "losses": 273
+   },
+   "chat_aegis": {
+    "accuracy": 0.8176470588235294,
+    "auroc": 0.863495,
+    "gains": 58,
+    "losses": 110
+   },
+   "civil": {
+    "accuracy": 0.8376470588235294,
+    "auroc": 0.88977,
+    "gains": 43,
+    "losses": 61
+   },
+   "hatecheck": {
+    "accuracy": 0.7458823529411764,
+    "auroc": 0.7807016666666666,
+    "gains": 130,
+    "losses": 304
+   },
+   "offensivelang": {
+    "accuracy": 0.76,
+    "auroc": 0.7977233333333333,
+    "gains": 91,
+    "losses": 241
+   },
+   "rtp": {
+    "accuracy": 0.8223529411764706,
+    "auroc": 0.8705966666666667,
+    "gains": 44,
+    "losses": 88
+   },
+   "twitter": {
+    "accuracy": 0.8494117647058823,
+    "auroc": 0.9001533333333334,
+    "gains": 77,
+    "losses": 75
+   },
+   "wiki": {
+    "accuracy": 0.8364705882352941,
+    "auroc": 0.8823766666666667,
+    "gains": 58,
+    "losses": 78
+   },
+   "pooled": {
+    "accuracy": 0.8482352941176471,
+    "auroc": 0.9017666666666667,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "berkeley",
+  "prior": 0.7058823529411765,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 92468,
+  "chosen": "pooled",
+  "chosen_source_only": "twitter",
+  "distances": {
+   "chat": 0.2496682439316558,
+   "chat_aegis": 0.19954029632244116,
+   "civil": 0.09565431444701161,
+   "hatecheck": 0.19483852287010073,
+   "offensivelang": 0.2386069185041898,
+   "rtp": 0.18692504533497803,
+   "twitter": 0.06409693451257696,
+   "wiki": 0.09662700681017238,
+   "pooled": 0.05328259518626371
+  },
+  "distance_auc_spearman": -0.9285714285714287,
+  "pooled": {
+   "accuracy": 0.8552941176470589,
+   "auroc": 0.9027533333333333,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8552941176470589,
+   "auroc": 0.9027533333333333,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.851764705882353,
+   "auroc": 0.9058466666666667,
+   "gains": 69,
+   "losses": 75
+  },
+  "clean_pool": {
+   "accuracy": 0.8470588235294118,
+   "auroc": 0.899965,
+   "gains": 13,
+   "losses": 27
+  },
+  "source_results": {
+   "chat": {
+    "accuracy": 0.7305882352941176,
+    "auroc": 0.7399583333333334,
+    "gains": 65,
+    "losses": 277
+   },
+   "chat_aegis": {
+    "accuracy": 0.8282352941176471,
+    "auroc": 0.8748283333333333,
+    "gains": 50,
+    "losses": 96
+   },
+   "civil": {
+    "accuracy": 0.8329411764705882,
+    "auroc": 0.8879633333333333,
+    "gains": 38,
+    "losses": 76
+   },
+   "hatecheck": {
+    "accuracy": 0.7658823529411765,
+    "auroc": 0.80189,
+    "gains": 128,
+    "losses": 280
+   },
+   "offensivelang": {
+    "accuracy": 0.7658823529411765,
+    "auroc": 0.791635,
+    "gains": 99,
+    "losses": 251
+   },
+   "rtp": {
+    "accuracy": 0.8270588235294117,
+    "auroc": 0.8670966666666666,
+    "gains": 40,
+    "losses": 88
+   },
+   "twitter": {
+    "accuracy": 0.851764705882353,
+    "auroc": 0.9058466666666667,
+    "gains": 69,
+    "losses": 75
+   },
+   "wiki": {
+    "accuracy": 0.8435294117647059,
+    "auroc": 0.882885,
+    "gains": 54,
+    "losses": 74
+   },
+   "pooled": {
+    "accuracy": 0.8552941176470589,
+    "auroc": 0.9027533333333333,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "berkeley",
+  "prior": 0.7058823529411765,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 92468,
+  "chosen": "pooled",
+  "chosen_source_only": "twitter",
+  "distances": {
+   "chat": 0.24856136069737308,
+   "chat_aegis": 0.20428174689724765,
+   "civil": 0.09966034588358165,
+   "hatecheck": 0.1936144191276448,
+   "offensivelang": 0.23936958357315716,
+   "rtp": 0.18366591941999236,
+   "twitter": 0.06525417072116246,
+   "wiki": 0.1000621614356189,
+   "pooled": 0.05451968978215045
+  },
+  "distance_auc_spearman": -0.9285714285714287,
+  "pooled": {
+   "accuracy": 0.8729411764705882,
+   "auroc": 0.9157333333333333,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8729411764705882,
+   "auroc": 0.9157333333333333,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.8541176470588235,
+   "auroc": 0.912035,
+   "gains": 63,
+   "losses": 95
+  },
+  "clean_pool": {
+   "accuracy": 0.8588235294117647,
+   "auroc": 0.9149966666666667,
+   "gains": 9,
+   "losses": 33
+  },
+  "source_results": {
+   "chat": {
+    "accuracy": 0.7341176470588235,
+    "auroc": 0.7501033333333333,
+    "gains": 58,
+    "losses": 294
+   },
+   "chat_aegis": {
+    "accuracy": 0.8423529411764706,
+    "auroc": 0.8815683333333333,
+    "gains": 54,
+    "losses": 106
+   },
+   "civil": {
+    "accuracy": 0.8482352941176471,
+    "auroc": 0.8999483333333334,
+    "gains": 35,
+    "losses": 77
+   },
+   "hatecheck": {
+    "accuracy": 0.7647058823529411,
+    "auroc": 0.78695,
+    "gains": 113,
+    "losses": 297
+   },
+   "offensivelang": {
+    "accuracy": 0.7858823529411765,
+    "auroc": 0.81981,
+    "gains": 88,
+    "losses": 236
+   },
+   "rtp": {
+    "accuracy": 0.8341176470588235,
+    "auroc": 0.8820233333333334,
+    "gains": 31,
+    "losses": 97
+   },
+   "twitter": {
+    "accuracy": 0.8541176470588235,
+    "auroc": 0.912035,
+    "gains": 63,
+    "losses": 95
+   },
+   "wiki": {
+    "accuracy": 0.8470588235294118,
+    "auroc": 0.8887583333333333,
+    "gains": 48,
+    "losses": 92
+   },
+   "pooled": {
+    "accuracy": 0.8729411764705882,
+    "auroc": 0.9157333333333333,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "chat",
+  "prior": 0.5,
+  "seed": 17,
+  "n": 1390,
+  "train_n": 107078,
+  "chosen": "chat_aegis",
+  "chosen_source_only": "chat_aegis",
+  "distances": {
+   "berkeley": 0.22855003758302983,
+   "chat_aegis": 0.1286168897859184,
+   "civil": 0.2549728728700572,
+   "hatecheck": 0.34456044142103714,
+   "offensivelang": 0.27897965700770183,
+   "rtp": 0.19369826329954667,
+   "twitter": 0.246673661936625,
+   "wiki": 0.21892766964424348,
+   "pooled": 0.17185002533565616
+  },
+  "distance_auc_spearman": -0.7380952380952381,
+  "pooled": {
+   "accuracy": 0.823021582733813,
+   "auroc": 0.9044852750892811,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8503597122302158,
+   "auroc": 0.9297179235029243,
+   "gains": 124,
+   "losses": 86
+  },
+  "routed_source_only": {
+   "accuracy": 0.8503597122302158,
+   "auroc": 0.9297179235029243,
+   "gains": 124,
+   "losses": 86
+  },
+  "clean_pool": {
+   "accuracy": 0.8014388489208633,
+   "auroc": 0.881875679312665,
+   "gains": 66,
+   "losses": 96
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.6589928057553956,
+    "auroc": 0.7273619377878991,
+    "gains": 99,
+    "losses": 327
+   },
+   "chat_aegis": {
+    "accuracy": 0.8503597122302158,
+    "auroc": 0.9297179235029243,
+    "gains": 124,
+    "losses": 86
+   },
+   "civil": {
+    "accuracy": 0.8215827338129497,
+    "auroc": 0.8943884892086331,
+    "gains": 122,
+    "losses": 124
+   },
+   "hatecheck": {
+    "accuracy": 0.6,
+    "auroc": 0.6455835619274365,
+    "gains": 110,
+    "losses": 420
+   },
+   "offensivelang": {
+    "accuracy": 0.6028776978417266,
+    "auroc": 0.6466559701878785,
+    "gains": 114,
+    "losses": 420
+   },
+   "rtp": {
+    "accuracy": 0.8043165467625899,
+    "auroc": 0.8909952900988561,
+    "gains": 94,
+    "losses": 120
+   },
+   "twitter": {
+    "accuracy": 0.7654676258992805,
+    "auroc": 0.8437989752083226,
+    "gains": 111,
+    "losses": 191
+   },
+   "wiki": {
+    "accuracy": 0.8129496402877698,
+    "auroc": 0.8890492210548109,
+    "gains": 117,
+    "losses": 131
+   },
+   "pooled": {
+    "accuracy": 0.823021582733813,
+    "auroc": 0.9044852750892811,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "chat",
+  "prior": 0.5,
+  "seed": 29,
+  "n": 1390,
+  "train_n": 107078,
+  "chosen": "chat_aegis",
+  "chosen_source_only": "chat_aegis",
+  "distances": {
+   "berkeley": 0.2285500363012887,
+   "chat_aegis": 0.1286168901162511,
+   "civil": 0.2549728731692058,
+   "hatecheck": 0.3445604381586167,
+   "offensivelang": 0.27897965784612866,
+   "rtp": 0.19369826010389776,
+   "twitter": 0.24667366171928673,
+   "wiki": 0.21892767012010184,
+   "pooled": 0.17185002468683963
+  },
+  "distance_auc_spearman": -0.7380952380952381,
+  "pooled": {
+   "accuracy": 0.823021582733813,
+   "auroc": 0.9044852750892811,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8503597122302158,
+   "auroc": 0.9297179235029243,
+   "gains": 124,
+   "losses": 86
+  },
+  "routed_source_only": {
+   "accuracy": 0.8503597122302158,
+   "auroc": 0.9297179235029243,
+   "gains": 124,
+   "losses": 86
+  },
+  "clean_pool": {
+   "accuracy": 0.8014388489208633,
+   "auroc": 0.881875679312665,
+   "gains": 66,
+   "losses": 96
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.6589928057553956,
+    "auroc": 0.7273619377878991,
+    "gains": 99,
+    "losses": 327
+   },
+   "chat_aegis": {
+    "accuracy": 0.8503597122302158,
+    "auroc": 0.9297179235029243,
+    "gains": 124,
+    "losses": 86
+   },
+   "civil": {
+    "accuracy": 0.8215827338129497,
+    "auroc": 0.8943884892086331,
+    "gains": 122,
+    "losses": 124
+   },
+   "hatecheck": {
+    "accuracy": 0.6,
+    "auroc": 0.6455835619274365,
+    "gains": 110,
+    "losses": 420
+   },
+   "offensivelang": {
+    "accuracy": 0.6028776978417266,
+    "auroc": 0.6466559701878785,
+    "gains": 114,
+    "losses": 420
+   },
+   "rtp": {
+    "accuracy": 0.8043165467625899,
+    "auroc": 0.8909952900988561,
+    "gains": 94,
+    "losses": 120
+   },
+   "twitter": {
+    "accuracy": 0.7654676258992805,
+    "auroc": 0.8437989752083226,
+    "gains": 111,
+    "losses": 191
+   },
+   "wiki": {
+    "accuracy": 0.8129496402877698,
+    "auroc": 0.8890492210548109,
+    "gains": 117,
+    "losses": 131
+   },
+   "pooled": {
+    "accuracy": 0.823021582733813,
+    "auroc": 0.9044852750892811,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "chat",
+  "prior": 0.5,
+  "seed": 41,
+  "n": 1390,
+  "train_n": 107078,
+  "chosen": "chat_aegis",
+  "chosen_source_only": "chat_aegis",
+  "distances": {
+   "berkeley": 0.22855003126073173,
+   "chat_aegis": 0.12861688657470685,
+   "civil": 0.25497286622776894,
+   "hatecheck": 0.34456043900310696,
+   "offensivelang": 0.2789796552267542,
+   "rtp": 0.1936982587877134,
+   "twitter": 0.246673656101409,
+   "wiki": 0.21892766443191736,
+   "pooled": 0.17185002014900583
+  },
+  "distance_auc_spearman": -0.7380952380952381,
+  "pooled": {
+   "accuracy": 0.823021582733813,
+   "auroc": 0.9044852750892811,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8503597122302158,
+   "auroc": 0.9297179235029243,
+   "gains": 124,
+   "losses": 86
+  },
+  "routed_source_only": {
+   "accuracy": 0.8503597122302158,
+   "auroc": 0.9297179235029243,
+   "gains": 124,
+   "losses": 86
+  },
+  "clean_pool": {
+   "accuracy": 0.8014388489208633,
+   "auroc": 0.881875679312665,
+   "gains": 66,
+   "losses": 96
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.6589928057553956,
+    "auroc": 0.7273619377878991,
+    "gains": 99,
+    "losses": 327
+   },
+   "chat_aegis": {
+    "accuracy": 0.8503597122302158,
+    "auroc": 0.9297179235029243,
+    "gains": 124,
+    "losses": 86
+   },
+   "civil": {
+    "accuracy": 0.8215827338129497,
+    "auroc": 0.8943884892086331,
+    "gains": 122,
+    "losses": 124
+   },
+   "hatecheck": {
+    "accuracy": 0.6,
+    "auroc": 0.6455835619274365,
+    "gains": 110,
+    "losses": 420
+   },
+   "offensivelang": {
+    "accuracy": 0.6028776978417266,
+    "auroc": 0.6466559701878785,
+    "gains": 114,
+    "losses": 420
+   },
+   "rtp": {
+    "accuracy": 0.8043165467625899,
+    "auroc": 0.8909952900988561,
+    "gains": 94,
+    "losses": 120
+   },
+   "twitter": {
+    "accuracy": 0.7654676258992805,
+    "auroc": 0.8437989752083226,
+    "gains": 111,
+    "losses": 191
+   },
+   "wiki": {
+    "accuracy": 0.8129496402877698,
+    "auroc": 0.8890492210548109,
+    "gains": 117,
+    "losses": 131
+   },
+   "pooled": {
+    "accuracy": 0.823021582733813,
+    "auroc": 0.9044852750892811,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "chat",
+  "prior": 0.7058823529411765,
+  "seed": 17,
+  "n": 984,
+  "train_n": 107078,
+  "chosen": "chat_aegis",
+  "chosen_source_only": "chat_aegis",
+  "distances": {
+   "berkeley": 0.2505284670548763,
+   "chat_aegis": 0.1299280724324866,
+   "civil": 0.262091566131436,
+   "hatecheck": 0.38114916675295263,
+   "offensivelang": 0.28790552655684143,
+   "rtp": 0.19837854177971573,
+   "twitter": 0.25489818456889773,
+   "wiki": 0.22660583474564408,
+   "pooled": 0.18042433276652625
+  },
+  "distance_auc_spearman": -0.7142857142857144,
+  "pooled": {
+   "accuracy": 0.8414634146341463,
+   "auroc": 0.9078389883249111,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8719512195121951,
+   "auroc": 0.9261606631649697,
+   "gains": 82,
+   "losses": 52
+  },
+  "routed_source_only": {
+   "accuracy": 0.8719512195121951,
+   "auroc": 0.9261606631649697,
+   "gains": 82,
+   "losses": 52
+  },
+  "clean_pool": {
+   "accuracy": 0.8333333333333334,
+   "auroc": 0.8838216623932688,
+   "gains": 50,
+   "losses": 58
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.717479674796748,
+    "auroc": 0.732359164571457,
+    "gains": 67,
+    "losses": 189
+   },
+   "chat_aegis": {
+    "accuracy": 0.8719512195121951,
+    "auroc": 0.9261606631649697,
+    "gains": 82,
+    "losses": 52
+   },
+   "civil": {
+    "accuracy": 0.8333333333333334,
+    "auroc": 0.8947350078414776,
+    "gains": 76,
+    "losses": 84
+   },
+   "hatecheck": {
+    "accuracy": 0.6605691056910569,
+    "auroc": 0.6382066665007095,
+    "gains": 67,
+    "losses": 245
+   },
+   "offensivelang": {
+    "accuracy": 0.6605691056910569,
+    "auroc": 0.6432003186378233,
+    "gains": 71,
+    "losses": 249
+   },
+   "rtp": {
+    "accuracy": 0.8353658536585366,
+    "auroc": 0.8870179980583007,
+    "gains": 59,
+    "losses": 65
+   },
+   "twitter": {
+    "accuracy": 0.8008130081300813,
+    "auroc": 0.8542132384058151,
+    "gains": 72,
+    "losses": 112
+   },
+   "wiki": {
+    "accuracy": 0.8394308943089431,
+    "auroc": 0.8945358592019118,
+    "gains": 78,
+    "losses": 80
+   },
+   "pooled": {
+    "accuracy": 0.8414634146341463,
+    "auroc": 0.9078389883249111,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "chat",
+  "prior": 0.7058823529411765,
+  "seed": 29,
+  "n": 984,
+  "train_n": 107078,
+  "chosen": "chat_aegis",
+  "chosen_source_only": "chat_aegis",
+  "distances": {
+   "berkeley": 0.2504008466403347,
+   "chat_aegis": 0.12785133321751516,
+   "civil": 0.2614574780475982,
+   "hatecheck": 0.38075681526191807,
+   "offensivelang": 0.2872491462105923,
+   "rtp": 0.19865691350077647,
+   "twitter": 0.25471053253345816,
+   "wiki": 0.22568903034479781,
+   "pooled": 0.18012397693151597
+  },
+  "distance_auc_spearman": -0.7142857142857144,
+  "pooled": {
+   "accuracy": 0.8516260162601627,
+   "auroc": 0.9056782255856215,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8678861788617886,
+   "auroc": 0.9245276443205297,
+   "gains": 76,
+   "losses": 60
+  },
+  "routed_source_only": {
+   "accuracy": 0.8678861788617886,
+   "auroc": 0.9245276443205297,
+   "gains": 76,
+   "losses": 60
+  },
+  "clean_pool": {
+   "accuracy": 0.8394308943089431,
+   "auroc": 0.8869134450225287,
+   "gains": 49,
+   "losses": 61
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7195121951219512,
+    "auroc": 0.7413308107838988,
+    "gains": 62,
+    "losses": 192
+   },
+   "chat_aegis": {
+    "accuracy": 0.8678861788617886,
+    "auroc": 0.9245276443205297,
+    "gains": 76,
+    "losses": 60
+   },
+   "civil": {
+    "accuracy": 0.8333333333333334,
+    "auroc": 0.8973338975878121,
+    "gains": 67,
+    "losses": 85
+   },
+   "hatecheck": {
+    "accuracy": 0.6727642276422764,
+    "auroc": 0.6621293968285579,
+    "gains": 63,
+    "losses": 239
+   },
+   "offensivelang": {
+    "accuracy": 0.6463414634146342,
+    "auroc": 0.6243060914590127,
+    "gains": 66,
+    "losses": 268
+   },
+   "rtp": {
+    "accuracy": 0.8373983739837398,
+    "auroc": 0.8962286226382216,
+    "gains": 56,
+    "losses": 70
+   },
+   "twitter": {
+    "accuracy": 0.7886178861788617,
+    "auroc": 0.8371511787110104,
+    "gains": 60,
+    "losses": 122
+   },
+   "wiki": {
+    "accuracy": 0.8394308943089431,
+    "auroc": 0.8921560329590998,
+    "gains": 71,
+    "losses": 83
+   },
+   "pooled": {
+    "accuracy": 0.8516260162601627,
+    "auroc": 0.9056782255856215,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "chat",
+  "prior": 0.7058823529411765,
+  "seed": 41,
+  "n": 984,
+  "train_n": 107078,
+  "chosen": "chat_aegis",
+  "chosen_source_only": "chat_aegis",
+  "distances": {
+   "berkeley": 0.25138864199618915,
+   "chat_aegis": 0.1290037677820373,
+   "civil": 0.2632528673651091,
+   "hatecheck": 0.38321062004331596,
+   "offensivelang": 0.2900496600106849,
+   "rtp": 0.19972128063722214,
+   "twitter": 0.2549430360254474,
+   "wiki": 0.2265109882118129,
+   "pooled": 0.1811621893143169
+  },
+  "distance_auc_spearman": -0.7142857142857144,
+  "pooled": {
+   "accuracy": 0.8414634146341463,
+   "auroc": 0.8919668417515123,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8658536585365854,
+   "auroc": 0.9237509646262229,
+   "gains": 80,
+   "losses": 56
+  },
+  "routed_source_only": {
+   "accuracy": 0.8658536585365854,
+   "auroc": 0.9237509646262229,
+   "gains": 80,
+   "losses": 56
+  },
+  "clean_pool": {
+   "accuracy": 0.8272357723577236,
+   "auroc": 0.8814866445943591,
+   "gains": 54,
+   "losses": 68
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7134146341463414,
+    "auroc": 0.7331308655497747,
+    "gains": 72,
+    "losses": 198
+   },
+   "chat_aegis": {
+    "accuracy": 0.8658536585365854,
+    "auroc": 0.9237509646262229,
+    "gains": 80,
+    "losses": 56
+   },
+   "civil": {
+    "accuracy": 0.8333333333333334,
+    "auroc": 0.894062881182943,
+    "gains": 79,
+    "losses": 87
+   },
+   "hatecheck": {
+    "accuracy": 0.6605691056910569,
+    "auroc": 0.6439919344800976,
+    "gains": 68,
+    "losses": 246
+   },
+   "offensivelang": {
+    "accuracy": 0.6626016260162602,
+    "auroc": 0.6593214010106794,
+    "gains": 71,
+    "losses": 247
+   },
+   "rtp": {
+    "accuracy": 0.8414634146341463,
+    "auroc": 0.884304597844216,
+    "gains": 69,
+    "losses": 69
+   },
+   "twitter": {
+    "accuracy": 0.8008130081300813,
+    "auroc": 0.8445744442508277,
+    "gains": 72,
+    "losses": 112
+   },
+   "wiki": {
+    "accuracy": 0.8394308943089431,
+    "auroc": 0.8885165915710338,
+    "gains": 86,
+    "losses": 88
+   },
+   "pooled": {
+    "accuracy": 0.8414634146341463,
+    "auroc": 0.8919668417515123,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "chat_aegis",
+  "prior": 0.5,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 102316,
+  "chosen": "pooled",
+  "chosen_source_only": "chat",
+  "distances": {
+   "berkeley": 0.17575116002715763,
+   "chat": 0.13126801342411787,
+   "civil": 0.14556726346738158,
+   "hatecheck": 0.3239969187886774,
+   "offensivelang": 0.24040210816026666,
+   "rtp": 0.17634236093019073,
+   "twitter": 0.1878845734959776,
+   "wiki": 0.1483743719797029,
+   "pooled": 0.1169307004884227
+  },
+  "distance_auc_spearman": -0.7857142857142858,
+  "pooled": {
+   "accuracy": 0.7435294117647059,
+   "auroc": 0.8045937716262975,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7435294117647059,
+   "auroc": 0.8045937716262975,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.7541176470588236,
+   "auroc": 0.8314837370242214,
+   "gains": 192,
+   "losses": 174
+  },
+  "clean_pool": {
+   "accuracy": 0.7364705882352941,
+   "auroc": 0.8049522491349481,
+   "gains": 7,
+   "losses": 19
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.6552941176470588,
+    "auroc": 0.698393079584775,
+    "gains": 115,
+    "losses": 265
+   },
+   "chat": {
+    "accuracy": 0.7541176470588236,
+    "auroc": 0.8314837370242214,
+    "gains": 192,
+    "losses": 174
+   },
+   "civil": {
+    "accuracy": 0.7258823529411764,
+    "auroc": 0.7826698961937716,
+    "gains": 104,
+    "losses": 134
+   },
+   "hatecheck": {
+    "accuracy": 0.6258823529411764,
+    "auroc": 0.6692055363321799,
+    "gains": 201,
+    "losses": 401
+   },
+   "offensivelang": {
+    "accuracy": 0.5941176470588235,
+    "auroc": 0.6094117647058823,
+    "gains": 168,
+    "losses": 422
+   },
+   "rtp": {
+    "accuracy": 0.7447058823529412,
+    "auroc": 0.8133162629757785,
+    "gains": 103,
+    "losses": 101
+   },
+   "twitter": {
+    "accuracy": 0.6929411764705883,
+    "auroc": 0.7514519031141869,
+    "gains": 127,
+    "losses": 213
+   },
+   "wiki": {
+    "accuracy": 0.7035294117647058,
+    "auroc": 0.7677439446366782,
+    "gains": 87,
+    "losses": 155
+   },
+   "pooled": {
+    "accuracy": 0.7435294117647059,
+    "auroc": 0.8045937716262975,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "chat_aegis",
+  "prior": 0.5,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 102316,
+  "chosen": "pooled",
+  "chosen_source_only": "chat",
+  "distances": {
+   "berkeley": 0.17248592469282928,
+   "chat": 0.13020179085366437,
+   "civil": 0.14308898505266776,
+   "hatecheck": 0.31496875719195583,
+   "offensivelang": 0.23435362786083594,
+   "rtp": 0.1721879890291046,
+   "twitter": 0.18608682109377897,
+   "wiki": 0.1475419331715494,
+   "pooled": 0.11416766664075367
+  },
+  "distance_auc_spearman": -0.880952380952381,
+  "pooled": {
+   "accuracy": 0.7447058823529412,
+   "auroc": 0.7957342560553633,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7447058823529412,
+   "auroc": 0.7957342560553633,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.731764705882353,
+   "auroc": 0.8110435986159169,
+   "gains": 179,
+   "losses": 201
+  },
+  "clean_pool": {
+   "accuracy": 0.7423529411764705,
+   "auroc": 0.7965217993079585,
+   "gains": 18,
+   "losses": 22
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.6435294117647059,
+    "auroc": 0.6981965397923875,
+    "gains": 119,
+    "losses": 291
+   },
+   "chat": {
+    "accuracy": 0.731764705882353,
+    "auroc": 0.8110435986159169,
+    "gains": 179,
+    "losses": 201
+   },
+   "civil": {
+    "accuracy": 0.711764705882353,
+    "auroc": 0.7729301038062284,
+    "gains": 80,
+    "losses": 136
+   },
+   "hatecheck": {
+    "accuracy": 0.62,
+    "auroc": 0.6689301038062284,
+    "gains": 186,
+    "losses": 398
+   },
+   "offensivelang": {
+    "accuracy": 0.5894117647058823,
+    "auroc": 0.6167778546712803,
+    "gains": 172,
+    "losses": 436
+   },
+   "rtp": {
+    "accuracy": 0.7364705882352941,
+    "auroc": 0.8001743944636678,
+    "gains": 92,
+    "losses": 106
+   },
+   "twitter": {
+    "accuracy": 0.6811764705882353,
+    "auroc": 0.7408332179930796,
+    "gains": 138,
+    "losses": 246
+   },
+   "wiki": {
+    "accuracy": 0.6988235294117647,
+    "auroc": 0.7567349480968858,
+    "gains": 99,
+    "losses": 177
+   },
+   "pooled": {
+    "accuracy": 0.7447058823529412,
+    "auroc": 0.7957342560553633,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "chat_aegis",
+  "prior": 0.5,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 102316,
+  "chosen": "pooled",
+  "chosen_source_only": "chat",
+  "distances": {
+   "berkeley": 0.17107184580368232,
+   "chat": 0.12938292813510469,
+   "civil": 0.1430432125956202,
+   "hatecheck": 0.31661856411206624,
+   "offensivelang": 0.23414342046409933,
+   "rtp": 0.17136880773332763,
+   "twitter": 0.18464500799195224,
+   "wiki": 0.14756851842080576,
+   "pooled": 0.11321259203566246
+  },
+  "distance_auc_spearman": -0.7857142857142858,
+  "pooled": {
+   "accuracy": 0.7435294117647059,
+   "auroc": 0.8078546712802768,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7435294117647059,
+   "auroc": 0.8078546712802768,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.74,
+   "auroc": 0.8123155709342561,
+   "gains": 182,
+   "losses": 188
+  },
+  "clean_pool": {
+   "accuracy": 0.7470588235294118,
+   "auroc": 0.8072733564013841,
+   "gains": 18,
+   "losses": 12
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.66,
+    "auroc": 0.7157868512110727,
+    "gains": 125,
+    "losses": 267
+   },
+   "chat": {
+    "accuracy": 0.74,
+    "auroc": 0.8123155709342561,
+    "gains": 182,
+    "losses": 188
+   },
+   "civil": {
+    "accuracy": 0.7223529411764706,
+    "auroc": 0.7873730103806228,
+    "gains": 101,
+    "losses": 137
+   },
+   "hatecheck": {
+    "accuracy": 0.6294117647058823,
+    "auroc": 0.6819958477508651,
+    "gains": 199,
+    "losses": 393
+   },
+   "offensivelang": {
+    "accuracy": 0.591764705882353,
+    "auroc": 0.620484429065744,
+    "gains": 156,
+    "losses": 414
+   },
+   "rtp": {
+    "accuracy": 0.7341176470588235,
+    "auroc": 0.8061633217993079,
+    "gains": 100,
+    "losses": 116
+   },
+   "twitter": {
+    "accuracy": 0.6905882352941176,
+    "auroc": 0.7544830449826989,
+    "gains": 142,
+    "losses": 232
+   },
+   "wiki": {
+    "accuracy": 0.7023529411764706,
+    "auroc": 0.7694103806228374,
+    "gains": 105,
+    "losses": 175
+   },
+   "pooled": {
+    "accuracy": 0.7435294117647059,
+    "auroc": 0.8078546712802768,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "chat_aegis",
+  "prior": 0.7058823529411765,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 102316,
+  "chosen": "chat",
+  "chosen_source_only": "chat",
+  "distances": {
+   "berkeley": 0.20579855607967903,
+   "chat": 0.12617029700274573,
+   "civil": 0.15965451181135287,
+   "hatecheck": 0.3493799106481846,
+   "offensivelang": 0.24355233157470016,
+   "rtp": 0.17542953729704874,
+   "twitter": 0.19947169424818836,
+   "wiki": 0.1674666263696792,
+   "pooled": 0.1294432932881741
+  },
+  "distance_auc_spearman": -0.9047619047619048,
+  "pooled": {
+   "accuracy": 0.768235294117647,
+   "auroc": 0.8090166666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7705882352941177,
+   "auroc": 0.8236583333333334,
+   "gains": 157,
+   "losses": 153
+  },
+  "routed_source_only": {
+   "accuracy": 0.7705882352941177,
+   "auroc": 0.8236583333333334,
+   "gains": 157,
+   "losses": 153
+  },
+  "clean_pool": {
+   "accuracy": 0.7729411764705882,
+   "auroc": 0.808205,
+   "gains": 23,
+   "losses": 15
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.6788235294117647,
+    "auroc": 0.7077983333333333,
+    "gains": 108,
+    "losses": 260
+   },
+   "chat": {
+    "accuracy": 0.7705882352941177,
+    "auroc": 0.8236583333333334,
+    "gains": 157,
+    "losses": 153
+   },
+   "civil": {
+    "accuracy": 0.7329411764705882,
+    "auroc": 0.7812166666666667,
+    "gains": 77,
+    "losses": 137
+   },
+   "hatecheck": {
+    "accuracy": 0.6776470588235294,
+    "auroc": 0.679465,
+    "gains": 163,
+    "losses": 317
+   },
+   "offensivelang": {
+    "accuracy": 0.6341176470588236,
+    "auroc": 0.6194,
+    "gains": 175,
+    "losses": 403
+   },
+   "rtp": {
+    "accuracy": 0.7694117647058824,
+    "auroc": 0.80642,
+    "gains": 91,
+    "losses": 89
+   },
+   "twitter": {
+    "accuracy": 0.7188235294117648,
+    "auroc": 0.7481733333333334,
+    "gains": 114,
+    "losses": 198
+   },
+   "wiki": {
+    "accuracy": 0.731764705882353,
+    "auroc": 0.7650183333333334,
+    "gains": 88,
+    "losses": 150
+   },
+   "pooled": {
+    "accuracy": 0.768235294117647,
+    "auroc": 0.8090166666666667,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "chat_aegis",
+  "prior": 0.7058823529411765,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 102316,
+  "chosen": "pooled",
+  "chosen_source_only": "chat",
+  "distances": {
+   "berkeley": 0.20617398498543038,
+   "chat": 0.1304155761399469,
+   "civil": 0.15944903580677888,
+   "hatecheck": 0.34845082573480635,
+   "offensivelang": 0.2455100205410602,
+   "rtp": 0.1784435360074956,
+   "twitter": 0.19957263362949332,
+   "wiki": 0.16818324521159148,
+   "pooled": 0.13028413240148115
+  },
+  "distance_auc_spearman": -0.8571428571428572,
+  "pooled": {
+   "accuracy": 0.7552941176470588,
+   "auroc": 0.7887,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7552941176470588,
+   "auroc": 0.7887,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.7741176470588236,
+   "auroc": 0.8211983333333334,
+   "gains": 174,
+   "losses": 142
+  },
+  "clean_pool": {
+   "accuracy": 0.7541176470588236,
+   "auroc": 0.7884866666666667,
+   "gains": 16,
+   "losses": 18
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.6670588235294118,
+    "auroc": 0.6660366666666667,
+    "gains": 101,
+    "losses": 251
+   },
+   "chat": {
+    "accuracy": 0.7741176470588236,
+    "auroc": 0.8211983333333334,
+    "gains": 174,
+    "losses": 142
+   },
+   "civil": {
+    "accuracy": 0.7388235294117647,
+    "auroc": 0.76549,
+    "gains": 80,
+    "losses": 108
+   },
+   "hatecheck": {
+    "accuracy": 0.6741176470588235,
+    "auroc": 0.6703533333333334,
+    "gains": 200,
+    "losses": 338
+   },
+   "offensivelang": {
+    "accuracy": 0.6270588235294118,
+    "auroc": 0.60709,
+    "gains": 189,
+    "losses": 407
+   },
+   "rtp": {
+    "accuracy": 0.7647058823529411,
+    "auroc": 0.8038716666666667,
+    "gains": 101,
+    "losses": 85
+   },
+   "twitter": {
+    "accuracy": 0.7247058823529412,
+    "auroc": 0.7434483333333334,
+    "gains": 133,
+    "losses": 185
+   },
+   "wiki": {
+    "accuracy": 0.7305882352941176,
+    "auroc": 0.7500583333333334,
+    "gains": 99,
+    "losses": 141
+   },
+   "pooled": {
+    "accuracy": 0.7552941176470588,
+    "auroc": 0.7887,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "chat_aegis",
+  "prior": 0.7058823529411765,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 102316,
+  "chosen": "chat",
+  "chosen_source_only": "chat",
+  "distances": {
+   "berkeley": 0.21004036573558718,
+   "chat": 0.12949355902999646,
+   "civil": 0.16037483541127953,
+   "hatecheck": 0.3579434675662106,
+   "offensivelang": 0.24900586042932046,
+   "rtp": 0.17967898057450002,
+   "twitter": 0.2017538377606957,
+   "wiki": 0.1699569389429359,
+   "pooled": 0.13235478572673098
+  },
+  "distance_auc_spearman": -0.8571428571428572,
+  "pooled": {
+   "accuracy": 0.7505882352941177,
+   "auroc": 0.782845,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7705882352941177,
+   "auroc": 0.81624,
+   "gains": 174,
+   "losses": 140
+  },
+  "routed_source_only": {
+   "accuracy": 0.7705882352941177,
+   "auroc": 0.81624,
+   "gains": 174,
+   "losses": 140
+  },
+  "clean_pool": {
+   "accuracy": 0.7552941176470588,
+   "auroc": 0.782935,
+   "gains": 19,
+   "losses": 11
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.6788235294117647,
+    "auroc": 0.69059,
+    "gains": 116,
+    "losses": 238
+   },
+   "chat": {
+    "accuracy": 0.7705882352941177,
+    "auroc": 0.81624,
+    "gains": 174,
+    "losses": 140
+   },
+   "civil": {
+    "accuracy": 0.7329411764705882,
+    "auroc": 0.7520733333333334,
+    "gains": 82,
+    "losses": 112
+   },
+   "hatecheck": {
+    "accuracy": 0.6811764705882353,
+    "auroc": 0.692825,
+    "gains": 196,
+    "losses": 314
+   },
+   "offensivelang": {
+    "accuracy": 0.6247058823529412,
+    "auroc": 0.6035966666666667,
+    "gains": 176,
+    "losses": 390
+   },
+   "rtp": {
+    "accuracy": 0.7623529411764706,
+    "auroc": 0.789545,
+    "gains": 100,
+    "losses": 80
+   },
+   "twitter": {
+    "accuracy": 0.7164705882352941,
+    "auroc": 0.7306816666666667,
+    "gains": 133,
+    "losses": 191
+   },
+   "wiki": {
+    "accuracy": 0.7188235294117648,
+    "auroc": 0.7376216666666666,
+    "gains": 89,
+    "losses": 143
+   },
+   "pooled": {
+    "accuracy": 0.7505882352941177,
+    "auroc": 0.782845,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "civil",
+  "prior": 0.5,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 82250,
+  "chosen": "pooled",
+  "chosen_source_only": "berkeley",
+  "distances": {
+   "berkeley": 0.08527523389933875,
+   "chat": 0.24368845081778995,
+   "chat_aegis": 0.13552997369412598,
+   "hatecheck": 0.26041860783476456,
+   "offensivelang": 0.22654833810667702,
+   "rtp": 0.15965888898334338,
+   "twitter": 0.0915513010515045,
+   "wiki": 0.09311333360283419,
+   "pooled": 0.061470459638748386
+  },
+  "distance_auc_spearman": -0.523809523809524,
+  "pooled": {
+   "accuracy": 0.7494117647058823,
+   "auroc": 0.8437840830449826,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7494117647058823,
+   "auroc": 0.8437840830449826,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.7270588235294118,
+   "auroc": 0.7965217993079585,
+   "gains": 95,
+   "losses": 133
+  },
+  "clean_pool": {
+   "accuracy": 0.7588235294117647,
+   "auroc": 0.8486906574394464,
+   "gains": 47,
+   "losses": 31
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7270588235294118,
+    "auroc": 0.7965217993079585,
+    "gains": 95,
+    "losses": 133
+   },
+   "chat": {
+    "accuracy": 0.7023529411764706,
+    "auroc": 0.7637965397923876,
+    "gains": 179,
+    "losses": 259
+   },
+   "chat_aegis": {
+    "accuracy": 0.7588235294117647,
+    "auroc": 0.8239958477508651,
+    "gains": 164,
+    "losses": 148
+   },
+   "hatecheck": {
+    "accuracy": 0.5611764705882353,
+    "auroc": 0.5870242214532871,
+    "gains": 150,
+    "losses": 470
+   },
+   "offensivelang": {
+    "accuracy": 0.6376470588235295,
+    "auroc": 0.6983820069204152,
+    "gains": 157,
+    "losses": 347
+   },
+   "rtp": {
+    "accuracy": 0.7917647058823529,
+    "auroc": 0.8770117647058824,
+    "gains": 160,
+    "losses": 88
+   },
+   "twitter": {
+    "accuracy": 0.7364705882352941,
+    "auroc": 0.8184636678200692,
+    "gains": 126,
+    "losses": 148
+   },
+   "wiki": {
+    "accuracy": 0.7823529411764706,
+    "auroc": 0.8628608996539793,
+    "gains": 159,
+    "losses": 103
+   },
+   "pooled": {
+    "accuracy": 0.7494117647058823,
+    "auroc": 0.8437840830449826,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "civil",
+  "prior": 0.5,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 82250,
+  "chosen": "pooled",
+  "chosen_source_only": "berkeley",
+  "distances": {
+   "berkeley": 0.08686691917971773,
+   "chat": 0.24680488984494944,
+   "chat_aegis": 0.1342162949015474,
+   "hatecheck": 0.2632411126848868,
+   "offensivelang": 0.22866388268679255,
+   "rtp": 0.16261305810781193,
+   "twitter": 0.09309714840910749,
+   "wiki": 0.09428111615540019,
+   "pooled": 0.0634347724977987
+  },
+  "distance_auc_spearman": -0.5714285714285715,
+  "pooled": {
+   "accuracy": 0.7717647058823529,
+   "auroc": 0.8519820069204153,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7717647058823529,
+   "auroc": 0.8519820069204153,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.7270588235294118,
+   "auroc": 0.8111612456747405,
+   "gains": 82,
+   "losses": 158
+  },
+  "clean_pool": {
+   "accuracy": 0.7705882352941177,
+   "auroc": 0.856721107266436,
+   "gains": 30,
+   "losses": 32
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7270588235294118,
+    "auroc": 0.8111612456747405,
+    "gains": 82,
+    "losses": 158
+   },
+   "chat": {
+    "accuracy": 0.6882352941176471,
+    "auroc": 0.7521494809688581,
+    "gains": 155,
+    "losses": 297
+   },
+   "chat_aegis": {
+    "accuracy": 0.7447058823529412,
+    "auroc": 0.8218906574394463,
+    "gains": 131,
+    "losses": 177
+   },
+   "hatecheck": {
+    "accuracy": 0.5847058823529412,
+    "auroc": 0.6248885813148789,
+    "gains": 155,
+    "losses": 473
+   },
+   "offensivelang": {
+    "accuracy": 0.6776470588235294,
+    "auroc": 0.7387044982698961,
+    "gains": 151,
+    "losses": 311
+   },
+   "rtp": {
+    "accuracy": 0.7929411764705883,
+    "auroc": 0.8791667820069204,
+    "gains": 128,
+    "losses": 92
+   },
+   "twitter": {
+    "accuracy": 0.7517647058823529,
+    "auroc": 0.8406906574394464,
+    "gains": 111,
+    "losses": 145
+   },
+   "wiki": {
+    "accuracy": 0.7917647058823529,
+    "auroc": 0.8732498269896194,
+    "gains": 137,
+    "losses": 103
+   },
+   "pooled": {
+    "accuracy": 0.7717647058823529,
+    "auroc": 0.8519820069204153,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "civil",
+  "prior": 0.5,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 82250,
+  "chosen": "pooled",
+  "chosen_source_only": "berkeley",
+  "distances": {
+   "berkeley": 0.08398561496231963,
+   "chat": 0.24391459449630196,
+   "chat_aegis": 0.1355819524629052,
+   "hatecheck": 0.2558456749300814,
+   "offensivelang": 0.22503467629531126,
+   "rtp": 0.15992899976115957,
+   "twitter": 0.09206815193449976,
+   "wiki": 0.09487010115339055,
+   "pooled": 0.06153748385113257
+  },
+  "distance_auc_spearman": -0.5714285714285715,
+  "pooled": {
+   "accuracy": 0.7717647058823529,
+   "auroc": 0.8491875432525952,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7717647058823529,
+   "auroc": 0.8491875432525952,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.7388235294117647,
+   "auroc": 0.8136678200692041,
+   "gains": 103,
+   "losses": 159
+  },
+  "clean_pool": {
+   "accuracy": 0.7670588235294118,
+   "auroc": 0.8521702422145329,
+   "gains": 28,
+   "losses": 36
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7388235294117647,
+    "auroc": 0.8136678200692041,
+    "gains": 103,
+    "losses": 159
+   },
+   "chat": {
+    "accuracy": 0.6611764705882353,
+    "auroc": 0.7281757785467128,
+    "gains": 147,
+    "losses": 335
+   },
+   "chat_aegis": {
+    "accuracy": 0.7388235294117647,
+    "auroc": 0.8185134948096886,
+    "gains": 133,
+    "losses": 189
+   },
+   "hatecheck": {
+    "accuracy": 0.56,
+    "auroc": 0.580557785467128,
+    "gains": 148,
+    "losses": 508
+   },
+   "offensivelang": {
+    "accuracy": 0.66,
+    "auroc": 0.71519723183391,
+    "gains": 142,
+    "losses": 332
+   },
+   "rtp": {
+    "accuracy": 0.7870588235294118,
+    "auroc": 0.8635903114186851,
+    "gains": 141,
+    "losses": 115
+   },
+   "twitter": {
+    "accuracy": 0.7482352941176471,
+    "auroc": 0.8251515570934256,
+    "gains": 125,
+    "losses": 165
+   },
+   "wiki": {
+    "accuracy": 0.7764705882352941,
+    "auroc": 0.8582186851211072,
+    "gains": 129,
+    "losses": 121
+   },
+   "pooled": {
+    "accuracy": 0.7717647058823529,
+    "auroc": 0.8491875432525952,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "civil",
+  "prior": 0.7058823529411765,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 82250,
+  "chosen": "pooled",
+  "chosen_source_only": "twitter",
+  "distances": {
+   "berkeley": 0.10068545491083151,
+   "chat": 0.2568579094441515,
+   "chat_aegis": 0.15615329868753938,
+   "hatecheck": 0.27983984543101786,
+   "offensivelang": 0.23725018042368584,
+   "rtp": 0.16542142349816435,
+   "twitter": 0.0993074651711101,
+   "wiki": 0.10621265077472258,
+   "pooled": 0.07132403553612077
+  },
+  "distance_auc_spearman": -0.6190476190476191,
+  "pooled": {
+   "accuracy": 0.7941176470588235,
+   "auroc": 0.8537383333333334,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7941176470588235,
+   "auroc": 0.8537383333333334,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.7976470588235294,
+   "auroc": 0.8452366666666666,
+   "gains": 121,
+   "losses": 115
+  },
+  "clean_pool": {
+   "accuracy": 0.7988235294117647,
+   "auroc": 0.8569966666666666,
+   "gains": 38,
+   "losses": 30
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7517647058823529,
+    "auroc": 0.79794,
+    "gains": 86,
+    "losses": 158
+   },
+   "chat": {
+    "accuracy": 0.7247058823529412,
+    "auroc": 0.764375,
+    "gains": 141,
+    "losses": 259
+   },
+   "chat_aegis": {
+    "accuracy": 0.7776470588235294,
+    "auroc": 0.8250233333333333,
+    "gains": 126,
+    "losses": 154
+   },
+   "hatecheck": {
+    "accuracy": 0.6411764705882353,
+    "auroc": 0.607875,
+    "gains": 146,
+    "losses": 406
+   },
+   "offensivelang": {
+    "accuracy": 0.7141176470588235,
+    "auroc": 0.7218016666666667,
+    "gains": 129,
+    "losses": 265
+   },
+   "rtp": {
+    "accuracy": 0.8211764705882353,
+    "auroc": 0.8815683333333333,
+    "gains": 120,
+    "losses": 74
+   },
+   "twitter": {
+    "accuracy": 0.7976470588235294,
+    "auroc": 0.8452366666666666,
+    "gains": 121,
+    "losses": 115
+   },
+   "wiki": {
+    "accuracy": 0.82,
+    "auroc": 0.8684266666666667,
+    "gains": 129,
+    "losses": 85
+   },
+   "pooled": {
+    "accuracy": 0.7941176470588235,
+    "auroc": 0.8537383333333334,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "civil",
+  "prior": 0.7058823529411765,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 82250,
+  "chosen": "pooled",
+  "chosen_source_only": "twitter",
+  "distances": {
+   "berkeley": 0.09929686691273892,
+   "chat": 0.2543759161515631,
+   "chat_aegis": 0.1556482043553738,
+   "hatecheck": 0.27729277702037636,
+   "offensivelang": 0.23690169821943602,
+   "rtp": 0.16316530161735146,
+   "twitter": 0.09636869962416919,
+   "wiki": 0.10244826725284863,
+   "pooled": 0.06922938998742006
+  },
+  "distance_auc_spearman": -0.6190476190476191,
+  "pooled": {
+   "accuracy": 0.8094117647058824,
+   "auroc": 0.85979,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8094117647058824,
+   "auroc": 0.85979,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.7811764705882352,
+   "auroc": 0.8359166666666666,
+   "gains": 97,
+   "losses": 145
+  },
+  "clean_pool": {
+   "accuracy": 0.808235294117647,
+   "auroc": 0.8650066666666667,
+   "gains": 32,
+   "losses": 34
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7694117647058824,
+    "auroc": 0.8167633333333333,
+    "gains": 78,
+    "losses": 146
+   },
+   "chat": {
+    "accuracy": 0.7270588235294118,
+    "auroc": 0.7559016666666667,
+    "gains": 132,
+    "losses": 272
+   },
+   "chat_aegis": {
+    "accuracy": 0.7788235294117647,
+    "auroc": 0.8216833333333333,
+    "gains": 99,
+    "losses": 151
+   },
+   "hatecheck": {
+    "accuracy": 0.6282352941176471,
+    "auroc": 0.5963916666666667,
+    "gains": 125,
+    "losses": 433
+   },
+   "offensivelang": {
+    "accuracy": 0.7141176470588235,
+    "auroc": 0.7258783333333333,
+    "gains": 133,
+    "losses": 295
+   },
+   "rtp": {
+    "accuracy": 0.8211764705882353,
+    "auroc": 0.8815216666666666,
+    "gains": 108,
+    "losses": 88
+   },
+   "twitter": {
+    "accuracy": 0.7811764705882352,
+    "auroc": 0.8359166666666666,
+    "gains": 97,
+    "losses": 145
+   },
+   "wiki": {
+    "accuracy": 0.8176470588235294,
+    "auroc": 0.8736,
+    "gains": 103,
+    "losses": 89
+   },
+   "pooled": {
+    "accuracy": 0.8094117647058824,
+    "auroc": 0.85979,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "civil",
+  "prior": 0.7058823529411765,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 82250,
+  "chosen": "pooled",
+  "chosen_source_only": "twitter",
+  "distances": {
+   "berkeley": 0.09739984242501531,
+   "chat": 0.25190784708152086,
+   "chat_aegis": 0.1542406094789525,
+   "hatecheck": 0.26956396901913915,
+   "offensivelang": 0.23270114298299216,
+   "rtp": 0.15746560553807218,
+   "twitter": 0.09589882517636052,
+   "wiki": 0.10181712866647269,
+   "pooled": 0.06662699235957553
+  },
+  "distance_auc_spearman": -0.6666666666666669,
+  "pooled": {
+   "accuracy": 0.8058823529411765,
+   "auroc": 0.8615566666666666,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8058823529411765,
+   "auroc": 0.8615566666666666,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.7976470588235294,
+   "auroc": 0.8447433333333333,
+   "gains": 101,
+   "losses": 115
+  },
+  "clean_pool": {
+   "accuracy": 0.8058823529411765,
+   "auroc": 0.8644816666666667,
+   "gains": 35,
+   "losses": 35
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7752941176470588,
+    "auroc": 0.8189016666666666,
+    "gains": 70,
+    "losses": 122
+   },
+   "chat": {
+    "accuracy": 0.7364705882352941,
+    "auroc": 0.7513016666666666,
+    "gains": 139,
+    "losses": 257
+   },
+   "chat_aegis": {
+    "accuracy": 0.7835294117647059,
+    "auroc": 0.8138833333333333,
+    "gains": 109,
+    "losses": 147
+   },
+   "hatecheck": {
+    "accuracy": 0.6176470588235294,
+    "auroc": 0.595795,
+    "gains": 128,
+    "losses": 448
+   },
+   "offensivelang": {
+    "accuracy": 0.7058823529411765,
+    "auroc": 0.723305,
+    "gains": 116,
+    "losses": 286
+   },
+   "rtp": {
+    "accuracy": 0.8235294117647058,
+    "auroc": 0.87778,
+    "gains": 104,
+    "losses": 74
+   },
+   "twitter": {
+    "accuracy": 0.7976470588235294,
+    "auroc": 0.8447433333333333,
+    "gains": 101,
+    "losses": 115
+   },
+   "wiki": {
+    "accuracy": 0.8141176470588235,
+    "auroc": 0.8673983333333334,
+    "gains": 110,
+    "losses": 96
+   },
+   "pooled": {
+    "accuracy": 0.8058823529411765,
+    "auroc": 0.8615566666666666,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "hatecheck",
+  "prior": 0.5,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 106142,
+  "chosen": "offensivelang",
+  "chosen_source_only": "offensivelang",
+  "distances": {
+   "berkeley": 0.17687212947623465,
+   "chat": 0.34484864071407473,
+   "chat_aegis": 0.31478543185378866,
+   "civil": 0.26815336528548833,
+   "offensivelang": 0.1686418902190621,
+   "rtp": 0.21438726565399405,
+   "twitter": 0.2738262879786651,
+   "wiki": 0.31121247276406244,
+   "pooled": 0.19525812297225492
+  },
+  "distance_auc_spearman": -0.4285714285714286,
+  "pooled": {
+   "accuracy": 0.6929411764705883,
+   "auroc": 0.7867833910034602,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.6976470588235294,
+   "auroc": 0.766718339100346,
+   "gains": 224,
+   "losses": 216
+  },
+  "routed_source_only": {
+   "accuracy": 0.6976470588235294,
+   "auroc": 0.766718339100346,
+   "gains": 224,
+   "losses": 216
+  },
+  "clean_pool": {
+   "accuracy": 0.6870588235294117,
+   "auroc": 0.7803487889273356,
+   "gains": 23,
+   "losses": 33
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7729411764705882,
+    "auroc": 0.8624484429065744,
+    "gains": 229,
+    "losses": 93
+   },
+   "chat": {
+    "accuracy": 0.64,
+    "auroc": 0.6994795847750865,
+    "gains": 197,
+    "losses": 287
+   },
+   "chat_aegis": {
+    "accuracy": 0.7235294117647059,
+    "auroc": 0.7895820069204152,
+    "gains": 192,
+    "losses": 140
+   },
+   "civil": {
+    "accuracy": 0.6317647058823529,
+    "auroc": 0.700873356401384,
+    "gains": 65,
+    "losses": 169
+   },
+   "offensivelang": {
+    "accuracy": 0.6976470588235294,
+    "auroc": 0.766718339100346,
+    "gains": 224,
+    "losses": 216
+   },
+   "rtp": {
+    "accuracy": 0.6776470588235294,
+    "auroc": 0.754636678200692,
+    "gains": 114,
+    "losses": 140
+   },
+   "twitter": {
+    "accuracy": 0.7529411764705882,
+    "auroc": 0.8380304498269896,
+    "gains": 202,
+    "losses": 100
+   },
+   "wiki": {
+    "accuracy": 0.6729411764705883,
+    "auroc": 0.7508290657439446,
+    "gains": 103,
+    "losses": 137
+   },
+   "pooled": {
+    "accuracy": 0.6929411764705883,
+    "auroc": 0.7867833910034602,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "hatecheck",
+  "prior": 0.5,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 106142,
+  "chosen": "offensivelang",
+  "chosen_source_only": "offensivelang",
+  "distances": {
+   "berkeley": 0.18094716740376265,
+   "chat": 0.3472598193637083,
+   "chat_aegis": 0.31875361335452834,
+   "civil": 0.2745412772033058,
+   "offensivelang": 0.1710773076992915,
+   "rtp": 0.21709212488906107,
+   "twitter": 0.2784815648489606,
+   "wiki": 0.315433640884655,
+   "pooled": 0.19988854999525713
+  },
+  "distance_auc_spearman": -0.4285714285714286,
+  "pooled": {
+   "accuracy": 0.7023529411764706,
+   "auroc": 0.7966934256055364,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7023529411764706,
+   "auroc": 0.7721785467128027,
+   "gains": 232,
+   "losses": 232
+  },
+  "routed_source_only": {
+   "accuracy": 0.7023529411764706,
+   "auroc": 0.7721785467128027,
+   "gains": 232,
+   "losses": 232
+  },
+  "clean_pool": {
+   "accuracy": 0.6941176470588235,
+   "auroc": 0.7900096885813149,
+   "gains": 23,
+   "losses": 37
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7764705882352941,
+    "auroc": 0.8666961937716263,
+    "gains": 214,
+    "losses": 88
+   },
+   "chat": {
+    "accuracy": 0.6388235294117647,
+    "auroc": 0.7045674740484429,
+    "gains": 189,
+    "losses": 297
+   },
+   "chat_aegis": {
+    "accuracy": 0.7294117647058823,
+    "auroc": 0.7985550173010381,
+    "gains": 185,
+    "losses": 139
+   },
+   "civil": {
+    "accuracy": 0.6494117647058824,
+    "auroc": 0.7142837370242214,
+    "gains": 71,
+    "losses": 161
+   },
+   "offensivelang": {
+    "accuracy": 0.7023529411764706,
+    "auroc": 0.7721785467128027,
+    "gains": 232,
+    "losses": 232
+   },
+   "rtp": {
+    "accuracy": 0.6882352941176471,
+    "auroc": 0.7647501730103806,
+    "gains": 116,
+    "losses": 140
+   },
+   "twitter": {
+    "accuracy": 0.7564705882352941,
+    "auroc": 0.8412581314878893,
+    "gains": 195,
+    "losses": 103
+   },
+   "wiki": {
+    "accuracy": 0.6894117647058824,
+    "auroc": 0.7622532871972318,
+    "gains": 109,
+    "losses": 131
+   },
+   "pooled": {
+    "accuracy": 0.7023529411764706,
+    "auroc": 0.7966934256055364,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "hatecheck",
+  "prior": 0.5,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 106142,
+  "chosen": "offensivelang",
+  "chosen_source_only": "offensivelang",
+  "distances": {
+   "berkeley": 0.1765792196134805,
+   "chat": 0.3450062394918427,
+   "chat_aegis": 0.31450394926236735,
+   "civil": 0.26737390837097885,
+   "offensivelang": 0.16867883498718517,
+   "rtp": 0.2141091662311975,
+   "twitter": 0.2731599679141819,
+   "wiki": 0.3102338169005112,
+   "pooled": 0.19474178378483542
+  },
+  "distance_auc_spearman": -0.4285714285714286,
+  "pooled": {
+   "accuracy": 0.6976470588235294,
+   "auroc": 0.7900955017301038,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7035294117647058,
+   "auroc": 0.7683501730103807,
+   "gains": 224,
+   "losses": 214
+  },
+  "routed_source_only": {
+   "accuracy": 0.7035294117647058,
+   "auroc": 0.7683501730103807,
+   "gains": 224,
+   "losses": 214
+  },
+  "clean_pool": {
+   "accuracy": 0.6929411764705883,
+   "auroc": 0.7839875432525951,
+   "gains": 21,
+   "losses": 29
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7764705882352941,
+    "auroc": 0.8647626297577855,
+    "gains": 235,
+    "losses": 101
+   },
+   "chat": {
+    "accuracy": 0.64,
+    "auroc": 0.6979114186851211,
+    "gains": 197,
+    "losses": 295
+   },
+   "chat_aegis": {
+    "accuracy": 0.7188235294117648,
+    "auroc": 0.7813826989619377,
+    "gains": 176,
+    "losses": 140
+   },
+   "civil": {
+    "accuracy": 0.6364705882352941,
+    "auroc": 0.7016373702422145,
+    "gains": 71,
+    "losses": 175
+   },
+   "offensivelang": {
+    "accuracy": 0.7035294117647058,
+    "auroc": 0.7683501730103807,
+    "gains": 224,
+    "losses": 214
+   },
+   "rtp": {
+    "accuracy": 0.6776470588235294,
+    "auroc": 0.7521024221453287,
+    "gains": 106,
+    "losses": 140
+   },
+   "twitter": {
+    "accuracy": 0.7588235294117647,
+    "auroc": 0.8469688581314879,
+    "gains": 198,
+    "losses": 94
+   },
+   "wiki": {
+    "accuracy": 0.6717647058823529,
+    "auroc": 0.7502851211072664,
+    "gains": 98,
+    "losses": 142
+   },
+   "pooled": {
+    "accuracy": 0.6976470588235294,
+    "auroc": 0.7900955017301038,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "hatecheck",
+  "prior": 0.7058823529411765,
+  "seed": 17,
+  "n": 1647,
+  "train_n": 106142,
+  "chosen": "offensivelang",
+  "chosen_source_only": "offensivelang",
+  "distances": {
+   "berkeley": 0.19232515400723627,
+   "chat": 0.38462686883752945,
+   "chat_aegis": 0.3516852564813886,
+   "civil": 0.2864113015962879,
+   "offensivelang": 0.17997349426504608,
+   "rtp": 0.22275043392751462,
+   "twitter": 0.29225377788564555,
+   "wiki": 0.314079966666584,
+   "pooled": 0.20959710676691656
+  },
+  "distance_auc_spearman": -0.3333333333333334,
+  "pooled": {
+   "accuracy": 0.7595628415300546,
+   "auroc": 0.7849907264626251,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7449908925318761,
+   "auroc": 0.774510918613162,
+   "gains": 180,
+   "losses": 204
+  },
+  "routed_source_only": {
+   "accuracy": 0.7449908925318761,
+   "auroc": 0.774510918613162,
+   "gains": 180,
+   "losses": 204
+  },
+  "clean_pool": {
+   "accuracy": 0.7583485124468731,
+   "auroc": 0.7786307142400318,
+   "gains": 21,
+   "losses": 23
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.8214936247723132,
+    "auroc": 0.8602929158701846,
+    "gains": 185,
+    "losses": 83
+   },
+   "chat": {
+    "accuracy": 0.697632058287796,
+    "auroc": 0.7041279677096139,
+    "gains": 161,
+    "losses": 263
+   },
+   "chat_aegis": {
+    "accuracy": 0.7668488160291439,
+    "auroc": 0.7888706892263525,
+    "gains": 131,
+    "losses": 119
+   },
+   "civil": {
+    "accuracy": 0.6964177292046144,
+    "auroc": 0.6955241858118432,
+    "gains": 61,
+    "losses": 165
+   },
+   "offensivelang": {
+    "accuracy": 0.7449908925318761,
+    "auroc": 0.774510918613162,
+    "gains": 180,
+    "losses": 204
+   },
+   "rtp": {
+    "accuracy": 0.7279902853673346,
+    "auroc": 0.7519897244942192,
+    "gains": 87,
+    "losses": 139
+   },
+   "twitter": {
+    "accuracy": 0.7947783849423193,
+    "auroc": 0.8404649559773456,
+    "gains": 148,
+    "losses": 90
+   },
+   "wiki": {
+    "accuracy": 0.7304189435336976,
+    "auroc": 0.7498294521862098,
+    "gains": 92,
+    "losses": 140
+   },
+   "pooled": {
+    "accuracy": 0.7595628415300546,
+    "auroc": 0.7849907264626251,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "hatecheck",
+  "prior": 0.7058823529411765,
+  "seed": 29,
+  "n": 1647,
+  "train_n": 106142,
+  "chosen": "offensivelang",
+  "chosen_source_only": "offensivelang",
+  "distances": {
+   "berkeley": 0.1919187441230844,
+   "chat": 0.3857498386884757,
+   "chat_aegis": 0.35292723827903955,
+   "civil": 0.28625367339932534,
+   "offensivelang": 0.18094582189392988,
+   "rtp": 0.2247367116490352,
+   "twitter": 0.2922431759993948,
+   "wiki": 0.31424258024739127,
+   "pooled": 0.21008869621088583
+  },
+  "distance_auc_spearman": -0.4047619047619048,
+  "pooled": {
+   "accuracy": 0.742562234365513,
+   "auroc": 0.7737363472921982,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7462052216150576,
+   "auroc": 0.7716773377486267,
+   "gains": 201,
+   "losses": 195
+  },
+  "routed_source_only": {
+   "accuracy": 0.7462052216150576,
+   "auroc": 0.7716773377486267,
+   "gains": 201,
+   "losses": 195
+  },
+  "clean_pool": {
+   "accuracy": 0.74013357619915,
+   "auroc": 0.7670832060146529,
+   "gains": 20,
+   "losses": 24
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.8129933211900425,
+    "auroc": 0.8517548659423122,
+    "gains": 202,
+    "losses": 86
+   },
+   "chat": {
+    "accuracy": 0.6879174256223437,
+    "auroc": 0.6914861110124144,
+    "gains": 172,
+    "losses": 262
+   },
+   "chat_aegis": {
+    "accuracy": 0.7571341833636915,
+    "auroc": 0.7705687769589904,
+    "gains": 135,
+    "losses": 111
+   },
+   "civil": {
+    "accuracy": 0.6830601092896175,
+    "auroc": 0.6899671695458454,
+    "gains": 67,
+    "losses": 165
+   },
+   "offensivelang": {
+    "accuracy": 0.7462052216150576,
+    "auroc": 0.7716773377486267,
+    "gains": 201,
+    "losses": 195
+   },
+   "rtp": {
+    "accuracy": 0.7158469945355191,
+    "auroc": 0.7391719903640486,
+    "gains": 85,
+    "losses": 129
+   },
+   "twitter": {
+    "accuracy": 0.7704918032786885,
+    "auroc": 0.8252755413116548,
+    "gains": 142,
+    "losses": 96
+   },
+   "wiki": {
+    "accuracy": 0.7340619307832422,
+    "auroc": 0.7453792201701215,
+    "gains": 108,
+    "losses": 122
+   },
+   "pooled": {
+    "accuracy": 0.742562234365513,
+    "auroc": 0.7737363472921982,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "hatecheck",
+  "prior": 0.7058823529411765,
+  "seed": 41,
+  "n": 1647,
+  "train_n": 106142,
+  "chosen": "offensivelang",
+  "chosen_source_only": "offensivelang",
+  "distances": {
+   "berkeley": 0.19242739088488817,
+   "chat": 0.3823040282428911,
+   "chat_aegis": 0.34942571661423094,
+   "civil": 0.28595701486524117,
+   "offensivelang": 0.17909364645136666,
+   "rtp": 0.22304520234379974,
+   "twitter": 0.2914942271554691,
+   "wiki": 0.312754430844995,
+   "pooled": 0.20909929803150376
+  },
+  "distance_auc_spearman": -0.1666666666666667,
+  "pooled": {
+   "accuracy": 0.7656344869459624,
+   "auroc": 0.8056572131065994,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7316332726168792,
+   "auroc": 0.760588176772809,
+   "gains": 177,
+   "losses": 233
+  },
+  "routed_source_only": {
+   "accuracy": 0.7316332726168792,
+   "auroc": 0.760588176772809,
+   "gains": 177,
+   "losses": 233
+  },
+  "clean_pool": {
+   "accuracy": 0.7656344869459624,
+   "auroc": 0.8015303113208218,
+   "gains": 15,
+   "losses": 15
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.8239222829386764,
+    "auroc": 0.8723289725204835,
+    "gains": 178,
+    "losses": 82
+   },
+   "chat": {
+    "accuracy": 0.7024893746205222,
+    "auroc": 0.7331104368155881,
+    "gains": 163,
+    "losses": 267
+   },
+   "chat_aegis": {
+    "accuracy": 0.7765634486945963,
+    "auroc": 0.8011803329946064,
+    "gains": 135,
+    "losses": 117
+   },
+   "civil": {
+    "accuracy": 0.7097753491196114,
+    "auroc": 0.7215575989710282,
+    "gains": 65,
+    "losses": 157
+   },
+   "offensivelang": {
+    "accuracy": 0.7316332726168792,
+    "auroc": 0.760588176772809,
+    "gains": 177,
+    "losses": 233
+   },
+   "rtp": {
+    "accuracy": 0.7340619307832422,
+    "auroc": 0.776331871833318,
+    "gains": 85,
+    "losses": 137
+   },
+   "twitter": {
+    "accuracy": 0.8032786885245902,
+    "auroc": 0.849395621184881,
+    "gains": 141,
+    "losses": 79
+   },
+   "wiki": {
+    "accuracy": 0.7437765634486946,
+    "auroc": 0.7737541126894679,
+    "gains": 92,
+    "losses": 128
+   },
+   "pooled": {
+    "accuracy": 0.7656344869459624,
+    "auroc": 0.8056572131065994,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "offensivelang",
+  "prior": 0.5,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 104972,
+  "chosen": "hatecheck",
+  "chosen_source_only": "hatecheck",
+  "distances": {
+   "berkeley": 0.21808321514764417,
+   "chat": 0.28596233959894257,
+   "chat_aegis": 0.23892451840743226,
+   "civil": 0.2404578106843889,
+   "hatecheck": 0.16970979801832384,
+   "rtp": 0.19993714903532467,
+   "twitter": 0.28315027157112016,
+   "wiki": 0.2851748804415958,
+   "pooled": 0.18759749905855808
+  },
+  "distance_auc_spearman": -0.14285714285714288,
+  "pooled": {
+   "accuracy": 0.571764705882353,
+   "auroc": 0.6023958477508651,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.5541176470588235,
+   "auroc": 0.5846034602076124,
+   "gains": 311,
+   "losses": 341
+  },
+  "routed_source_only": {
+   "accuracy": 0.5541176470588235,
+   "auroc": 0.5846034602076124,
+   "gains": 311,
+   "losses": 341
+  },
+  "clean_pool": {
+   "accuracy": 0.571764705882353,
+   "auroc": 0.5999778546712803,
+   "gains": 51,
+   "losses": 51
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.5576470588235294,
+    "auroc": 0.5830698961937716,
+    "gains": 154,
+    "losses": 178
+   },
+   "chat": {
+    "accuracy": 0.5470588235294118,
+    "auroc": 0.5635307958477509,
+    "gains": 288,
+    "losses": 330
+   },
+   "chat_aegis": {
+    "accuracy": 0.5729411764705883,
+    "auroc": 0.5905896193771626,
+    "gains": 231,
+    "losses": 229
+   },
+   "civil": {
+    "accuracy": 0.5658823529411765,
+    "auroc": 0.5892179930795848,
+    "gains": 184,
+    "losses": 194
+   },
+   "hatecheck": {
+    "accuracy": 0.5541176470588235,
+    "auroc": 0.5846034602076124,
+    "gains": 311,
+    "losses": 341
+   },
+   "rtp": {
+    "accuracy": 0.5694117647058824,
+    "auroc": 0.592714186851211,
+    "gains": 184,
+    "losses": 188
+   },
+   "twitter": {
+    "accuracy": 0.5682352941176471,
+    "auroc": 0.5976858131487889,
+    "gains": 156,
+    "losses": 162
+   },
+   "wiki": {
+    "accuracy": 0.5588235294117647,
+    "auroc": 0.5872567474048442,
+    "gains": 175,
+    "losses": 197
+   },
+   "pooled": {
+    "accuracy": 0.571764705882353,
+    "auroc": 0.6023958477508651,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "offensivelang",
+  "prior": 0.5,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 104972,
+  "chosen": "hatecheck",
+  "chosen_source_only": "hatecheck",
+  "distances": {
+   "berkeley": 0.21431368141581045,
+   "chat": 0.2808701891132234,
+   "chat_aegis": 0.23420996260917606,
+   "civil": 0.2343840700335128,
+   "hatecheck": 0.16812055356399286,
+   "rtp": 0.19465395339803346,
+   "twitter": 0.278282086893018,
+   "wiki": 0.279366278596629,
+   "pooled": 0.1827205874423539
+  },
+  "distance_auc_spearman": -0.3571428571428572,
+  "pooled": {
+   "accuracy": 0.5823529411764706,
+   "auroc": 0.6159861591695501,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.5682352941176471,
+   "auroc": 0.6007570934256056,
+   "gains": 326,
+   "losses": 350
+  },
+  "routed_source_only": {
+   "accuracy": 0.5682352941176471,
+   "auroc": 0.6007570934256056,
+   "gains": 326,
+   "losses": 350
+  },
+  "clean_pool": {
+   "accuracy": 0.5847058823529412,
+   "auroc": 0.6121813148788927,
+   "gains": 44,
+   "losses": 40
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.5541176470588235,
+    "auroc": 0.5912332179930796,
+    "gains": 136,
+    "losses": 184
+   },
+   "chat": {
+    "accuracy": 0.5529411764705883,
+    "auroc": 0.5746532871972319,
+    "gains": 279,
+    "losses": 329
+   },
+   "chat_aegis": {
+    "accuracy": 0.5823529411764706,
+    "auroc": 0.6127003460207613,
+    "gains": 226,
+    "losses": 226
+   },
+   "civil": {
+    "accuracy": 0.591764705882353,
+    "auroc": 0.6156650519031142,
+    "gains": 192,
+    "losses": 176
+   },
+   "hatecheck": {
+    "accuracy": 0.5682352941176471,
+    "auroc": 0.6007570934256056,
+    "gains": 326,
+    "losses": 350
+   },
+   "rtp": {
+    "accuracy": 0.58,
+    "auroc": 0.6146726643598616,
+    "gains": 182,
+    "losses": 186
+   },
+   "twitter": {
+    "accuracy": 0.571764705882353,
+    "auroc": 0.6112124567474049,
+    "gains": 146,
+    "losses": 164
+   },
+   "wiki": {
+    "accuracy": 0.5647058823529412,
+    "auroc": 0.5960083044982699,
+    "gains": 180,
+    "losses": 210
+   },
+   "pooled": {
+    "accuracy": 0.5823529411764706,
+    "auroc": 0.6159861591695501,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "offensivelang",
+  "prior": 0.5,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 104972,
+  "chosen": "hatecheck",
+  "chosen_source_only": "hatecheck",
+  "distances": {
+   "berkeley": 0.21845065700213004,
+   "chat": 0.2828191125931533,
+   "chat_aegis": 0.2373961227144006,
+   "civil": 0.23845802899553117,
+   "hatecheck": 0.17231919523788453,
+   "rtp": 0.1981682026682258,
+   "twitter": 0.2826406955330498,
+   "wiki": 0.2832059546668566,
+   "pooled": 0.18643250018931304
+  },
+  "distance_auc_spearman": 0.0,
+  "pooled": {
+   "accuracy": 0.5670588235294117,
+   "auroc": 0.6005467128027682,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.5647058823529412,
+   "auroc": 0.5870615916955018,
+   "gains": 324,
+   "losses": 328
+  },
+  "routed_source_only": {
+   "accuracy": 0.5647058823529412,
+   "auroc": 0.5870615916955018,
+   "gains": 324,
+   "losses": 328
+  },
+  "clean_pool": {
+   "accuracy": 0.5623529411764706,
+   "auroc": 0.597363321799308,
+   "gains": 45,
+   "losses": 53
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.5435294117647059,
+    "auroc": 0.5783321799307959,
+    "gains": 158,
+    "losses": 198
+   },
+   "chat": {
+    "accuracy": 0.5388235294117647,
+    "auroc": 0.5591529411764706,
+    "gains": 274,
+    "losses": 322
+   },
+   "chat_aegis": {
+    "accuracy": 0.5647058823529412,
+    "auroc": 0.5905799307958477,
+    "gains": 216,
+    "losses": 220
+   },
+   "civil": {
+    "accuracy": 0.5788235294117647,
+    "auroc": 0.6014089965397924,
+    "gains": 181,
+    "losses": 161
+   },
+   "hatecheck": {
+    "accuracy": 0.5647058823529412,
+    "auroc": 0.5870615916955018,
+    "gains": 324,
+    "losses": 328
+   },
+   "rtp": {
+    "accuracy": 0.5682352941176471,
+    "auroc": 0.5939072664359861,
+    "gains": 174,
+    "losses": 172
+   },
+   "twitter": {
+    "accuracy": 0.5588235294117647,
+    "auroc": 0.5951529411764706,
+    "gains": 147,
+    "losses": 161
+   },
+   "wiki": {
+    "accuracy": 0.5647058823529412,
+    "auroc": 0.5877148788927335,
+    "gains": 178,
+    "losses": 182
+   },
+   "pooled": {
+    "accuracy": 0.5670588235294117,
+    "auroc": 0.6005467128027682,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "offensivelang",
+  "prior": 0.7058823529411765,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 104972,
+  "chosen": "hatecheck",
+  "chosen_source_only": "hatecheck",
+  "distances": {
+   "berkeley": 0.2400012684253949,
+   "chat": 0.28906939824522027,
+   "chat_aegis": 0.24607814432342145,
+   "civil": 0.24504069153814967,
+   "hatecheck": 0.17843825329075821,
+   "rtp": 0.185525355741939,
+   "twitter": 0.28758033093343904,
+   "wiki": 0.2822620744223572,
+   "pooled": 0.18929147951386277
+  },
+  "distance_auc_spearman": -0.1666666666666667,
+  "pooled": {
+   "accuracy": 0.6341176470588236,
+   "auroc": 0.5974883333333333,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.6164705882352941,
+   "auroc": 0.5917683333333333,
+   "gains": 263,
+   "losses": 293
+  },
+  "routed_source_only": {
+   "accuracy": 0.6164705882352941,
+   "auroc": 0.5917683333333333,
+   "gains": 263,
+   "losses": 293
+  },
+  "clean_pool": {
+   "accuracy": 0.6282352941176471,
+   "auroc": 0.59105,
+   "gains": 36,
+   "losses": 46
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.6164705882352941,
+    "auroc": 0.5626666666666666,
+    "gains": 157,
+    "losses": 187
+   },
+   "chat": {
+    "accuracy": 0.6094117647058823,
+    "auroc": 0.5621366666666666,
+    "gains": 222,
+    "losses": 264
+   },
+   "chat_aegis": {
+    "accuracy": 0.6376470588235295,
+    "auroc": 0.6126333333333334,
+    "gains": 184,
+    "losses": 178
+   },
+   "civil": {
+    "accuracy": 0.6211764705882353,
+    "auroc": 0.5991266666666667,
+    "gains": 134,
+    "losses": 156
+   },
+   "hatecheck": {
+    "accuracy": 0.6164705882352941,
+    "auroc": 0.5917683333333333,
+    "gains": 263,
+    "losses": 293
+   },
+   "rtp": {
+    "accuracy": 0.6164705882352941,
+    "auroc": 0.5908883333333333,
+    "gains": 138,
+    "losses": 168
+   },
+   "twitter": {
+    "accuracy": 0.6294117647058823,
+    "auroc": 0.5984933333333333,
+    "gains": 135,
+    "losses": 143
+   },
+   "wiki": {
+    "accuracy": 0.6152941176470588,
+    "auroc": 0.5755616666666666,
+    "gains": 134,
+    "losses": 166
+   },
+   "pooled": {
+    "accuracy": 0.6341176470588236,
+    "auroc": 0.5974883333333333,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "offensivelang",
+  "prior": 0.7058823529411765,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 104972,
+  "chosen": "hatecheck",
+  "chosen_source_only": "hatecheck",
+  "distances": {
+   "berkeley": 0.24037449813221126,
+   "chat": 0.28834727631300894,
+   "chat_aegis": 0.24381540444168662,
+   "civil": 0.24291132521557296,
+   "hatecheck": 0.18116717979295938,
+   "rtp": 0.18544143445620515,
+   "twitter": 0.2872137051996114,
+   "wiki": 0.28146861412363977,
+   "pooled": 0.18860197848094643
+  },
+  "distance_auc_spearman": 0.04761904761904763,
+  "pooled": {
+   "accuracy": 0.648235294117647,
+   "auroc": 0.6112,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.6270588235294118,
+   "auroc": 0.59965,
+   "gains": 262,
+   "losses": 298
+  },
+  "routed_source_only": {
+   "accuracy": 0.6270588235294118,
+   "auroc": 0.59965,
+   "gains": 262,
+   "losses": 298
+  },
+  "clean_pool": {
+   "accuracy": 0.6494117647058824,
+   "auroc": 0.60778,
+   "gains": 48,
+   "losses": 46
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.6352941176470588,
+    "auroc": 0.59537,
+    "gains": 157,
+    "losses": 179
+   },
+   "chat": {
+    "accuracy": 0.6164705882352941,
+    "auroc": 0.576445,
+    "gains": 226,
+    "losses": 280
+   },
+   "chat_aegis": {
+    "accuracy": 0.6388235294117647,
+    "auroc": 0.615475,
+    "gains": 168,
+    "losses": 184
+   },
+   "civil": {
+    "accuracy": 0.6364705882352941,
+    "auroc": 0.6119683333333333,
+    "gains": 137,
+    "losses": 157
+   },
+   "hatecheck": {
+    "accuracy": 0.6270588235294118,
+    "auroc": 0.59965,
+    "gains": 262,
+    "losses": 298
+   },
+   "rtp": {
+    "accuracy": 0.6364705882352941,
+    "auroc": 0.6142766666666667,
+    "gains": 154,
+    "losses": 174
+   },
+   "twitter": {
+    "accuracy": 0.6505882352941177,
+    "auroc": 0.61695,
+    "gains": 141,
+    "losses": 137
+   },
+   "wiki": {
+    "accuracy": 0.64,
+    "auroc": 0.6037983333333333,
+    "gains": 149,
+    "losses": 163
+   },
+   "pooled": {
+    "accuracy": 0.648235294117647,
+    "auroc": 0.6112,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "offensivelang",
+  "prior": 0.7058823529411765,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 104972,
+  "chosen": "hatecheck",
+  "chosen_source_only": "hatecheck",
+  "distances": {
+   "berkeley": 0.24111053194804632,
+   "chat": 0.2895283035696387,
+   "chat_aegis": 0.24701845284067753,
+   "civil": 0.24510211703048912,
+   "hatecheck": 0.1800155993809937,
+   "rtp": 0.18494171318931546,
+   "twitter": 0.28887251714591206,
+   "wiki": 0.28453672973318983,
+   "pooled": 0.18990124900465719
+  },
+  "distance_auc_spearman": -0.5714285714285715,
+  "pooled": {
+   "accuracy": 0.6305882352941177,
+   "auroc": 0.5990183333333333,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.6282352941176471,
+   "auroc": 0.600275,
+   "gains": 271,
+   "losses": 275
+  },
+  "routed_source_only": {
+   "accuracy": 0.6282352941176471,
+   "auroc": 0.600275,
+   "gains": 271,
+   "losses": 275
+  },
+  "clean_pool": {
+   "accuracy": 0.6270588235294118,
+   "auroc": 0.5928783333333333,
+   "gains": 40,
+   "losses": 46
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.6305882352941177,
+    "auroc": 0.579495,
+    "gains": 167,
+    "losses": 167
+   },
+   "chat": {
+    "accuracy": 0.6129411764705882,
+    "auroc": 0.5535966666666666,
+    "gains": 227,
+    "losses": 257
+   },
+   "chat_aegis": {
+    "accuracy": 0.6388235294117647,
+    "auroc": 0.603575,
+    "gains": 175,
+    "losses": 161
+   },
+   "civil": {
+    "accuracy": 0.6317647058823529,
+    "auroc": 0.5961683333333333,
+    "gains": 153,
+    "losses": 151
+   },
+   "hatecheck": {
+    "accuracy": 0.6282352941176471,
+    "auroc": 0.600275,
+    "gains": 271,
+    "losses": 275
+   },
+   "rtp": {
+    "accuracy": 0.6141176470588235,
+    "auroc": 0.594185,
+    "gains": 146,
+    "losses": 174
+   },
+   "twitter": {
+    "accuracy": 0.6270588235294118,
+    "auroc": 0.5941,
+    "gains": 127,
+    "losses": 133
+   },
+   "wiki": {
+    "accuracy": 0.6247058823529412,
+    "auroc": 0.571585,
+    "gains": 145,
+    "losses": 155
+   },
+   "pooled": {
+    "accuracy": 0.6305882352941177,
+    "auroc": 0.5990183333333333,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "rtp",
+  "prior": 0.5,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 94468,
+  "chosen": "pooled",
+  "chosen_source_only": "chat_aegis",
+  "distances": {
+   "berkeley": 0.19350712731430098,
+   "chat": 0.1997441231095823,
+   "chat_aegis": 0.17763808651483115,
+   "civil": 0.17783799064054714,
+   "hatecheck": 0.22041804163592882,
+   "offensivelang": 0.20200397052637048,
+   "twitter": 0.21333398882363908,
+   "wiki": 0.21852407598912224,
+   "pooled": 0.14000179873759913
+  },
+  "distance_auc_spearman": -0.3571428571428572,
+  "pooled": {
+   "accuracy": 0.8823529411764706,
+   "auroc": 0.9451598615916955,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8823529411764706,
+   "auroc": 0.9451598615916955,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.8635294117647059,
+   "auroc": 0.9281204152249135,
+   "gains": 88,
+   "losses": 120
+  },
+  "clean_pool": {
+   "accuracy": 0.8764705882352941,
+   "auroc": 0.9434463667820069,
+   "gains": 30,
+   "losses": 40
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7741176470588236,
+    "auroc": 0.8532581314878893,
+    "gains": 64,
+    "losses": 248
+   },
+   "chat": {
+    "accuracy": 0.7717647058823529,
+    "auroc": 0.8559529411764706,
+    "gains": 86,
+    "losses": 274
+   },
+   "chat_aegis": {
+    "accuracy": 0.8635294117647059,
+    "auroc": 0.9281204152249135,
+    "gains": 88,
+    "losses": 120
+   },
+   "civil": {
+    "accuracy": 0.9258823529411765,
+    "auroc": 0.9723294117647059,
+    "gains": 118,
+    "losses": 44
+   },
+   "hatecheck": {
+    "accuracy": 0.6788235294117647,
+    "auroc": 0.7409480968858132,
+    "gains": 83,
+    "losses": 429
+   },
+   "offensivelang": {
+    "accuracy": 0.68,
+    "auroc": 0.7391972318339101,
+    "gains": 110,
+    "losses": 454
+   },
+   "twitter": {
+    "accuracy": 0.8070588235294117,
+    "auroc": 0.8877342560553633,
+    "gains": 57,
+    "losses": 185
+   },
+   "wiki": {
+    "accuracy": 0.8717647058823529,
+    "auroc": 0.9516221453287197,
+    "gains": 90,
+    "losses": 108
+   },
+   "pooled": {
+    "accuracy": 0.8823529411764706,
+    "auroc": 0.9451598615916955,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "rtp",
+  "prior": 0.5,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 94468,
+  "chosen": "pooled",
+  "chosen_source_only": "chat_aegis",
+  "distances": {
+   "berkeley": 0.20053057002526187,
+   "chat": 0.20459372973751344,
+   "chat_aegis": 0.18060436658706142,
+   "civil": 0.18090994715844122,
+   "hatecheck": 0.22826290347815034,
+   "offensivelang": 0.20743698668557287,
+   "twitter": 0.21844285188391277,
+   "wiki": 0.2240705253833536,
+   "pooled": 0.1448883073864908
+  },
+  "distance_auc_spearman": -0.3571428571428572,
+  "pooled": {
+   "accuracy": 0.8611764705882353,
+   "auroc": 0.9366034602076124,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8611764705882353,
+   "auroc": 0.9366034602076124,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.8447058823529412,
+   "auroc": 0.9244539792387543,
+   "gains": 106,
+   "losses": 134
+  },
+  "clean_pool": {
+   "accuracy": 0.8576470588235294,
+   "auroc": 0.934478892733564,
+   "gains": 32,
+   "losses": 38
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7482352941176471,
+    "auroc": 0.830323875432526,
+    "gains": 71,
+    "losses": 263
+   },
+   "chat": {
+    "accuracy": 0.7729411764705882,
+    "auroc": 0.8532996539792388,
+    "gains": 111,
+    "losses": 261
+   },
+   "chat_aegis": {
+    "accuracy": 0.8447058823529412,
+    "auroc": 0.9244539792387543,
+    "gains": 106,
+    "losses": 134
+   },
+   "civil": {
+    "accuracy": 0.9105882352941177,
+    "auroc": 0.9679612456747405,
+    "gains": 133,
+    "losses": 49
+   },
+   "hatecheck": {
+    "accuracy": 0.6741176470588235,
+    "auroc": 0.7417314878892733,
+    "gains": 104,
+    "losses": 422
+   },
+   "offensivelang": {
+    "accuracy": 0.6552941176470588,
+    "auroc": 0.7219072664359861,
+    "gains": 118,
+    "losses": 468
+   },
+   "twitter": {
+    "accuracy": 0.8058823529411765,
+    "auroc": 0.8812346020761246,
+    "gains": 79,
+    "losses": 173
+   },
+   "wiki": {
+    "accuracy": 0.8764705882352941,
+    "auroc": 0.9480567474048442,
+    "gains": 108,
+    "losses": 82
+   },
+   "pooled": {
+    "accuracy": 0.8611764705882353,
+    "auroc": 0.9366034602076124,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "rtp",
+  "prior": 0.5,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 94468,
+  "chosen": "pooled",
+  "chosen_source_only": "civil",
+  "distances": {
+   "berkeley": 0.19221282955144403,
+   "chat": 0.20016850448660228,
+   "chat_aegis": 0.17654055641301036,
+   "civil": 0.17542850294925222,
+   "hatecheck": 0.22096288823117174,
+   "offensivelang": 0.20120362220435495,
+   "twitter": 0.21190818213064344,
+   "wiki": 0.21757512491867992,
+   "pooled": 0.13854686974392985
+  },
+  "distance_auc_spearman": -0.4761904761904762,
+  "pooled": {
+   "accuracy": 0.8823529411764706,
+   "auroc": 0.9481564013840831,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8823529411764706,
+   "auroc": 0.9481564013840831,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.9294117647058824,
+   "auroc": 0.9750948096885813,
+   "gains": 121,
+   "losses": 41
+  },
+  "clean_pool": {
+   "accuracy": 0.8811764705882353,
+   "auroc": 0.9470671280276817,
+   "gains": 35,
+   "losses": 37
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.768235294117647,
+    "auroc": 0.848078892733564,
+    "gains": 63,
+    "losses": 257
+   },
+   "chat": {
+    "accuracy": 0.7823529411764706,
+    "auroc": 0.8616539792387543,
+    "gains": 90,
+    "losses": 260
+   },
+   "chat_aegis": {
+    "accuracy": 0.8623529411764705,
+    "auroc": 0.9301010380622837,
+    "gains": 94,
+    "losses": 128
+   },
+   "civil": {
+    "accuracy": 0.9294117647058824,
+    "auroc": 0.9750948096885813,
+    "gains": 121,
+    "losses": 41
+   },
+   "hatecheck": {
+    "accuracy": 0.6823529411764706,
+    "auroc": 0.7475017301038063,
+    "gains": 79,
+    "losses": 419
+   },
+   "offensivelang": {
+    "accuracy": 0.6894117647058824,
+    "auroc": 0.7552,
+    "gains": 105,
+    "losses": 433
+   },
+   "twitter": {
+    "accuracy": 0.8282352941176471,
+    "auroc": 0.9028,
+    "gains": 63,
+    "losses": 155
+   },
+   "wiki": {
+    "accuracy": 0.888235294117647,
+    "auroc": 0.9571432525951558,
+    "gains": 99,
+    "losses": 89
+   },
+   "pooled": {
+    "accuracy": 0.8823529411764706,
+    "auroc": 0.9481564013840831,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "rtp",
+  "prior": 0.7058823529411765,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 94468,
+  "chosen": "pooled",
+  "chosen_source_only": "civil",
+  "distances": {
+   "berkeley": 0.19651569859386966,
+   "chat": 0.20701912374462333,
+   "chat_aegis": 0.1867101409057551,
+   "civil": 0.1743292103986376,
+   "hatecheck": 0.23062148634395355,
+   "offensivelang": 0.19262317888381053,
+   "twitter": 0.20876249209674969,
+   "wiki": 0.21673726355043538,
+   "pooled": 0.13494949477926477
+  },
+  "distance_auc_spearman": -0.30952380952380953,
+  "pooled": {
+   "accuracy": 0.8952941176470588,
+   "auroc": 0.9513366666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8952941176470588,
+   "auroc": 0.9513366666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.9294117647058824,
+   "auroc": 0.9769066666666667,
+   "gains": 94,
+   "losses": 36
+  },
+  "clean_pool": {
+   "accuracy": 0.8858823529411765,
+   "auroc": 0.94682,
+   "gains": 24,
+   "losses": 40
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7964705882352942,
+    "auroc": 0.86006,
+    "gains": 60,
+    "losses": 228
+   },
+   "chat": {
+    "accuracy": 0.7952941176470588,
+    "auroc": 0.8593583333333333,
+    "gains": 85,
+    "losses": 255
+   },
+   "chat_aegis": {
+    "accuracy": 0.8741176470588236,
+    "auroc": 0.9365133333333333,
+    "gains": 85,
+    "losses": 121
+   },
+   "civil": {
+    "accuracy": 0.9294117647058824,
+    "auroc": 0.9769066666666667,
+    "gains": 94,
+    "losses": 36
+   },
+   "hatecheck": {
+    "accuracy": 0.7282352941176471,
+    "auroc": 0.7506516666666667,
+    "gains": 84,
+    "losses": 368
+   },
+   "offensivelang": {
+    "accuracy": 0.7082352941176471,
+    "auroc": 0.7287566666666667,
+    "gains": 80,
+    "losses": 398
+   },
+   "twitter": {
+    "accuracy": 0.8282352941176471,
+    "auroc": 0.8977783333333333,
+    "gains": 49,
+    "losses": 163
+   },
+   "wiki": {
+    "accuracy": 0.8988235294117647,
+    "auroc": 0.9552566666666666,
+    "gains": 80,
+    "losses": 74
+   },
+   "pooled": {
+    "accuracy": 0.8952941176470588,
+    "auroc": 0.9513366666666667,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "rtp",
+  "prior": 0.7058823529411765,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 94468,
+  "chosen": "pooled",
+  "chosen_source_only": "civil",
+  "distances": {
+   "berkeley": 0.19362332329272375,
+   "chat": 0.20778855383798472,
+   "chat_aegis": 0.1851206515589576,
+   "civil": 0.1712234617854841,
+   "hatecheck": 0.22863737225045716,
+   "offensivelang": 0.19113846511597865,
+   "twitter": 0.20496348125520594,
+   "wiki": 0.21344041159129507,
+   "pooled": 0.13215188752287835
+  },
+  "distance_auc_spearman": -0.4761904761904762,
+  "pooled": {
+   "accuracy": 0.8858823529411765,
+   "auroc": 0.9474183333333334,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8858823529411765,
+   "auroc": 0.9474183333333334,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.9211764705882353,
+   "auroc": 0.9741683333333333,
+   "gains": 102,
+   "losses": 42
+  },
+  "clean_pool": {
+   "accuracy": 0.8823529411764706,
+   "auroc": 0.947165,
+   "gains": 31,
+   "losses": 37
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7964705882352942,
+    "auroc": 0.8625316666666667,
+    "gains": 68,
+    "losses": 220
+   },
+   "chat": {
+    "accuracy": 0.7905882352941176,
+    "auroc": 0.8490016666666667,
+    "gains": 87,
+    "losses": 249
+   },
+   "chat_aegis": {
+    "accuracy": 0.8482352941176471,
+    "auroc": 0.9156366666666667,
+    "gains": 75,
+    "losses": 139
+   },
+   "civil": {
+    "accuracy": 0.9211764705882353,
+    "auroc": 0.9741683333333333,
+    "gains": 102,
+    "losses": 42
+   },
+   "hatecheck": {
+    "accuracy": 0.7,
+    "auroc": 0.7322616666666667,
+    "gains": 84,
+    "losses": 400
+   },
+   "offensivelang": {
+    "accuracy": 0.7152941176470589,
+    "auroc": 0.7347866666666667,
+    "gains": 88,
+    "losses": 378
+   },
+   "twitter": {
+    "accuracy": 0.8188235294117647,
+    "auroc": 0.89919,
+    "gains": 52,
+    "losses": 166
+   },
+   "wiki": {
+    "accuracy": 0.8905882352941177,
+    "auroc": 0.9505,
+    "gains": 87,
+    "losses": 79
+   },
+   "pooled": {
+    "accuracy": 0.8858823529411765,
+    "auroc": 0.9474183333333334,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "rtp",
+  "prior": 0.7058823529411765,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 94468,
+  "chosen": "pooled",
+  "chosen_source_only": "civil",
+  "distances": {
+   "berkeley": 0.19539540957322188,
+   "chat": 0.20831365625667678,
+   "chat_aegis": 0.18798646097660557,
+   "civil": 0.17458676522547453,
+   "hatecheck": 0.22786236444158048,
+   "offensivelang": 0.18927172664833905,
+   "twitter": 0.2091997136615611,
+   "wiki": 0.21910435925417973,
+   "pooled": 0.13499324271236152
+  },
+  "distance_auc_spearman": -0.30952380952380953,
+  "pooled": {
+   "accuracy": 0.8917647058823529,
+   "auroc": 0.9508666666666666,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8917647058823529,
+   "auroc": 0.9508666666666666,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.9247058823529412,
+   "auroc": 0.9748916666666667,
+   "gains": 99,
+   "losses": 43
+  },
+  "clean_pool": {
+   "accuracy": 0.8870588235294118,
+   "auroc": 0.9485233333333334,
+   "gains": 30,
+   "losses": 38
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7788235294117647,
+    "auroc": 0.8515766666666666,
+    "gains": 57,
+    "losses": 249
+   },
+   "chat": {
+    "accuracy": 0.7858823529411765,
+    "auroc": 0.84261,
+    "gains": 81,
+    "losses": 261
+   },
+   "chat_aegis": {
+    "accuracy": 0.8541176470588235,
+    "auroc": 0.92147,
+    "gains": 78,
+    "losses": 142
+   },
+   "civil": {
+    "accuracy": 0.9247058823529412,
+    "auroc": 0.9748916666666667,
+    "gains": 99,
+    "losses": 43
+   },
+   "hatecheck": {
+    "accuracy": 0.7,
+    "auroc": 0.7339783333333333,
+    "gains": 83,
+    "losses": 409
+   },
+   "offensivelang": {
+    "accuracy": 0.7058823529411765,
+    "auroc": 0.72425,
+    "gains": 89,
+    "losses": 405
+   },
+   "twitter": {
+    "accuracy": 0.8364705882352941,
+    "auroc": 0.9040033333333334,
+    "gains": 61,
+    "losses": 155
+   },
+   "wiki": {
+    "accuracy": 0.8988235294117647,
+    "auroc": 0.95759,
+    "gains": 92,
+    "losses": 80
+   },
+   "pooled": {
+    "accuracy": 0.8917647058823529,
+    "auroc": 0.9508666666666666,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "twitter",
+  "prior": 0.5,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 80896,
+  "chosen": "berkeley",
+  "chosen_source_only": "berkeley",
+  "distances": {
+   "berkeley": 0.058947925143377516,
+   "chat": 0.24324410303909724,
+   "chat_aegis": 0.1848715834058131,
+   "civil": 0.09742803877138788,
+   "hatecheck": 0.27229557900703605,
+   "offensivelang": 0.27737330395519844,
+   "rtp": 0.20115502793679096,
+   "wiki": 0.10665429300469152,
+   "pooled": 0.07189513325868237
+  },
+  "distance_auc_spearman": -0.9761904761904763,
+  "pooled": {
+   "accuracy": 0.6647058823529411,
+   "auroc": 0.7435404844290657,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7035294117647058,
+   "auroc": 0.7835695501730103,
+   "gains": 203,
+   "losses": 137
+  },
+  "routed_source_only": {
+   "accuracy": 0.7035294117647058,
+   "auroc": 0.7835695501730103,
+   "gains": 203,
+   "losses": 137
+  },
+  "clean_pool": {
+   "accuracy": 0.668235294117647,
+   "auroc": 0.7409494809688582,
+   "gains": 35,
+   "losses": 29
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7035294117647058,
+    "auroc": 0.7835695501730103,
+    "gains": 203,
+    "losses": 137
+   },
+   "chat": {
+    "accuracy": 0.66,
+    "auroc": 0.7037840830449827,
+    "gains": 200,
+    "losses": 208
+   },
+   "chat_aegis": {
+    "accuracy": 0.6870588235294117,
+    "auroc": 0.7545453287197231,
+    "gains": 184,
+    "losses": 146
+   },
+   "civil": {
+    "accuracy": 0.7094117647058824,
+    "auroc": 0.7701024221453288,
+    "gains": 153,
+    "losses": 77
+   },
+   "hatecheck": {
+    "accuracy": 0.6458823529411765,
+    "auroc": 0.6933702422145329,
+    "gains": 286,
+    "losses": 318
+   },
+   "offensivelang": {
+    "accuracy": 0.6270588235294118,
+    "auroc": 0.6782823529411764,
+    "gains": 215,
+    "losses": 279
+   },
+   "rtp": {
+    "accuracy": 0.7023529411764706,
+    "auroc": 0.7610491349480969,
+    "gains": 159,
+    "losses": 95
+   },
+   "wiki": {
+    "accuracy": 0.6976470588235294,
+    "auroc": 0.7648332179930796,
+    "gains": 165,
+    "losses": 109
+   },
+   "pooled": {
+    "accuracy": 0.6647058823529411,
+    "auroc": 0.7435404844290657,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "twitter",
+  "prior": 0.5,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 80896,
+  "chosen": "berkeley",
+  "chosen_source_only": "berkeley",
+  "distances": {
+   "berkeley": 0.05884974232765056,
+   "chat": 0.24171590871345305,
+   "chat_aegis": 0.1843033593119002,
+   "civil": 0.09816170676020682,
+   "hatecheck": 0.2660057496195778,
+   "offensivelang": 0.2731006553957953,
+   "rtp": 0.19778506952591077,
+   "wiki": 0.10678016534497739,
+   "pooled": 0.07133858325426451
+  },
+  "distance_auc_spearman": -0.9523809523809524,
+  "pooled": {
+   "accuracy": 0.6705882352941176,
+   "auroc": 0.7386387543252595,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7,
+   "auroc": 0.7755314878892734,
+   "gains": 197,
+   "losses": 147
+  },
+  "routed_source_only": {
+   "accuracy": 0.7,
+   "auroc": 0.7755314878892734,
+   "gains": 197,
+   "losses": 147
+  },
+  "clean_pool": {
+   "accuracy": 0.6705882352941176,
+   "auroc": 0.7363259515570935,
+   "gains": 36,
+   "losses": 36
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7,
+    "auroc": 0.7755314878892734,
+    "gains": 197,
+    "losses": 147
+   },
+   "chat": {
+    "accuracy": 0.6411764705882353,
+    "auroc": 0.6942608996539792,
+    "gains": 174,
+    "losses": 224
+   },
+   "chat_aegis": {
+    "accuracy": 0.6894117647058824,
+    "auroc": 0.7573598615916955,
+    "gains": 188,
+    "losses": 156
+   },
+   "civil": {
+    "accuracy": 0.691764705882353,
+    "auroc": 0.7672560553633218,
+    "gains": 122,
+    "losses": 86
+   },
+   "hatecheck": {
+    "accuracy": 0.6282352941176471,
+    "auroc": 0.6862221453287197,
+    "gains": 259,
+    "losses": 331
+   },
+   "offensivelang": {
+    "accuracy": 0.6247058823529412,
+    "auroc": 0.6863508650519031,
+    "gains": 202,
+    "losses": 280
+   },
+   "rtp": {
+    "accuracy": 0.6776470588235294,
+    "auroc": 0.7485072664359862,
+    "gains": 136,
+    "losses": 124
+   },
+   "wiki": {
+    "accuracy": 0.6929411764705883,
+    "auroc": 0.7551259515570934,
+    "gains": 149,
+    "losses": 111
+   },
+   "pooled": {
+    "accuracy": 0.6705882352941176,
+    "auroc": 0.7386387543252595,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "twitter",
+  "prior": 0.5,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 80896,
+  "chosen": "berkeley",
+  "chosen_source_only": "berkeley",
+  "distances": {
+   "berkeley": 0.05748414183740899,
+   "chat": 0.24405695525248175,
+   "chat_aegis": 0.18362642469253798,
+   "civil": 0.0977050814071157,
+   "hatecheck": 0.27077110893893697,
+   "offensivelang": 0.2753757587661265,
+   "rtp": 0.20148610868189337,
+   "wiki": 0.106054467818201,
+   "pooled": 0.07173574760714511
+  },
+  "distance_auc_spearman": -0.9761904761904763,
+  "pooled": {
+   "accuracy": 0.6788235294117647,
+   "auroc": 0.7330152249134948,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.72,
+   "auroc": 0.783243598615917,
+   "gains": 196,
+   "losses": 126
+  },
+  "routed_source_only": {
+   "accuracy": 0.72,
+   "auroc": 0.783243598615917,
+   "gains": 196,
+   "losses": 126
+  },
+  "clean_pool": {
+   "accuracy": 0.6729411764705883,
+   "auroc": 0.7317681660899654,
+   "gains": 27,
+   "losses": 37
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.72,
+    "auroc": 0.783243598615917,
+    "gains": 196,
+    "losses": 126
+   },
+   "chat": {
+    "accuracy": 0.6317647058823529,
+    "auroc": 0.6834110726643599,
+    "gains": 152,
+    "losses": 232
+   },
+   "chat_aegis": {
+    "accuracy": 0.6964705882352941,
+    "auroc": 0.7464878892733564,
+    "gains": 161,
+    "losses": 131
+   },
+   "civil": {
+    "accuracy": 0.7035294117647058,
+    "auroc": 0.7583079584775086,
+    "gains": 131,
+    "losses": 89
+   },
+   "hatecheck": {
+    "accuracy": 0.6211764705882353,
+    "auroc": 0.6809363321799308,
+    "gains": 241,
+    "losses": 339
+   },
+   "offensivelang": {
+    "accuracy": 0.6282352941176471,
+    "auroc": 0.6792048442906574,
+    "gains": 197,
+    "losses": 283
+   },
+   "rtp": {
+    "accuracy": 0.6870588235294117,
+    "auroc": 0.7430373702422145,
+    "gains": 123,
+    "losses": 109
+   },
+   "wiki": {
+    "accuracy": 0.6905882352941176,
+    "auroc": 0.7463273356401384,
+    "gains": 144,
+    "losses": 124
+   },
+   "pooled": {
+    "accuracy": 0.6788235294117647,
+    "auroc": 0.7330152249134948,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "twitter",
+  "prior": 0.7058823529411765,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 80896,
+  "chosen": "berkeley",
+  "chosen_source_only": "berkeley",
+  "distances": {
+   "berkeley": 0.06710105611340479,
+   "chat": 0.25361046576285456,
+   "chat_aegis": 0.19964389913816555,
+   "civil": 0.09789699317469294,
+   "hatecheck": 0.2904699512248519,
+   "offensivelang": 0.28710836251344163,
+   "rtp": 0.20181525934832253,
+   "wiki": 0.10283396107213605,
+   "pooled": 0.07371855082979487
+  },
+  "distance_auc_spearman": -1.0,
+  "pooled": {
+   "accuracy": 0.7247058823529412,
+   "auroc": 0.7434916666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7552941176470588,
+   "auroc": 0.7884366666666667,
+   "gains": 182,
+   "losses": 130
+  },
+  "routed_source_only": {
+   "accuracy": 0.7552941176470588,
+   "auroc": 0.7884366666666667,
+   "gains": 182,
+   "losses": 130
+  },
+  "clean_pool": {
+   "accuracy": 0.7258823529411764,
+   "auroc": 0.7420566666666667,
+   "gains": 27,
+   "losses": 25
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7552941176470588,
+    "auroc": 0.7884366666666667,
+    "gains": 182,
+    "losses": 130
+   },
+   "chat": {
+    "accuracy": 0.7105882352941176,
+    "auroc": 0.7105183333333334,
+    "gains": 160,
+    "losses": 184
+   },
+   "chat_aegis": {
+    "accuracy": 0.7388235294117647,
+    "auroc": 0.7530333333333333,
+    "gains": 149,
+    "losses": 125
+   },
+   "civil": {
+    "accuracy": 0.7505882352941177,
+    "auroc": 0.7731783333333333,
+    "gains": 107,
+    "losses": 63
+   },
+   "hatecheck": {
+    "accuracy": 0.6752941176470588,
+    "auroc": 0.6651416666666666,
+    "gains": 200,
+    "losses": 284
+   },
+   "offensivelang": {
+    "accuracy": 0.7,
+    "auroc": 0.694245,
+    "gains": 200,
+    "losses": 242
+   },
+   "rtp": {
+    "accuracy": 0.7388235294117647,
+    "auroc": 0.7489933333333333,
+    "gains": 130,
+    "losses": 106
+   },
+   "wiki": {
+    "accuracy": 0.7376470588235294,
+    "auroc": 0.762525,
+    "gains": 123,
+    "losses": 101
+   },
+   "pooled": {
+    "accuracy": 0.7247058823529412,
+    "auroc": 0.7434916666666667,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "twitter",
+  "prior": 0.7058823529411765,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 80896,
+  "chosen": "berkeley",
+  "chosen_source_only": "berkeley",
+  "distances": {
+   "berkeley": 0.06799326450157135,
+   "chat": 0.250755374615973,
+   "chat_aegis": 0.19959115295424176,
+   "civil": 0.10314598416272434,
+   "hatecheck": 0.28997970188830474,
+   "offensivelang": 0.28531516424427633,
+   "rtp": 0.19648763754759851,
+   "wiki": 0.10351111900691444,
+   "pooled": 0.07436318660698865
+  },
+  "distance_auc_spearman": -1.0,
+  "pooled": {
+   "accuracy": 0.7258823529411764,
+   "auroc": 0.7438366666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7552941176470588,
+   "auroc": 0.7872166666666667,
+   "gains": 187,
+   "losses": 137
+  },
+  "routed_source_only": {
+   "accuracy": 0.7552941176470588,
+   "auroc": 0.7872166666666667,
+   "gains": 187,
+   "losses": 137
+  },
+  "clean_pool": {
+   "accuracy": 0.7223529411764706,
+   "auroc": 0.74184,
+   "gains": 29,
+   "losses": 35
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7552941176470588,
+    "auroc": 0.7872166666666667,
+    "gains": 187,
+    "losses": 137
+   },
+   "chat": {
+    "accuracy": 0.6952941176470588,
+    "auroc": 0.6967616666666666,
+    "gains": 149,
+    "losses": 201
+   },
+   "chat_aegis": {
+    "accuracy": 0.74,
+    "auroc": 0.7520866666666667,
+    "gains": 143,
+    "losses": 119
+   },
+   "civil": {
+    "accuracy": 0.7447058823529412,
+    "auroc": 0.774375,
+    "gains": 112,
+    "losses": 80
+   },
+   "hatecheck": {
+    "accuracy": 0.6811764705882353,
+    "auroc": 0.68871,
+    "gains": 207,
+    "losses": 283
+   },
+   "offensivelang": {
+    "accuracy": 0.7011764705882353,
+    "auroc": 0.6913416666666666,
+    "gains": 199,
+    "losses": 241
+   },
+   "rtp": {
+    "accuracy": 0.7352941176470589,
+    "auroc": 0.755165,
+    "gains": 125,
+    "losses": 109
+   },
+   "wiki": {
+    "accuracy": 0.7470588235294118,
+    "auroc": 0.76979,
+    "gains": 133,
+    "losses": 97
+   },
+   "pooled": {
+    "accuracy": 0.7258823529411764,
+    "auroc": 0.7438366666666667,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "twitter",
+  "prior": 0.7058823529411765,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 80896,
+  "chosen": "berkeley",
+  "chosen_source_only": "berkeley",
+  "distances": {
+   "berkeley": 0.06298897310528548,
+   "chat": 0.2465383273180387,
+   "chat_aegis": 0.19514126250996944,
+   "civil": 0.10013320512557028,
+   "hatecheck": 0.28102323175351923,
+   "offensivelang": 0.27929926473947053,
+   "rtp": 0.19204670129734142,
+   "wiki": 0.10155646586930794,
+   "pooled": 0.07031369514100853
+  },
+  "distance_auc_spearman": -0.880952380952381,
+  "pooled": {
+   "accuracy": 0.7211764705882353,
+   "auroc": 0.7374516666666666,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.7447058823529412,
+   "auroc": 0.7657583333333333,
+   "gains": 185,
+   "losses": 145
+  },
+  "routed_source_only": {
+   "accuracy": 0.7447058823529412,
+   "auroc": 0.7657583333333333,
+   "gains": 185,
+   "losses": 145
+  },
+  "clean_pool": {
+   "accuracy": 0.7223529411764706,
+   "auroc": 0.7375533333333333,
+   "gains": 31,
+   "losses": 29
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.7447058823529412,
+    "auroc": 0.7657583333333333,
+    "gains": 185,
+    "losses": 145
+   },
+   "chat": {
+    "accuracy": 0.7035294117647058,
+    "auroc": 0.6799783333333334,
+    "gains": 164,
+    "losses": 194
+   },
+   "chat_aegis": {
+    "accuracy": 0.7329411764705882,
+    "auroc": 0.7388666666666667,
+    "gains": 152,
+    "losses": 132
+   },
+   "civil": {
+    "accuracy": 0.7435294117647059,
+    "auroc": 0.763765,
+    "gains": 121,
+    "losses": 83
+   },
+   "hatecheck": {
+    "accuracy": 0.6835294117647058,
+    "auroc": 0.690565,
+    "gains": 209,
+    "losses": 273
+   },
+   "offensivelang": {
+    "accuracy": 0.6905882352941176,
+    "auroc": 0.6839666666666666,
+    "gains": 203,
+    "losses": 255
+   },
+   "rtp": {
+    "accuracy": 0.7388235294117647,
+    "auroc": 0.7549783333333333,
+    "gains": 131,
+    "losses": 101
+   },
+   "wiki": {
+    "accuracy": 0.7329411764705882,
+    "auroc": 0.7502016666666667,
+    "gains": 129,
+    "losses": 109
+   },
+   "pooled": {
+    "accuracy": 0.7211764705882353,
+    "auroc": 0.7374516666666666,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "wiki",
+  "prior": 0.5,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 97154,
+  "chosen": "pooled",
+  "chosen_source_only": "civil",
+  "distances": {
+   "berkeley": 0.10913163699341978,
+   "chat": 0.21785580184966796,
+   "chat_aegis": 0.1466477527677632,
+   "civil": 0.09892071635982064,
+   "hatecheck": 0.30850015144313964,
+   "offensivelang": 0.2772168985840094,
+   "rtp": 0.20799490380986907,
+   "twitter": 0.10400516178837134,
+   "pooled": 0.07979688445518651
+  },
+  "distance_auc_spearman": -0.8571428571428572,
+  "pooled": {
+   "accuracy": 0.8717647058823529,
+   "auroc": 0.94520276816609,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8717647058823529,
+   "auroc": 0.94520276816609,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.8929411764705882,
+   "auroc": 0.9624553633217993,
+   "gains": 76,
+   "losses": 40
+  },
+  "clean_pool": {
+   "accuracy": 0.8729411764705882,
+   "auroc": 0.9446103806228374,
+   "gains": 24,
+   "losses": 22
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.8505882352941176,
+    "auroc": 0.9227557093425606,
+    "gains": 70,
+    "losses": 106
+   },
+   "chat": {
+    "accuracy": 0.7870588235294118,
+    "auroc": 0.8753231833910035,
+    "gains": 76,
+    "losses": 220
+   },
+   "chat_aegis": {
+    "accuracy": 0.8376470588235294,
+    "auroc": 0.9165702422145329,
+    "gains": 68,
+    "losses": 126
+   },
+   "civil": {
+    "accuracy": 0.8929411764705882,
+    "auroc": 0.9624553633217993,
+    "gains": 76,
+    "losses": 40
+   },
+   "hatecheck": {
+    "accuracy": 0.6423529411764706,
+    "auroc": 0.7008276816608997,
+    "gains": 110,
+    "losses": 500
+   },
+   "offensivelang": {
+    "accuracy": 0.7717647058823529,
+    "auroc": 0.8429826989619377,
+    "gains": 86,
+    "losses": 256
+   },
+   "rtp": {
+    "accuracy": 0.8811764705882353,
+    "auroc": 0.9505854671280277,
+    "gains": 77,
+    "losses": 61
+   },
+   "twitter": {
+    "accuracy": 0.8670588235294118,
+    "auroc": 0.9426809688581315,
+    "gains": 73,
+    "losses": 81
+   },
+   "pooled": {
+    "accuracy": 0.8717647058823529,
+    "auroc": 0.94520276816609,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "wiki",
+  "prior": 0.5,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 97154,
+  "chosen": "pooled",
+  "chosen_source_only": "civil",
+  "distances": {
+   "berkeley": 0.11274993022673413,
+   "chat": 0.21517351301739507,
+   "chat_aegis": 0.14388972689187135,
+   "civil": 0.10011041250434846,
+   "hatecheck": 0.31254794544885317,
+   "offensivelang": 0.2782898518490403,
+   "rtp": 0.20724364490486497,
+   "twitter": 0.10670095653172607,
+   "pooled": 0.0813191867175262
+  },
+  "distance_auc_spearman": -0.8571428571428572,
+  "pooled": {
+   "accuracy": 0.8823529411764706,
+   "auroc": 0.9521079584775086,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8823529411764706,
+   "auroc": 0.9521079584775086,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.8952941176470588,
+   "auroc": 0.961760553633218,
+   "gains": 67,
+   "losses": 45
+  },
+  "clean_pool": {
+   "accuracy": 0.8823529411764706,
+   "auroc": 0.9517896193771627,
+   "gains": 18,
+   "losses": 18
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.8717647058823529,
+    "auroc": 0.9403031141868512,
+    "gains": 82,
+    "losses": 100
+   },
+   "chat": {
+    "accuracy": 0.7858823529411765,
+    "auroc": 0.8691557093425606,
+    "gains": 56,
+    "losses": 220
+   },
+   "chat_aegis": {
+    "accuracy": 0.8411764705882353,
+    "auroc": 0.922719723183391,
+    "gains": 57,
+    "losses": 127
+   },
+   "civil": {
+    "accuracy": 0.8952941176470588,
+    "auroc": 0.961760553633218,
+    "gains": 67,
+    "losses": 45
+   },
+   "hatecheck": {
+    "accuracy": 0.6411764705882353,
+    "auroc": 0.7031501730103806,
+    "gains": 101,
+    "losses": 511
+   },
+   "offensivelang": {
+    "accuracy": 0.7894117647058824,
+    "auroc": 0.8602020761245674,
+    "gains": 83,
+    "losses": 241
+   },
+   "rtp": {
+    "accuracy": 0.8823529411764706,
+    "auroc": 0.953764705882353,
+    "gains": 60,
+    "losses": 60
+   },
+   "twitter": {
+    "accuracy": 0.8741176470588236,
+    "auroc": 0.9412138408304498,
+    "gains": 58,
+    "losses": 72
+   },
+   "pooled": {
+    "accuracy": 0.8823529411764706,
+    "auroc": 0.9521079584775086,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "wiki",
+  "prior": 0.5,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 97154,
+  "chosen": "pooled",
+  "chosen_source_only": "civil",
+  "distances": {
+   "berkeley": 0.10713120594595711,
+   "chat": 0.2165158565730162,
+   "chat_aegis": 0.14404901887096327,
+   "civil": 0.09589240309018682,
+   "hatecheck": 0.3053842637994318,
+   "offensivelang": 0.2734931537489692,
+   "rtp": 0.20652265843586676,
+   "twitter": 0.10357446249821359,
+   "pooled": 0.0778598562398343
+  },
+  "distance_auc_spearman": -0.8571428571428572,
+  "pooled": {
+   "accuracy": 0.8611764705882353,
+   "auroc": 0.9472110726643599,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8611764705882353,
+   "auroc": 0.9472110726643599,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.8894117647058823,
+   "auroc": 0.9607543252595155,
+   "gains": 96,
+   "losses": 48
+  },
+  "clean_pool": {
+   "accuracy": 0.86,
+   "auroc": 0.9475017301038062,
+   "gains": 26,
+   "losses": 28
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.8611764705882353,
+    "auroc": 0.9256152249134948,
+    "gains": 84,
+    "losses": 84
+   },
+   "chat": {
+    "accuracy": 0.7788235294117647,
+    "auroc": 0.8584442906574394,
+    "gains": 81,
+    "losses": 221
+   },
+   "chat_aegis": {
+    "accuracy": 0.8294117647058824,
+    "auroc": 0.910559169550173,
+    "gains": 67,
+    "losses": 121
+   },
+   "civil": {
+    "accuracy": 0.8894117647058823,
+    "auroc": 0.9607543252595155,
+    "gains": 96,
+    "losses": 48
+   },
+   "hatecheck": {
+    "accuracy": 0.6258823529411764,
+    "auroc": 0.6737301038062283,
+    "gains": 96,
+    "losses": 496
+   },
+   "offensivelang": {
+    "accuracy": 0.7611764705882353,
+    "auroc": 0.8403543252595156,
+    "gains": 78,
+    "losses": 248
+   },
+   "rtp": {
+    "accuracy": 0.8788235294117647,
+    "auroc": 0.9494643598615917,
+    "gains": 99,
+    "losses": 69
+   },
+   "twitter": {
+    "accuracy": 0.8611764705882353,
+    "auroc": 0.9406698961937716,
+    "gains": 80,
+    "losses": 80
+   },
+   "pooled": {
+    "accuracy": 0.8611764705882353,
+    "auroc": 0.9472110726643599,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "wiki",
+  "prior": 0.7058823529411765,
+  "seed": 17,
+  "n": 1700,
+  "train_n": 97154,
+  "chosen": "pooled",
+  "chosen_source_only": "berkeley",
+  "distances": {
+   "berkeley": 0.10127624279540398,
+   "chat": 0.22566030951623292,
+   "chat_aegis": 0.16883813223673963,
+   "civil": 0.10718663526748644,
+   "hatecheck": 0.3115337846900977,
+   "offensivelang": 0.28178499177662264,
+   "rtp": 0.20799013120113452,
+   "twitter": 0.10243332340666116,
+   "pooled": 0.07925996674490916
+  },
+  "distance_auc_spearman": -0.7142857142857144,
+  "pooled": {
+   "accuracy": 0.8929411764705882,
+   "auroc": 0.949035,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8929411764705882,
+   "auroc": 0.949035,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.8623529411764705,
+   "auroc": 0.929275,
+   "gains": 62,
+   "losses": 114
+  },
+  "clean_pool": {
+   "accuracy": 0.8964705882352941,
+   "auroc": 0.950235,
+   "gains": 24,
+   "losses": 18
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.8623529411764705,
+    "auroc": 0.929275,
+    "gains": 62,
+    "losses": 114
+   },
+   "chat": {
+    "accuracy": 0.8117647058823529,
+    "auroc": 0.8658266666666666,
+    "gains": 64,
+    "losses": 202
+   },
+   "chat_aegis": {
+    "accuracy": 0.8564705882352941,
+    "auroc": 0.9189866666666666,
+    "gains": 55,
+    "losses": 117
+   },
+   "civil": {
+    "accuracy": 0.9058823529411765,
+    "auroc": 0.9621666666666666,
+    "gains": 60,
+    "losses": 38
+   },
+   "hatecheck": {
+    "accuracy": 0.648235294117647,
+    "auroc": 0.6507233333333333,
+    "gains": 91,
+    "losses": 507
+   },
+   "offensivelang": {
+    "accuracy": 0.8011764705882353,
+    "auroc": 0.8391333333333333,
+    "gains": 76,
+    "losses": 232
+   },
+   "rtp": {
+    "accuracy": 0.8917647058823529,
+    "auroc": 0.9500516666666666,
+    "gains": 66,
+    "losses": 68
+   },
+   "twitter": {
+    "accuracy": 0.888235294117647,
+    "auroc": 0.945985,
+    "gains": 67,
+    "losses": 75
+   },
+   "pooled": {
+    "accuracy": 0.8929411764705882,
+    "auroc": 0.949035,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "wiki",
+  "prior": 0.7058823529411765,
+  "seed": 29,
+  "n": 1700,
+  "train_n": 97154,
+  "chosen": "pooled",
+  "chosen_source_only": "berkeley",
+  "distances": {
+   "berkeley": 0.0985897673563948,
+   "chat": 0.22224880439180503,
+   "chat_aegis": 0.16774232125785674,
+   "civil": 0.10594648767543502,
+   "hatecheck": 0.30861538340423994,
+   "offensivelang": 0.27810832665656177,
+   "rtp": 0.20643487299298144,
+   "twitter": 0.09989503914802607,
+   "pooled": 0.07711867487466649
+  },
+  "distance_auc_spearman": -0.7142857142857144,
+  "pooled": {
+   "accuracy": 0.8847058823529412,
+   "auroc": 0.9443666666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8847058823529412,
+   "auroc": 0.9443666666666667,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.8623529411764705,
+   "auroc": 0.9312083333333333,
+   "gains": 67,
+   "losses": 105
+  },
+  "clean_pool": {
+   "accuracy": 0.8952941176470588,
+   "auroc": 0.9471583333333333,
+   "gains": 38,
+   "losses": 20
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.8623529411764705,
+    "auroc": 0.9312083333333333,
+    "gains": 67,
+    "losses": 105
+   },
+   "chat": {
+    "accuracy": 0.8035294117647059,
+    "auroc": 0.8607833333333333,
+    "gains": 79,
+    "losses": 217
+   },
+   "chat_aegis": {
+    "accuracy": 0.8470588235294118,
+    "auroc": 0.9112516666666667,
+    "gains": 63,
+    "losses": 127
+   },
+   "civil": {
+    "accuracy": 0.9058823529411765,
+    "auroc": 0.9644316666666667,
+    "gains": 76,
+    "losses": 40
+   },
+   "hatecheck": {
+    "accuracy": 0.6529411764705882,
+    "auroc": 0.6589066666666666,
+    "gains": 80,
+    "losses": 474
+   },
+   "offensivelang": {
+    "accuracy": 0.7870588235294118,
+    "auroc": 0.83283,
+    "gains": 87,
+    "losses": 253
+   },
+   "rtp": {
+    "accuracy": 0.8929411764705882,
+    "auroc": 0.950655,
+    "gains": 79,
+    "losses": 65
+   },
+   "twitter": {
+    "accuracy": 0.8776470588235294,
+    "auroc": 0.9384266666666666,
+    "gains": 59,
+    "losses": 71
+   },
+   "pooled": {
+    "accuracy": 0.8847058823529412,
+    "auroc": 0.9443666666666667,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ },
+ {
+  "held_family": "wiki",
+  "prior": 0.7058823529411765,
+  "seed": 41,
+  "n": 1700,
+  "train_n": 97154,
+  "chosen": "pooled",
+  "chosen_source_only": "twitter",
+  "distances": {
+   "berkeley": 0.10508960263445406,
+   "chat": 0.22529473974183015,
+   "chat_aegis": 0.16732834622972798,
+   "civil": 0.10571153933991526,
+   "hatecheck": 0.3146551612608741,
+   "offensivelang": 0.2811390775736333,
+   "rtp": 0.207187727879529,
+   "twitter": 0.10241682020501179,
+   "pooled": 0.07942297083896836
+  },
+  "distance_auc_spearman": -0.7380952380952381,
+  "pooled": {
+   "accuracy": 0.8929411764705882,
+   "auroc": 0.9482283333333333,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed": {
+   "accuracy": 0.8929411764705882,
+   "auroc": 0.9482283333333333,
+   "gains": 0,
+   "losses": 0
+  },
+  "routed_source_only": {
+   "accuracy": 0.8682352941176471,
+   "auroc": 0.9354416666666666,
+   "gains": 48,
+   "losses": 90
+  },
+  "clean_pool": {
+   "accuracy": 0.8929411764705882,
+   "auroc": 0.94845,
+   "gains": 17,
+   "losses": 17
+  },
+  "source_results": {
+   "berkeley": {
+    "accuracy": 0.8647058823529412,
+    "auroc": 0.9310566666666666,
+    "gains": 67,
+    "losses": 115
+   },
+   "chat": {
+    "accuracy": 0.8176470588235294,
+    "auroc": 0.8768533333333334,
+    "gains": 56,
+    "losses": 184
+   },
+   "chat_aegis": {
+    "accuracy": 0.8529411764705882,
+    "auroc": 0.91324,
+    "gains": 44,
+    "losses": 112
+   },
+   "civil": {
+    "accuracy": 0.9117647058823529,
+    "auroc": 0.96536,
+    "gains": 67,
+    "losses": 35
+   },
+   "hatecheck": {
+    "accuracy": 0.6529411764705882,
+    "auroc": 0.6612966666666666,
+    "gains": 95,
+    "losses": 503
+   },
+   "offensivelang": {
+    "accuracy": 0.8011764705882353,
+    "auroc": 0.8457533333333334,
+    "gains": 75,
+    "losses": 231
+   },
+   "rtp": {
+    "accuracy": 0.8952941176470588,
+    "auroc": 0.9537233333333334,
+    "gains": 59,
+    "losses": 55
+   },
+   "twitter": {
+    "accuracy": 0.8682352941176471,
+    "auroc": 0.9354416666666666,
+    "gains": 48,
+    "losses": 90
+   },
+   "pooled": {
+    "accuracy": 0.8929411764705882,
+    "auroc": 0.9482283333333333,
+    "gains": 0,
+    "losses": 0
+   }
+  }
+ }
+]

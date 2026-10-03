@@ -1,0 +1,2492 @@
+{
+ "positive_rate": 0.7058823529411765,
+ "pairs": [
+  "chat_aegis+/hatecheck-",
+  "hatecheck+/twitter_davidson-",
+  "twitter_davidson+/twitter_eval-",
+  "twitter_eval+/wiki-",
+  "wiki+/chat_aegis-"
+ ],
+ "results": [
+  {
+   "transform": "batchstd+abtt1",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "batchstd+abtt1|dom|0",
+   "mean_accuracy": 0.6117247204774177,
+   "worst_accuracy": 0.5826972010178118,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.6070588235294118,
+     "auroc": 0.4978
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5826972010178118,
+     "auroc": 0.5149072575625545
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6247058823529412,
+     "auroc": 0.5425183333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6225930680359435,
+     "auroc": 0.6400855718759649
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.6215686274509804,
+     "auroc": 0.6094872685185185
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt4",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "batchstd+abtt4|lda|0.6",
+   "mean_accuracy": 0.6048919625116653,
+   "worst_accuracy": 0.5776081424936387,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5905882352941176,
+     "auroc": 0.50288
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5776081424936387,
+     "auroc": 0.531744055769949
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6070588235294118,
+     "auroc": 0.5051516666666667
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6148908857509627,
+     "auroc": 0.5255771690706188
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.634313725490196,
+     "auroc": 0.590275462962963
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt4",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "batchstd+abtt4|dom|0",
+   "mean_accuracy": 0.6038719519400426,
+   "worst_accuracy": 0.5776081424936387,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.6164705882352941,
+     "auroc": 0.5431666666666667
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5776081424936387,
+     "auroc": 0.47958421511266025
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.5952941176470589,
+     "auroc": 0.505535
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6054771074026529,
+     "auroc": 0.5227771161395616
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.6245098039215686,
+     "auroc": 0.5660381944444445
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt4",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "batchstd+abtt4|lda|0.3",
+   "mean_accuracy": 0.599995070034599,
+   "worst_accuracy": 0.5725190839694656,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5929411764705882,
+     "auroc": 0.50156
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5725190839694656,
+     "auroc": 0.5271691771442798
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6,
+     "auroc": 0.5070283333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6080445014976466,
+     "auroc": 0.5239116051343126
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.6264705882352941,
+     "auroc": 0.5833738425925926
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt1",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "batchstd+abtt1|lda|0.3",
+   "mean_accuracy": 0.6245760904171564,
+   "worst_accuracy": 0.5674300254452926,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5882352941176471,
+     "auroc": 0.4788733333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5674300254452926,
+     "auroc": 0.5191086767085771
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6541176470588236,
+     "auroc": 0.6188466666666667
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6474112109542148,
+     "auroc": 0.6450460941290636
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.6656862745098039,
+     "auroc": 0.6813321759259259
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt4",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "batchstd+abtt4|logistic|0.002",
+   "mean_accuracy": 0.602346132451942,
+   "worst_accuracy": 0.5674300254452926,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.6023529411764705,
+     "auroc": 0.5031533333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5674300254452926,
+     "auroc": 0.5300946097348438
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6129411764705882,
+     "auroc": 0.5109733333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6054771074026529,
+     "auroc": 0.5247832032111508
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.6235294117647059,
+     "auroc": 0.5760335648148148
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt4",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "batchstd+abtt4|lda|0.9",
+   "mean_accuracy": 0.6008775830296057,
+   "worst_accuracy": 0.5674300254452926,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5976470588235294,
+     "auroc": 0.5157866666666666
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5674300254452926,
+     "auroc": 0.5119195817253828
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.5964705882352941,
+     "auroc": 0.5043183333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6114676936243046,
+     "auroc": 0.5249993383617838
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.6313725490196078,
+     "auroc": 0.5843726851851851
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt1",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "batchstd+abtt1|logistic|0.002",
+   "mean_accuracy": 0.6245027273518546,
+   "worst_accuracy": 0.5623409669211196,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5929411764705882,
+     "auroc": 0.4780066666666667
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5623409669211196,
+     "auroc": 0.5181439063861571
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6658823529411765,
+     "auroc": 0.64014
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6405648267008985,
+     "auroc": 0.6383300251422522
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.6607843137254902,
+     "auroc": 0.668880787037037
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt1",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "batchstd+abtt1|lda|0.6",
+   "mean_accuracy": 0.6225566426278494,
+   "worst_accuracy": 0.5623409669211196,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5835294117647059,
+     "auroc": 0.4766533333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5623409669211196,
+     "auroc": 0.5177393252832068
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6435294117647059,
+     "auroc": 0.6095883333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6508344030808729,
+     "auroc": 0.6457289047682061
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.6725490196078432,
+     "auroc": 0.6944409722222222
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "std+abtt4|logistic|0.05",
+   "mean_accuracy": 0.6742561718236472,
+   "worst_accuracy": 0.5576470588235294,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5576470588235294,
+     "auroc": 0.44032
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7099236641221374,
+     "auroc": 0.7428109050168057
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6588235294117647,
+     "auroc": 0.6112766666666667
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6782199400941378,
+     "auroc": 0.6830858806404658
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.7666666666666667,
+     "auroc": 0.82628125
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt1",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "batchstd+abtt1|lda|0.1",
+   "mean_accuracy": 0.6225976544524267,
+   "worst_accuracy": 0.5572519083969466,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5905882352941176,
+     "auroc": 0.4824866666666667
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5572519083969466,
+     "auroc": 0.5058819868044317
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6564705882352941,
+     "auroc": 0.6196383333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6508344030808729,
+     "auroc": 0.6445600105862115
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.657843137254902,
+     "auroc": 0.6585543981481482
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt1",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "batchstd+abtt1|lda|0.9",
+   "mean_accuracy": 0.6150498682005703,
+   "worst_accuracy": 0.5572519083969466,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5835294117647059,
+     "auroc": 0.48448
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5572519083969466,
+     "auroc": 0.5056330138180007
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6317647058823529,
+     "auroc": 0.5730033333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.637997432605905,
+     "auroc": 0.6472894887742049
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.6647058823529411,
+     "auroc": 0.6846284722222222
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt4",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "batchstd+abtt4|logistic|0.05",
+   "mean_accuracy": 0.5976401674781762,
+   "worst_accuracy": 0.5572519083969466,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.6047058823529412,
+     "auroc": 0.5049933333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5572519083969466,
+     "auroc": 0.5059753516743434
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.5929411764705882,
+     "auroc": 0.5076983333333334
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6029097133076594,
+     "auroc": 0.521928454854219
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.6303921568627451,
+     "auroc": 0.5571597222222222
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "std+abtt1|lda|0.02",
+   "mean_accuracy": 0.6844469141025871,
+   "worst_accuracy": 0.5529411764705883,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5529411764705883,
+     "auroc": 0.40438666666666667
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7099236641221374,
+     "auroc": 0.7534545001867298
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6411764705882353,
+     "auroc": 0.58778
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7201540436456996,
+     "auroc": 0.7410453883816329
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.7980392156862746,
+     "auroc": 0.8642442129629629
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt1",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "batchstd+abtt1|logistic|0.05",
+   "mean_accuracy": 0.6218715188532076,
+   "worst_accuracy": 0.5521628498727735,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.6023529411764705,
+     "auroc": 0.48224
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5521628498727735,
+     "auroc": 0.4914415535914353
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6811764705882353,
+     "auroc": 0.6619866666666666
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6354300385109114,
+     "auroc": 0.629292047108641
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.638235294117647,
+     "auroc": 0.6282627314814815
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt4",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "batchstd+abtt4|lda|0.1",
+   "mean_accuracy": 0.5949217844023027,
+   "worst_accuracy": 0.5521628498727735,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5976470588235294,
+     "auroc": 0.5022
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5521628498727735,
+     "auroc": 0.5129465952944106
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.5952941176470589,
+     "auroc": 0.5072283333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6020539152759948,
+     "auroc": 0.5219002249569935
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.6274509803921569,
+     "auroc": 0.5730960648148148
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "raw|logistic|0.05",
+   "mean_accuracy": 0.6971270617978791,
+   "worst_accuracy": 0.5505882352941176,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5505882352941176,
+     "auroc": 0.3918
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6590330788804071,
+     "auroc": 0.6914913481887215
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7811764705882352,
+     "auroc": 0.821705
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6987590928540864,
+     "auroc": 0.729540823077941
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.796078431372549,
+     "auroc": 0.8669641203703704
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "std|lda|0.02",
+   "mean_accuracy": 0.6932990268611829,
+   "worst_accuracy": 0.548235294117647,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.548235294117647,
+     "auroc": 0.39424
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6590330788804071,
+     "auroc": 0.6874766587825221
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7447058823529412,
+     "auroc": 0.7588583333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7184424475823705,
+     "auroc": 0.7401526178818755
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.796078431372549,
+     "auroc": 0.861644675925926
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt1",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "batchstd+abtt1|lda|0.02",
+   "mean_accuracy": 0.6205477341815226,
+   "worst_accuracy": 0.5470737913486005,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5976470588235294,
+     "auroc": 0.48511333333333334
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5470737913486005,
+     "auroc": 0.48867172911739076
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6541176470588236,
+     "auroc": 0.6173883333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6499786050492083,
+     "auroc": 0.6431873318336201
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.653921568627451,
+     "auroc": 0.6389525462962963
+    }
+   }
+  },
+  {
+   "transform": "batchstd+abtt4",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "batchstd+abtt4|lda|0.02",
+   "mean_accuracy": 0.5928700679930959,
+   "worst_accuracy": 0.5470737913486005,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5976470588235294,
+     "auroc": 0.5019333333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5470737913486005,
+     "auroc": 0.5003734594796465
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.5870588235294117,
+     "auroc": 0.5069366666666667
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6011981172443304,
+     "auroc": 0.5187481804949053
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.6313725490196078,
+     "auroc": 0.5670625
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "std|logistic|0.05",
+   "mean_accuracy": 0.6965582742930684,
+   "worst_accuracy": 0.5435294117647059,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5435294117647059,
+     "auroc": 0.38266666666666665
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6641221374045801,
+     "auroc": 0.6987115647952197
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7788235294117647,
+     "auroc": 0.8216716666666667
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6953359007274283,
+     "auroc": 0.7270671783335538
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8009803921568628,
+     "auroc": 0.867275462962963
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "batchstd|lda|0.02",
+   "mean_accuracy": 0.6828208409685543,
+   "worst_accuracy": 0.5435294117647059,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5435294117647059,
+     "auroc": 0.38509333333333334
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.628498727735369,
+     "auroc": 0.6453691024523839
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7423529411764705,
+     "auroc": 0.7689583333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7056054771074026,
+     "auroc": 0.7241268581006572
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.7941176470588235,
+     "auroc": 0.8564652777777778
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "batchstd|logistic|0.05",
+   "mean_accuracy": 0.6882208581460002,
+   "worst_accuracy": 0.5411764705882353,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5411764705882353,
+     "auroc": 0.37231333333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.638676844783715,
+     "auroc": 0.647049670110793
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7835294117647059,
+     "auroc": 0.82538
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6816431322207959,
+     "auroc": 0.7056777380794848
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.796078431372549,
+     "auroc": 0.857630787037037
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "std+abtt4|lda|0.02",
+   "mean_accuracy": 0.6682701485772214,
+   "worst_accuracy": 0.5364705882352941,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5364705882352941,
+     "auroc": 0.41092666666666666
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7201017811704835,
+     "auroc": 0.7554774057014814
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6458823529411765,
+     "auroc": 0.59056
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6722293538724861,
+     "auroc": 0.6661885227824093
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.7666666666666667,
+     "auroc": 0.8225891203703704
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "std+abtt1|lda|0.1",
+   "mean_accuracy": 0.6984776344466586,
+   "worst_accuracy": 0.5341176470588235,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5341176470588235,
+     "auroc": 0.38284
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7455470737913485,
+     "auroc": 0.7922009212000498
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.648235294117647,
+     "auroc": 0.58993
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.732135216089003,
+     "auroc": 0.7657862467469454
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8323529411764706,
+     "auroc": 0.901707175925926
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "std+abtt1|logistic|0.05",
+   "mean_accuracy": 0.6839538737542268,
+   "worst_accuracy": 0.5341176470588235,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5341176470588235,
+     "auroc": 0.36972
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7099236641221374,
+     "auroc": 0.7520851487613593
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6764705882352942,
+     "auroc": 0.6498833333333334
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6953359007274283,
+     "auroc": 0.7271783335538794
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.803921568627451,
+     "auroc": 0.8708842592592593
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "std+abtt4|lda|0.1",
+   "mean_accuracy": 0.6835861607428495,
+   "worst_accuracy": 0.5341176470588235,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5341176470588235,
+     "auroc": 0.3913933333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7506361323155216,
+     "auroc": 0.798207394497697
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6541176470588236,
+     "auroc": 0.5960583333333334
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6859221223791185,
+     "auroc": 0.6868598650258039
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.7931372549019607,
+     "auroc": 0.8630740740740741
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "l2+batchstd|dom|0",
+   "mean_accuracy": 0.6748341263971807,
+   "worst_accuracy": 0.5318066157760815,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5741176470588235,
+     "auroc": 0.5553333333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5318066157760815,
+     "auroc": 0.3052097597410681
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7694117647058824,
+     "auroc": 0.7806033333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7184424475823705,
+     "auroc": 0.7441427374178465
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.7803921568627451,
+     "auroc": 0.8241701388888889
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "std+abtt4|logistic|0.002",
+   "mean_accuracy": 0.7117368922541825,
+   "worst_accuracy": 0.5317647058823529,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5317647058823529,
+     "auroc": 0.3743533333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.8015267175572519,
+     "auroc": 0.835024274866177
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6658823529411765,
+     "auroc": 0.60725
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7124518613607189,
+     "auroc": 0.7409386440827489
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8470588235294118,
+     "auroc": 0.9082581018518519
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "std|lda|0.1",
+   "mean_accuracy": 0.7096845671408526,
+   "worst_accuracy": 0.5294117647058824,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5294117647058824,
+     "auroc": 0.37152
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6997455470737913,
+     "auroc": 0.7217415660400847
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7529411764705882,
+     "auroc": 0.7753016666666667
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7329910141206675,
+     "auroc": 0.7657183185567465
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8333333333333334,
+     "auroc": 0.9003518518518518
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "l2+std|dom|0",
+   "mean_accuracy": 0.6752694939512909,
+   "worst_accuracy": 0.5216284987277354,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.571764705882353,
+     "auroc": 0.55514
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5216284987277354,
+     "auroc": 0.29858085397734346
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7658823529411765,
+     "auroc": 0.777365
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7278562259306803,
+     "auroc": 0.7619866790172467
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.7892156862745098,
+     "auroc": 0.8311851851851851
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "batchstd|lda|0.1",
+   "mean_accuracy": 0.6965913483699391,
+   "worst_accuracy": 0.5176470588235295,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5176470588235295,
+     "auroc": 0.3576666666666667
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6641221374045801,
+     "auroc": 0.680474293539151
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7552941176470588,
+     "auroc": 0.78111
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7184424475823705,
+     "auroc": 0.74877949803714
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8274509803921568,
+     "auroc": 0.8961828703703704
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "std+abtt4|lda|0.3",
+   "mean_accuracy": 0.7049661525537809,
+   "worst_accuracy": 0.5152941176470588,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5152941176470588,
+     "auroc": 0.34672
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.811704834605598,
+     "auroc": 0.8475662890576372
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6635294117647059,
+     "auroc": 0.59803
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6970474967907574,
+     "auroc": 0.7150774116712981
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8372549019607843,
+     "auroc": 0.9041597222222222
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "raw|lda|0.02",
+   "mean_accuracy": 0.7320049822278762,
+   "worst_accuracy": 0.508235294117647,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.508235294117647,
+     "auroc": 0.33736666666666665
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7455470737913485,
+     "auroc": 0.7696999875513507
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7694117647058824,
+     "auroc": 0.79816
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7672229353872486,
+     "auroc": 0.8163574610736183
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8696078431372549,
+     "auroc": 0.9312627314814815
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "raw|lda|0.6",
+   "mean_accuracy": 0.7108475778360223,
+   "worst_accuracy": 0.508235294117647,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.508235294117647,
+     "auroc": 0.3250866666666667
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5826972010178118,
+     "auroc": 0.5020229055147516
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.8105882352941176,
+     "auroc": 0.8533483333333334
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7860504920838682,
+     "auroc": 0.8492082396012527
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8666666666666667,
+     "auroc": 0.9329212962962963
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "raw|logistic|0.002",
+   "mean_accuracy": 0.7340921568051028,
+   "worst_accuracy": 0.5035294117647059,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5035294117647059,
+     "auroc": 0.3199066666666667
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7404580152671756,
+     "auroc": 0.7675525955433835
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7929411764705883,
+     "auroc": 0.8347033333333334
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.762943945228926,
+     "auroc": 0.8106629614926558
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8705882352941177,
+     "auroc": 0.9334675925925926
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "std+abtt1|lda|0.3",
+   "mean_accuracy": 0.7094766489531461,
+   "worst_accuracy": 0.5035294117647059,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5035294117647059,
+     "auroc": 0.34019333333333335
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7760814249363868,
+     "auroc": 0.8343707207767957
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6435294117647059,
+     "auroc": 0.5866116666666666
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7526743688489517,
+     "auroc": 0.7978033611221385
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8715686274509804,
+     "auroc": 0.9324444444444444
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "raw|lda|0.3",
+   "mean_accuracy": 0.7261257781008316,
+   "worst_accuracy": 0.5011764705882353,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5011764705882353,
+     "auroc": 0.30644
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6590330788804071,
+     "auroc": 0.6570085895680319
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7952941176470588,
+     "auroc": 0.8373266666666667
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.793752674368849,
+     "auroc": 0.8564739093996736
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8813725490196078,
+     "auroc": 0.945855324074074
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "std+abtt4|dom|0",
+   "mean_accuracy": 0.7216559741869487,
+   "worst_accuracy": 0.5011764705882353,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5011764705882353,
+     "auroc": 0.2715533333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.8269720101781171,
+     "auroc": 0.8881177642225818
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6129411764705882,
+     "auroc": 0.5280566666666666
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7809157038938811,
+     "auroc": 0.837357858056548
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8862745098039215,
+     "auroc": 0.9420405092592593
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "std+abtt1|logistic|0.002",
+   "mean_accuracy": 0.7155019705066713,
+   "worst_accuracy": 0.5011764705882353,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.5011764705882353,
+     "auroc": 0.3142
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7760814249363868,
+     "auroc": 0.8289244366986182
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6635294117647059,
+     "auroc": 0.60821
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7612323491655969,
+     "auroc": 0.8105138723479335
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8754901960784314,
+     "auroc": 0.9359583333333333
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "std+abtt4|lda|0.6",
+   "mean_accuracy": 0.715061647624488,
+   "worst_accuracy": 0.4988235294117647,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4988235294117647,
+     "auroc": 0.2937266666666667
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.8269720101781171,
+     "auroc": 0.8772563176895307
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6541176470588236,
+     "auroc": 0.5895433333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7218656397090286,
+     "auroc": 0.7496211018481761
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8735294117647059,
+     "auroc": 0.9313287037037037
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "std|lda|0.3",
+   "mean_accuracy": 0.7241023760404219,
+   "worst_accuracy": 0.4964705882352941,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4964705882352941,
+     "auroc": 0.3270733333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7404580152671756,
+     "auroc": 0.7593987302377692
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7611764705882353,
+     "auroc": 0.7924083333333334
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7518185708172871,
+     "auroc": 0.7982691544263597
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8705882352941177,
+     "auroc": 0.9310925925925926
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "batchstd|logistic|0.002",
+   "mean_accuracy": 0.7221680588275643,
+   "worst_accuracy": 0.4964705882352941,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4964705882352941,
+     "auroc": 0.30228
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7048346055979644,
+     "auroc": 0.7325096477032242
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7976470588235294,
+     "auroc": 0.83808
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7432605905006419,
+     "auroc": 0.7932265890344493
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8686274509803922,
+     "auroc": 0.9285682870370371
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "batchstd|lda|0.3",
+   "mean_accuracy": 0.7130589949195878,
+   "worst_accuracy": 0.4964705882352941,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4964705882352941,
+     "auroc": 0.31638
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7048346055979644,
+     "auroc": 0.7232354039586705
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7647058823529411,
+     "auroc": 0.7956183333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7355584082156611,
+     "auroc": 0.7830929381147722
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8637254901960785,
+     "auroc": 0.9271493055555555
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "std|logistic|0.002",
+   "mean_accuracy": 0.7331330085758495,
+   "worst_accuracy": 0.49411764705882355,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.49411764705882355,
+     "auroc": 0.31124
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7404580152671756,
+     "auroc": 0.76696128470061
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.8,
+     "auroc": 0.8381766666666667
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7595207531022679,
+     "auroc": 0.8083445811830091
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8715686274509804,
+     "auroc": 0.9331331018518518
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "std+abtt4|lda|0.9",
+   "mean_accuracy": 0.7191947997300028,
+   "worst_accuracy": 0.49411764705882355,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.49411764705882355,
+     "auroc": 0.2666733333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.8269720101781171,
+     "auroc": 0.8915100211627038
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6376470588235295,
+     "auroc": 0.5612983333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7509627727856226,
+     "auroc": 0.7960504609412906
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8862745098039215,
+     "auroc": 0.944931712962963
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "batchstd|dom|0",
+   "mean_accuracy": 0.7062811544396492,
+   "worst_accuracy": 0.49411764705882355,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.49411764705882355,
+     "auroc": 0.30272666666666664
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6030534351145038,
+     "auroc": 0.5919021536163326
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.8105882352941176,
+     "auroc": 0.8512033333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7971758664955071,
+     "auroc": 0.8584217723082352
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8264705882352941,
+     "auroc": 0.8963969907407408
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "std+abtt1|lda|0.9",
+   "mean_accuracy": 0.7203375779301716,
+   "worst_accuracy": 0.49176470588235294,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.49176470588235294,
+     "auroc": 0.2762266666666667
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.806615776081425,
+     "auroc": 0.8429291671853604
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6235294117647059,
+     "auroc": 0.5436266666666667
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.795464270432178,
+     "auroc": 0.8626430241277403
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.884313725490196,
+     "auroc": 0.9480879629629629
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "std+abtt1|dom|0",
+   "mean_accuracy": 0.7102297170198322,
+   "worst_accuracy": 0.49176470588235294,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.49176470588235294,
+     "auroc": 0.3005933333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7811704834605598,
+     "auroc": 0.8112162330387153
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6188235294117647,
+     "auroc": 0.5207033333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.8142918271287976,
+     "auroc": 0.8741414141414141
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8450980392156863,
+     "auroc": 0.9128356481481481
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "std|dom|0",
+   "mean_accuracy": 0.7149461902096628,
+   "worst_accuracy": 0.4894117647058824,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4894117647058824,
+     "auroc": 0.29069333333333336
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.628498727735369,
+     "auroc": 0.6170173036225569
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.8211764705882353,
+     "auroc": 0.852925
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.8023106546854942,
+     "auroc": 0.865698910502404
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8333333333333334,
+     "auroc": 0.9019444444444444
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "raw|lda|0.1",
+   "mean_accuracy": 0.7343659960353532,
+   "worst_accuracy": 0.48705882352941177,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.48705882352941177,
+     "auroc": 0.2942
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7353689567430025,
+     "auroc": 0.7479770944852484
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7764705882352941,
+     "auroc": 0.816795
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7886178861788617,
+     "auroc": 0.8465740373163954
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.884313725490196,
+     "auroc": 0.9484930555555555
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "batchstd|lda|0.9",
+   "mean_accuracy": 0.7257884549502267,
+   "worst_accuracy": 0.48470588235294115,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.48470588235294115,
+     "auroc": 0.27410666666666667
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6946564885496184,
+     "auroc": 0.7124673222955309
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7870588235294118,
+     "auroc": 0.823075
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7860504920838682,
+     "auroc": 0.8514595739049887
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8764705882352941,
+     "auroc": 0.9417835648148148
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "std|lda|0.9",
+   "mean_accuracy": 0.7328885381666901,
+   "worst_accuracy": 0.4823529411764706,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4823529411764706,
+     "auroc": 0.26832666666666666
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7201017811704835,
+     "auroc": 0.7428420266401096
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7858823529411765,
+     "auroc": 0.82287
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.793752674368849,
+     "auroc": 0.8604499139870319
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8823529411764706,
+     "auroc": 0.9446111111111111
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "std+abtt1|lda|0.6",
+   "mean_accuracy": 0.721558012404268,
+   "worst_accuracy": 0.4823529411764706,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4823529411764706,
+     "auroc": 0.29377333333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.811704834605598,
+     "auroc": 0.8517677082036599
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6447058823529411,
+     "auroc": 0.5725566666666667
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7817715019255456,
+     "auroc": 0.8312169732257069
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8872549019607843,
+     "auroc": 0.947130787037037
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "batchstd|lda|0.6",
+   "mean_accuracy": 0.7253011335000736,
+   "worst_accuracy": 0.4776470588235294,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4776470588235294,
+     "auroc": 0.27863333333333334
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7201017811704835,
+     "auroc": 0.7406635130088386
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7788235294117647,
+     "auroc": 0.8081083333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7715019255455713,
+     "auroc": 0.8189043271139341
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8784313725490196,
+     "auroc": 0.9421284722222222
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "std|lda|0.6",
+   "mean_accuracy": 0.731019841871427,
+   "worst_accuracy": 0.47294117647058825,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.47294117647058825,
+     "auroc": 0.2813733333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7404580152671756,
+     "auroc": 0.7736213120876385
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7764705882352941,
+     "auroc": 0.806415
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7809157038938811,
+     "auroc": 0.8309681972564069
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.884313725490196,
+     "auroc": 0.9453923611111111
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "l2+batchstd|lda|0.02",
+   "mean_accuracy": 0.6806489689017138,
+   "worst_accuracy": 0.47058823529411764,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.47058823529411764,
+     "auroc": 0.32886
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6895674300254453,
+     "auroc": 0.6433461969376323
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7482352941176471,
+     "auroc": 0.7834883333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.6919127086007703,
+     "auroc": 0.6909540823077941
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8029411764705883,
+     "auroc": 0.8670150462962963
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "l2+std|lda|0.02",
+   "mean_accuracy": 0.6848858739333027,
+   "worst_accuracy": 0.46352941176470586,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.46352941176470586,
+     "auroc": 0.3017066666666667
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6895674300254453,
+     "auroc": 0.6690526577866301
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7447058823529412,
+     "auroc": 0.762885
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7295678219940094,
+     "auroc": 0.7415932248246658
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.7970588235294118,
+     "auroc": 0.8658344907407407
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "l2+batchstd|lda|0.1",
+   "mean_accuracy": 0.6907517311464562,
+   "worst_accuracy": 0.4611764705882353,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4611764705882353,
+     "auroc": 0.30651333333333336
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6946564885496184,
+     "auroc": 0.6479833188099091
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7658823529411765,
+     "auroc": 0.80035
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7192982456140351,
+     "auroc": 0.7411768338405893
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8127450980392157,
+     "auroc": 0.8903634259259259
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "l2+batchstd|logistic|0.05",
+   "mean_accuracy": 0.6886050050158525,
+   "worst_accuracy": 0.4611764705882353,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4611764705882353,
+     "auroc": 0.33275333333333335
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6844783715012722,
+     "auroc": 0.6447155483630026
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7917647058823529,
+     "auroc": 0.830685
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7056054771074026,
+     "auroc": 0.7112990163645185
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8,
+     "auroc": 0.8675763888888889
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "l2|lda|0.02",
+   "mean_accuracy": 0.6858754120233282,
+   "worst_accuracy": 0.4588235294117647,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4588235294117647,
+     "auroc": 0.30216
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6844783715012722,
+     "auroc": 0.6573820490476783
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7494117647058823,
+     "auroc": 0.77501
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7347026101839966,
+     "auroc": 0.7455074765118433
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8019607843137255,
+     "auroc": 0.8759571759259259
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "raw|lda|0.9",
+   "mean_accuracy": 0.6596845978834851,
+   "worst_accuracy": 0.455470737913486,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.47058823529411764,
+     "auroc": 0.23782
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.455470737913486,
+     "auroc": 0.22423129590439436
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.8235294117647058,
+     "auroc": 0.86257
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7184424475823705,
+     "auroc": 0.7607136870892329
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8303921568627451,
+     "auroc": 0.8979675925925926
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "l2+batchstd|lda|0.9",
+   "mean_accuracy": 0.7007346067315989,
+   "worst_accuracy": 0.4541176470588235,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4541176470588235,
+     "auroc": 0.3358
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.628498727735369,
+     "auroc": 0.5461533673596415
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7811764705882352,
+     "auroc": 0.80121
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7732135216089003,
+     "auroc": 0.8148983282607737
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8666666666666667,
+     "auroc": 0.9301342592592593
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "l2+std|lda|0.1",
+   "mean_accuracy": 0.6962501650975434,
+   "worst_accuracy": 0.45176470588235296,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.45176470588235296,
+     "auroc": 0.2724533333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7048346055979644,
+     "auroc": 0.6761483878999128
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7611764705882353,
+     "auroc": 0.78828
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7458279845956355,
+     "auroc": 0.7777327863790746
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8176470588235294,
+     "auroc": 0.896974537037037
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "l2+batchstd|lda|0.3",
+   "mean_accuracy": 0.7038422353429217,
+   "worst_accuracy": 0.4470588235294118,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4470588235294118,
+     "auroc": 0.283
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6997455470737913,
+     "auroc": 0.6598095356653803
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7823529411764706,
+     "auroc": 0.8149816666666667
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7518185708172871,
+     "auroc": 0.7868722156058401
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8382352941176471,
+     "auroc": 0.9132488425925926
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "l2|lda|0.1",
+   "mean_accuracy": 0.703751705975926,
+   "worst_accuracy": 0.4470588235294118,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4470588235294118,
+     "auroc": 0.26266666666666666
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6946564885496184,
+     "auroc": 0.6706709821984315
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7823529411764706,
+     "auroc": 0.803585
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7603765511339324,
+     "auroc": 0.7954302853866173
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8343137254901961,
+     "auroc": 0.9092060185185186
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "l2+batchstd|logistic|0.002",
+   "mean_accuracy": 0.7105393744911854,
+   "worst_accuracy": 0.4447058823529412,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4447058823529412,
+     "auroc": 0.2914333333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7048346055979644,
+     "auroc": 0.6662205900659779
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.8058823529411765,
+     "auroc": 0.8382616666666667
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7560975609756098,
+     "auroc": 0.7923099995589079
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8411764705882353,
+     "auroc": 0.9156469907407407
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "l2+std|lda|0.9",
+   "mean_accuracy": 0.7040131167284305,
+   "worst_accuracy": 0.4447058823529412,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4447058823529412,
+     "auroc": 0.3074733333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6437659033078881,
+     "auroc": 0.5639238142661521
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7776470588235294,
+     "auroc": 0.79698
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7843388960205392,
+     "auroc": 0.8270151294605443
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8696078431372549,
+     "auroc": 0.9362337962962963
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "l2+std|logistic|0.05",
+   "mean_accuracy": 0.694140538407251,
+   "worst_accuracy": 0.4447058823529412,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4447058823529412,
+     "auroc": 0.2910333333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7099236641221374,
+     "auroc": 0.6814079422382672
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7917647058823529,
+     "auroc": 0.8204066666666666
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7252888318356868,
+     "auroc": 0.7447117462837987
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.7990196078431373,
+     "auroc": 0.8708923611111111
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "l2+batchstd|lda|0.6",
+   "mean_accuracy": 0.7075383786220345,
+   "worst_accuracy": 0.4376470588235294,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4376470588235294,
+     "auroc": 0.27692666666666665
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6844783715012722,
+     "auroc": 0.6465206025146272
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7835294117647059,
+     "auroc": 0.8157116666666666
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7732135216089003,
+     "auroc": 0.815675532618764
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8588235294117647,
+     "auroc": 0.9273715277777778
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "l2+std|lda|0.3",
+   "mean_accuracy": 0.7086109414181846,
+   "worst_accuracy": 0.43529411764705883,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.43529411764705883,
+     "auroc": 0.2459
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7150127226463104,
+     "auroc": 0.6784513880243993
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7788235294117647,
+     "auroc": 0.8073166666666667
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.762943945228926,
+     "auroc": 0.8106982488641877
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8509803921568627,
+     "auroc": 0.9209849537037037
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "l2+std|logistic|0.002",
+   "mean_accuracy": 0.7168411672285844,
+   "worst_accuracy": 0.4329411764705882,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4329411764705882,
+     "auroc": 0.24837333333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7201017811704835,
+     "auroc": 0.6877256317689531
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.8094117647058824,
+     "auroc": 0.835645
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7697903294822422,
+     "auroc": 0.8101689382912091
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8519607843137255,
+     "auroc": 0.9233090277777778
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "l2|lda|0.3",
+   "mean_accuracy": 0.713501206936537,
+   "worst_accuracy": 0.4329411764705882,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4329411764705882,
+     "auroc": 0.23402666666666666
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7099236641221374,
+     "auroc": 0.6779534420515374
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7858823529411765,
+     "auroc": 0.8105133333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7809157038938811,
+     "auroc": 0.828397512240307
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8578431372549019,
+     "auroc": 0.9268159722222222
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "l2+std|lda|0.6",
+   "mean_accuracy": 0.7120860874408852,
+   "worst_accuracy": 0.43058823529411766,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.43058823529411766,
+     "auroc": 0.24115333333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6997455470737913,
+     "auroc": 0.6653491846134695
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7811764705882352,
+     "auroc": 0.8101133333333334
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7851946940522037,
+     "auroc": 0.8316280711040537
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8637254901960785,
+     "auroc": 0.9336828703703703
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "l2|lda|0.6",
+   "mean_accuracy": 0.7110257878808316,
+   "worst_accuracy": 0.42823529411764705,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.42823529411764705,
+     "auroc": 0.22947333333333333
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.6946564885496184,
+     "auroc": 0.6516867919830699
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7823529411764706,
+     "auroc": 0.8002833333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.79204107830552,
+     "auroc": 0.8406387014247276
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.8578431372549019,
+     "auroc": 0.93196875
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "l2|lda|0.9",
+   "mean_accuracy": 0.6945247167883019,
+   "worst_accuracy": 0.4235294117647059,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4235294117647059,
+     "auroc": 0.2611266666666667
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.638676844783715,
+     "auroc": 0.5411116643844143
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.78,
+     "auroc": 0.80398
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7843388960205392,
+     "auroc": 0.8381244762030788
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.846078431372549,
+     "auroc": 0.9219641203703703
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "l2|logistic|0.05",
+   "mean_accuracy": 0.6500408119974661,
+   "worst_accuracy": 0.4117647058823529,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4117647058823529,
+     "auroc": 0.13862666666666668
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.5826972010178118,
+     "auroc": 0.44451014564919705
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.7670588235294118,
+     "auroc": 0.7898783333333333
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7612323491655969,
+     "auroc": 0.802236337170835
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.7274509803921568,
+     "auroc": 0.7636840277777778
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "l2|logistic|0.002",
+   "mean_accuracy": 0.6338709116862161,
+   "worst_accuracy": 0.4117647058823529,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4117647058823529,
+     "auroc": 0.09505333333333334
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7099236641221374,
+     "auroc": 0.698400348562181
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6847058823529412,
+     "auroc": 0.6589133333333334
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7560975609756098,
+     "auroc": 0.8039557143487275
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.6068627450980392,
+     "auroc": 0.6227870370370371
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "l2|dom|0",
+   "mean_accuracy": 0.6328227101206092,
+   "worst_accuracy": 0.4117647058823529,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4117647058823529,
+     "auroc": 0.09492666666666667
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.7099236641221374,
+     "auroc": 0.6987426864185236
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.6811764705882353,
+     "auroc": 0.652355
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.7543859649122807,
+     "auroc": 0.8041392086806934
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.6068627450980392,
+     "auroc": 0.6229525462962963
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "raw|dom|0",
+   "mean_accuracy": 0.5495767027719671,
+   "worst_accuracy": 0.4117647058823529,
+   "n_folds": 5,
+   "per_pair": {
+    "chat_aegis+/hatecheck-": {
+     "accuracy": 0.4117647058823529,
+     "auroc": 0.09954666666666667
+    },
+    "hatecheck+/twitter_davidson-": {
+     "accuracy": 0.4351145038167939,
+     "auroc": 0.09520104568654301
+    },
+    "twitter_davidson+/twitter_eval-": {
+     "accuracy": 0.788235294117647,
+     "auroc": 0.8052833333333334
+    },
+    "twitter_eval+/wiki-": {
+     "accuracy": 0.5284552845528455,
+     "auroc": 0.3449455251201976
+    },
+    "wiki+/chat_aegis-": {
+     "accuracy": 0.5843137254901961,
+     "auroc": 0.4679583333333333
+    }
+   }
+  }
+ ]
+}

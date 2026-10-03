@@ -1,0 +1,218 @@
+[
+ {
+  "name": "source_berkeley",
+  "recipe": "std|lda|0.6",
+  "loso_worst": null,
+  "pooled_accuracy_on_this_family": 0.85634871613871,
+  "trained_rows": 16000,
+  "zip": "/kaggle/working/submissions/source_berkeley.zip",
+  "version": "source_berkeley",
+  "positive_rate": 0.7058823529411765,
+  "combine": "rank",
+  "decision": "quota",
+  "heads": 1,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 1200,
+    "seconds": 0.0321,
+    "bytes": 53144
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 960,
+    "seconds": 0.0253,
+    "bytes": 53144
+   }
+  }
+ },
+ {
+  "name": "source_chat_aegis",
+  "recipe": "std|lda|0.6",
+  "loso_worst": null,
+  "pooled_accuracy_on_this_family": 0.7626807436309387,
+  "trained_rows": 6152,
+  "zip": "/kaggle/working/submissions/source_chat_aegis.zip",
+  "version": "source_chat_aegis",
+  "positive_rate": 0.7058823529411765,
+  "combine": "rank",
+  "decision": "quota",
+  "heads": 1,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 1200,
+    "seconds": 0.032,
+    "bytes": 53773
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 960,
+    "seconds": 0.0264,
+    "bytes": 53773
+   }
+  }
+ },
+ {
+  "name": "source_civil",
+  "recipe": "std|lda|0.6",
+  "loso_worst": null,
+  "pooled_accuracy_on_this_family": 0.7939798610737171,
+  "trained_rows": 26218,
+  "zip": "/kaggle/working/submissions/source_civil.zip",
+  "version": "source_civil",
+  "positive_rate": 0.7058823529411765,
+  "combine": "rank",
+  "decision": "quota",
+  "heads": 1,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 1200,
+    "seconds": 0.0315,
+    "bytes": 55444
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 960,
+    "seconds": 0.0282,
+    "bytes": 55444
+   }
+  }
+ },
+ {
+  "name": "source_hatecheck",
+  "recipe": "std|lda|0.6",
+  "loso_worst": null,
+  "pooled_accuracy_on_this_family": 0.7547055251973285,
+  "trained_rows": 2326,
+  "zip": "/kaggle/working/submissions/source_hatecheck.zip",
+  "version": "source_hatecheck",
+  "positive_rate": 0.7058823529411765,
+  "combine": "rank",
+  "decision": "quota",
+  "heads": 1,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 1200,
+    "seconds": 0.0288,
+    "bytes": 53676
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 960,
+    "seconds": 0.0258,
+    "bytes": 53676
+   }
+  }
+ },
+ {
+  "name": "source_offensivelang",
+  "recipe": "std|lda|0.6",
+  "loso_worst": null,
+  "pooled_accuracy_on_this_family": 0.6252019386106623,
+  "trained_rows": 3496,
+  "zip": "/kaggle/working/submissions/source_offensivelang.zip",
+  "version": "source_offensivelang",
+  "positive_rate": 0.7058823529411765,
+  "combine": "rank",
+  "decision": "quota",
+  "heads": 1,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 1200,
+    "seconds": 0.0308,
+    "bytes": 53202
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 960,
+    "seconds": 0.0256,
+    "bytes": 53202
+   }
+  }
+ },
+ {
+  "name": "source_rtp",
+  "recipe": "std|lda|0.6",
+  "loso_worst": null,
+  "pooled_accuracy_on_this_family": 0.8840258168616377,
+  "trained_rows": 14000,
+  "zip": "/kaggle/working/submissions/source_rtp.zip",
+  "version": "source_rtp",
+  "positive_rate": 0.7058823529411765,
+  "combine": "rank",
+  "decision": "quota",
+  "heads": 1,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 1200,
+    "seconds": 0.0346,
+    "bytes": 54031
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 960,
+    "seconds": 0.0265,
+    "bytes": 54031
+   }
+  }
+ },
+ {
+  "name": "source_twitter",
+  "recipe": "std|lda|0.6",
+  "loso_worst": null,
+  "pooled_accuracy_on_this_family": 0.7301587301587301,
+  "trained_rows": 27572,
+  "zip": "/kaggle/working/submissions/source_twitter.zip",
+  "version": "source_twitter",
+  "positive_rate": 0.7058823529411765,
+  "combine": "rank",
+  "decision": "quota",
+  "heads": 1,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 1200,
+    "seconds": 0.0308,
+    "bytes": 55345
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 960,
+    "seconds": 0.0252,
+    "bytes": 55345
+   }
+  }
+ },
+ {
+  "name": "source_wiki",
+  "recipe": "std|lda|0.6",
+  "loso_worst": null,
+  "pooled_accuracy_on_this_family": 0.8876965310706264,
+  "trained_rows": 11314,
+  "zip": "/kaggle/working/submissions/source_wiki.zip",
+  "version": "source_wiki",
+  "positive_rate": 0.7058823529411765,
+  "combine": "rank",
+  "decision": "quota",
+  "heads": 1,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 1200,
+    "seconds": 0.0301,
+    "bytes": 55228
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 960,
+    "seconds": 0.0258,
+    "bytes": 55228
+   }
+  }
+ }
+]

@@ -1,0 +1,16 @@
+{
+ "id": "bleymambwe/latent-probe-select",
+ "title": "latent-probe-select",
+ "code_file": "script.py",
+ "language": "python",
+ "kernel_type": "script",
+ "is_private": true,
+ "enable_gpu": false,
+ "enable_internet": true,
+ "dataset_sources": [],
+ "competition_sources": [],
+ "kernel_sources": [
+  "bleymambwe/latent-probe-extract"
+ ],
+ "model_sources": []
+}

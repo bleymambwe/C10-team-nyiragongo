@@ -1,0 +1,118 @@
+{
+  "version": "v005",
+  "rows": 50000,
+  "validation_rows": 9998,
+  "validation_positive_prior": 0.5985197039407881,
+  "target_positive_prior": 0.7058823529411765,
+  "selected": [
+    {
+      "kind": "binary",
+      "row_l2": false,
+      "k": 2304,
+      "C": 0.002
+    },
+    {
+      "kind": "binary",
+      "row_l2": true,
+      "k": 2304,
+      "C": 0.01
+    },
+    {
+      "kind": "binary",
+      "row_l2": false,
+      "k": 1024,
+      "C": 0.002
+    }
+  ],
+  "weights": [
+    0.6375,
+    0.11249999999999999,
+    0.25
+  ],
+  "threshold": 0.3742194336323283,
+  "validation_weighted_accuracy": 0.8358724959652853,
+  "top_candidates": [
+    {
+      "kind": "binary",
+      "row_l2": false,
+      "k": 2304,
+      "C": 0.002,
+      "accuracy": 0.8348977893196396,
+      "threshold": 0.39661261308133305
+    },
+    {
+      "kind": "binary",
+      "row_l2": true,
+      "k": 2304,
+      "C": 0.002,
+      "accuracy": 0.8336767366435154,
+      "threshold": 0.3294565028521284
+    },
+    {
+      "kind": "binary",
+      "row_l2": false,
+      "k": 2304,
+      "C": 0.01,
+      "accuracy": 0.8304188721042879,
+      "threshold": 0.386831951710447
+    },
+    {
+      "kind": "binary",
+      "row_l2": true,
+      "k": 2304,
+      "C": 0.01,
+      "accuracy": 0.8298511830173505,
+      "threshold": 0.4388959363597124
+    },
+    {
+      "kind": "binary",
+      "row_l2": false,
+      "k": 1024,
+      "C": 0.002,
+      "accuracy": 0.828963502701225,
+      "threshold": 0.37186172481308033
+    },
+    {
+      "kind": "binary",
+      "row_l2": false,
+      "k": 2304,
+      "C": 0.05,
+      "accuracy": 0.828506526308596,
+      "threshold": 0.37801562379952053
+    },
+    {
+      "kind": "binary",
+      "row_l2": false,
+      "k": 2304,
+      "C": 0.2,
+      "accuracy": 0.8278523006846279,
+      "threshold": 0.3789626668880333
+    },
+    {
+      "kind": "binary",
+      "row_l2": true,
+      "k": 2304,
+      "C": 0.05,
+      "accuracy": 0.8275994502098897,
+      "threshold": 0.42441260229103533
+    },
+    {
+      "kind": "binary",
+      "row_l2": false,
+      "k": 1024,
+      "C": 0.01,
+      "accuracy": 0.8270511569055333,
+      "threshold": 0.3615999980473039
+    },
+    {
+      "kind": "binary",
+      "row_l2": true,
+      "k": 2304,
+      "C": 0.2,
+      "accuracy": 0.8268775940389823,
+      "threshold": 0.4164006765463844
+    }
+  ],
+  "task": "toxicity",
+  "label_rule": "civil_comments.toxicity >= 0.5"
+}

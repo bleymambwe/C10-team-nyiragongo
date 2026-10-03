@@ -1,0 +1,157 @@
+\documentclass[9pt]{extarticle}
+\usepackage[twocolumn,margin=0.55in,columnsep=0.28in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=NavyBlue,citecolor=NavyBlue,urlcolor=NavyBlue]{hyperref}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=1.1em,itemsep=0pt,topsep=1pt}
+\pagestyle{empty}
+\setlength{\parskip}{2pt}
+
+\input{numbers}
+\newcommand{\Sbar}{\bar{S}}
+\newcommand{\gbar}{\bar{g}}
+
+\title{\vspace{-2.4em}\textbf{\large Seeing Is Not Steering}\\[-0.1em]
+{\normalsize A one-page case for effect-based steering certificates}\vspace{-1.6em}}
+\author{\normalsize Blessings Mambwe \quad \texttt{bleymambwe@gmail.com}\vspace{-2.6em}}
+\date{}
+
+\begin{document}
+\twocolumn[
+  \maketitle
+  \vspace{-1.2em}
+]
+
+\paragraph{The problem, without jargon.} To check whether a language model
+``represents'' a concept, practitioners fit a linear classifier (a
+\emph{probe}) to its hidden states. To control a behaviour, they add a
+vector to the hidden state and watch the output change (\emph{activation
+steering}). Standard practice reuses the probe's direction as the steering
+vector. These are two different jobs --- separating labelled examples, and
+moving an output --- and nothing in how a probe is fit ties them together.
+No widely used method checks whether they coincide before either is
+deployed.
+
+\paragraph{Precise problem statement.} Fix a scalar behaviour $\varphi$
+(here, a logit difference tracking toxic output) and a hidden state
+$x_\ell$ at layer $\ell$. For a unit-norm direction $w$ and step $\alpha$,
+the causal effect of writing $\alpha w$ into $x_\ell$ is
+$\Delta(\alpha,w)=\varphi(x_\ell+\alpha w)-\varphi(x_\ell)$. At fixed write
+norm, how much of the best achievable $\Delta$ do four candidate
+directions actually deliver --- \textbf{random}, the \textbf{probe}
+direction, a direction built \textbf{orthogonal} to the probe, and the
+\textbf{best} direction found by directly measuring many candidates --- and
+can the answer be predicted \emph{before} any of them is tried?
+
+\paragraph{One cheap number, zero interventions.} Let $\gbar$ be the average
+gradient of $\varphi$ with respect to $x_\ell$, from one backward pass over
+the same data the probe already required. Define the \textbf{certificate}
+$\Sbar(w) := |\gbar^\top w|/\|w\|$. Computing $\Sbar$ needs no intervention
+at all.
+
+\paragraph{Headline result.} On GPT-2, a toxicity probe that separates
+held-out prompts at AUC \EthreeMaxAUC{} recovers only \EthreeEffProbe\% of
+the best available causal effect; a probe-orthogonal direction recovers
+\EthreeEffDark\%; a random direction recovers \EthreeEffRandom\%
+(Table~\ref{tab:main}). The pattern replicates on RealToxicityPrompts
+across three models and two architecture families, scoring the exact
+difference-of-means vector activation-steering methods deploy
+(\EfiveDomEff\%, versus \EfiveDarkEff\% for the orthogonal direction). The
+certificate rank-predicts measured effect (Spearman \EthreeSpSbar) where
+probe accuracy does not (\EthreeSpAUC); ordering candidate interventions by
+it needs $\sim\EfourSpeedupRandom\times$ fewer measurements than random
+search to find the best available direction.
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lrr}
+\toprule
+Direction & GPT-2 (\%) & RealToxicityPrompts (\%) \\
+\midrule
+Random & \EthreeEffRandom & --- \\
+Probe & \EthreeEffProbe & \EfiveFisherEff \\
+Difference-of-means & --- & \EfiveDomEff \\
+Probe-orthogonal & \EthreeEffDark & \EfiveDarkEff \\
+Certificate-optimal & 100 & 100 \\
+\bottomrule
+\end{tabular}
+\caption{\% of best available causal effect recovered at equal write norm.
+Certificate-optimal is the normalising basis, not a measured percentage.}
+\label{tab:main}
+\end{table}
+
+\paragraph{Why the gap exists.} The probe direction is fit to separate
+label-$1$ from label-$0$ examples; it depends only on the class means and
+covariance of the hidden states. The certificate-optimal direction depends
+only on how $\varphi$ responds to a perturbation. Nothing forces these two
+disjoint quantities to point the same way, and on the systems measured here
+they very nearly do not.
+
+\paragraph{Systematic experiments and de-risking.}
+\begin{itemize}
+\item De-risk on an exactly solvable linear synthetic system with known
+ground truth, before touching a real model.
+\item Validate on GPT-2 with matched sentence pairs that isolate the causal
+factor (hostile framing) from a spurious confound (identity terms), so the
+effect is not a dataset artefact.
+\item Replicate on three models, two architecture families, on a public
+toxicity benchmark, scoring the exact vectors deployed methods ship.
+\item Rule out ``this is just a bad probe'': retrain it on an unrelated
+concept and check whether alignment changes --- it does not
+($\rho=\EsixMatched$ matched vs.\ $\rho=\EsixUnmatched$ unmatched, ratio
+\EsixRatio).
+\item Test whether $\Sbar$ can replace trial-and-error search: order
+candidates by $\Sbar$ under a fixed measurement budget and compare to
+random and probe-accuracy ordering.
+\end{itemize}
+
+\paragraph{Industry relevance.} Many deployed safety monitors are built
+from exactly this kind of probe. If probe accuracy does not predict
+steering efficacy, probe-based monitoring is not, by itself, evidence that
+a model's behaviour is under control. $\Sbar$ gives a one-backward-pass
+number that predicts which of many candidate directions will actually
+work, in principle replacing the expensive trial-and-error search teams
+currently run by hand.
+
+\paragraph{Related work.} Activation steering and its deployed
+difference-of-means vectors~\cite{actadd,caa}; local-linearity optimal
+control for steering~\cite{locallin2026}; identifiability limits of
+circuit-level mechanistic interpretability~\cite{eeao2025}; control-theoretic
+(Gramian-based) framings of neural interpretability~\cite{blackbox2025}.
+Full positioning against 12 further references in the companion report.
+
+\paragraph{Full paper.} Formal definitions, an exact decoupling theorem, a
+closed form for probe-orthogonal directions, a finite-sample leakage law,
+and complete experimental and reproducibility detail are in the companion
+technical report, \emph{Seeing Is Not Steering} (Mambwe, 2026). Every
+number above is generated from \texttt{results/data/*.json}; none is typed
+by hand.
+
+\begin{thebibliography}{9}
+\small
+\bibitem{actadd}
+A.~M.~Turner, L.~Thiergart, G.~Leech, D.~Udell, U.~Mini, and M.~MacDiarmid.
+\emph{Activation Addition: Steering Language Models Without Optimization.}
+2024. arXiv:2308.10248.
+\bibitem{caa}
+N.~Rimsky, N.~Gabrieli, J.~Schulz, M.~Tong, E.~Hubinger, and A.~M.~Turner.
+\emph{Steering Llama 2 via Contrastive Activation Addition.} ACL, 2024.
+arXiv:2312.06681.
+\bibitem{locallin2026}
+J.~Skifstad, X.~A.~Yang, and G.~Chou. \emph{Local Linearity of LLMs Enables
+Activation Steering via Model-Based Linear Optimal Control.} 2026.
+arXiv:2604.19018.
+\bibitem{eeao2025}
+M.~Méloux, F.~Portet, S.~Maniu, and M.~Peyrard. \emph{Everything, Everywhere,
+All at Once: Is Mechanistic Interpretability Identifiable?} ICLR, 2025.
+arXiv:2502.20914.
+\bibitem{blackbox2025}
+J.~Moon. \emph{From Black-Box to White-Box: Control-Theoretic Neural Network
+Interpretability.} 2025. arXiv:2511.12852.
+\end{thebibliography}
+
+\end{document}

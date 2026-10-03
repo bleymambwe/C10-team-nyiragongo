@@ -1,0 +1,192 @@
+[
+ {
+  "name": "best_single",
+  "recipe": "std+abtt4|lda|0.6",
+  "loso_worst": 0.6776470588235294,
+  "loso_mean": 0.7052193190545334,
+  "trained_rows": 10455,
+  "zip": "results\\rehearsal\\submissions_gpt2_l8_10455\\best_single.zip",
+  "version": "best_single",
+  "positive_rate": 0.7058823529411765,
+  "combine": "rank",
+  "decision": "quota",
+  "heads": 1,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 1200,
+    "seconds": 0.0434,
+    "bytes": 44124
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 960,
+    "seconds": 0.035,
+    "bytes": 44124
+   }
+  }
+ },
+ {
+  "name": "best_threshold",
+  "recipe": "std+abtt4|logistic|0.002",
+  "loso_worst": 0.6752941176470588,
+  "loso_mean": 0.700577977937934,
+  "trained_rows": 10455,
+  "zip": "results\\rehearsal\\submissions_gpt2_l8_10455\\best_threshold.zip",
+  "version": "best_threshold",
+  "positive_rate": 0.7058823529411765,
+  "combine": "probability",
+  "decision": "threshold",
+  "heads": 1,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 421,
+    "seconds": 0.0366,
+    "bytes": 44117
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 338,
+    "seconds": 0.0278,
+    "bytes": 44117
+   }
+  }
+ },
+ {
+  "name": "best_cross_source",
+  "recipe": "batchstd+abtt1|dom|0",
+  "loso_worst": 0.5826972010178118,
+  "loso_mean": 0.6117247204774177,
+  "selected_by": "cross-source worst fold",
+  "trained_rows": 10455,
+  "zip": "results\\rehearsal\\submissions_gpt2_l8_10455\\best_cross_source.zip",
+  "version": "best_cross_source",
+  "positive_rate": 0.7058823529411765,
+  "combine": "rank",
+  "decision": "quota",
+  "heads": 1,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 1200,
+    "seconds": 0.3065,
+    "bytes": 8567
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 960,
+    "seconds": 0.2664,
+    "bytes": 8567
+   }
+  }
+ },
+ {
+  "name": "best_ensemble",
+  "recipe": "std+abtt4|lda|0.6 + std|lda|0.6 + raw|logistic|0.002",
+  "loso_worst": 0.6692111959287532,
+  "loso_mean": 0.727076493318569,
+  "trained_rows": 10455,
+  "zip": "results\\rehearsal\\submissions_gpt2_l8_10455\\best_ensemble.zip",
+  "version": "best_ensemble",
+  "positive_rate": 0.7058823529411765,
+  "combine": "rank",
+  "decision": "quota",
+  "heads": 3,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 1200,
+    "seconds": 0.0476,
+    "bytes": 67881
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 960,
+    "seconds": 0.0374,
+    "bytes": 67881
+   }
+  }
+ },
+ {
+  "name": "source_twitter_davidson",
+  "recipe": "std+abtt4|lda|0.6",
+  "loso_worst": null,
+  "pooled_accuracy_on_this_family": 0.6811764705882353,
+  "trained_rows": 2400,
+  "zip": "results\\rehearsal\\submissions_gpt2_l8_10455\\source_twitter_davidson.zip",
+  "version": "source_twitter_davidson",
+  "positive_rate": 0.7058823529411765,
+  "combine": "rank",
+  "decision": "quota",
+  "heads": 1,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 1200,
+    "seconds": 0.0322,
+    "bytes": 44023
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 960,
+    "seconds": 0.0264,
+    "bytes": 44023
+   }
+  }
+ },
+ {
+  "name": "source_twitter_eval",
+  "recipe": "std+abtt4|lda|0.6",
+  "loso_worst": null,
+  "pooled_accuracy_on_this_family": 0.6824989302524604,
+  "trained_rows": 3300,
+  "zip": "results\\rehearsal\\submissions_gpt2_l8_10455\\source_twitter_eval.zip",
+  "version": "source_twitter_eval",
+  "positive_rate": 0.7058823529411765,
+  "combine": "rank",
+  "decision": "quota",
+  "heads": 1,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 1200,
+    "seconds": 0.0331,
+    "bytes": 44101
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 960,
+    "seconds": 0.0286,
+    "bytes": 44101
+   }
+  }
+ },
+ {
+  "name": "source_wiki",
+  "recipe": "std+abtt4|lda|0.6",
+  "loso_worst": null,
+  "pooled_accuracy_on_this_family": 0.7901176470588235,
+  "trained_rows": 3000,
+  "zip": "results\\rehearsal\\submissions_gpt2_l8_10455\\source_wiki.zip",
+  "version": "source_wiki",
+  "positive_rate": 0.7058823529411765,
+  "combine": "rank",
+  "decision": "quota",
+  "heads": 1,
+  "checks": {
+   "1700": {
+    "rows": 1700,
+    "positives": 1200,
+    "seconds": 0.0386,
+    "bytes": 44076
+   },
+   "1360": {
+    "rows": 1360,
+    "positives": 960,
+    "seconds": 0.0531,
+    "bytes": 44076
+   }
+  }
+ }
+]

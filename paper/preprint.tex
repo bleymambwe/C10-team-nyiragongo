@@ -1,0 +1,1006 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=NavyBlue,citecolor=NavyBlue,urlcolor=NavyBlue]{hyperref}
+\usepackage{caption}
+\usepackage{enumitem}
+
+\captionsetup{font=small,labelfont=bf}
+\graphicspath{{figures/}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\input{numbers}
+
+\newcommand{\Sbar}{\bar{S}}
+\newcommand{\gbar}{\bar{g}}
+\newcommand{\Wg}{W_{g}}
+\newcommand{\reff}{r_{\mathrm{eff}}}
+
+\title{\textbf{Seeing Is Not Steering}\\[2mm]
+\large Effect-Gramian Certificates for Causally Usable Latent Directions}
+
+\author{Blessings Mambwe\\
+\small \texttt{bleymambwe@gmail.com}}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+Interpretability routinely fits a linear probe to a model's hidden states and
+then reuses that same direction as a steering vector. This conflates two
+different roles: the probe is an \emph{observation operator}, the steering
+vector an \emph{actuator}. We show the two are governed by disjoint objects.
+The probe direction is determined by the representation geometry
+$(\Sigma_\ell,\delta_\ell)$; the steering-effective directions are determined by
+the \emph{effect Gramian} $\Wg(\ell)=\mathbb{E}[gg^\top]$ over adjoint covectors
+$g=\nabla_{x_\ell}\Phi_\ell$. Neither enters the other's definition, so their
+alignment $\rho$ is a free parameter. We prove it can be set arbitrarily:
+there is a system in which the optimal probe attains AUC $\ge 1-\epsilon$ and
+steers \emph{exactly} nothing, while a chance-level direction steers maximally.
+We introduce the \emph{steerability certificate}
+$\Sbar(\ell,w)=|\gbar_\ell^\top w|/\|w\|$, computable from one reverse-mode pass
+and \emph{zero} interventions, together with a closed form for probe-orthogonal
+directions, an exact expression for the fraction of control an uninformed
+direction retains ($\reff/d$), and an explicit validity radius. Empirically, on
+\EthreeModel{} a toxicity probe classifying held-out prompts at AUC
+\EthreeMaxAUC{} recovers only \EthreeEffProbe\% of the causal control available
+at equal write norm, while a direction constrained to be orthogonal to it
+recovers \EthreeEffDark\%. Only \EthreeMeanReff\% of the residual stream carries
+first-order behavioural effect. In a controlled comparison, a probe trained on
+\emph{exactly} the concept a behaviour measures is no better aligned with that
+behaviour ($\rho=\EsixMatched$) than a probe for an unrelated concept
+($\rho=\EsixUnmatched$; ratio \EsixRatio). The certificate rank-predicts
+measured steering (Spearman \EthreeSpSbar) where probe accuracy does not
+(\EthreeSpAUC), and using it to order interventions reaches 90\% of the best
+attainable effect in \EfourCertNinety{} measurements out of \EfourM{} against
+\EfourRandNinety{} for random selection. We report three results against
+interest, including a pre-registered prediction that failed.
+\end{abstract}
+
+\section{Introduction}
+
+A recurring pattern in mechanistic interpretability runs as follows. Collect
+hidden states from a frozen language model, fit a linear probe until it detects
+some concept---toxicity, sentiment, refusal, truthfulness---at high accuracy,
+and conclude that the model ``represents'' that concept. Then take the probe
+direction, add a multiple of it back into the residual stream, and expect the
+model's behaviour to move accordingly.
+
+The probe is being asked to do two jobs. As a \emph{sensor} it must separate
+classes; as an \emph{actuator} it must move a behaviour. These are different
+requirements, and nothing in the fitting procedure ties them together.
+
+That this gap exists is increasingly acknowledged. What is missing is a theory
+that \emph{predicts} it. Existing work observes the discrepancy after running
+the interventions, which is precisely when the information is least useful. We
+give the structural reason for the gap, a quantitative certificate that
+anticipates it from cheap adjoint information, and measurements of its size.
+
+\paragraph{Contributions.}
+\begin{enumerate}[leftmargin=1.5em,itemsep=1pt]
+  \item \textbf{A formalisation} of the frozen Transformer as an exact discrete
+  controlled system, with probes as observation operators and steering as
+  actuation, yielding the effect Gramian $\Wg$ and the certificate $\Sbar$
+  (\S\ref{sec:setup}--\S\ref{sec:two}).
+  \item \textbf{An exact decoupling theorem} (Thm.~\ref{thm:decouple}): probe
+  accuracy and steering efficacy are independently settable. Corollary: no
+  function of probe accuracy alone consistently estimates steering efficacy.
+  \item \textbf{Structural results}: the fraction of control an uninformed
+  direction retains is exactly $\reff/d$ (Prop.~\ref{prop:inert}); a closed form
+  for the strongest probe-orthogonal direction (Prop.~\ref{prop:dark}); an
+  explicit first-order validity radius (Prop.~\ref{prop:radius}); and a
+  finite-sample leakage law $\Theta(N^{-1/2})$, \emph{independent of width}
+  (Prop.~\ref{prop:leak}).
+  \item \textbf{Measurements} on constructed systems, on transformers trained
+  from scratch, and on three pretrained models with real toxicity data, using
+  difference-of-means and logistic probes---the vectors practitioners actually
+  deploy---as first-class baselines.
+  \item \textbf{Active intervention design}: ordering candidate directions by
+  the certificate reaches 90\% of the best attainable effect in
+  \EfourCertNinety{} measurements out of \EfourM{}, against \EfourRandNinety{}
+  for random selection --- a $\sim\EfourSpeedupRandom\times$ budget reduction
+  (\S\ref{sec:results}).
+  \item \textbf{Negative results}, including a pre-registered prediction that
+  failed and a metric we discarded as vacuous (\S\ref{sec:negative}).
+\end{enumerate}
+
+\section{Setup: forward system, sensor, actuator}
+\label{sec:setup}
+
+Let a frozen decoder-only Transformer have residual stream $x_\ell\in\mathbb{R}^d$,
+$\ell=0,\dots,L$, evolving as
+\begin{equation}
+x_{\ell+1} = x_\ell + F_\ell(x_\ell;c),
+\label{eq:fwd}
+\end{equation}
+with $c$ a fixed context. Equation~\eqref{eq:fwd} is exact: no continuous-time,
+autonomy, invertibility or energy-descent assumption is made or required.
+
+Fix a scalar behaviour $\varphi:\mathbb{R}^d\to\mathbb{R}$ (in experiments, a
+logit difference between a target and a contrast token set), and define the
+layer-$\ell$ tail map
+$\Phi_\ell := \varphi \circ T_{L-1}\circ\cdots\circ T_\ell$ where
+$T_\ell(x)=x+F_\ell(x;c)$.
+
+A linear probe at layer $\ell$ is a covector $w$ with readout $w^\top x_\ell$:
+an observation operator $H_\ell=w^\top$. An additive intervention is
+$x_\ell \mapsto x_\ell + \alpha w$, with measured causal effect
+\begin{equation}
+\Delta_i(\alpha,w) := \Phi_\ell\!\left(x_\ell^{(i)}+\alpha w\right)-\Phi_\ell\!\left(x_\ell^{(i)}\right).
+\label{eq:effect}
+\end{equation}
+
+\begin{quote}
+\textbf{Assumption A1.} $\Phi_\ell$ is $C^2$ on a neighbourhood of the segment
+$[x_\ell^{(i)},x_\ell^{(i)}+\alpha w]$, with $\|\nabla^2\Phi_\ell\|_{\mathrm{op}}\le M_\ell$ there.
+\end{quote}
+
+A1 holds for GELU/SiLU blocks; $M_\ell$ is \emph{estimated} in
+\S\ref{sec:results}, not assumed.
+
+\section{Two geometries and a certificate}
+\label{sec:two}
+
+\begin{definition}[Adjoint covector and effect Gramian]
+For example $i$, $g_\ell^{(i)} := \nabla_x\Phi_\ell(x_\ell^{(i)}) = J_\ell^{(i)\top}\nabla\varphi(x_L^{(i)})$,
+obtained by one reverse-mode pass. Write
+$\Wg(\ell) := \tfrac1N\sum_i g_\ell^{(i)}g_\ell^{(i)\top}$ and
+$\gbar_\ell := \tfrac1N\sum_i g_\ell^{(i)}$.
+\end{definition}
+
+$\Wg$ is the finite-horizon, behaviour-restricted analogue of a
+controllability-to-output Gramian for \eqref{eq:fwd}: it measures how much
+\emph{behaviour} a unit-norm write at layer $\ell$ can produce. Its kernel,
+$\mathcal{N}(\ell)=\ker\Wg(\ell)$, is inert to first order for every sampled example.
+
+\begin{remark}[Non-normal composition as a candidate mechanism]
+\label{rem:nonnormal}
+By the chain rule,
+\[
+J_\ell^{(i)} = DT_{L-1}(x_{L-1}^{(i)})\cdots DT_\ell(x_\ell^{(i)}),
+\]
+a product of the per-block Jacobians $DT_k=I+DF_k(\cdot\,;c)$: this is exact, not
+a limiting approximation. Each factor is generically non-normal---nothing forces
+$DF_k$ to be symmetric---and products of non-normal matrices can have
+singular-value spectra far more concentrated than the spectral radius of any
+individual factor would suggest, the classical phenomenon of transient
+amplification despite well-behaved eigenvalues~\cite{trefethen1993}. Direct
+measurements on production-scale LLMs report exactly this signature in the
+residual-stream Jacobian---a learned non-normality gradient through depth and a
+cumulative low-rank perturbation bottleneck~\cite{nonnormalresidual2026}---and in
+the attention propagator specifically, via pseudospectral and Kreiss-style
+diagnostics~\cite{transientreserves2026}. This is a plausible structural
+mechanism for the small $\reff(\ell)$ measured directly from $\Wg(\ell)$ in
+\S\ref{sec:results}: a highly non-normal $J_\ell^{(i)}$ would concentrate
+$g_\ell^{(i)}$, and hence $\Wg(\ell)$, onto a small subspace independently of
+whether the underlying computation is itself low-dimensional. We do not test
+this here---no Schur, pseudospectral, or Kreiss diagnostic is computed on these
+models---and add it to \S\ref{sec:next}.
+\end{remark}
+
+On the read side, given binary labels $y_i$, let $\delta_\ell=\mu_1-\mu_0$ and
+$\Sigma_\ell$ be the pooled within-class covariance. The Fisher-optimal probe is
+$w_{\mathrm{probe}} \propto (\Sigma_\ell+\gamma I)^{-1}\delta_\ell$.
+
+\begin{remark}[The source of the phenomenon]
+$\Wg$ does not depend on $\Sigma_\ell$; $w_{\mathrm{probe}}$ does not depend on
+$\Wg$. They are computed from disjoint information, and nothing in training
+couples them. Their alignment
+$\rho(\ell) := |\cos\angle(w_{\mathrm{probe}},\gbar_\ell)|$ is therefore a free
+parameter of the system.
+\end{remark}
+
+\begin{definition}[Steerability certificate]
+For $w\neq 0$,
+\begin{equation}
+\Sbar(\ell,w) := \frac{|\gbar_\ell^\top w|}{\|w\|},
+\qquad
+S_2(\ell,w) := \frac{\sqrt{w^\top \Wg(\ell)\, w}}{\|w\|}.
+\end{equation}
+\end{definition}
+
+By Cauchy--Schwarz $\Sbar\le S_2\le\sqrt{\lambda_1(\Wg)}$, with $\Sbar$
+maximised at $w=\gbar_\ell/\|\gbar_\ell\|$. Both are computable from $N$
+reverse-mode passes over data the probe already required, and \emph{no
+intervention is performed}.
+
+\begin{theorem}[Three-way decomposition]
+\label{thm:decomp}
+Let $P_C$ project onto the top-$r$ eigenspace of $\Wg(\ell)$ with eigenvalues
+$\lambda_1\ge\cdots\ge\lambda_d\ge0$, and $P_O$ onto the discriminative subspace
+$\mathcal{O}(\ell)=\mathrm{span}\{(\Sigma_\ell+\gamma I)^{-1}\delta_\ell\}$. Then
+for every $w$ and $i$, under A1,
+\begin{equation}
+\Delta_i(\alpha,w) = \alpha\left[g^{(i)\top}P_C w + g^{(i)\top}(I-P_C)w\right] + R_i,
+\quad |R_i| \le \tfrac{M_\ell}{2}\alpha^2\|w\|^2,
+\end{equation}
+and $\mathrm{RMS}_i\,|g^{(i)\top}(I-P_C)w| \le \sqrt{\lambda_{r+1}}\|w\|$.
+\end{theorem}
+
+Consequently $\mathbb{R}^d$ partitions into \emph{causal} ($\mathcal{C}_r\cap\mathcal{O}$),
+\emph{epiphenomenal} ($\mathcal{O}\setminus\mathcal{C}_r$: visible, inert),
+\emph{dark} ($\mathcal{C}_r\setminus\mathcal{O}$: invisible, effective), and inert.
+Membership is decided by two computable numbers, $\Sbar(\ell,w)$ and the probe
+AUC of $w$. Standard practice assumes everything lies in the first cell.
+
+\begin{remark}[Relation to the Kalman canonical decomposition]
+\label{rem:kalman}
+The four cells echo the controllable/observable canonical structure theorem
+for linear time-invariant systems~\cite{kalman1963}, which partitions state
+space into controllable-and-observable, controllable-only, observable-only,
+and neither, using an exact controllability Gramian and an exact
+observability Gramian built from the system matrices. The correspondence
+here is structural, not literal: Kalman's theorem concerns the full state of
+an autonomous linear system, while $\mathcal C_r(\ell)$ is a rank-$r$
+truncation of a \emph{behaviour}-restricted, finite-horizon, first-order
+Gramian, and $\mathcal O(\ell)$ is a \emph{label}-dependent discriminative
+subspace with no counterpart in $(A,B,C)$. What transfers is the organising
+idea---that ``can be moved'' and ``can be seen'' are governed by different
+Gramians and need not coincide---not Kalman's exactness or invariance
+results. Theorem~\ref{thm:decouple} is the certificate that this failure to
+coincide can be total in the present, nonlinear, sampled setting.
+\end{remark}
+
+\section{Probe accuracy carries no causal information}
+
+\begin{theorem}[Exact decoupling]
+\label{thm:decouple}
+For every $d\ge2$ and $\epsilon\in(0,\tfrac12)$ there is a system satisfying A1
+---indeed with $\Phi_\ell$ linear, so $M_\ell=0$ and the first-order expansion is
+exact---and a labelled representation such that
+\begin{enumerate}[label=(\alph*),leftmargin=2em,itemsep=0pt]
+  \item the optimal linear probe attains $\mathrm{AUC}\ge1-\epsilon$;
+  \item $\Delta_i(\alpha,w_{\mathrm{probe}})=0$ \emph{exactly}, for all $\alpha$ and all $i$;
+  \item there is a unit $v$ with $\mathrm{AUC}(v)=\tfrac12$ exactly and
+  $|\gbar^\top v|=\|\gbar\|$, the maximum attainable.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Take $\Phi_\ell(x)=e_1^\top x$, so $g^{(i)}=\gbar=e_1$; draw
+$x\mid y\sim\mathcal{N}(y\Delta\mu\, e_2,\sigma^2 I_d)$, giving
+$w_{\mathrm{probe}}\propto e_2$. Then (b) is
+$\alpha e_1^\top e_2 = 0$; (a) follows from
+$\mathrm{AUC}=\Phi_{\mathcal N}(\Delta\mu/(\sigma\sqrt2))$; and $v=e_1$ has a
+class-independent score, giving (c). Full proof in Appendix~\ref{app:proofs}.
+\end{proof}
+
+\begin{corollary}
+\label{cor:noinfo}
+No function of probe accuracy alone is a consistent estimator of steering
+efficacy: the pair $(\mathrm{AUC},\Sbar)$ can be set to any admissible values
+independently.
+\end{corollary}
+
+Theorem~\ref{thm:decouple} also refutes the converse assumption---that a
+probe-invisible direction is causally irrelevant---by construction.
+
+\begin{proposition}[Random-direction inertness]
+\label{prop:inert}
+Let $\reff(\ell) := \operatorname{tr}\Wg(\ell)/\lambda_1(\Wg(\ell))$. For $w$
+uniform on $S^{d-1}$,
+\begin{equation}
+\mathbb{E}\!\left[S_2(\ell,w)^2\right] = \frac{\operatorname{tr}\Wg(\ell)}{d},
+\qquad
+\frac{\mathbb{E}[S_2^2]}{\max_w S_2^2} = \frac{\reff(\ell)}{d}.
+\end{equation}
+\end{proposition}
+
+So $\reff/d$ is exactly the share of steering power retained by a direction
+chosen without write-side information. Measuring $\reff/d\ll1$ makes ``we found
+a direction and it moved behaviour'' a claim about luck at that scale.
+
+\begin{remark}[Relation to resolving power]
+\label{rem:resolution}
+$\mathcal N(\ell)=\ker\Wg(\ell)$ plays the role of the null space in
+classical linear resolution theory~\cite{backusgilbert1968}: directions a
+declared observation cannot see are assigned zero resolving power regardless
+of the size of the underlying quantity. $\reff(\ell)$ is the corresponding
+effective-rank count for $\Wg(\ell)$---the number of directions the
+behaviour functional resolves at layer $\ell$---so $\reff/d$ is a
+resolving-power fraction, not a claim about how many neurons ``matter.''
+Backus and Gilbert's theory is posed for a linear forward operator mapping a
+continuum model to finitely many exact data functionals; $\Wg(\ell)$ instead
+comes from a first-order expansion of one behaviour functional restricted to
+a finite sample. The transfer is in the concept, not the guarantees: a small
+$\reff/d$ is evidence of low resolving power at this Gramian, not evidence
+that the unresolved directions are inert to every future experiment.
+Remark~\ref{rem:nonnormal} sketches one candidate mechanism for why the
+resolving power measured here is so concentrated.
+\end{remark}
+
+\begin{proposition}[Probe suboptimality]
+$\Sbar(\ell,w_{\mathrm{probe}}) = \|\gbar_\ell\|\cdot\rho(\ell)$, with equality
+to the optimum iff $(\Sigma_\ell+\gamma I)^{-1}\delta_\ell \parallel \gbar_\ell$.
+\end{proposition}
+
+\begin{proposition}[Dark directions, closed form]
+\label{prop:dark}
+$v^\star := (I-P_O)\gbar_\ell / \|(I-P_O)\gbar_\ell\|$ maximises $\Sbar(\ell,v)$
+over $v\perp\mathcal{O}(\ell)$, attaining $\|(I-P_O)\gbar_\ell\|$. Under
+shared-covariance Gaussian class conditionals, any $v\perp\mathcal{O}(\ell)$ in
+the whitened metric has probe AUC exactly $\tfrac12$.
+\end{proposition}
+
+This upgrades ``dark directions'' from an existence claim to a construction: one
+projection of one adjoint mean.
+
+\begin{proposition}[Validity radius]
+\label{prop:radius}
+Under A1, the certificate determines the sign and leading behaviour of
+$\Delta_i(\alpha,w)$ whenever
+$|\alpha| < \alpha^\star(\ell,w) := 2|\gbar_\ell^\top w|/(M_\ell\|w\|^2)$.
+\end{proposition}
+
+$M_\ell$ is estimated by second differences along the steering ray, so
+$\alpha^\star$ is reported, not assumed.
+
+\begin{proposition}[Finite-sample causal leakage]
+\label{prop:leak}
+Let the population probe be exactly inert, $\gbar^\top w_{\mathrm{pop}}=0$, and
+let $\hat{w}$ be the Fisher probe from $N$ i.i.d.\ samples. Then
+$\mathbb{E}[\hat{\rho}] = \Theta(N^{-1/2})$, with a constant that does
+\emph{not} grow with $d$.
+\end{proposition}
+
+The dimension-cancellation is the practically important part: the artefact is
+not mitigated by a wider residual stream. A probe fitted on $N\sim10^3$ carries
+spurious alignment of order $3\times10^{-2}$ before any real effect exists.
+
+\section{Experimental setup}
+\label{sec:setup-exp}
+
+All experiments run on \textbf{4 CPU cores, no GPU}. This constrains scale and
+is stated wherever it matters.
+
+\paragraph{E1 (exact verification).} Linear $\Phi$ with Gaussian
+class-conditional representations, where the first-order theory is exact.
+Evaluated both axis-aligned and conjugated by a random rotation, to exclude
+coordinate artefacts.
+
+\paragraph{E3 (\EthreeModel, toxicity).} Matched minimal pairs: hostile versus
+friendly framing is the causal factor; identity-marked subjects are a confound
+correlated with the label at $0.85$, as in real corpora. Only the frame differs
+within a pair. $\varphi$ is a logit difference between mild insult tokens and
+matched neutral tokens at the final position. Probes are fitted on a train split;
+every AUC and every steering measurement is on held-out prompts. Write magnitude
+is $\alpha=0.10\cdot\overline{\|x_\ell\|}$ at each layer.
+
+\paragraph{E5 (real data, multiple models).} \EfiveN{} RealToxicityPrompts
+prompts, balanced between high ($>0.6$) and low ($<0.05$) toxicity.
+Difference-of-means (as deployed by activation-steering methods) and
+logistic-regression probes are included as first-class baselines.
+
+\paragraph{E2 (trained from scratch).} \EtwoNruns{} transformers
+(\EtwoLayers{} layers, $d=\EtwoD$, LayerNorm + attention + GELU) trained on a
+synthetic task with a causal content variable and a spurious surface marker,
+across \EtwoNlevels{} confound levels $\times$ \EtwoNseeds{} seeds. This tests
+whether the gap is produced by training itself, and whether training under a
+confound widens it.
+
+\paragraph{E4 (active design).} \EfourM{} candidate directions at layers
+\EfourLayers{} --- random draws, probe/adjoint mixtures, effect eigenvectors and
+sparse coordinate writes. Each is measured once to establish ground truth, then
+four orderings are compared at every budget.
+
+\paragraph{E6 (structural independence).} One model and \EsixN{} prompts held
+fixed. \EsixNlab{} label definitions vary the read side; \EsixNbeh{} behaviour
+functionals vary the write side. Some pairs are \emph{matched} by construction:
+the probe is trained on exactly the concept the behaviour measures.
+
+\paragraph{Instrument validation.} \texttt{auc}, \texttt{fisher\_probe},
+\texttt{spearman} and \texttt{pearson} are pinned to scikit-learn and SciPy
+references to $\sim10^{-16}$ (including heavy-tie and degenerate cases) in
+\texttt{tests/test\_instruments.py}.
+
+\section{Results}
+\label{sec:results}
+
+\subsection{The decoupling is exact, and the plane is fully occupied}
+
+At the population probe, steering has effect \EonePopEffect{} (floating-point
+zero) while classification is at AUC \EoneProbeAUC{}, matching the closed form
+\EoneProbeAUCclosed{}. The constructed probe-orthogonal direction attains AUC
+\EoneDarkAUC{} and the maximal effect, with gap \EoneDarkGap{}. The
+axis-aligned construction gives \EoneAxisPopEffect{} exactly. Sweeping a family
+of systems (Fig.~\ref{fig:decouple}) leaves probe AUC and the certificate
+essentially uncorrelated: Pearson $r=\EoneCorrP$, Spearman $\EoneCorrS$.
+
+Proposition~\ref{prop:inert} matches Monte-Carlo to within
+\PthreeMaxRelErr{} relative error across construction ranks, with an
+isotropic control at $\PthreeIso$ against an exact $1.0$. The closed-form dark
+direction (Prop.~\ref{prop:dark}) beat the best of \PfiveNrand{} random
+directions in the same subspace by a margin of $\PfiveMargin$.
+
+\begin{figure}[t]
+\centering
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{fig1_decoupling.pdf}
+\caption{Each point is one system; the class-mean direction is rotated away
+from the effect direction by $\theta$ and separability is swept. Probe accuracy
+and the certificate move independently (Cor.~\ref{cor:noinfo}).}
+\label{fig:decouple}
+\end{minipage}\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{fig2_leakage.pdf}
+\caption{Finite-sample leakage. True alignment is exactly zero; the estimate
+decays as $N^{-1/2}$ with no dependence on width $d$
+(Prop.~\ref{prop:leak}).}
+\label{fig:leak}
+\end{minipage}
+\end{figure}
+
+\subsection{Finite-sample probes manufacture causal effect}
+
+Regressing $\log\hat\rho$ on $\log N^{-1/2}$ gives slope $\PsevenSlope$
+(predicted $1.0$) with $R^2=\PsevenRtwo$. The dimension-dependent alternative
+$\sqrt{d/N}$ fits worse (slope $\PsevenAltSlope$, $R^2=\PsevenAltRtwo$). The
+dimension-free law wins (Fig.~\ref{fig:leak}).
+
+\subsection{A perfect probe, nearly orthogonal to the mechanism}
+
+On \EthreeModel, the behaviour functional is validated first: across
+\EthreePairN{} exactly matched pairs it moves by $\EthreePairGap$ logits in the
+correct direction on \EthreePairSign\% of pairs.
+
+From layer~1 onward the probe separates held-out prompts at AUC
+\EthreeMaxAUC{}. Its alignment with the mechanism averages $\rho=\EthreeMeanRho$
+(minimum \EthreeMinRho), and only \EthreeMeanReff\% of the \EthreeD-dimensional
+residual stream is behaviourally live (Fig.~\ref{fig:layerwise}).
+
+Measured at equal write norm (Fig.~\ref{fig:effects}), the probe direction
+recovers \EthreeEffProbe\% of the effect available to the certificate-optimal
+direction; a random direction recovers \EthreeEffRandom\%; and a direction
+constrained to be \emph{orthogonal to the probe} recovers \EthreeEffDark\%.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig3_gpt2_layerwise.pdf}
+\caption{\textbf{Left:} probe AUC on held-out prompts against alignment $\rho$
+with the adjoint direction. \textbf{Right:} the live fraction $\reff/d$.}
+\label{fig:layerwise}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig4_gpt2_effects.pdf}
+\caption{Measured causal effect at equal write norm,
+$\alpha=0.10\cdot\overline{\|x_\ell\|}$. The probe-orthogonal direction tracks
+the adjoint almost exactly; the probe itself does not.}
+\label{fig:effects}
+\end{figure}
+
+\paragraph{This is not ``gradients steer better''.}
+That $\gbar$ moves $\varphi$ is true by construction and carries no information.
+Three things do. First, the probe direction is what practitioners deploy, and
+the size of its shortfall had not been measured. Second, the certificate
+rank-predicts measured effect across a pool of directions including random
+draws, probe/adjoint mixtures and effect eigenvectors---Spearman $\EthreeSpSbar$,
+against $\EthreeSpAUC$ for probe accuracy---so it is a genuine predictor over
+the space, not a restatement of one special case (Fig.~\ref{fig:calib}). Third,
+the dissociation runs both ways: the best steering direction is itself a weak
+detector (AUC $\EthreeGbarAUC$ against the probe's $\EthreeMaxAUC$).
+
+\paragraph{Validity.} With $M_\ell$ estimated by second differences, the write
+magnitude used lies inside the certificate's validity radius at
+\EthreeInWarranty{} of \EthreeNlayers{} layers. Where it does not (the first two
+layers) the first-order prediction is out of warranty and we say so rather than
+quoting it.
+
+\subsection{The two geometries are structurally independent}
+
+E6 is the sharpest available test (Fig.~\ref{fig:indep}). A probe trained on
+\emph{exactly} the concept a behaviour functional measures aligns with that
+behaviour's adjoint at $\rho=\EsixMatched$. A probe for a completely unrelated
+concept aligns at $\rho=\EsixUnmatched$. The ratio is \EsixRatio, and matched
+beats unmatched in \EsixWins{} of \EsixNlayers{} layers---chance.
+
+We state one nuance rather than averaging it away: over the final third of the
+network matched alignment does exceed unmatched ($\EsixLateMatched$ versus
+$\EsixLateUnmatched$). Both remain near zero---$\rho=0.06$ is roughly $86^\circ$
+from the effect direction---so neither regime confers usable control. The claim
+is not that matched probes carry literally no signal, but that the signal is too
+small to act on and is swamped by which layer one happens to be at.
+
+\begin{figure}[t]
+\centering
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{fig5_independence.pdf}
+\caption{Alignment when the probe is trained on \emph{exactly} the concept the
+behaviour measures (matched) versus an unrelated concept (unmatched). If the
+read and write geometries were the same object, matched would dominate
+everywhere.}
+\label{fig:indep}
+\end{minipage}\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=\linewidth]{fig7_calibration.pdf}
+\caption{Predicted $|\alpha\Sbar|$, computed with no interventions, against
+measured $|\Delta\varphi|$ for every (layer, direction) pair. The dashed line
+is $y=x$; landing near it is stronger than a rank correlation.}
+\label{fig:calib}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.52\textwidth]{fig6_realdata.pdf}
+\caption{RealToxicityPrompts, two models. Every read-side construction
+classifies well and steers poorly; a direction built orthogonal to all of them
+does the reverse.}
+\label{fig:real}
+\end{figure}
+
+\subsection{Real data and deployed steering vectors}
+
+On RealToxicityPrompts (Fig.~\ref{fig:real}, Table~\ref{tab:real}), probe
+accuracy sits at $\EfiveFisherAUC$---\emph{not} saturated---so the gap is not an
+artefact of a maxed-out probe. The Fisher probe recovers \EfiveFisherEff\% of
+available control; difference-of-means, the vector activation-steering methods
+actually ship, recovers \EfiveDomEff\%; a direction orthogonal to all read-side
+constructions recovers \EfiveDarkEff\% at AUC $\EfiveDarkAUC$. The pattern
+replicates on \EfiveSecond{} (\EfiveSecondFisherEff\%, \EfiveSecondDomEff\%,
+\EfiveSecondDarkEff\%) and, across a different architecture family, on
+\EfiveThirdName{} (\EfiveThirdFisherEff\%, \EfiveThirdDomEff\%,
+\EfiveThirdDarkEff\%).
+
+\paragraph{A weak signal on how this scales.}
+The three models span widths $\{\EfiveWidths\}$ and \EfiveNfamilies{}
+architecture families. Across them the effect rank in \emph{absolute} terms is
+small and roughly constant---$\reff$ between \EfiveAbsReffMin{} and
+\EfiveAbsReffMax---rather than growing with $d$. If $\reff$ stays $O(1)$ as
+width increases, then $\reff/d$ \emph{shrinks} with scale and the gap widens
+rather than closing. We state this as suggestive and not established: it rests
+on two distinct widths and three checkpoints, which is far too little to fit a
+trend. It does, however, point the opposite way to the failure mode we
+identify as the largest threat in \S\ref{sec:limits}.
+
+\begin{table}[t]
+\centering
+\small
+\caption{RealToxicityPrompts, averaged over all layers. Efficiency is measured
+effect relative to the certificate-optimal direction at equal write norm; KL is
+the mean divergence of the next-token distribution under the same write. Rows
+are generated from \texttt{results/data/}, not transcribed.}
+\label{tab:real}
+\input{table_e5}
+\end{table}
+
+\subsection{The certificate buys a cheaper search}
+
+If the certificate predicts effect, it should be usable to \emph{choose} which
+interventions to run. E4 tests this directly: given \EfourM{} candidate
+directions and a budget of $B$ intervention measurements, which ordering finds
+the strongest direction fastest? Candidates include random draws,
+probe/adjoint mixtures, effect eigenvectors and sparse coordinate writes;
+ground truth is obtained by measuring all \EfourM{} once, offline.
+
+Ordering by the certificate reaches 90\% of the best attainable effect after
+\EfourCertNinety{} measurements on average (\EfourCertNinetyList{} across
+layers \EfourLayers), against \EfourAucNinety{} for ordering by probe accuracy
+(\EfourAucNinetyList) and \EfourRandNinety{} for random order
+(\EfourRandNinetyList); the oracle needs \EfourOracleNinety{}. That is a
+\textbf{$\sim\EfourSpeedupRandom\times$} reduction in intervention budget
+against random selection and $\sim\EfourSpeedupAUC\times$ against probe
+accuracy (Fig.~\ref{fig:budget}). Rank correlation with the true effect is
+\EfourSpSbar{} for the certificate and \EfourSpAUC{} for $|\mathrm{AUC}-\tfrac12|$.
+
+The certificate costs nothing extra here: it reuses adjoints already computed
+for the probe-training data.
+
+\begin{remark}[Relation to c-optimal experimental design]
+\label{rem:elfving}
+Ranking candidates by $\Sbar(\ell,w)=|\gbar_\ell^\top w|/\|w\|$ is a discrete
+instance of \emph{c-optimal design}: choosing where to sample so as to best
+estimate one linear functional $c^\top\theta$ of an unknown parameter, rather
+than the whole parameter vector, is classically solved by Elfving's
+theorem~\cite{elfving1952}, which characterises the optimal design point by
+alignment with $c$ on the convex hull of the candidate set. Here $\gbar_\ell$
+plays the role of $c$ and the \EfourM{} candidates play the role of the design
+points, but two things do not transfer: the candidate pool is finite rather
+than a continuum, and the task is a budgeted search for the single best point
+rather than a continuous allocation, so Elfving's optimality and efficiency
+guarantees do not apply as stated. What transfers is the reason a
+\emph{single} functional is so much cheaper to design for than the whole
+Gramian: c-optimality needs only alignment with one vector, where sensor
+placement for the full state needs the Gramian's spectrum. That is also why
+the certificate is cheap here---one backward pass, no eigendecomposition---while
+a general-purpose observability audit is not.
+\end{remark}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig8_budget.pdf}
+\caption{Fraction of the best attainable effect discovered after $B$
+intervention measurements, out of \EfourM{} candidates. The dotted line marks
+90\%. Certificate ordering is close to the oracle; probe-accuracy ordering is
+much closer to random.}
+\label{fig:budget}
+\end{figure}
+
+\paragraph{Collateral damage, and a caveat about how to read it.}
+Table~\ref{tab:real} also reports the KL divergence of the next-token
+distribution under each write. At \emph{equal write norm} the adjoint direction
+disturbs the distribution more than the probe does (0.301 versus 0.019 nats on
+gpt2), which is unsurprising: it moves the behaviour more. Read naively, that
+looks like a point against it.
+
+It is not, because the comparison should be at \emph{equal effect}, not equal
+norm. Behaviour change is first-order in the write magnitude while KL is
+second-order (it is the Fisher--Rao metric to leading order), so scaling the
+probe to match the adjoint's effect requires
+$\alpha_{\mathrm{probe}}/\alpha_{\gbar}\approx 100/\EfiveFisherEff \approx 11$
+and costs roughly $11^2$ times its measured KL --- about 2.3 nats, against
+0.301 for the adjoint. On that basis the certificate-optimal direction is the
+cheaper actuator by close to an order of magnitude. We flag this as an
+extrapolation from the quadratic scaling rather than a measurement: verifying
+it requires a matched-effect sweep, which we have not run.
+
+\section{Results against interest}
+\label{sec:negative}
+
+\paragraph{A pre-registered prediction failed, in two independent designs.}
+We predicted the gap would widen with the spurious correlation between a
+surface confound and the label. It does not.
+
+In the \emph{pretrained} setting (E3), sweeping
+$P(\text{identity matches label})$ over $\{\EthreeDialLevels\}$ moves mean
+$\rho$ over $\{\EthreeDialRhos\}$---no trend, and the gap is already near-total
+at zero confounding. One might object that a pretrained model's representations
+were fixed long before our confound existed, so the dial never had a chance to
+act.
+
+E2 removes that objection by controlling training itself. We train
+\EtwoNruns{} transformers from scratch (\EtwoNseeds{} seeds $\times$
+\EtwoNlevels{} confound levels, \EtwoLayers{} layers, $d=\EtwoD$) on a task with
+a causal content variable and a spurious surface marker, to test accuracy
+\EtwoAcc. The manipulation demonstrably works: accuracy against the marker
+tracks the dial at $\{\EtwoMarkerList\}$. Yet across confound levels
+$\{\EtwoLevels\}$, mean $\rho$ moves over $\{\EtwoRhoList\}$---a change of
+$\EtwoRhoDelta$ end to end, which is $\EtwoDeltaInSD$ within-level seed standard
+deviations (\EtwoSeedSD) and therefore indistinguishable from zero. Probe
+steering efficiency is flat at $\{\EtwoEffList\}$\%, and the probe-orthogonal
+direction holds at \EtwoDarkLo--\EtwoDarkHi\% throughout
+(Fig.~\ref{fig:dial}).
+
+Two experimental designs, one inheriting representations and one creating them,
+both refute the confound hypothesis. This makes the result \emph{stronger} and
+more general: the mechanism is the extreme low-rankness of $\Wg$
+(Prop.~\ref{prop:inert}), not label contamination. Cleaning the labels will not
+fix it.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig9_confound_dial.pdf}
+\caption{The confound dial in both designs. \textbf{Left:} alignment $\rho$
+against confound strength, for transformers trained from scratch (E2, error bars
+over \EtwoNseeds{} seeds) and for pretrained gpt2 (E3). \textbf{Right:} probe
+steering efficiency in E2. Neither shows the widening the pre-registered
+prediction expected.}
+\label{fig:dial}
+\end{figure}
+
+\paragraph{A proposition is only approximate in practice.}
+Prop.~\ref{prop:dark} predicts probe-orthogonal directions classify at exactly
+$0.500$. This is exact in the Gaussian construction (E1: \EoneDarkAUC) but not
+in \EthreeModel, where they classify at $\EthreeDarkAUC$: real representations
+are not shared-covariance Gaussian. The steering half of the proposition
+survives intact (\EthreeEffDark\% of the optimum); the detectability half is
+weaker than stated.
+
+\paragraph{A metric was discarded as vacuous.} Our first collateral-damage
+measure was the change in the prompt's own next-token perplexity under the
+steer. It returned identically zero at every layer---structurally, not by a
+small margin: the write lands on the final token, and causal masking forbids a
+final-position state from influencing earlier predictions. We replaced it with
+the KL divergence of the next-token distribution. We record this because a
+metric that \emph{cannot} be non-zero is worse than no metric: it reads as
+evidence of safety.
+
+\paragraph{An identity-bias result that is smaller than it first appeared.}
+On the confounded split the toxicity probe appears to detect identity mentions
+at AUC up to $0.90$; on balanced $2\times2$ cells that figure falls to
+$\EthreeIdentAUClast$ at the final layer. The disparity that persists is inside
+the hostile class: hostile sentences with identity-marked subjects are flagged
+\EthreeHostileGap{} percentage points more often than otherwise identical
+sentences with neutral subjects. At layer $0$, benign identity-marked sentences
+are flagged at \EthreeFPRidentZero\% against \EthreeFPRneutZero\%.
+
+\section{Related work}
+
+Circuit non-identifiability is now well established: multiple sufficient
+subgraphs realise the same behaviour, and top-down and bottom-up analyses stand
+in a many-to-many relation~\cite{eeao2025,uniq2026,manycircuits2026,certified2026}.
+We take that as premise rather than contribution.
+
+Control-theoretic framings of neural interpretability have recently
+appeared---Gramian and Hankel-based mode ranking, and controllability analyses of
+state-space language models~\cite{blackbox2025,ssmctrl2025}. Our contribution is
+not the import of Gramians but their use as a \emph{predictive certificate for
+probe-derived directions}, together with the closed form for probe-orthogonal
+directions. The read/write split we formalise is a finite-horizon,
+behaviour-restricted specialisation of three older results from outside
+machine learning: Kalman's controllable/observable canonical decomposition
+\cite{kalman1963}, which first separated ``can be moved'' from ``can be
+seen'' as distinct subspaces of one linear system (Remark~\ref{rem:kalman});
+Backus--Gilbert resolution theory~\cite{backusgilbert1968}, which quantifies
+which directions a declared linear observation can and cannot resolve
+(Remark~\ref{rem:resolution}); and Elfving's theory of c-optimal design
+\cite{elfving1952} for a single linear functional, which the certificate
+ordering in E4 specialises to a finite, budgeted candidate pool
+(Remark~\ref{rem:elfving}). None of the three has previously been used, to
+our knowledge, to certify or select individual steering directions from
+adjoints already computed for probe training.
+
+Independently, direct measurements of trained-Transformer Jacobians report a
+learned non-normality gradient through depth and a resulting low-rank
+perturbation bottleneck~\cite{nonnormalresidual2026,transientreserves2026},
+the signature classical non-normal dynamical systems produce under
+composition~\cite{trefethen1993}. Remark~\ref{rem:nonnormal} connects this to
+the smallness of $\reff/d$ we measure directly from $\Wg$.
+
+The gap between linear decodability and causal control is observed
+qualitatively in recent steering work~\cite{langaxis2026}. Activation steering
+and its difference-of-means constructions~\cite{actadd,caa}, feedback
+controllers~\cite{feedback2025}, local-linearity optimal control~\cite{locallin2026}
+and causal head selection for detoxification~\cite{causaldetox2026} all deploy
+read-side directions as actuators. We supply the quantity that says in advance
+how much of their effect is real. Probing methodology, activation and path
+patching, ACDC and attribution patching, sparse autoencoders and causal
+abstraction supply the surrounding toolkit; our object is orthogonal to circuit
+discovery and concerns the validity of single directions.
+
+\section{Limitations}
+\label{sec:limits}
+
+\textbf{Scale.} Everything ran on 4 CPU cores without a GPU; the largest model
+is \EthreeModel{} (124M). The theory is scale-free, the measurements are not. If
+$\reff/d$ grows with width, Prop.~\ref{prop:inert} loses its force; testing this
+is the first item in \S\ref{sec:next}.
+
+\textbf{First order.} The certificate is first-order.
+Prop.~\ref{prop:radius} gives its validity radius, measured per layer, and we
+mark where the prediction is out of warranty. Large-$\alpha$ steering studies
+operate partly in that regime.
+
+\textbf{One behaviour functional.} $\varphi$ is a logit difference over a small
+token set. The minimal-pair check establishes that it tracks the intended
+factor, not that it is the only reasonable readout.
+
+\textbf{Position and pathway.} Interventions write to the final token's residual
+stream at a single layer. Multi-position, multi-layer and attention-internal
+writes are untested.
+
+\textbf{What ``dark'' does not mean.} A dark direction is invisible to
+\emph{this} probe family---linear, this concept, this data. It is not invisible
+in principle; a nonlinear or differently-supervised detector may find it. The
+safety claim concerns the monitors that are actually deployed.
+
+\textbf{Toy-scale training.} The from-scratch models in E2 are small
+(\EtwoLayers{} layers, $d=\EtwoD$). They establish that gradient descent
+produces the gap unaided and that a training-time confound does not widen it,
+but they are not evidence about what large-scale pretraining does.
+
+\section{Safety implication}
+
+If a monitor is built from a toxicity probe, it is close to blind on the
+directions that most strongly drive toxic output: on \EthreeModel{} the
+probe-orthogonal direction achieves \EthreeEffDark\% of the maximal effect while
+the probe itself achieves \EthreeEffProbe\%. Probe-based monitoring is therefore
+not, by itself, evidence of control. Given Theorem~\ref{thm:decouple}, this is a
+consequence rather than a concern.
+
+\section{Next steps}
+\label{sec:next}
+
+Ordered by what would most change the conclusions:
+\begin{enumerate}[leftmargin=1.5em,itemsep=1pt]
+  \item Replicate $\rho$ and $\reff/d$ at 1B--7B parameters. The single largest
+  threat to external validity.
+  \item Test Remark~\ref{rem:nonnormal} directly: compute Schur non-normality,
+  finite-horizon transient gain, and Kreiss-constant diagnostics on $J_\ell^{(i)}$
+  for the same models and prompts, and check whether they predict $\reff(\ell)$
+  and its layer profile.
+  \item Extend the certificate to nonlinear and sparse-autoencoder readouts,
+  testing whether dark directions survive a stronger detector---the real safety
+  question.
+  \item Minimum-energy multi-layer control under an explicit collateral-damage
+  constraint.
+  \item A second-order certificate, extending validity past $\alpha^\star$ where
+  most deployed steering operates.
+  \item Benchmark certificate-guided design against circuit-discovery methods
+  (ACDC, EAP) at equal model-run budget. \S\ref{sec:results} establishes the
+  gain against random and probe-ordered selection, but not against those.
+  \item A human-labelled toxicity behaviour functional, removing the
+  logit-difference proxy from the safety claim.
+\end{enumerate}
+
+\section{Conclusion}
+
+Reading a residual stream and writing to it are governed by different subspaces.
+That separation is provable, constructible, and measurable in advance from one
+backward pass---and on the models measured here it is close to total. Probe
+accuracy, the field's default evidence that a direction ``is'' a concept,
+carries essentially no information about whether that direction controls
+anything.
+
+\paragraph{Reproducibility.} Every number in this paper is generated from
+\texttt{results/data/*.json} via \texttt{paper/make\_numbers.py}, and every
+figure from the same files via \texttt{paper/make\_figures.py}. No measurement
+is typed by hand into the text.
+
+\appendix
+
+\section{Proofs}
+\label{app:proofs}
+
+\begin{proof}[Proof of Theorem~\ref{thm:decomp}]
+Taylor's theorem with Lagrange remainder on the segment gives
+$\Delta_i = \alpha g^{(i)\top}w + R_i$ with
+$|R_i|\le\frac12\alpha^2\|w\|^2\sup\|\nabla^2\Phi_\ell\|\le\frac{M_\ell}{2}\alpha^2\|w\|^2$
+under A1. Splitting $w=P_Cw+(I-P_C)w$ is an identity. For the RMS bound,
+$\frac1N\sum_i(g^{(i)\top}(I-P_C)w)^2 = w^\top(I-P_C)\Wg(I-P_C)w \le \lambda_{r+1}\|w\|^2$,
+since $(I-P_C)\Wg(I-P_C)$ has spectral norm $\lambda_{r+1}$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:decouple}]
+Take $\Phi_\ell(x)=e_1^\top x$, so $g^{(i)}=\gbar=e_1$ for all $i$, and draw
+$x\mid y\sim\mathcal{N}(y\Delta\mu\,e_2,\sigma^2 I_d)$. Then $\delta=\Delta\mu\,e_2$,
+$\Sigma=\sigma^2I$, and $w_{\mathrm{probe}}\propto e_2$.
+(b) $\Delta_i(\alpha,w_{\mathrm{probe}})=\Phi_\ell(x+\alpha e_2)-\Phi_\ell(x)=\alpha e_1^\top e_2=0$
+exactly, for all $\alpha,i$.
+(a) The score $e_2^\top x$ is $\mathcal{N}(y\Delta\mu,\sigma^2)$, so
+$\mathrm{AUC}=\Phi_{\mathcal N}(\Delta\mu/(\sigma\sqrt2))$; choose
+$\Delta\mu/\sigma \ge \sqrt2\,\Phi_{\mathcal N}^{-1}(1-\epsilon)$.
+(c) Take $v=e_1$: its score is $\mathcal{N}(0,\sigma^2)$ independent of $y$, so
+its AUC is exactly $\tfrac12$, while $|\gbar^\top v|=1=\|\gbar\|$ and
+$\Delta_i(\alpha,v)=\alpha$.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:inert}]
+$\mathbb{E}[ww^\top]=I/d$, so $\mathbb{E}[w^\top\Wg w]=\operatorname{tr}(\Wg)/d$.
+The maximum of $w^\top\Wg w$ on the unit sphere is $\lambda_1$; divide.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:dark}]
+Maximising $|\gbar^\top v|$ subject to $\|v\|=1$, $P_Ov=0$ is maximising
+$|((I-P_O)\gbar)^\top v|$ over unit $v\in\mathcal{O}^\perp$, attained at the
+normalised $(I-P_O)\gbar$. For the AUC claim, the score $v^\top x$ has
+class-conditional means $v^\top\mu_y$, and $v^\top\delta$ vanishes when $v$ is
+orthogonal to $(\Sigma+\gamma I)^{-1}\delta$ in the $(\Sigma+\gamma I)$-metric;
+equal means with shared variance gives AUC $\tfrac12$.
+\end{proof}
+
+\begin{proof}[Proof sketch of Proposition~\ref{prop:leak}]
+Write $\hat w = w_{\mathrm{pop}} + e$ with estimation error $e$ asymptotically
+Gaussian and, for isotropic $\Sigma$, isotropic within the complement of
+$w_{\mathrm{pop}}$ with $\mathbb{E}\|e\|^2 = Cd/N$. The leakage is the component
+of $e$ along the single fixed unit vector $\gbar$, i.e.\ one coordinate of an
+isotropic vector spread over $d-1$ dimensions:
+$\mathbb{E}[(e^\top\gbar)^2] = \mathbb{E}\|e\|^2/(d-1) = Cd/(N(d-1)) \to C/N$.
+The $d$ factors cancel.
+\end{proof}
+
+\section{Additional experimental detail}
+
+\paragraph{Behaviour functional.} $\varphi$ is the mean logit over a set of mild
+insult tokens minus the mean over a matched neutral set, at the final position.
+Insult vocabulary is used strictly as a \emph{logit measurement target};
+nothing is generated or emitted. Identity terms appear only to measure false
+positives, which is their sole purpose.
+
+\paragraph{Adjoints at every layer from one pass.} Forward pre-hooks capture the
+input to each block and call \texttt{retain\_grad}; a single backward of
+$\sum_i\varphi_i$ then yields $g_\ell^{(i)}$ at every layer simultaneously, so
+the certificate costs one forward and one backward pass in total.
+
+\paragraph{Curvature estimation.} $M_\ell$ is estimated by non-uniform second
+differences of $\alpha\mapsto\overline{\Delta(\alpha,\gbar)}$ on a grid spanning
+$[-2\alpha,2\alpha]$.
+
+\begin{thebibliography}{99}
+\small
+\bibitem{eeao2025}
+M.~Méloux, F.~Portet, S.~Maniu, and M.~Peyrard. \emph{Everything, Everywhere,
+All at Once: Is Mechanistic Interpretability Identifiable?} ICLR, 2025.
+arXiv:2502.20914.
+\bibitem{uniq2026}
+A.~Sahi, I.~Kutianawala, M.~Beeram, S.~Song, and A.~Shrivastava.
+\emph{Characterizing Mechanistic Uniqueness and Identifiability Through
+Circuit Analysis.} ICLR, 2026. OpenReview:cHpZ5DE8wj.
+\bibitem{manycircuits2026}
+A.~Bayat Makou, J.~Niu, S.~Dutta, and I.~Gurevych. \emph{Many Circuits, One
+Mechanism: Input Variation and Evaluation Granularity in Circuit Discovery.}
+2026. arXiv:2606.06267.
+\bibitem{certified2026}
+A.~Anani, T.~Lorenz, B.~Schiele, M.~Fritz, and J.~Fischer. \emph{Certified
+Circuits: Stability Guarantees for Mechanistic Circuits.} ICML, 2026.
+arXiv:2602.22968.
+\bibitem{blackbox2025}
+J.~Moon. \emph{From Black-Box to White-Box: Control-Theoretic Neural Network
+Interpretability.} 2025. arXiv:2511.12852.
+\bibitem{ssmctrl2025}
+M.~Mabrok and Y.~Zafari. \emph{Controllability Analysis of State Space-based
+Language Model.} 2025. arXiv:2511.17970.
+\bibitem{langaxis2026}
+A.~Srivastav. \emph{Steering the Language Axis: From Linear Decodability to
+Causal Control.} 2026. arXiv:2608.12334.
+\bibitem{actadd}
+A.~M.~Turner, L.~Thiergart, G.~Leech, D.~Udell, U.~Mini, and M.~MacDiarmid.
+\emph{Activation Addition: Steering Language Models Without Optimization.}
+2024. arXiv:2308.10248.
+\bibitem{caa}
+N.~Rimsky, N.~Gabrieli, J.~Schulz, M.~Tong, E.~Hubinger, and A.~M.~Turner.
+\emph{Steering Llama 2 via Contrastive Activation Addition.} ACL, 2024.
+arXiv:2312.06681.
+\bibitem{feedback2025}
+D.~V.~Nguyen, H.~M.~Vu, N.~Y.~Pham, L.~Zhang, and T.~M.~Nguyen.
+\emph{Activation Steering with a Feedback Controller.} ICLR, 2026.
+arXiv:2510.04309.
+\bibitem{locallin2026}
+J.~Skifstad, X.~A.~Yang, and G.~Chou. \emph{Local Linearity of LLMs Enables
+Activation Steering via Model-Based Linear Optimal Control.} 2026.
+arXiv:2604.19018.
+\bibitem{causaldetox2026}
+Y.~Wang, Y.~Chen, A.~Goyal, and H.~Sundaram. \emph{CausalDetox: Causal Head
+Selection and Intervention for Language Model Detoxification.} ACL, 2026.
+arXiv:2604.14602.
+\bibitem{kalman1963}
+R.~E.~Kalman. \emph{Mathematical Description of Linear Dynamical Systems.}
+SIAM Journal on Control, 1(2):152--192, 1963. DOI:10.1137/0301010.
+\bibitem{backusgilbert1968}
+G.~Backus and F.~Gilbert. \emph{The Resolving Power of Gross Earth Data.}
+Geophysical Journal of the Royal Astronomical Society, 16(2):169--205, 1968.
+DOI:10.1111/j.1365-246X.1968.tb00216.x.
+\bibitem{elfving1952}
+G.~Elfving. \emph{Optimum Allocation in Linear Regression Theory.} The
+Annals of Mathematical Statistics, 23(2):255--262, 1952.
+DOI:10.1214/aoms/1177729442.
+\bibitem{trefethen1993}
+L.~N.~Trefethen, A.~E.~Trefethen, S.~C.~Reddy, and T.~A.~Driscoll.
+\emph{Hydrodynamic Stability Without Eigenvalues.} Science, 261(5121):578--584,
+1993. DOI:10.1126/science.261.5121.578.
+\bibitem{nonnormalresidual2026}
+J.~Fernando and G.~Guitchounts. \emph{Dynamics of the Transformer Residual
+Stream: Coupling Spectral Geometry to Network Topology.} 2026.
+arXiv:2605.14258.
+\bibitem{transientreserves2026}
+H.~Li. \emph{Transient Reserves, Sink Dampers, and the Failure of Eigenvalue
+Reasoning in the Attention Propagator.} 2026. arXiv:2607.09279.
+\end{thebibliography}
+
+\bigskip
+\noindent\fbox{\begin{minipage}{0.96\linewidth}
+\small
+\textbf{Bibliography status.} All entries above were verified against
+primary sources (arXiv, ACL Anthology, ICML/ICLR listings, OpenReview,
+Project Euclid, Science) on 2026-08-26; author lists, venues, and
+identifiers are as confirmed at that date. Four references beyond the
+original twelve---Kalman (1963), Backus and Gilbert (1968), Elfving (1952),
+and Trefethen et al. (1993)---ground the structural connections drawn in
+\S\ref{sec:two}, \S\ref{sec:results}, and Related Work. Two further 2026
+preprints report direct empirical measurements of the Transformer-Jacobian
+non-normality discussed in Remark~\ref{rem:nonnormal}; as very recent,
+single-venue preprints they are flagged as concurrent evidence, not
+independently replicated results.
+\end{minipage}}
+
+\end{document}

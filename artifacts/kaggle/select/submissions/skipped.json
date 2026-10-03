@@ -1,0 +1,26 @@
+[
+ {
+  "name": "best_cross_source",
+  "recipe": "std|lda|0.02",
+  "score": 0.6332827516439049,
+  "reason": "below all-positive baseline 0.7059"
+ },
+ {
+  "name": "best_single",
+  "recipe": "std|lda|0.6",
+  "score": 0.6252019386106623,
+  "reason": "below all-positive baseline 0.7059"
+ },
+ {
+  "name": "best_threshold",
+  "recipe": "raw|logistic|0.002",
+  "score": 0.6284329563812601,
+  "reason": "below all-positive baseline 0.7059"
+ },
+ {
+  "name": "best_ensemble",
+  "recipe": "std|lda|0.6 + raw|lda|0.3 + std+abtt1|lda|0.6",
+  "score": 0.6203554119547657,
+  "reason": "below all-positive baseline 0.7059"
+ }
+]

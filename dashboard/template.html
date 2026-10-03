@@ -1,0 +1,456 @@
+<title>The Probe-Steer Gap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap">
+
+<style>
+:root{
+  color-scheme: light;
+  --ground:#f5f7f8; --surface:#ffffff; --surface-2:#eef2f4; --surface-sunk:#e6ecef;
+  --rule:#d3dce1; --rule-strong:#b4c2c9;
+  --ink:#0d1418; --ink-2:#41525b; --ink-3:#6d818b;
+  --accent:#1c5cab; --accent-soft:#e3edfa;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#4a3aa7;
+  --good:#0f7a55; --bad:#c2302f; --warn:#8a6100;
+  --good-bg:#dff3ea; --bad-bg:#fbe4e3; --warn-bg:#fbf0d8;
+  --shadow:0 1px 2px rgba(13,20,24,.06), 0 4px 14px rgba(13,20,24,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --ground:#101417; --surface:#181d21; --surface-2:#1f262b; --surface-sunk:#141a1e;
+    --rule:#2c353b; --rule-strong:#3d4950;
+    --ink:#e9eff2; --ink-2:#a7b8c1; --ink-3:#7b8d97;
+    --accent:#6aa9ec; --accent-soft:#16283d;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#9085e9;
+    --good:#43c295; --bad:#f07d7c; --warn:#dfa93a;
+    --good-bg:#132a22; --bad-bg:#2e1a1a; --warn-bg:#2b2413;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --ground:#101417; --surface:#181d21; --surface-2:#1f262b; --surface-sunk:#141a1e;
+  --rule:#2c353b; --rule-strong:#3d4950;
+  --ink:#e9eff2; --ink-2:#a7b8c1; --ink-3:#7b8d97;
+  --accent:#6aa9ec; --accent-soft:#16283d;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#9085e9;
+  --good:#43c295; --bad:#f07d7c; --warn:#dfa93a;
+  --good-bg:#132a22; --bad-bg:#2e1a1a; --warn-bg:#2b2413;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.3);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+}
+.wrap{display:grid; grid-template-columns:238px minmax(0,1fr); gap:0; max-width:1420px; margin:0 auto;}
+@media (max-width:960px){ .wrap{grid-template-columns:1fr} }
+
+/* ---------- rail ---------- */
+.rail{
+  position:sticky; top:0; align-self:start; height:100vh; overflow-y:auto;
+  padding:30px 20px 40px; border-right:1px solid var(--rule); background:var(--surface-sunk);
+}
+@media (max-width:960px){ .rail{position:static;height:auto;border-right:none;border-bottom:1px solid var(--rule)} }
+.rail h2{
+  font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.66rem; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
+  margin:0 0 12px; padding-bottom:8px; border-bottom:1px solid var(--rule);
+}
+.rail a{
+  display:block; padding:6px 9px; margin:1px -9px; border-radius:5px;
+  color:var(--ink-2); text-decoration:none; font-size:.86rem; line-height:1.35;
+}
+.rail a:hover{background:var(--surface-2); color:var(--ink)}
+.rail a .n{
+  font-family:"IBM Plex Mono",monospace; font-size:.7rem; color:var(--ink-3);
+  margin-right:8px; font-variant-numeric:tabular-nums;
+}
+.rail .grp{margin-top:22px}
+
+/* ---------- content ---------- */
+main{padding:44px 46px 100px; min-width:0}
+@media (max-width:700px){ main{padding:28px 20px 70px} }
+
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace; font-size:.68rem; font-weight:600;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin:0 0 12px;
+}
+h1{
+  font-size:clamp(1.9rem,4.4vw,3rem); line-height:1.06; margin:0 0 16px;
+  font-weight:700; letter-spacing:-.025em; text-wrap:balance; max-width:19ch;
+}
+.standfirst{
+  font-family:"IBM Plex Serif",Georgia,serif; font-size:1.11rem; line-height:1.62;
+  color:var(--ink-2); max-width:64ch; margin:0 0 26px;
+}
+h2{
+  font-size:1.42rem; font-weight:650; letter-spacing:-.015em; margin:0 0 6px;
+  text-wrap:balance;
+}
+h3{font-size:1.02rem; font-weight:600; margin:0 0 8px; letter-spacing:-.005em}
+p{max-width:66ch; margin:0 0 14px}
+.prose{font-family:"IBM Plex Serif",Georgia,serif; font-size:1rem; line-height:1.68; color:var(--ink-2)}
+.prose strong{color:var(--ink); font-weight:500}
+code,.mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
+code{font-size:.86em; background:var(--surface-2); padding:.12em .38em; border-radius:3px}
+
+section{margin:0 0 54px; scroll-margin-top:22px}
+.sec-head{border-top:2px solid var(--ink); padding-top:12px; margin-bottom:20px}
+.sec-head .tag{
+  font-family:"IBM Plex Mono",monospace; font-size:.68rem; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3); display:block; margin-bottom:6px;
+}
+.sec-head p{color:var(--ink-2); margin:6px 0 0; font-size:.95rem}
+
+/* ---------- cards ---------- */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:9px;
+  padding:20px 22px; box-shadow:var(--shadow); margin-bottom:18px;
+}
+.card > h3{margin-bottom:4px}
+.card .cap{font-size:.85rem; color:var(--ink-3); margin:0 0 14px; max-width:74ch}
+.grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(370px,1fr)); gap:18px}
+.grid3{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px}
+
+/* ---------- stat tiles ---------- */
+.tile{
+  background:var(--surface); border:1px solid var(--rule); border-radius:9px;
+  padding:15px 17px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:3px;
+}
+.tile .lab{
+  font-family:"IBM Plex Mono",monospace; font-size:.65rem; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3);
+}
+.tile .val{
+  font-family:"IBM Plex Mono",monospace; font-size:1.85rem; font-weight:500;
+  letter-spacing:-.02em; line-height:1.12; font-variant-numeric:tabular-nums; color:var(--ink);
+}
+.tile .val .u{font-size:.95rem; color:var(--ink-3); margin-left:3px}
+.tile .sub{font-size:.79rem; color:var(--ink-3); line-height:1.4}
+
+/* ---------- verdict ledger ---------- */
+.ledger{display:flex; flex-direction:column; gap:0; border:1px solid var(--rule);
+        border-radius:9px; overflow:hidden; background:var(--surface); box-shadow:var(--shadow)}
+.lrow{display:grid; grid-template-columns:62px minmax(0,1fr) 172px; gap:14px;
+      padding:15px 18px; border-bottom:1px solid var(--rule); align-items:start}
+.lrow:last-child{border-bottom:none}
+@media (max-width:640px){ .lrow{grid-template-columns:52px minmax(0,1fr); }
+  .lrow .verdict{grid-column:2} }
+.lrow .pid{
+  font-family:"IBM Plex Mono",monospace; font-size:.95rem; font-weight:600;
+  color:var(--accent); padding-top:1px;
+}
+.lrow .claim{font-size:.93rem; line-height:1.5}
+.lrow .claim .ev{
+  display:block; margin-top:5px; font-family:"IBM Plex Mono",monospace;
+  font-size:.79rem; color:var(--ink-3); font-variant-numeric:tabular-nums; line-height:1.55;
+}
+.pill{
+  display:inline-flex; align-items:center; gap:6px; padding:3px 10px; border-radius:999px;
+  font-family:"IBM Plex Mono",monospace; font-size:.68rem; font-weight:600;
+  letter-spacing:.08em; text-transform:uppercase; white-space:nowrap;
+}
+.pill::before{content:""; width:6px; height:6px; border-radius:50%; background:currentColor}
+.pill.ok{color:var(--good); background:var(--good-bg)}
+.pill.no{color:var(--bad); background:var(--bad-bg)}
+.pill.mid{color:var(--warn); background:var(--warn-bg)}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto; margin:0 0 4px; border-radius:7px; border:1px solid var(--rule)}
+table{border-collapse:collapse; width:100%; font-size:.85rem; background:var(--surface)}
+th,td{padding:8px 12px; text-align:right; border-bottom:1px solid var(--rule); white-space:nowrap}
+.tw.wrap-cells td{white-space:normal; min-width:11ch}
+.tw.wrap-cells td:nth-child(n+2){font-size:.82rem; line-height:1.5}
+.tw.wrap-cells th{white-space:normal}
+th:first-child,td:first-child{text-align:left}
+thead th{
+  font-family:"IBM Plex Mono",monospace; font-size:.66rem; font-weight:600;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--ink-3);
+  background:var(--surface-2); position:sticky; top:0;
+}
+tbody td{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums; color:var(--ink-2)}
+tbody td:first-child{font-family:"IBM Plex Sans",sans-serif; color:var(--ink)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:var(--surface-2)}
+td.hi{color:var(--ink); font-weight:500}
+td.g{color:var(--good)} td.r{color:var(--bad)}
+
+/* ---------- charts ---------- */
+.chart{width:100%; position:relative}
+.chart svg{display:block; width:100%; height:auto; overflow:visible}
+.legend{display:flex; flex-wrap:wrap; gap:14px; margin:0 0 10px; padding:0; list-style:none}
+.legend li{display:flex; align-items:center; gap:6px; font-size:.78rem; color:var(--ink-2)}
+.legend .sw{width:11px; height:3px; border-radius:2px; flex:none}
+.legend .sw.dot{width:9px; height:9px; border-radius:50%}
+.tip{
+  position:absolute; pointer-events:none; opacity:0; transition:opacity .09s;
+  background:var(--ink); color:var(--ground); padding:6px 9px; border-radius:5px;
+  font-family:"IBM Plex Mono",monospace; font-size:.72rem; line-height:1.45;
+  white-space:nowrap; z-index:20; font-variant-numeric:tabular-nums;
+  box-shadow:0 3px 12px rgba(0,0,0,.22);
+}
+.axl{font-family:"IBM Plex Mono",monospace; font-size:9.5px; fill:var(--ink-3);
+     font-variant-numeric:tabular-nums}
+.axt{font-family:"IBM Plex Mono",monospace; font-size:9px; fill:var(--ink-3);
+     letter-spacing:.09em; text-transform:uppercase}
+.gridln{stroke:var(--rule); stroke-width:1}
+.axisln{stroke:var(--rule-strong); stroke-width:1}
+.dlab{font-family:"IBM Plex Mono",monospace; font-size:9.5px; font-weight:500}
+
+.note{
+  border-left:3px solid var(--accent); background:var(--accent-soft);
+  padding:13px 16px; border-radius:0 7px 7px 0; margin:0 0 18px; font-size:.9rem;
+  color:var(--ink-2); max-width:74ch;
+}
+.note strong{color:var(--ink)}
+.caveat{border-left-color:var(--warn); background:var(--warn-bg)}
+
+footer{border-top:1px solid var(--rule); padding-top:20px; margin-top:44px;
+       font-size:.82rem; color:var(--ink-3); max-width:74ch}
+footer code{font-size:.8em}
+.kv{display:grid; grid-template-columns:auto 1fr; gap:3px 14px; font-size:.82rem;
+    font-family:"IBM Plex Mono",monospace; color:var(--ink-3)}
+.kv b{color:var(--ink-2); font-weight:500}
+@media (prefers-reduced-motion:reduce){ *{transition:none!important; animation:none!important} }
+</style>
+
+<div class="wrap">
+<nav class="rail">
+  <h2>Contents</h2>
+  <a href="#summary"><span class="n">00</span>Summary</a>
+  <a href="#verdicts"><span class="n">01</span>Predictions &amp; verdicts</a>
+  <a href="#theory"><span class="n">02</span>The two geometries</a>
+  <div class="grp" id="rail-exp"><h2>Experiments</h2></div>
+  <div class="grp"><h2>Assessment</h2>
+  <a href="#outputs"><span class="n">03</span>Outputs</a>
+  <a href="#gaps"><span class="n">04</span>Gap analysis</a>
+  <a href="#limits"><span class="n">05</span>Limitations</a>
+  <a href="#next"><span class="n">06</span>Next steps</a>
+  </div>
+</nav>
+
+<main>
+<p class="eyebrow">Mechanistic interpretability &middot; measurement report</p>
+<h1>Seeing is not steering</h1>
+<p class="standfirst">
+A linear probe reads the residual stream; a steering vector writes to it. Those two
+operations are governed by <em>different subspaces</em>, and nothing in training ties them
+together. This report derives the gap, proves it can be made total, and measures it —
+in constructed systems, in transformers trained from scratch, and in three pretrained
+language models on real toxicity data.
+</p>
+
+<div id="content"></div>
+
+<footer>
+  <div class="kv" id="provenance"></div>
+</footer>
+</main>
+</div>
+
+<script>
+const DATA = __DATA__;
+</script>
+<script>
+/* ============================ chart toolkit ============================ */
+const PAL = ['var(--s1)','var(--s2)','var(--s3)','var(--s4)','var(--s5)'];
+const NS = 'http://www.w3.org/2000/svg';
+const el = (n, a = {}) => { const e = document.createElementNS(NS, n);
+  for (const k in a) if (a[k] !== undefined && a[k] !== null) e.setAttribute(k, a[k]); return e; };
+const fmt = (v, d = 3) => (v === null || v === undefined || !isFinite(v)) ? '—' : (+v).toFixed(d);
+
+function nice(lo, hi, n = 5) {
+  if (!isFinite(lo) || !isFinite(hi)) return [0, 1, [0, 1]];
+  if (lo === hi) { lo -= .5; hi += .5; }
+  const raw = (hi - lo) / n, mag = Math.pow(10, Math.floor(Math.log10(raw))), norm = raw / mag;
+  const step = (norm < 1.5 ? 1 : norm < 3 ? 2 : norm < 7 ? 5 : 10) * mag;
+  const s = Math.floor(lo / step) * step, e = Math.ceil(hi / step) * step;
+  const t = []; for (let v = s; v <= e + step * 1e-9; v += step) t.push(+v.toFixed(10));
+  return [s, e, t];
+}
+
+function frame(host, W, H, m) {
+  host.innerHTML = '';
+  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img' });
+  host.appendChild(svg);
+  const tip = document.createElement('div'); tip.className = 'tip';
+  host.appendChild(tip);
+  return { svg, tip, iw: W - m.l - m.r, ih: H - m.t - m.b };
+}
+function showTip(host, tip, ev, html) {
+  tip.innerHTML = html; tip.style.opacity = 1;
+  const r = host.getBoundingClientRect();
+  let x = ev.clientX - r.left + 12, y = ev.clientY - r.top - 10;
+  if (x + tip.offsetWidth > r.width) x = ev.clientX - r.left - tip.offsetWidth - 12;
+  tip.style.left = x + 'px'; tip.style.top = Math.max(0, y) + 'px';
+}
+function legend(host, items, dot) {
+  const ul = document.createElement('ul'); ul.className = 'legend';
+  items.forEach((it, i) => {
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="sw${dot ? ' dot' : ''}" style="background:${it.color || PAL[i % PAL.length]}"></span>${it.name}`;
+    ul.appendChild(li);
+  });
+  host.parentNode.insertBefore(ul, host);
+}
+
+/* ---- multi-series line chart with crosshair ---- */
+function lineChart(host, o) {
+  const W = 640, H = o.height || 250, m = { l: 52, r: o.padRight || 62, t: 12, b: 40 };
+  const { svg, tip, iw, ih } = frame(host, W, H, m);
+  const xs = o.x, allY = o.series.flatMap(s => s.y.filter(v => isFinite(v)));
+  const [y0, y1, yt] = nice(o.yMin !== undefined ? Math.min(o.yMin, ...allY) : Math.min(...allY),
+                            o.yMax !== undefined ? Math.max(o.yMax, ...allY) : Math.max(...allY), 5);
+  const X = i => m.l + (xs.length < 2 ? iw / 2 : i / (xs.length - 1) * iw);
+  const Y = v => m.t + ih - (v - y0) / (y1 - y0) * ih;
+  yt.forEach(t => {
+    svg.appendChild(el('line', { x1: m.l, x2: m.l + iw, y1: Y(t), y2: Y(t), class: 'gridln' }));
+    const tx = el('text', { x: m.l - 8, y: Y(t) + 3.2, class: 'axl', 'text-anchor': 'end' });
+    tx.textContent = fmt(t, o.yDec === undefined ? 2 : o.yDec); svg.appendChild(tx);
+  });
+  if (y0 < 0 && y1 > 0) svg.appendChild(el('line', { x1: m.l, x2: m.l + iw, y1: Y(0), y2: Y(0), class: 'axisln' }));
+  svg.appendChild(el('line', { x1: m.l, x2: m.l + iw, y1: m.t + ih, y2: m.t + ih, class: 'axisln' }));
+  xs.forEach((v, i) => {
+    if (xs.length > 14 && i % 2) return;
+    const tx = el('text', { x: X(i), y: m.t + ih + 15, class: 'axl', 'text-anchor': 'middle' });
+    tx.textContent = v; svg.appendChild(tx);
+  });
+  if (o.xLabel) { const t = el('text', { x: m.l + iw / 2, y: H - 5, class: 'axt', 'text-anchor': 'middle' }); t.textContent = o.xLabel; svg.appendChild(t); }
+  if (o.yLabel) { const t = el('text', { x: 11, y: m.t + ih / 2, class: 'axt', 'text-anchor': 'middle', transform: `rotate(-90 11 ${m.t + ih / 2})` }); t.textContent = o.yLabel; svg.appendChild(t); }
+
+  o.series.forEach((s, si) => {
+    const c = s.color || PAL[si % PAL.length];
+    const pts = s.y.map((v, i) => isFinite(v) ? [X(i), Y(v)] : null);
+    let d = '', pen = false;
+    pts.forEach(p => { if (!p) { pen = false; return; } d += (pen ? 'L' : 'M') + p[0] + ' ' + p[1] + ' '; pen = true; });
+    svg.appendChild(el('path', { d, fill: 'none', stroke: c, 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }));
+    // Point markers only when they read as points, not as a dotted line.
+    if (xs.length <= 20) {
+      pts.forEach((p) => { if (p) svg.appendChild(el('circle', { cx: p[0], cy: p[1], r: 2.6, fill: c, stroke: 'var(--surface)', 'stroke-width': 1.6 })); });
+    }
+    const last = pts.filter(Boolean).pop();
+    if (last && o.directLabel !== false && o.series.length <= 5) {
+      const t = el('text', { x: last[0] + 8, y: last[1] + 3.4, class: 'dlab', fill: c });
+      t.textContent = s.name; svg.appendChild(t);
+    }
+  });
+
+  const cross = el('line', { y1: m.t, y2: m.t + ih, class: 'axisln', opacity: 0 });
+  svg.appendChild(cross);
+  const hit = el('rect', { x: m.l, y: m.t, width: iw, height: ih, fill: 'transparent' });
+  svg.appendChild(hit);
+  hit.addEventListener('mousemove', ev => {
+    const r = svg.getBoundingClientRect();
+    const px = (ev.clientX - r.left) / r.width * W;
+    let i = Math.round((px - m.l) / (iw || 1) * (xs.length - 1));
+    i = Math.max(0, Math.min(xs.length - 1, i));
+    cross.setAttribute('x1', X(i)); cross.setAttribute('x2', X(i)); cross.setAttribute('opacity', .55);
+    showTip(host, tip, ev, `<b>${o.xLabel || 'x'} ${xs[i]}</b><br>` +
+      o.series.map((s, si) => `<span style="color:${s.color || PAL[si % PAL.length]}">■</span> ${s.name} ${fmt(s.y[i], o.tipDec === undefined ? 3 : o.tipDec)}`).join('<br>'));
+  });
+  hit.addEventListener('mouseleave', () => { tip.style.opacity = 0; cross.setAttribute('opacity', 0); });
+}
+
+/* ---- grouped bar chart ---- */
+function barChart(host, o) {
+  const W = 640, H = o.height || 250, m = { l: 54, r: 14, t: 12, b: 46 };
+  const { svg, tip, iw, ih } = frame(host, W, H, m);
+  const allV = o.series.flatMap(s => s.y.filter(isFinite));
+  const [y0, y1, yt] = nice(Math.min(0, ...allV), Math.max(0, ...allV), 5);
+  const Y = v => m.t + ih - (v - y0) / (y1 - y0) * ih;
+  const gw = iw / o.groups.length, bw = Math.max(3, (gw - 10) / o.series.length - 2);
+  yt.forEach(t => {
+    svg.appendChild(el('line', { x1: m.l, x2: m.l + iw, y1: Y(t), y2: Y(t), class: 'gridln' }));
+    const tx = el('text', { x: m.l - 8, y: Y(t) + 3.2, class: 'axl', 'text-anchor': 'end' });
+    tx.textContent = fmt(t, o.yDec === undefined ? 2 : o.yDec); svg.appendChild(tx);
+  });
+  svg.appendChild(el('line', { x1: m.l, x2: m.l + iw, y1: Y(0), y2: Y(0), class: 'axisln' }));
+  o.groups.forEach((g, gi) => {
+    const t = el('text', { x: m.l + gi * gw + gw / 2, y: m.t + ih + 15, class: 'axl', 'text-anchor': 'middle' });
+    t.textContent = g; svg.appendChild(t);
+    o.series.forEach((s, si) => {
+      const v = s.y[gi]; if (!isFinite(v)) return;
+      const c = s.color || PAL[si % PAL.length];
+      const x = m.l + gi * gw + 5 + si * (bw + 2);
+      const yTop = v >= 0 ? Y(v) : Y(0), h = Math.abs(Y(v) - Y(0));
+      const r = el('rect', { x, y: yTop, width: bw, height: Math.max(1, h), fill: c, rx: 2.5,
+                             stroke: 'var(--surface)', 'stroke-width': 1 });
+      r.addEventListener('mousemove', ev => showTip(host, tip, ev,
+        `<b>${g}</b><br><span style="color:${c}">■</span> ${s.name} ${fmt(v, o.tipDec === undefined ? 3 : o.tipDec)}`));
+      r.addEventListener('mouseleave', () => tip.style.opacity = 0);
+      svg.appendChild(r);
+    });
+  });
+  if (o.xLabel) { const t = el('text', { x: m.l + iw / 2, y: H - 6, class: 'axt', 'text-anchor': 'middle' }); t.textContent = o.xLabel; svg.appendChild(t); }
+  if (o.yLabel) { const t = el('text', { x: 11, y: m.t + ih / 2, class: 'axt', 'text-anchor': 'middle', transform: `rotate(-90 11 ${m.t + ih / 2})` }); t.textContent = o.yLabel; svg.appendChild(t); }
+}
+
+/* ---- scatter ---- */
+function scatter(host, o) {
+  const W = 640, H = o.height || 280, m = { l: 56, r: 18, t: 14, b: 44 };
+  const { svg, tip, iw, ih } = frame(host, W, H, m);
+  const xsv = o.points.map(p => p.x), ysv = o.points.map(p => p.y);
+  const [x0, x1, xt] = nice(o.xMin !== undefined ? o.xMin : Math.min(...xsv),
+                            o.xMax !== undefined ? o.xMax : Math.max(...xsv), 5);
+  const [y0, y1, yt] = nice(o.yMin !== undefined ? o.yMin : Math.min(...ysv),
+                            o.yMax !== undefined ? o.yMax : Math.max(...ysv), 5);
+  const X = v => m.l + (v - x0) / (x1 - x0) * iw, Y = v => m.t + ih - (v - y0) / (y1 - y0) * ih;
+  yt.forEach(t => { svg.appendChild(el('line', { x1: m.l, x2: m.l + iw, y1: Y(t), y2: Y(t), class: 'gridln' }));
+    const tx = el('text', { x: m.l - 8, y: Y(t) + 3.2, class: 'axl', 'text-anchor': 'end' }); tx.textContent = fmt(t, o.yDec ?? 2); svg.appendChild(tx); });
+  xt.forEach(t => { svg.appendChild(el('line', { x1: X(t), x2: X(t), y1: m.t, y2: m.t + ih, class: 'gridln' }));
+    const tx = el('text', { x: X(t), y: m.t + ih + 15, class: 'axl', 'text-anchor': 'middle' }); tx.textContent = fmt(t, o.xDec ?? 2); svg.appendChild(tx); });
+  svg.appendChild(el('line', { x1: m.l, x2: m.l + iw, y1: m.t + ih, y2: m.t + ih, class: 'axisln' }));
+  (o.vlines || []).forEach(v => svg.appendChild(el('line', { x1: X(v), x2: X(v), y1: m.t, y2: m.t + ih,
+    stroke: 'var(--ink-3)', 'stroke-width': 1, 'stroke-dasharray': '3 3' })));
+  o.points.forEach(p => {
+    const c = p.color || PAL[(p.g || 0) % PAL.length];
+    const dot = el('circle', { cx: X(p.x), cy: Y(p.y), r: p.r || 4.4, fill: c,
+      'fill-opacity': .82, stroke: 'var(--surface)', 'stroke-width': 1.3 });
+    dot.addEventListener('mousemove', ev => showTip(host, tip, ev, p.label ||
+      `${o.xLabel} ${fmt(p.x, 3)}<br>${o.yLabel} ${fmt(p.y, 3)}`));
+    dot.addEventListener('mouseleave', () => tip.style.opacity = 0);
+    svg.appendChild(dot);
+  });
+  if (o.xLabel) { const t = el('text', { x: m.l + iw / 2, y: H - 6, class: 'axt', 'text-anchor': 'middle' }); t.textContent = o.xLabel; svg.appendChild(t); }
+  if (o.yLabel) { const t = el('text', { x: 11, y: m.t + ih / 2, class: 'axt', 'text-anchor': 'middle', transform: `rotate(-90 11 ${m.t + ih / 2})` }); t.textContent = o.yLabel; svg.appendChild(t); }
+}
+
+/* ---- helpers to build DOM ---- */
+function h(tag, cls, html) { const e = document.createElement(tag); if (cls) e.className = cls; if (html !== undefined) e.innerHTML = html; return e; }
+function card(parent, title, cap) {
+  const c = h('div', 'card');
+  if (title) c.appendChild(h('h3', null, title));
+  if (cap) c.appendChild(h('p', 'cap', cap));
+  parent.appendChild(c); return c;
+}
+function chartIn(parent) { const d = h('div', 'chart'); parent.appendChild(d); return d; }
+function table(parent, cols, rows, wrapCells) {
+  const w = h('div', 'tw' + (wrapCells ? ' wrap-cells' : '')), t = document.createElement('table');
+  const th = document.createElement('thead'), tr = document.createElement('tr');
+  cols.forEach(c => { const e = document.createElement('th'); e.textContent = c; tr.appendChild(e); });
+  th.appendChild(tr); t.appendChild(th);
+  const tb = document.createElement('tbody');
+  rows.forEach(r => { const x = document.createElement('tr');
+    r.forEach(c => { const e = document.createElement('td');
+      if (c && typeof c === 'object') { e.textContent = c.v; if (c.cls) e.className = c.cls; }
+      else e.textContent = c;
+      x.appendChild(e); });
+    tb.appendChild(x); });
+  t.appendChild(tb); w.appendChild(t); parent.appendChild(w); return t;
+}
+function section(id, tag, title, desc) {
+  const s = h('section'); s.id = id;
+  const hd = h('div', 'sec-head');
+  hd.appendChild(h('span', 'tag', tag));
+  hd.appendChild(h('h2', null, title));
+  if (desc) hd.appendChild(h('p', null, desc));
+  s.appendChild(hd);
+  document.getElementById('content').appendChild(s);
+  return s;
+}
+</script>
+<script>__RENDER__</script>

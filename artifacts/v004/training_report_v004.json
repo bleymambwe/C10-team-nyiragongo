@@ -1,0 +1,116 @@
+{
+  "version": "v004",
+  "rows": 51068,
+  "validation_rows": 10147,
+  "validation_positive_prior": 0.6811865576032324,
+  "target_positive_prior": 0.7058823529411765,
+  "selected": [
+    {
+      "kind": "binary",
+      "row_l2": false,
+      "k": 2304,
+      "C": 0.02
+    },
+    {
+      "kind": "binary",
+      "row_l2": true,
+      "k": 2304,
+      "C": 0.02
+    },
+    {
+      "kind": "multiclass",
+      "row_l2": false,
+      "k": 1024,
+      "C": 0.02
+    }
+  ],
+  "weights": [
+    0.25,
+    0.25,
+    0.5
+  ],
+  "threshold": 0.4027030575874463,
+  "validation_weighted_accuracy": 0.9591124445656676,
+  "top_candidates": [
+    {
+      "kind": "binary",
+      "row_l2": false,
+      "k": 2304,
+      "C": 0.02,
+      "accuracy": 0.9571384646078936,
+      "threshold": 0.3879235064504133
+    },
+    {
+      "kind": "binary",
+      "row_l2": true,
+      "k": 2304,
+      "C": 0.02,
+      "accuracy": 0.9566464691234556,
+      "threshold": 0.2856622708083398
+    },
+    {
+      "kind": "multiclass",
+      "row_l2": false,
+      "k": 1024,
+      "C": 0.02,
+      "accuracy": 0.9557436092675092,
+      "threshold": 0.45899546650785905
+    },
+    {
+      "kind": "multiclass",
+      "row_l2": true,
+      "k": 1024,
+      "C": 0.02,
+      "accuracy": 0.955270397056298,
+      "threshold": 0.4602749309587722
+    },
+    {
+      "kind": "binary",
+      "row_l2": false,
+      "k": 1024,
+      "C": 0.02,
+      "accuracy": 0.9543923184936004,
+      "threshold": 0.45844391109955374
+    },
+    {
+      "kind": "binary",
+      "row_l2": true,
+      "k": 1024,
+      "C": 0.02,
+      "accuracy": 0.9532776338252971,
+      "threshold": 0.3784084339507259
+    },
+    {
+      "kind": "binary",
+      "row_l2": true,
+      "k": 1024,
+      "C": 0.1,
+      "accuracy": 0.9520385691628531,
+      "threshold": 0.5
+    },
+    {
+      "kind": "binary",
+      "row_l2": false,
+      "k": 1024,
+      "C": 0.1,
+      "accuracy": 0.9520322554575668,
+      "threshold": 0.47823753630995147
+    },
+    {
+      "kind": "multiclass",
+      "row_l2": false,
+      "k": 1024,
+      "C": 0.1,
+      "accuracy": 0.9517333015122587,
+      "threshold": 0.40894213362554793
+    },
+    {
+      "kind": "binary",
+      "row_l2": false,
+      "k": 1024,
+      "C": 0.5,
+      "accuracy": 0.9511031937246821,
+      "threshold": 0.5
+    }
+  ]
+}

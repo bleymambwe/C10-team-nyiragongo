@@ -1,0 +1,58 @@
+[
+ {
+  "utc": "2026-09-08T04:50:29+00:00",
+  "zip": "C:\\Users\\BLESSING MAMBWE\\Pictures\\Projects\\Latent Probing For Toxicity\\artifacts\\kaggle\\select\\submissions\\best_single.zip",
+  "label": "gemma_pooled_std_lda06",
+  "phase": "Development Phase",
+  "submission_id": "918460"
+ },
+ {
+  "utc": "2026-09-08T04:52:28+00:00",
+  "zip": "C:\\Users\\BLESSING MAMBWE\\Pictures\\Projects\\Latent Probing For Toxicity\\artifacts\\kaggle\\select\\submissions\\best_ensemble.zip",
+  "label": "gemma_rank_ensemble",
+  "phase": "Development Phase",
+  "submission_id": "918464"
+ },
+ {
+  "utc": "2026-09-08T05:13:48+00:00",
+  "zip": "C:\\Users\\BLESSING MAMBWE\\Pictures\\Projects\\Latent Probing For Toxicity\\artifacts\\local\\raw_lda06.zip",
+  "label": "gemma_raw_lda06",
+  "phase": "Development Phase",
+  "submission_id": "918476"
+ },
+ {
+  "utc": "2026-09-08T05:27:30+00:00",
+  "zip": "C:\\Users\\BLESSING MAMBWE\\Pictures\\Projects\\Latent Probing For Toxicity\\artifacts\\kaggle\\select\\submissions\\best_single.zip",
+  "label": "restore_best_0.8976",
+  "phase": "Development Phase",
+  "submission_id": "918485"
+ },
+ {
+  "utc": "2026-09-09T07:10:11+00:00",
+  "zip": "C:\\Users\\BLESSING MAMBWE\\Pictures\\Projects\\Latent Probing For Toxicity\\artifacts\\finalists\\corpus_router_incumbent_fallback.zip",
+  "label": "corpus_router_pooled_fallback_v1",
+  "phase": "Development Phase",
+  "submission_id": "919789"
+ },
+ {
+  "utc": "2026-09-09T07:14:04+00:00",
+  "zip": "C:\\Users\\BLESSING MAMBWE\\Pictures\\Projects\\Latent Probing For Toxicity\\artifacts\\finalists\\corpus_router_source_only.zip",
+  "label": "corpus_router_source_only_v1",
+  "phase": "Development Phase",
+  "submission_id": "919792"
+ },
+ {
+  "utc": "2026-09-09T07:15:09+00:00",
+  "zip": "C:\\Users\\BLESSING MAMBWE\\Pictures\\Projects\\Latent Probing For Toxicity\\artifacts\\kaggle\\select\\submissions\\best_single.zip",
+  "label": "restore_incumbent_after_source_router",
+  "phase": "Development Phase",
+  "submission_id": "919793"
+ },
+ {
+  "utc": "2026-09-10T08:54:54+00:00",
+  "zip": "C:\\Users\\BLESSING MAMBWE\\Pictures\\Projects\\Latent Probing For Toxicity\\artifacts\\kaggle\\select\\submissions\\best_single.zip",
+  "label": "final_testing_pooled_std_lda06_manual",
+  "phase": "Testing Phase",
+  "submission_id": "921106"
+ }
+]

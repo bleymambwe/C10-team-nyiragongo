@@ -1,0 +1,1994 @@
+{
+  "experiment": "e5_real_data_multimodel",
+  "dataset": "RealToxicityPrompts",
+  "n_prompts": 400,
+  "n_steer": 100,
+  "alpha_frac": 0.1,
+  "models": [
+    {
+      "model": "gpt2",
+      "n_layers": 12,
+      "d_model": 768,
+      "phi_toxic_mean": -2.3774341160058974,
+      "phi_benign_mean": -3.9012186884880067,
+      "phi_separation_auc": 0.761325,
+      "layers": [
+        {
+          "layer": 0,
+          "alpha": 0.47885750322076137,
+          "resid_norm_mean": 4.788575032207613,
+          "r_eff": 1.6041809414544372,
+          "r_eff_over_d": 0.0020887772675187983,
+          "gbar_norm": 0.5074060812935518,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.64665,
+              "rho": 0.010154150536560323,
+              "Sbar": 0.005152277732620888,
+              "predicted_effect": 0.0024672068509427637,
+              "measured_mean_effect": -0.013615872859954834,
+              "measured_ci_lo": -0.03585195851325989,
+              "measured_ci_hi": 0.0006261917352676353,
+              "measured_abs_mean": 0.042018959522247316,
+              "next_token_kl": 0.00835239933151873
+            },
+            "logistic_probe": {
+              "auc_test": 0.66845,
+              "rho": 0.02936121747373465,
+              "Sbar": 0.01489806030035546,
+              "predicted_effect": 0.007134047958260562,
+              "measured_mean_effect": -0.0030994915962219236,
+              "measured_ci_lo": -0.02337324810028076,
+              "measured_ci_hi": 0.010084330797195428,
+              "measured_abs_mean": 0.03519418001174927
+            },
+            "diff_of_means": {
+              "auc_test": 0.62095,
+              "rho": 0.14020037143915326,
+              "Sbar": 0.07113852106784119,
+              "predicted_effect": 0.03406521458136396,
+              "measured_mean_effect": 0.034791619777679444,
+              "measured_ci_lo": 0.01669454127550125,
+              "measured_ci_hi": 0.0520367339849472,
+              "measured_abs_mean": 0.0741841721534729,
+              "next_token_kl": 0.009737201672881687
+            },
+            "gbar": {
+              "auc_test": 0.60685,
+              "rho": 1.0,
+              "Sbar": 0.5074060812935517,
+              "predicted_effect": 0.24297520920726084,
+              "measured_mean_effect": 0.19943466901779175,
+              "measured_ci_lo": 0.15541736084222793,
+              "measured_ci_hi": 0.24484651970863341,
+              "measured_abs_mean": 0.21432281255722047,
+              "next_token_kl": 0.02101308846734658
+            },
+            "random": {
+              "auc_test": 0.52885,
+              "rho": 0.020549093118787,
+              "Sbar": 0.010426734813539992,
+              "predicted_effect": 0.004992920199556752,
+              "measured_mean_effect": 0.003917818069458008,
+              "measured_ci_lo": -0.006608130693435669,
+              "measured_ci_hi": 0.013316593766212463,
+              "measured_abs_mean": 0.03432892799377441
+            },
+            "dark": {
+              "auc_test": 0.56325,
+              "rho": 0.9885634626448935,
+              "Sbar": 0.5016031126906298,
+              "predicted_effect": 0.2401964141507972,
+              "measured_mean_effect": 0.19177919387817383,
+              "measured_ci_lo": 0.1476408747434616,
+              "measured_ci_hi": 0.2356032602787018,
+              "measured_abs_mean": 0.2097568082809448
+            }
+          },
+          "spearman_Sbar_vs_measured": 0.7714285714285715,
+          "spearman_absauc_vs_measured": -0.37142857142857144
+        },
+        {
+          "layer": 1,
+          "alpha": 5.310602457208702,
+          "resid_norm_mean": 53.10602457208702,
+          "r_eff": 1.103713887474663,
+          "r_eff_over_d": 0.001437127457649301,
+          "gbar_norm": 0.10542914373859064,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.7642,
+              "rho": 0.010552570234543994,
+              "Sbar": 0.0011125484440693118,
+              "predicted_effect": 0.005908302500838206,
+              "measured_mean_effect": -0.0573891019821167,
+              "measured_ci_lo": -0.08841785180568695,
+              "measured_ci_hi": -0.020095199584960942,
+              "measured_abs_mean": 0.11928676128387451,
+              "next_token_kl": 0.08202102438796526
+            },
+            "logistic_probe": {
+              "auc_test": 0.8223,
+              "rho": 0.008325386621346902,
+              "Sbar": 0.0008777383827813214,
+              "predicted_effect": 0.004661319612384878,
+              "measured_mean_effect": -0.032358205318450926,
+              "measured_ci_lo": -0.06571809577941895,
+              "measured_ci_hi": -0.0014613217115402254,
+              "measured_abs_mean": 0.10176112413406373
+            },
+            "diff_of_means": {
+              "auc_test": 0.6942,
+              "rho": 0.1334721190858378,
+              "Sbar": 0.014071851228195077,
+              "predicted_effect": 0.07473000770992808,
+              "measured_mean_effect": 0.06794950723648072,
+              "measured_ci_lo": 0.04810455632209778,
+              "measured_ci_hi": 0.09271133971214293,
+              "measured_abs_mean": 0.09317731618881225,
+              "next_token_kl": 0.023743102996983605
+            },
+            "gbar": {
+              "auc_test": 0.6308,
+              "rho": 1.0,
+              "Sbar": 0.10542914373859065,
+              "predicted_effect": 0.559892269799569,
+              "measured_mean_effect": 0.37447684168815615,
+              "measured_ci_lo": 0.19278330343961717,
+              "measured_ci_hi": 0.5634206701517104,
+              "measured_abs_mean": 0.7433158099651337,
+              "next_token_kl": 1.8767657395474089
+            },
+            "random": {
+              "auc_test": 0.477,
+              "rho": 0.04787570426468456,
+              "Sbar": 0.005047494506507684,
+              "predicted_effect": 0.026805236729007136,
+              "measured_mean_effect": -0.037066621780395506,
+              "measured_ci_lo": -0.05258753180503845,
+              "measured_ci_hi": -0.025593021273612983,
+              "measured_abs_mean": 0.04873642921447754
+            },
+            "dark": {
+              "auc_test": 0.5394,
+              "rho": 0.9887026715711137,
+              "Sbar": 0.10423807607579952,
+              "predicted_effect": 0.5535669829428486,
+              "measured_mean_effect": 0.3721824860572815,
+              "measured_ci_lo": 0.19021111434698104,
+              "measured_ci_hi": 0.5619374954104422,
+              "measured_abs_mean": 0.7532481122016906
+            }
+          },
+          "spearman_Sbar_vs_measured": 0.9428571428571428,
+          "spearman_absauc_vs_measured": -0.37142857142857144
+        },
+        {
+          "layer": 2,
+          "alpha": 5.907229697792648,
+          "resid_norm_mean": 59.07229697792648,
+          "r_eff": 1.2111176300837128,
+          "r_eff_over_d": 0.0015769760808381677,
+          "gbar_norm": 0.11903007346690625,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.7746,
+              "rho": 0.036514547159880235,
+              "Sbar": 0.0043463292310513555,
+              "predicted_effect": 0.02567476511005085,
+              "measured_mean_effect": 0.0017064285278320312,
+              "measured_ci_lo": -0.023350970923900604,
+              "measured_ci_hi": 0.02708496046066284,
+              "measured_abs_mean": 0.08610746383666992,
+              "next_token_kl": 0.021922770648719354
+            },
+            "logistic_probe": {
+              "auc_test": 0.8467,
+              "rho": 0.08748105991550442,
+              "Sbar": 0.010412876988705317,
+              "predicted_effect": 0.061511256187141726,
+              "measured_mean_effect": 0.06634072542190551,
+              "measured_ci_lo": 0.05038012903928757,
+              "measured_ci_hi": 0.08471439230442046,
+              "measured_abs_mean": 0.08300852537155151
+            },
+            "diff_of_means": {
+              "auc_test": 0.7242,
+              "rho": 0.15348812893172487,
+              "Sbar": 0.018269703263041184,
+              "predicted_effect": 0.10792333368529612,
+              "measured_mean_effect": 0.11138787508010864,
+              "measured_ci_lo": 0.08322433215379715,
+              "measured_ci_hi": 0.14236448901891707,
+              "measured_abs_mean": 0.13663531064987183,
+              "next_token_kl": 0.04621572016791712
+            },
+            "gbar": {
+              "auc_test": 0.6595,
+              "rho": 1.0,
+              "Sbar": 0.11903007346690626,
+              "predicted_effect": 0.7031379849141494,
+              "measured_mean_effect": 0.6273550534248352,
+              "measured_ci_lo": 0.5295710355639458,
+              "measured_ci_hi": 0.7560333454608917,
+              "measured_abs_mean": 0.644789822101593,
+              "next_token_kl": 0.5224492021346426
+            },
+            "random": {
+              "auc_test": 0.5003,
+              "rho": 0.018410648437192687,
+              "Sbar": 0.002191420836052429,
+              "predicted_effect": 0.012945226243090502,
+              "measured_mean_effect": 0.01525834083557129,
+              "measured_ci_lo": -0.10727441841363906,
+              "measured_ci_hi": 0.1404019001722335,
+              "measured_abs_mean": 0.43467796325683594
+            },
+            "dark": {
+              "auc_test": 0.5587,
+              "rho": 0.9876677503525483,
+              "Sbar": 0.11756216488535785,
+              "predicted_effect": 0.6944667117475819,
+              "measured_mean_effect": 0.6233168005943298,
+              "measured_ci_lo": 0.5195666274428368,
+              "measured_ci_hi": 0.7585043091773986,
+              "measured_abs_mean": 0.6489375281333923
+            }
+          },
+          "spearman_Sbar_vs_measured": 0.9428571428571428,
+          "spearman_absauc_vs_measured": -0.2571428571428571
+        },
+        {
+          "layer": 3,
+          "alpha": 6.287796438273347,
+          "resid_norm_mean": 62.87796438273346,
+          "r_eff": 1.6929741333124193,
+          "r_eff_over_d": 0.002204393402750546,
+          "gbar_norm": 0.13394503307313385,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.757,
+              "rho": 0.026797847484380837,
+              "Sbar": 0.00358943856758419,
+              "predicted_effect": 0.022569659040656855,
+              "measured_mean_effect": -0.016403038501739502,
+              "measured_ci_lo": -0.04521733385324478,
+              "measured_ci_hi": 0.005931683957576745,
+              "measured_abs_mean": 0.07994309663772584,
+              "next_token_kl": 0.016835627546242904
+            },
+            "logistic_probe": {
+              "auc_test": 0.8207,
+              "rho": 0.06810890588229594,
+              "Sbar": 0.009122849650979092,
+              "predicted_effect": 0.05736262154232958,
+              "measured_mean_effect": 0.04008640885353088,
+              "measured_ci_lo": 0.013216972947120665,
+              "measured_ci_hi": 0.06042958012223243,
+              "measured_abs_mean": 0.08760271668434143
+            },
+            "diff_of_means": {
+              "auc_test": 0.7669,
+              "rho": 0.16574957630342996,
+              "Sbar": 0.022201332479820843,
+              "predicted_effect": 0.13959745929153985,
+              "measured_mean_effect": 0.12771366834640502,
+              "measured_ci_lo": 0.10315139770507813,
+              "measured_ci_hi": 0.15906748259067535,
+              "measured_abs_mean": 0.14328649759292603,
+              "next_token_kl": 0.018439558055130572
+            },
+            "gbar": {
+              "auc_test": 0.5902,
+              "rho": 1.0000000000000002,
+              "Sbar": 0.13394503307313388,
+              "predicted_effect": 0.8422191018816568,
+              "measured_mean_effect": 0.9599075984954833,
+              "measured_ci_lo": 0.8283834242224694,
+              "measured_ci_hi": 1.082312030494213,
+              "measured_abs_mean": 0.9706399822235108,
+              "next_token_kl": 0.9532324386333736
+            },
+            "random": {
+              "auc_test": 0.4302,
+              "rho": 0.034500456341269706,
+              "Sbar": 0.004621164765669582,
+              "predicted_effect": 0.029056943354251484,
+              "measured_mean_effect": -0.002196226119995117,
+              "measured_ci_lo": -0.027932005763053894,
+              "measured_ci_hi": 0.019954331278800953,
+              "measured_abs_mean": 0.0847100830078125
+            },
+            "dark": {
+              "auc_test": 0.4886,
+              "rho": 0.9853656135626486,
+              "Sbar": 0.1319848296977778,
+              "predicted_effect": 0.8298937420798015,
+              "measured_mean_effect": 0.9501237511634827,
+              "measured_ci_lo": 0.8148975178599357,
+              "measured_ci_hi": 1.0803784992694854,
+              "measured_abs_mean": 0.9780131936073303
+            }
+          },
+          "spearman_Sbar_vs_measured": 0.9428571428571428,
+          "spearman_absauc_vs_measured": -0.14285714285714285
+        },
+        {
+          "layer": 4,
+          "alpha": 6.647330840188198,
+          "resid_norm_mean": 66.47330840188198,
+          "r_eff": 3.1318134611199984,
+          "r_eff_over_d": 0.004077882110833331,
+          "gbar_norm": 0.14365525890794165,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.7705,
+              "rho": 0.0346863957540647,
+              "Sbar": 0.004982883162633492,
+              "predicted_effect": 0.03312287292002812,
+              "measured_mean_effect": 0.03390959262847901,
+              "measured_ci_lo": 0.016491963386535646,
+              "measured_ci_hi": 0.050801534533500656,
+              "measured_abs_mean": 0.06899926662445069,
+              "next_token_kl": 0.015054372714682055
+            },
+            "logistic_probe": {
+              "auc_test": 0.8119,
+              "rho": 0.0665178790061469,
+              "Sbar": 0.009555643130635174,
+              "predicted_effect": 0.0635195212801037,
+              "measured_mean_effect": 0.06020780324935913,
+              "measured_ci_lo": 0.04274820894002914,
+              "measured_ci_hi": 0.07558049738407134,
+              "measured_abs_mean": 0.08447988271713257
+            },
+            "diff_of_means": {
+              "auc_test": 0.772,
+              "rho": 0.1581139900566571,
+              "Sbar": 0.02271390617855678,
+              "predicted_effect": 0.15098684904186174,
+              "measured_mean_effect": 0.1313793683052063,
+              "measured_ci_lo": 0.10823731833696365,
+              "measured_ci_hi": 0.15589879459142683,
+              "measured_abs_mean": 0.14290670156478882,
+              "next_token_kl": 0.017618251943834668
+            },
+            "gbar": {
+              "auc_test": 0.6368,
+              "rho": 1.0000000000000002,
+              "Sbar": 0.14365525890794167,
+              "predicted_effect": 0.9549240328939811,
+              "measured_mean_effect": 0.9272044444084168,
+              "measured_ci_lo": 0.8573711340427399,
+              "measured_ci_hi": 1.0109454689621924,
+              "measured_abs_mean": 0.9272044444084168,
+              "next_token_kl": 0.05686812237642395
+            },
+            "random": {
+              "auc_test": 0.3842,
+              "rho": 0.02417929158699305,
+              "Sbar": 0.003473482393140102,
+              "predicted_effect": 0.02308938663477091,
+              "measured_mean_effect": -0.03766801357269287,
+              "measured_ci_lo": -0.05636116302013397,
+              "measured_ci_hi": -0.021359109163284307,
+              "measured_abs_mean": 0.07403046131134033
+            },
+            "dark": {
+              "auc_test": 0.5306,
+              "rho": 0.9864118172597267,
+              "Sbar": 0.14170324499829923,
+              "predicted_effect": 0.9419483506319385,
+              "measured_mean_effect": 0.9170422279834747,
+              "measured_ci_lo": 0.845366116732359,
+              "measured_ci_hi": 0.9997412647902965,
+              "measured_abs_mean": 0.9170422279834747
+            }
+          },
+          "spearman_Sbar_vs_measured": 0.9428571428571428,
+          "spearman_absauc_vs_measured": -0.2571428571428571
+        },
+        {
+          "layer": 5,
+          "alpha": 7.090517087477503,
+          "resid_norm_mean": 70.90517087477502,
+          "r_eff": 4.989108105331778,
+          "r_eff_over_d": 0.006496234512150752,
+          "gbar_norm": 0.16183178041126764,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.7542,
+              "rho": 0.07340015840472802,
+              "Sbar": 0.011878478317106209,
+              "predicted_effect": 0.08422455348067258,
+              "measured_mean_effect": 0.06938726902008056,
+              "measured_ci_lo": 0.05147855579853058,
+              "measured_ci_hi": 0.08413164734840393,
+              "measured_abs_mean": 0.08738019466400146,
+              "next_token_kl": 0.011529821346509076
+            },
+            "logistic_probe": {
+              "auc_test": 0.7999,
+              "rho": 0.07482760341420006,
+              "Sbar": 0.012109484284428245,
+              "predicted_effect": 0.08586250523927876,
+              "measured_mean_effect": 0.06559940576553344,
+              "measured_ci_lo": 0.0460055565237999,
+              "measured_ci_hi": 0.08157448774576187,
+              "measured_abs_mean": 0.09131362676620483
+            },
+            "diff_of_means": {
+              "auc_test": 0.768,
+              "rho": 0.1453864642900748,
+              "Sbar": 0.023528150363761983,
+              "predicted_effect": 0.16682675219099435,
+              "measured_mean_effect": 0.1404860484600067,
+              "measured_ci_lo": 0.11070275655388832,
+              "measured_ci_hi": 0.16436567398905755,
+              "measured_abs_mean": 0.15761499762535094,
+              "next_token_kl": 0.020690232989484986
+            },
+            "gbar": {
+              "auc_test": 0.6511,
+              "rho": 1.0,
+              "Sbar": 0.16183178041126767,
+              "predicted_effect": 1.1474710043030003,
+              "measured_mean_effect": 1.104434700012207,
+              "measured_ci_lo": 1.013031330049038,
+              "measured_ci_hi": 1.2016100110411643,
+              "measured_abs_mean": 1.104434700012207,
+              "next_token_kl": 0.03870119994098786
+            },
+            "random": {
+              "auc_test": 0.4678,
+              "rho": 0.04774521179842187,
+              "Sbar": 0.007726692631451671,
+              "predicted_effect": 0.054786246132994584,
+              "measured_mean_effect": -0.050986878871917725,
+              "measured_ci_lo": -0.0675434502363205,
+              "measured_ci_hi": -0.03343192595243455,
+              "measured_abs_mean": 0.07801563024520874
+            },
+            "dark": {
+              "auc_test": 0.553,
+              "rho": 0.9874653486678221,
+              "Sbar": 0.15980327546934686,
+              "predicted_effect": 1.1330878553502783,
+              "measured_mean_effect": 1.0929619777202606,
+              "measured_ci_lo": 1.002348278194666,
+              "measured_ci_hi": 1.1898386512994763,
+              "measured_abs_mean": 1.0929619777202606
+            }
+          },
+          "spearman_Sbar_vs_measured": 0.9428571428571428,
+          "spearman_absauc_vs_measured": -0.02857142857142857
+        },
+        {
+          "layer": 6,
+          "alpha": 8.057558632499974,
+          "resid_norm_mean": 80.57558632499973,
+          "r_eff": 4.117940521853225,
+          "r_eff_over_d": 0.0053619017211630525,
+          "gbar_norm": 0.16443653538454692,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.792,
+              "rho": 0.09940772431804003,
+              "Sbar": 0.016346261777320674,
+              "predicted_effect": 0.13171096269295457,
+              "measured_mean_effect": 0.10614273548126221,
+              "measured_ci_lo": 0.081474848985672,
+              "measured_ci_hi": 0.12681015622615813,
+              "measured_abs_mean": 0.1247748613357544,
+              "next_token_kl": 0.01283879629772855
+            },
+            "logistic_probe": {
+              "auc_test": 0.8379,
+              "rho": 0.11664933793419116,
+              "Sbar": 0.019181412984799598,
+              "predicted_effect": 0.1545553597792191,
+              "measured_mean_effect": 0.1312876510620117,
+              "measured_ci_lo": 0.104466095328331,
+              "measured_ci_hi": 0.15618435287475585,
+              "measured_abs_mean": 0.14957500457763673
+            },
+            "diff_of_means": {
+              "auc_test": 0.7911,
+              "rho": 0.16106484704772278,
+              "Sbar": 0.026484945420769505,
+              "predicted_effect": 0.213404000606412,
+              "measured_mean_effect": 0.19945356130599975,
+              "measured_ci_lo": 0.1682047821879387,
+              "measured_ci_hi": 0.22905967861413956,
+              "measured_abs_mean": 0.21018846273422243,
+              "next_token_kl": 0.020236964027086895
+            },
+            "gbar": {
+              "auc_test": 0.6693,
+              "rho": 1.0,
+              "Sbar": 0.16443653538454694,
+              "predicted_effect": 1.3249570251861438,
+              "measured_mean_effect": 1.2809941935539246,
+              "measured_ci_lo": 1.2040763885974883,
+              "measured_ci_hi": 1.364851477086544,
+              "measured_abs_mean": 1.2809941935539246,
+              "next_token_kl": 0.024528709400328808
+            },
+            "random": {
+              "auc_test": 0.4804,
+              "rho": 0.0389476295160118,
+              "Sbar": 0.006404413259053901,
+              "predicted_effect": 0.051603935341587054,
+              "measured_mean_effect": -0.05227950096130371,
+              "measured_ci_lo": -0.0718347691297531,
+              "measured_ci_hi": -0.03081411337852479,
+              "measured_abs_mean": 0.09139918327331543
+            },
+            "dark": {
+              "auc_test": 0.5637,
+              "rho": 0.9867703245137955,
+              "Sbar": 0.1622610933833336,
+              "predicted_effect": 1.3074282737097642,
+              "measured_mean_effect": 1.2644599997997283,
+              "measured_ci_lo": 1.1888066423237322,
+              "measured_ci_hi": 1.3470996398329733,
+              "measured_abs_mean": 1.2644599997997283
+            }
+          },
+          "spearman_Sbar_vs_measured": 1.0,
+          "spearman_absauc_vs_measured": -0.02857142857142857
+        },
+        {
+          "layer": 7,
+          "alpha": 9.096025208714895,
+          "resid_norm_mean": 90.96025208714894,
+          "r_eff": 3.1225572956705894,
+          "r_eff_over_d": 0.00406582981207108,
+          "gbar_norm": 0.1764013319375181,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.8082,
+              "rho": 0.08748550300076322,
+              "Sbar": 0.01543255925455837,
+              "predicted_effect": 0.14037494801444927,
+              "measured_mean_effect": 0.13454885244369508,
+              "measured_ci_lo": 0.11485302037000657,
+              "measured_ci_hi": 0.1547641543149948,
+              "measured_abs_mean": 0.14035577535629273,
+              "next_token_kl": 0.01177051399887811
+            },
+            "logistic_probe": {
+              "auc_test": 0.8466,
+              "rho": 0.1188982877350388,
+              "Sbar": 0.02097381632155112,
+              "predicted_effect": 0.1907783619837849,
+              "measured_mean_effect": 0.18118509531021118,
+              "measured_ci_lo": 0.15989406913518905,
+              "measured_ci_hi": 0.20201724070310592,
+              "measured_abs_mean": 0.18412698984146117
+            },
+            "diff_of_means": {
+              "auc_test": 0.7897,
+              "rho": 0.15755103760019495,
+              "Sbar": 0.027792212880812385,
+              "predicted_effect": 0.25279866896984027,
+              "measured_mean_effect": 0.23955212354660035,
+              "measured_ci_lo": 0.21597075682878494,
+              "measured_ci_hi": 0.26521654945611955,
+              "measured_abs_mean": 0.2430968165397644,
+              "next_token_kl": 0.017639807954158943
+            },
+            "gbar": {
+              "auc_test": 0.6763,
+              "rho": 1.0,
+              "Sbar": 0.1764013319375181,
+              "predicted_effect": 1.6045509621545486,
+              "measured_mean_effect": 1.580658307671547,
+              "measured_ci_lo": 1.492117595642805,
+              "measured_ci_hi": 1.6938689959198232,
+              "measured_abs_mean": 1.580658307671547,
+              "next_token_kl": 0.025389971788778592
+            },
+            "random": {
+              "auc_test": 0.3829,
+              "rho": 0.04378473940912611,
+              "Sbar": 0.007723686350306986,
+              "predicted_effect": 0.07025484574659949,
+              "measured_mean_effect": -0.08855935096740723,
+              "measured_ci_lo": -0.11129404020309448,
+              "measured_ci_hi": -0.06554956674575807,
+              "measured_abs_mean": 0.11088006019592285
+            },
+            "dark": {
+              "auc_test": 0.5807,
+              "rho": 0.9871840327237288,
+              "Sbar": 0.17414057823991622,
+              "predicted_effect": 1.5839870895304664,
+              "measured_mean_effect": 1.5612776458263398,
+              "measured_ci_lo": 1.4740334096848966,
+              "measured_ci_hi": 1.672791882038116,
+              "measured_abs_mean": 1.5612776458263398
+            }
+          },
+          "spearman_Sbar_vs_measured": 1.0,
+          "spearman_absauc_vs_measured": -0.2571428571428571
+        },
+        {
+          "layer": 8,
+          "alpha": 11.449793706067576,
+          "resid_norm_mean": 114.49793706067575,
+          "r_eff": 2.505422093030511,
+          "r_eff_over_d": 0.003262268350300145,
+          "gbar_norm": 0.16624581358290322,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.8124,
+              "rho": 0.10338712014057858,
+              "Sbar": 0.017187675901763847,
+              "predicted_effect": 0.19679534336194504,
+              "measured_mean_effect": 0.18338666439056397,
+              "measured_ci_lo": 0.16644591176509857,
+              "measured_ci_hi": 0.20065963244438173,
+              "measured_abs_mean": 0.1839823293685913,
+              "next_token_kl": 0.009081333212331325
+            },
+            "logistic_probe": {
+              "auc_test": 0.84,
+              "rho": 0.12888573889659144,
+              "Sbar": 0.021426714522097483,
+              "predicted_effect": 0.24533146107681847,
+              "measured_mean_effect": 0.2323831820487976,
+              "measured_ci_lo": 0.2102205777168274,
+              "measured_ci_hi": 0.2523246810436249,
+              "measured_abs_mean": 0.23250502347946167
+            },
+            "diff_of_means": {
+              "auc_test": 0.8151,
+              "rho": 0.1487049544212186,
+              "Sbar": 0.024721576131564026,
+              "predicted_effect": 0.2830569467952522,
+              "measured_mean_effect": 0.2741351532936096,
+              "measured_ci_lo": 0.24885631358623506,
+              "measured_ci_hi": 0.29945976138114927,
+              "measured_abs_mean": 0.2775774598121643,
+              "next_token_kl": 0.016431570439938998
+            },
+            "gbar": {
+              "auc_test": 0.6702,
+              "rho": 1.0,
+              "Sbar": 0.16624581358290322,
+              "predicted_effect": 1.9034802700216087,
+              "measured_mean_effect": 1.8766312646865844,
+              "measured_ci_lo": 1.7992120637893676,
+              "measured_ci_hi": 1.9507565479278564,
+              "measured_abs_mean": 1.8766312646865844,
+              "next_token_kl": 0.018830242930562235
+            },
+            "random": {
+              "auc_test": 0.4843,
+              "rho": 0.022981964518685005,
+              "Sbar": 0.0038206553891422077,
+              "predicted_effect": 0.04374571602765361,
+              "measured_mean_effect": 0.04864035844802857,
+              "measured_ci_lo": 0.03345252877473831,
+              "measured_ci_hi": 0.06530000680685043,
+              "measured_abs_mean": 0.07390509843826294
+            },
+            "dark": {
+              "auc_test": 0.5826,
+              "rho": 0.9883627393164376,
+              "Sbar": 0.16431116771268806,
+              "predicted_effect": 1.8813289739133496,
+              "measured_mean_effect": 1.855591471195221,
+              "measured_ci_lo": 1.7773826246261597,
+              "measured_ci_hi": 1.928898196399212,
+              "measured_abs_mean": 1.855591471195221
+            }
+          },
+          "spearman_Sbar_vs_measured": 1.0,
+          "spearman_absauc_vs_measured": 0.08571428571428572
+        },
+        {
+          "layer": 9,
+          "alpha": 13.286848998981114,
+          "resid_norm_mean": 132.86848998981114,
+          "r_eff": 1.922248154253386,
+          "r_eff_over_d": 0.0025029272841840962,
+          "gbar_norm": 0.17173077654388821,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.7972,
+              "rho": 0.13645327230335244,
+              "Sbar": 0.02343322641460934,
+              "predicted_effect": 0.3113537409298499,
+              "measured_mean_effect": 0.3163002371788025,
+              "measured_ci_lo": 0.29199624782800676,
+              "measured_ci_hi": 0.3388191920518875,
+              "measured_abs_mean": 0.3163002371788025,
+              "next_token_kl": 0.011342563894383298
+            },
+            "logistic_probe": {
+              "auc_test": 0.845,
+              "rho": 0.18559802272399273,
+              "Sbar": 0.03187289256740149,
+              "predicted_effect": 0.42349031070381105,
+              "measured_mean_effect": 0.4222346591949463,
+              "measured_ci_lo": 0.3960505108833313,
+              "measured_ci_hi": 0.44743244540691374,
+              "measured_abs_mean": 0.4222346591949463
+            },
+            "diff_of_means": {
+              "auc_test": 0.8419,
+              "rho": 0.18920356939444513,
+              "Sbar": 0.032492075896983504,
+              "predicted_effect": 0.43171730610665365,
+              "measured_mean_effect": 0.42739166021347047,
+              "measured_ci_lo": 0.3998842368721962,
+              "measured_ci_hi": 0.4554672232270241,
+              "measured_abs_mean": 0.42739166021347047,
+              "next_token_kl": 0.017609436964751996
+            },
+            "gbar": {
+              "auc_test": 0.7159,
+              "rho": 1.0000000000000002,
+              "Sbar": 0.17173077654388824,
+              "predicted_effect": 2.2817608964164107,
+              "measured_mean_effect": 2.274365396499634,
+              "measured_ci_lo": 2.183740385890007,
+              "measured_ci_hi": 2.3519440258145328,
+              "measured_abs_mean": 2.274365396499634,
+              "next_token_kl": 0.020859606277857285
+            },
+            "random": {
+              "auc_test": 0.5933,
+              "rho": 0.07114779085847531,
+              "Sbar": 0.01221826537350812,
+              "predicted_effect": 0.16234224704728195,
+              "measured_mean_effect": 0.1591282892227173,
+              "measured_ci_lo": 0.14190057694911956,
+              "measured_ci_hi": 0.17607592010498047,
+              "measured_abs_mean": 0.16122313022613524
+            },
+            "dark": {
+              "auc_test": 0.5904,
+              "rho": 0.9783638311812656,
+              "Sbar": 0.16801518047121228,
+              "predicted_effect": 2.232392332457558,
+              "measured_mean_effect": 2.228021639585495,
+              "measured_ci_lo": 2.1401042370200156,
+              "measured_ci_hi": 2.3032986882925033,
+              "measured_abs_mean": 2.228021639585495
+            }
+          },
+          "spearman_Sbar_vs_measured": 1.0,
+          "spearman_absauc_vs_measured": -0.14285714285714285
+        },
+        {
+          "layer": 10,
+          "alpha": 17.005619475280145,
+          "resid_norm_mean": 170.05619475280145,
+          "r_eff": 1.4771213520907058,
+          "r_eff_over_d": 0.0019233350938681066,
+          "gbar_norm": 0.1712417774675684,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.8188,
+              "rho": 0.10953399431142284,
+              "Sbar": 0.018756795879010572,
+              "predicted_effect": 0.31897093329395654,
+              "measured_mean_effect": 0.3222854256629944,
+              "measured_ci_lo": 0.30149308371543887,
+              "measured_ci_hi": 0.3450481479167938,
+              "measured_abs_mean": 0.3222854256629944,
+              "next_token_kl": 0.012085170955591215
+            },
+            "logistic_probe": {
+              "auc_test": 0.8589,
+              "rho": 0.16014376679958744,
+              "Sbar": 0.027423303277113127,
+              "predicted_effect": 0.46635026028578885,
+              "measured_mean_effect": 0.46778723478317263,
+              "measured_ci_lo": 0.4431157168149948,
+              "measured_ci_hi": 0.493943790435791,
+              "measured_abs_mean": 0.46778723478317263
+            },
+            "diff_of_means": {
+              "auc_test": 0.8563,
+              "rho": 0.20387497665923823,
+              "Sbar": 0.03491191338428697,
+              "predicted_effect": 0.5936987141671242,
+              "measured_mean_effect": 0.5890881907939911,
+              "measured_ci_lo": 0.5617405602633954,
+              "measured_ci_hi": 0.6168245922923088,
+              "measured_abs_mean": 0.5890881907939911,
+              "next_token_kl": 0.02152781537976504
+            },
+            "gbar": {
+              "auc_test": 0.73,
+              "rho": 1.0,
+              "Sbar": 0.1712417774675684,
+              "predicted_effect": 2.91207250588407,
+              "measured_mean_effect": 2.8992778837680815,
+              "measured_ci_lo": 2.814094568997622,
+              "measured_ci_hi": 2.9856462087333204,
+              "measured_abs_mean": 2.8992778837680815,
+              "next_token_kl": 0.024356364032428246
+            },
+            "random": {
+              "auc_test": 0.4313,
+              "rho": 0.0075679938205705025,
+              "Sbar": 0.001295956713698069,
+              "predicted_effect": 0.022038546729583938,
+              "measured_mean_effect": 0.010848510265350341,
+              "measured_ci_lo": -0.0017217993140220642,
+              "measured_ci_hi": 0.023902389824390385,
+              "measured_abs_mean": 0.05241549253463745
+            },
+            "dark": {
+              "auc_test": 0.5756,
+              "rho": 0.9782490576987046,
+              "Sbar": 0.16751710744630005,
+              "predicted_effect": 2.848732184831397,
+              "measured_mean_effect": 2.838532507419586,
+              "measured_ci_lo": 2.758014452934265,
+              "measured_ci_hi": 2.9209102572202683,
+              "measured_abs_mean": 2.838532507419586
+            }
+          },
+          "spearman_Sbar_vs_measured": 1.0,
+          "spearman_absauc_vs_measured": 0.08571428571428572
+        },
+        {
+          "layer": 11,
+          "alpha": 24.370000276630087,
+          "resid_norm_mean": 243.70000276630086,
+          "r_eff": 1.2325837475762254,
+          "r_eff_over_d": 0.0016049267546565434,
+          "gbar_norm": 0.16696733422653037,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.8062,
+              "rho": 0.09869202346638575,
+              "Sbar": 0.01647834406760461,
+              "predicted_effect": 0.40157724948593004,
+              "measured_mean_effect": 0.41611832261085513,
+              "measured_ci_lo": 0.3930567930340767,
+              "measured_ci_hi": 0.4416663075089455,
+              "measured_abs_mean": 0.41611832261085513,
+              "next_token_kl": 0.01750155329379292
+            },
+            "logistic_probe": {
+              "auc_test": 0.8491,
+              "rho": 0.15334697153420895,
+              "Sbar": 0.025603935048778503,
+              "predicted_effect": 0.6239679042215509,
+              "measured_mean_effect": 0.6437592291831971,
+              "measured_ci_lo": 0.617304889857769,
+              "measured_ci_hi": 0.6755894252061844,
+              "measured_abs_mean": 0.6437592291831971
+            },
+            "diff_of_means": {
+              "auc_test": 0.8382,
+              "rho": 0.19906502334233606,
+              "Sbar": 0.03323735628521189,
+              "predicted_effect": 0.8099943818650666,
+              "measured_mean_effect": 0.8168697464466095,
+              "measured_ci_lo": 0.7906759144961834,
+              "measured_ci_hi": 0.8493363334834576,
+              "measured_abs_mean": 0.8168697464466095,
+              "next_token_kl": 0.030967585160396993
+            },
+            "gbar": {
+              "auc_test": 0.7399,
+              "rho": 1.0,
+              "Sbar": 0.16696733422653037,
+              "predicted_effect": 4.068993981288734,
+              "measured_mean_effect": 4.0543293023109435,
+              "measured_ci_lo": 3.9493300307393073,
+              "measured_ci_hi": 4.181234714269638,
+              "measured_abs_mean": 4.0543293023109435,
+              "next_token_kl": 0.034011303883744404
+            },
+            "random": {
+              "auc_test": 0.4914,
+              "rho": 0.024809324941480006,
+              "Sbar": 0.004142346849438691,
+              "predicted_effect": 0.10094899386671867,
+              "measured_mean_effect": -0.1056496810913086,
+              "measured_ci_lo": -0.12419017893075943,
+              "measured_ci_hi": -0.08901371747255325,
+              "measured_abs_mean": 0.11776134490966797
+            },
+            "dark": {
+              "auc_test": 0.6079,
+              "rho": 0.9787881536667168,
+              "Sbar": 0.1634256487902393,
+              "predicted_effect": 3.9826831062265833,
+              "measured_mean_effect": 3.9687894868850706,
+              "measured_ci_lo": 3.8658168396353725,
+              "measured_ci_hi": 4.089796921312809,
+              "measured_abs_mean": 3.9687894868850706
+            }
+          },
+          "spearman_Sbar_vs_measured": 1.0,
+          "spearman_absauc_vs_measured": 0.08571428571428572
+        }
+      ],
+      "aggregate": {
+        "fisher_probe": {
+          "mean_auc": 0.7751625000000001,
+          "mean_rho": 0.06892210892622508,
+          "mean_abs_measured": 0.139266128440698,
+          "max_abs_measured": 0.41611832261085513,
+          "mean_next_token_kl": 0.019194662302361897,
+          "efficiency_vs_gbar": 0.09203079083838119
+        },
+        "logistic_probe": {
+          "mean_auc": 0.8206208333333334,
+          "mean_rho": 0.09984534816140327,
+          "mean_abs_measured": 0.19552742431561154,
+          "max_abs_measured": 0.6437592291831971,
+          "mean_next_token_kl": null,
+          "efficiency_vs_gbar": 0.12920976329158063
+        },
+        "diff_of_means": {
+          "mean_auc": 0.7732125,
+          "mean_rho": 0.16298958821433615,
+          "mean_abs_measured": 0.263349876900514,
+          "max_abs_measured": 0.8168697464466095,
+          "mean_next_token_kl": 0.021738103979360962,
+          "efficiency_vs_gbar": 0.17402865800685258
+        },
+        "gbar": {
+          "mean_auc": 0.6647375000000001,
+          "mean_rho": 1.0,
+          "mean_abs_measured": 1.5132558046281337,
+          "max_abs_measured": 4.0543293023109435,
+          "mean_next_token_kl": 0.30141716578449024
+        },
+        "random": {
+          "mean_auc": 0.47099583333333334,
+          "mean_rho": 0.033541654050974805,
+          "mean_abs_measured": 0.051016632517178855,
+          "max_abs_measured": 0.1591282892227173,
+          "mean_next_token_kl": null,
+          "efficiency_vs_gbar": 0.03371315831807805
+        },
+        "dark": {
+          "mean_auc": 0.5612041666666666,
+          "mean_rho": 0.9851579002632835,
+          "mean_abs_measured": 1.4886732656757038,
+          "max_abs_measured": 3.9687894868850706,
+          "mean_next_token_kl": null,
+          "efficiency_vs_gbar": 0.9837551993012372
+        }
+      },
+      "mean_r_eff_over_d": 0.0030502149873319934,
+      "wall_time_s": 33734.32901787758
+    },
+    {
+      "model": "distilgpt2",
+      "n_layers": 6,
+      "d_model": 768,
+      "phi_toxic_mean": -2.3065592867136,
+      "phi_benign_mean": -3.536376920938492,
+      "phi_separation_auc": 0.719,
+      "layers": [
+        {
+          "layer": 0,
+          "alpha": 0.49122943151162385,
+          "resid_norm_mean": 4.912294315116238,
+          "r_eff": 5.84115935231184,
+          "r_eff_over_d": 0.007605676239989375,
+          "gbar_norm": 0.8256804850840895,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.66025,
+              "rho": 0.009115811991011195,
+              "Sbar": 0.007526748066673493,
+              "predicted_effect": 0.0036973601739232337,
+              "measured_mean_effect": 0.0047705936431884765,
+              "measured_ci_lo": -0.0058763384819030765,
+              "measured_ci_hi": 0.01379858803749084,
+              "measured_abs_mean": 0.03203497886657715,
+              "next_token_kl": 0.011348164954749032
+            },
+            "logistic_probe": {
+              "auc_test": 0.66675,
+              "rho": 0.03247983360964617,
+              "Sbar": 0.026817964770263145,
+              "predicted_effect": 0.01317377358839512,
+              "measured_mean_effect": 0.01688202381134033,
+              "measured_ci_lo": 0.008791642308235169,
+              "measured_ci_hi": 0.023786369919776916,
+              "measured_abs_mean": 0.032384333610534666
+            },
+            "diff_of_means": {
+              "auc_test": 0.62445,
+              "rho": 0.15388367536706196,
+              "Sbar": 0.12705874772359826,
+              "predicted_effect": 0.062414996412842004,
+              "measured_mean_effect": 0.0602103328704834,
+              "measured_ci_lo": 0.04081723934412002,
+              "measured_ci_hi": 0.080083250105381,
+              "measured_abs_mean": 0.0816191291809082,
+              "next_token_kl": 0.07355767180585342
+            },
+            "gbar": {
+              "auc_test": 0.57175,
+              "rho": 1.0,
+              "Sbar": 0.8256804850840895,
+              "predicted_effect": 0.40559855529809913,
+              "measured_mean_effect": 0.3743269348144531,
+              "measured_ci_lo": 0.31134374904632567,
+              "measured_ci_hi": 0.44574778300523754,
+              "measured_abs_mean": 0.37451080322265623,
+              "next_token_kl": 0.056551016805921485
+            },
+            "random": {
+              "auc_test": 0.53065,
+              "rho": 0.032707914393208484,
+              "Sbar": 0.02700628662227325,
+              "predicted_effect": 0.013266282824699261,
+              "measured_mean_effect": 0.007170176506042481,
+              "measured_ci_lo": -0.0009492233991622923,
+              "measured_ci_hi": 0.015500187397003169,
+              "measured_abs_mean": 0.02742588520050049
+            },
+            "dark": {
+              "auc_test": 0.52415,
+              "rho": 0.9862908404789023,
+              "Sbar": 0.8143610996006143,
+              "predicted_effect": 0.40003814000199067,
+              "measured_mean_effect": 0.36692358016967774,
+              "measured_ci_lo": 0.30613371306657794,
+              "measured_ci_hi": 0.43810400420427326,
+              "measured_abs_mean": 0.3670563316345215
+            }
+          },
+          "spearman_Sbar_vs_measured": 0.9428571428571428,
+          "spearman_absauc_vs_measured": -0.42857142857142855
+        },
+        {
+          "layer": 1,
+          "alpha": 4.692728392660996,
+          "resid_norm_mean": 46.92728392660996,
+          "r_eff": 3.7820976794884156,
+          "r_eff_over_d": 0.004924606353500541,
+          "gbar_norm": 0.19734815244412815,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.817,
+              "rho": 0.019092821012710096,
+              "Sbar": 0.003767932951804768,
+              "predicted_effect": 0.017681885944577192,
+              "measured_mean_effect": -0.023731690645217896,
+              "measured_ci_lo": -0.03600813698768616,
+              "measured_ci_hi": -0.010852363586425781,
+              "measured_abs_mean": 0.05164783120155334,
+              "next_token_kl": 0.015679082808977302
+            },
+            "logistic_probe": {
+              "auc_test": 0.8702,
+              "rho": 0.04121052585957283,
+              "Sbar": 0.008132821139637664,
+              "predicted_effect": 0.038165120674411225,
+              "measured_mean_effect": 0.02860771059989929,
+              "measured_ci_lo": 0.007680706650018692,
+              "measured_ci_hi": 0.04655276834964751,
+              "measured_abs_mean": 0.0769735848903656
+            },
+            "diff_of_means": {
+              "auc_test": 0.7397,
+              "rho": 0.1694470321553372,
+              "Sbar": 0.03344005873299657,
+              "predicted_effect": 0.15692511306858428,
+              "measured_mean_effect": 0.13006924629211425,
+              "measured_ci_lo": 0.1028755930662155,
+              "measured_ci_hi": 0.1564569832086563,
+              "measured_abs_mean": 0.14588093757629395,
+              "next_token_kl": 0.04161908907311348
+            },
+            "gbar": {
+              "auc_test": 0.6553,
+              "rho": 1.0,
+              "Sbar": 0.19734815244412818,
+              "predicted_effect": 0.9261012782137508,
+              "measured_mean_effect": 0.7602448630332946,
+              "measured_ci_lo": 0.6929421863555908,
+              "measured_ci_hi": 0.8382650536894798,
+              "measured_abs_mean": 0.7602448630332946,
+              "next_token_kl": 0.1396738583947202
+            },
+            "random": {
+              "auc_test": 0.4592,
+              "rho": 0.0741882350936183,
+              "Sbar": 0.0146409111288162,
+              "predicted_effect": 0.06870581934862213,
+              "measured_mean_effect": -0.06967555284500122,
+              "measured_ci_lo": -0.08724402505159377,
+              "measured_ci_hi": -0.05613745951652528,
+              "measured_abs_mean": 0.08385241746902466
+            },
+            "dark": {
+              "auc_test": 0.556,
+              "rho": 0.9829602337832946,
+              "Sbar": 0.19398538606318147,
+              "predicted_effect": 0.9103207289399964,
+              "measured_mean_effect": 0.7489536786079407,
+              "measured_ci_lo": 0.6823662836551666,
+              "measured_ci_hi": 0.8261157548427581,
+              "measured_abs_mean": 0.7489536786079407
+            }
+          },
+          "spearman_Sbar_vs_measured": 1.0,
+          "spearman_absauc_vs_measured": -0.5428571428571428
+        },
+        {
+          "layer": 2,
+          "alpha": 5.5136598896362505,
+          "resid_norm_mean": 55.1365988963625,
+          "r_eff": 3.898060247211714,
+          "r_eff_over_d": 0.005075599280223586,
+          "gbar_norm": 0.2495115322394747,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.8438,
+              "rho": 0.04927883959352056,
+              "Sbar": 0.012295638773962616,
+              "predicted_effect": 0.06779397032545392,
+              "measured_mean_effect": 0.0686553704738617,
+              "measured_ci_lo": 0.05393929260969162,
+              "measured_ci_hi": 0.08599770709872244,
+              "measured_abs_mean": 0.09001236081123352,
+              "next_token_kl": 0.010262806278963884
+            },
+            "logistic_probe": {
+              "auc_test": 0.8804,
+              "rho": 0.07958341875059854,
+              "Sbar": 0.01985698075331759,
+              "predicted_effect": 0.10948463830884621,
+              "measured_mean_effect": 0.10023705005645751,
+              "measured_ci_lo": 0.08217793560028076,
+              "measured_ci_hi": 0.12083027404546737,
+              "measured_abs_mean": 0.12246525287628174
+            },
+            "diff_of_means": {
+              "auc_test": 0.7987,
+              "rho": 0.14894440045829627,
+              "Sbar": 0.03716334557683942,
+              "predicted_effect": 0.20490604787171027,
+              "measured_mean_effect": 0.16706256866455077,
+              "measured_ci_lo": 0.14086497139930726,
+              "measured_ci_hi": 0.19277076637744903,
+              "measured_abs_mean": 0.18012474060058595,
+              "next_token_kl": 0.03767795682021339
+            },
+            "gbar": {
+              "auc_test": 0.6643,
+              "rho": 1.0,
+              "Sbar": 0.2495115322394747,
+              "predicted_effect": 1.3757217273104738,
+              "measured_mean_effect": 1.2165530681610108,
+              "measured_ci_lo": 1.1389640879631042,
+              "measured_ci_hi": 1.31090435475111,
+              "measured_abs_mean": 1.2165530681610108,
+              "next_token_kl": 0.05717400820867624
+            },
+            "random": {
+              "auc_test": 0.463,
+              "rho": 0.07151711642610518,
+              "Sbar": 0.017844345300826403,
+              "predicted_effect": 0.09838765094198565,
+              "measured_mean_effect": 0.09061958074569702,
+              "measured_ci_lo": 0.07193519121408462,
+              "measured_ci_hi": 0.10907537561655037,
+              "measured_abs_mean": 0.1086151671409607
+            },
+            "dark": {
+              "auc_test": 0.5448,
+              "rho": 0.9886457927765658,
+              "Sbar": 0.24667852659779108,
+              "predicted_effect": 1.3601014977368096,
+              "measured_mean_effect": 1.2077495050430298,
+              "measured_ci_lo": 1.1311583786010742,
+              "measured_ci_hi": 1.3016308286190033,
+              "measured_abs_mean": 1.2077495050430298
+            }
+          },
+          "spearman_Sbar_vs_measured": 1.0,
+          "spearman_absauc_vs_measured": -0.2571428571428571
+        },
+        {
+          "layer": 3,
+          "alpha": 6.5334360477712625,
+          "resid_norm_mean": 65.33436047771262,
+          "r_eff": 2.501279979949253,
+          "r_eff_over_d": 0.0032568749738922567,
+          "gbar_norm": 0.2995694226010972,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.8396,
+              "rho": 0.03151341766768834,
+              "Sbar": 0.009440456334896612,
+              "predicted_effect": 0.0616786177258241,
+              "measured_mean_effect": 0.04220827579498291,
+              "measured_ci_lo": 0.024818081200122834,
+              "measured_ci_hi": 0.05948682010173797,
+              "measured_abs_mean": 0.07597755908966064,
+              "next_token_kl": 0.016131371526474442
+            },
+            "logistic_probe": {
+              "auc_test": 0.8811,
+              "rho": 0.0688888147018057,
+              "Sbar": 0.020636982443893913,
+              "predicted_effect": 0.13483040501615917,
+              "measured_mean_effect": 0.12207440495491027,
+              "measured_ci_lo": 0.10480384841561317,
+              "measured_ci_hi": 0.1392315154373646,
+              "measured_abs_mean": 0.137837690114975
+            },
+            "diff_of_means": {
+              "auc_test": 0.8075,
+              "rho": 0.10951761929340315,
+              "Sbar": 0.03280812997637156,
+              "predicted_effect": 0.21434981904759087,
+              "measured_mean_effect": 0.19092125177383423,
+              "measured_ci_lo": 0.1663966370224953,
+              "measured_ci_hi": 0.2164314048886299,
+              "measured_abs_mean": 0.19665165185928346,
+              "next_token_kl": 0.04127853651152691
+            },
+            "gbar": {
+              "auc_test": 0.6474,
+              "rho": 1.0,
+              "Sbar": 0.29956942260109726,
+              "predicted_effect": 1.957217664432032,
+              "measured_mean_effect": 1.854254674911499,
+              "measured_ci_lo": 1.7071643339395524,
+              "measured_ci_hi": 1.9905388592481612,
+              "measured_abs_mean": 1.854254674911499,
+              "next_token_kl": 0.04521165130912171
+            },
+            "random": {
+              "auc_test": 0.5501,
+              "rho": 0.011393466514400766,
+              "Sbar": 0.0034131341851439657,
+              "predicted_effect": 0.02229949392109998,
+              "measured_mean_effect": 0.02308325409889221,
+              "measured_ci_lo": 0.009547773718833924,
+              "measured_ci_hi": 0.03583264857530594,
+              "measured_abs_mean": 0.05938074707984924
+            },
+            "dark": {
+              "auc_test": 0.5519,
+              "rho": 0.9937156272149241,
+              "Sbar": 0.297686816674462,
+              "predicted_effect": 1.9449177790072054,
+              "measured_mean_effect": 1.8412002444267273,
+              "measured_ci_lo": 1.6950422331690789,
+              "measured_ci_hi": 1.9766434658765792,
+              "measured_abs_mean": 1.8412002444267273
+            }
+          },
+          "spearman_Sbar_vs_measured": 1.0,
+          "spearman_absauc_vs_measured": -0.02857142857142857
+        },
+        {
+          "layer": 4,
+          "alpha": 9.346888130072111,
+          "resid_norm_mean": 93.46888130072111,
+          "r_eff": 1.7760370741965255,
+          "r_eff_over_d": 0.0023125482736933924,
+          "gbar_norm": 0.24857330470662198,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.8009,
+              "rho": 0.09141697813605956,
+              "Sbar": 0.022723820361573333,
+              "predicted_effect": 0.21239700680748072,
+              "measured_mean_effect": 0.212800213098526,
+              "measured_ci_lo": 0.19723985281586648,
+              "measured_ci_hi": 0.22692653933167456,
+              "measured_abs_mean": 0.212800213098526,
+              "next_token_kl": 0.010434805359788394
+            },
+            "logistic_probe": {
+              "auc_test": 0.8766,
+              "rho": 0.12883403719345407,
+              "Sbar": 0.03202470238387273,
+              "predicted_effect": 0.29933131058091206,
+              "measured_mean_effect": 0.29036197662353513,
+              "measured_ci_lo": 0.2719811521172524,
+              "measured_ci_hi": 0.3087044749259949,
+              "measured_abs_mean": 0.29036197662353513
+            },
+            "diff_of_means": {
+              "auc_test": 0.7727,
+              "rho": 0.13455478832480616,
+              "Sbar": 0.03344672839799707,
+              "predicted_effect": 0.3126228286529846,
+              "measured_mean_effect": 0.2990567708015442,
+              "measured_ci_lo": 0.2782549653053284,
+              "measured_ci_hi": 0.322486908853054,
+              "measured_abs_mean": 0.2996237874031067,
+              "next_token_kl": 0.018688129571576912
+            },
+            "gbar": {
+              "auc_test": 0.6862,
+              "rho": 1.0,
+              "Sbar": 0.24857330470662195,
+              "predicted_effect": 2.323386871215123,
+              "measured_mean_effect": 2.2298211705684663,
+              "measured_ci_lo": 2.1301993798017502,
+              "measured_ci_hi": 2.3298648029267786,
+              "measured_abs_mean": 2.2298211705684663,
+              "next_token_kl": 0.016109320392085163
+            },
+            "random": {
+              "auc_test": 0.5095,
+              "rho": 0.048710123009158196,
+              "Sbar": 0.012108036249052523,
+              "predicted_effect": 0.11317246029475186,
+              "measured_mean_effect": -0.11910894155502319,
+              "measured_ci_lo": -0.13233997988700866,
+              "measured_ci_hi": -0.10740419065952302,
+              "measured_abs_mean": 0.12150624990463257
+            },
+            "dark": {
+              "auc_test": 0.5684,
+              "rho": 0.9893852054332417,
+              "Sbar": 0.24593475014238098,
+              "predicted_effect": 2.2987245968780714,
+              "measured_mean_effect": 2.2037787079811095,
+              "measured_ci_lo": 2.1048086887598036,
+              "measured_ci_hi": 2.3022753690481186,
+              "measured_abs_mean": 2.2037787079811095
+            }
+          },
+          "spearman_Sbar_vs_measured": 1.0,
+          "spearman_absauc_vs_measured": -0.02857142857142857
+        },
+        {
+          "layer": 5,
+          "alpha": 14.870893499705687,
+          "resid_norm_mean": 148.70893499705687,
+          "r_eff": 1.2767374819326196,
+          "r_eff_over_d": 0.0016624185962664318,
+          "gbar_norm": 0.22727353482682067,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.8292,
+              "rho": 0.11495838946453224,
+              "Sbar": 0.02612699953160258,
+              "predicted_effect": 0.3885318275013223,
+              "measured_mean_effect": 0.35621840596199034,
+              "measured_ci_lo": 0.339687867552042,
+              "measured_ci_hi": 0.3731228040456772,
+              "measured_abs_mean": 0.35621840596199034,
+              "next_token_kl": 0.012861237511970103
+            },
+            "logistic_probe": {
+              "auc_test": 0.8851,
+              "rho": 0.15262174646846066,
+              "Sbar": 0.034686883811329894,
+              "predicted_effect": 0.5158249549949522,
+              "measured_mean_effect": 0.4886716628074646,
+              "measured_ci_lo": 0.46514150249958036,
+              "measured_ci_hi": 0.5110988476872445,
+              "measured_abs_mean": 0.4886716628074646
+            },
+            "diff_of_means": {
+              "auc_test": 0.8035,
+              "rho": 0.1529154916812384,
+              "Sbar": 0.03475364432417635,
+              "predicted_effect": 0.5168177434714776,
+              "measured_mean_effect": 0.4865004026889801,
+              "measured_ci_lo": 0.45981542649865154,
+              "measured_ci_hi": 0.5091133902072906,
+              "measured_abs_mean": 0.4865004026889801,
+              "next_token_kl": 0.02905582131400782
+            },
+            "gbar": {
+              "auc_test": 0.6896,
+              "rho": 1.0,
+              "Sbar": 0.22727353482682064,
+              "predicted_effect": 3.3797605317113013,
+              "measured_mean_effect": 3.317243778705597,
+              "measured_ci_lo": 3.2354452069997786,
+              "measured_ci_hi": 3.394464134335518,
+              "measured_abs_mean": 3.317243778705597,
+              "next_token_kl": 0.02415375221244176
+            },
+            "random": {
+              "auc_test": 0.5257,
+              "rho": 0.008152107648926278,
+              "Sbar": 0.001852758321660237,
+              "predicted_effect": 0.027552171682102836,
+              "measured_mean_effect": 0.031346302032470706,
+              "measured_ci_lo": 0.02235819900035858,
+              "measured_ci_hi": 0.03968234592676162,
+              "measured_abs_mean": 0.044754676818847657
+            },
+            "dark": {
+              "auc_test": 0.5742,
+              "rho": 0.9862189568966977,
+              "Sbar": 0.2241414684471324,
+              "predicted_effect": 3.3331839061449484,
+              "measured_mean_effect": 3.2666284537315367,
+              "measured_ci_lo": 3.1871590411663058,
+              "measured_ci_hi": 3.341944572329521,
+              "measured_abs_mean": 3.2666284537315367
+            }
+          },
+          "spearman_Sbar_vs_measured": 0.9428571428571428,
+          "spearman_absauc_vs_measured": 0.08571428571428572
+        }
+      ],
+      "aggregate": {
+        "fisher_probe": {
+          "mean_auc": 0.7984583333333334,
+          "mean_rho": 0.05256270964425366,
+          "mean_abs_measured": 0.11806409160296122,
+          "max_abs_measured": 0.35621840596199034,
+          "mean_next_token_kl": 0.012786244740153862,
+          "efficiency_vs_gbar": 0.07263661437191656
+        },
+        "logistic_probe": {
+          "mean_auc": 0.8433583333333333,
+          "mean_rho": 0.08393639609725634,
+          "mean_abs_measured": 0.1744724714756012,
+          "max_abs_measured": 0.4886716628074646,
+          "mean_next_token_kl": null,
+          "efficiency_vs_gbar": 0.10734076260635537
+        },
+        "diff_of_means": {
+          "mean_auc": 0.7577583333333333,
+          "mean_rho": 0.14487716788002386,
+          "mean_abs_measured": 0.22230342884858448,
+          "max_abs_measured": 0.4865004026889801,
+          "mean_next_token_kl": 0.04031286751604866,
+          "efficiency_vs_gbar": 0.13676782005092242
+        },
+        "gbar": {
+          "mean_auc": 0.652425,
+          "mean_rho": 1.0,
+          "mean_abs_measured": 1.625407415032387,
+          "max_abs_measured": 3.317243778705597,
+          "mean_next_token_kl": 0.05647893455382776
+        },
+        "random": {
+          "mean_auc": 0.5063583333333334,
+          "mean_rho": 0.041111493847569534,
+          "mean_abs_measured": 0.05683396796385446,
+          "max_abs_measured": 0.11910894155502319,
+          "mean_next_token_kl": null,
+          "efficiency_vs_gbar": 0.03496598295186319
+        },
+        "dark": {
+          "mean_auc": 0.5532416666666666,
+          "mean_rho": 0.9878694427639377,
+          "mean_abs_measured": 1.6058723616600037,
+          "max_abs_measured": 3.2666284537315367,
+          "mean_next_token_kl": null,
+          "efficiency_vs_gbar": 0.9879814419500517
+        }
+      },
+      "mean_r_eff_over_d": 0.004139620619594264,
+      "wall_time_s": 484.9721956253052
+    },
+    {
+      "model": "EleutherAI/pythia-70m",
+      "n_layers": 6,
+      "d_model": 512,
+      "phi_toxic_mean": -1.1340399169921875,
+      "phi_benign_mean": -2.05205810546875,
+      "phi_separation_auc": 0.6998375,
+      "layers": [
+        {
+          "layer": 0,
+          "alpha": 0.06415874692363087,
+          "resid_norm_mean": 0.6415874692363086,
+          "r_eff": 8.425430124859497,
+          "r_eff_over_d": 0.016455918212616206,
+          "gbar_norm": 5.49263199730975,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.55315,
+              "rho": 0.06205823915440127,
+              "Sbar": 0.3408630700761651,
+              "predicted_effect": 0.02186934744862853,
+              "measured_mean_effect": 0.020830078125,
+              "measured_ci_lo": 0.0102882080078125,
+              "measured_ci_hi": 0.03150958251953124,
+              "measured_abs_mean": 0.04351806640625,
+              "next_token_kl": 0.002872501908010842
+            },
+            "logistic_probe": {
+              "auc_test": 0.57675,
+              "rho": 0.051077647815275296,
+              "Sbar": 0.28055072273749954,
+              "predicted_effect": 0.017999782819356967,
+              "measured_mean_effect": 0.0212109375,
+              "measured_ci_lo": 0.011187225341796876,
+              "measured_ci_hi": 0.03150485229492187,
+              "measured_abs_mean": 0.04352294921875
+            },
+            "diff_of_means": {
+              "auc_test": 0.65195,
+              "rho": 0.07478014600064681,
+              "Sbar": 0.4107398226866473,
+              "predicted_effect": 0.026352552335209622,
+              "measured_mean_effect": 0.025279541015625,
+              "measured_ci_lo": 0.01205352783203125,
+              "measured_ci_hi": 0.03934378051757812,
+              "measured_abs_mean": 0.061256103515625,
+              "next_token_kl": 0.009153391756020332
+            },
+            "gbar": {
+              "auc_test": 0.58375,
+              "rho": 1.0,
+              "Sbar": 5.492631997309751,
+              "predicted_effect": 0.35240038626003345,
+              "measured_mean_effect": 0.347972412109375,
+              "measured_ci_lo": 0.30860617065429685,
+              "measured_ci_hi": 0.3926007080078125,
+              "measured_abs_mean": 0.347972412109375,
+              "next_token_kl": 0.004556011968816165
+            },
+            "random": {
+              "auc_test": 0.45665,
+              "rho": 0.09832774965004348,
+              "Sbar": 0.5400781439512914,
+              "predicted_effect": 0.03465073695675518,
+              "measured_mean_effect": -0.02426025390625,
+              "measured_ci_lo": -0.03844805908203125,
+              "measured_ci_hi": -0.00878964233398439,
+              "measured_abs_mean": 0.05813720703125
+            },
+            "dark": {
+              "auc_test": 0.55675,
+              "rho": 0.9958796163922152,
+              "Sbar": 5.470000246464441,
+              "predicted_effect": 0.35094836148511055,
+              "measured_mean_effect": 0.34546630859375,
+              "measured_ci_lo": 0.3055990295410156,
+              "measured_ci_hi": 0.3903002014160156,
+              "measured_abs_mean": 0.34546630859375
+            }
+          },
+          "spearman_Sbar_vs_measured": 0.8857142857142857,
+          "spearman_absauc_vs_measured": 0.4857142857142857
+        },
+        {
+          "layer": 1,
+          "alpha": 0.7319506036118912,
+          "resid_norm_mean": 7.319506036118912,
+          "r_eff": 7.115273998128676,
+          "r_eff_over_d": 0.01389701952759507,
+          "gbar_norm": 1.0775163594923298,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.6495,
+              "rho": 0.007841831698754492,
+              "Sbar": 0.008449701943793478,
+              "predicted_effect": 0.006184764438100207,
+              "measured_mean_effect": -0.003277587890625,
+              "measured_ci_lo": -0.02111053466796875,
+              "measured_ci_hi": 0.0137290649414062,
+              "measured_abs_mean": 0.074019775390625,
+              "next_token_kl": 0.007308527419809252
+            },
+            "logistic_probe": {
+              "auc_test": 0.7922,
+              "rho": 0.015532576804393607,
+              "Sbar": 0.016736605611805202,
+              "predicted_effect": 0.012250368579974984,
+              "measured_mean_effect": -0.000574951171875,
+              "measured_ci_lo": -0.01922869873046875,
+              "measured_ci_hi": 0.01768026733398436,
+              "measured_abs_mean": 0.077581787109375
+            },
+            "diff_of_means": {
+              "auc_test": 0.6729,
+              "rho": 0.07425713479810916,
+              "Sbar": 0.08001327755398978,
+              "predicted_effect": 0.05856576680260861,
+              "measured_mean_effect": 0.06959716796875,
+              "measured_ci_lo": 0.052321960449218746,
+              "measured_ci_hi": 0.09072747802734374,
+              "measured_abs_mean": 0.09298828125,
+              "next_token_kl": 0.01388806528848363
+            },
+            "gbar": {
+              "auc_test": 0.5994,
+              "rho": 0.9999999999999999,
+              "Sbar": 1.0775163594923298,
+              "predicted_effect": 0.7886887497320985,
+              "measured_mean_effect": 0.76145263671875,
+              "measured_ci_lo": 0.7102703552246094,
+              "measured_ci_hi": 0.8114319763183594,
+              "measured_abs_mean": 0.76145263671875,
+              "next_token_kl": 0.016704310893449776
+            },
+            "random": {
+              "auc_test": 0.539,
+              "rho": 0.023906662163800156,
+              "Sbar": 0.02575981958235098,
+              "predicted_effect": 0.018854915492235214,
+              "measured_mean_effect": -0.020419921875,
+              "measured_ci_lo": -0.038565856933593747,
+              "measured_ci_hi": -0.004029785156250007,
+              "measured_abs_mean": 0.0707763671875
+            },
+            "dark": {
+              "auc_test": 0.5379,
+              "rho": 0.9966546344336658,
+              "Sbar": 1.0739116733661225,
+              "predicted_effect": 0.7860502975461895,
+              "measured_mean_effect": 0.757666015625,
+              "measured_ci_lo": 0.7066414184570312,
+              "measured_ci_hi": 0.8078713073730468,
+              "measured_abs_mean": 0.757666015625
+            }
+          },
+          "spearman_Sbar_vs_measured": 0.9428571428571428,
+          "spearman_absauc_vs_measured": -0.6
+        },
+        {
+          "layer": 2,
+          "alpha": 0.9323904115911994,
+          "resid_norm_mean": 9.323904115911994,
+          "r_eff": 4.914427063556874,
+          "r_eff_over_d": 0.00959849035850952,
+          "gbar_norm": 1.0597358466107336,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.7279,
+              "rho": 0.07125099709869451,
+              "Sbar": 0.07550723573224392,
+              "predicted_effect": 0.07040222260250063,
+              "measured_mean_effect": 0.062635498046875,
+              "measured_ci_lo": 0.04458062744140625,
+              "measured_ci_hi": 0.07994830322265621,
+              "measured_abs_mean": 0.088084716796875,
+              "next_token_kl": 0.007814088564676544
+            },
+            "logistic_probe": {
+              "auc_test": 0.8049,
+              "rho": 0.045778094110921964,
+              "Sbar": 0.04851268731886374,
+              "predicted_effect": 0.04523276449663052,
+              "measured_mean_effect": 0.048734130859375,
+              "measured_ci_lo": 0.0309837646484375,
+              "measured_ci_hi": 0.065299072265625,
+              "measured_abs_mean": 0.078109130859375
+            },
+            "diff_of_means": {
+              "auc_test": 0.7169,
+              "rho": 0.07133756387726323,
+              "Sbar": 0.07559897365061884,
+              "predicted_effect": 0.07048775815797273,
+              "measured_mean_effect": 0.071512451171875,
+              "measured_ci_lo": 0.053568389892578124,
+              "measured_ci_hi": 0.08546478271484374,
+              "measured_abs_mean": 0.090238037109375,
+              "next_token_kl": 0.012165857755462639
+            },
+            "gbar": {
+              "auc_test": 0.6283,
+              "rho": 1.0000000000000002,
+              "Sbar": 1.0597358466107338,
+              "predicted_effect": 0.9880875421993303,
+              "measured_mean_effect": 0.979859619140625,
+              "measured_ci_lo": 0.9188943481445312,
+              "measured_ci_hi": 1.0353471069335938,
+              "measured_abs_mean": 0.979859619140625,
+              "next_token_kl": 0.020145988500492724
+            },
+            "random": {
+              "auc_test": 0.5139,
+              "rho": 0.09989057069250064,
+              "Sbar": 0.10585761850124649,
+              "predicted_effect": 0.09870062848444137,
+              "measured_mean_effect": -0.1024072265625,
+              "measured_ci_lo": -0.12189907836914061,
+              "measured_ci_hi": -0.08392242431640627,
+              "measured_abs_mean": 0.1093359375
+            },
+            "dark": {
+              "auc_test": 0.5598,
+              "rho": 0.9942458617455244,
+              "Sbar": 1.0536379800361115,
+              "predicted_effect": 0.98240194987399,
+              "measured_mean_effect": 0.975533447265625,
+              "measured_ci_lo": 0.9131789855957031,
+              "measured_ci_hi": 1.0323531188964843,
+              "measured_abs_mean": 0.975533447265625
+            }
+          },
+          "spearman_Sbar_vs_measured": 1.0,
+          "spearman_absauc_vs_measured": -0.7714285714285715
+        },
+        {
+          "layer": 3,
+          "alpha": 1.2182878214184003,
+          "resid_norm_mean": 12.182878214184003,
+          "r_eff": 3.598037503283801,
+          "r_eff_over_d": 0.007027416998601174,
+          "gbar_norm": 1.3024467379545126,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.819,
+              "rho": 0.03993831938860506,
+              "Sbar": 0.05201753380707413,
+              "predicted_effect": 0.06337232793737832,
+              "measured_mean_effect": 0.04633056640625,
+              "measured_ci_lo": 0.024722320556640625,
+              "measured_ci_hi": 0.06833358764648437,
+              "measured_abs_mean": 0.098173828125,
+              "next_token_kl": 0.015121888985352902
+            },
+            "logistic_probe": {
+              "auc_test": 0.8747,
+              "rho": 0.1282160782080305,
+              "Sbar": 0.16699461281536995,
+              "predicted_effect": 0.20344750303544634,
+              "measured_mean_effect": 0.18381591796875,
+              "measured_ci_lo": 0.161859375,
+              "measured_ci_hi": 0.21052413940429687,
+              "measured_abs_mean": 0.1896435546875
+            },
+            "diff_of_means": {
+              "auc_test": 0.8629,
+              "rho": 0.12015751547451461,
+              "Sbar": 0.15649876407050045,
+              "predicted_effect": 0.19066053833412222,
+              "measured_mean_effect": 0.1758349609375,
+              "measured_ci_lo": 0.15135467529296875,
+              "measured_ci_hi": 0.20501992797851556,
+              "measured_abs_mean": 0.18492431640625,
+              "next_token_kl": 0.015077325071615633
+            },
+            "gbar": {
+              "auc_test": 0.7603,
+              "rho": 1.0000000000000002,
+              "Sbar": 1.3024467379545128,
+              "predicted_effect": 1.5867549988961056,
+              "measured_mean_effect": 1.5979150390625,
+              "measured_ci_lo": 1.5252425537109375,
+              "measured_ci_hi": 1.6867022705078125,
+              "measured_abs_mean": 1.5979150390625,
+              "next_token_kl": 0.037473327664580815
+            },
+            "random": {
+              "auc_test": 0.4025,
+              "rho": 0.07545918113415132,
+              "Sbar": 0.09828156431689405,
+              "predicted_effect": 0.11973523287722125,
+              "measured_mean_effect": 0.10984619140625,
+              "measured_ci_lo": 0.08821563720703125,
+              "measured_ci_hi": 0.13208493041992186,
+              "measured_abs_mean": 0.12981689453125
+            },
+            "dark": {
+              "auc_test": 0.6194,
+              "rho": 0.986125937652829,
+              "Sbar": 1.284376510708262,
+              "predicted_effect": 1.5647402611117354,
+              "measured_mean_effect": 1.575958251953125,
+              "measured_ci_lo": 1.501042724609375,
+              "measured_ci_hi": 1.6645349121093749,
+              "measured_abs_mean": 1.575958251953125
+            }
+          },
+          "spearman_Sbar_vs_measured": 1.0,
+          "spearman_absauc_vs_measured": -0.02857142857142857
+        },
+        {
+          "layer": 4,
+          "alpha": 1.322653765627365,
+          "resid_norm_mean": 13.22653765627365,
+          "r_eff": 2.213156072762544,
+          "r_eff_over_d": 0.004322570454614344,
+          "gbar_norm": 1.682111747008317,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.8781,
+              "rho": 0.09111127716958142,
+              "Sbar": 0.15325934961188353,
+              "predicted_effect": 0.20270905588175858,
+              "measured_mean_effect": 0.192684326171875,
+              "measured_ci_lo": 0.16579345703125,
+              "measured_ci_hi": 0.22088201904296875,
+              "measured_abs_mean": 0.197967529296875,
+              "next_token_kl": 0.01678663076503047
+            },
+            "logistic_probe": {
+              "auc_test": 0.905,
+              "rho": 0.18723290683317198,
+              "Sbar": 0.31494667201059234,
+              "predicted_effect": 0.4165654017066166,
+              "measured_mean_effect": 0.39089111328125,
+              "measured_ci_lo": 0.3630345153808594,
+              "measured_ci_hi": 0.4198049621582031,
+              "measured_abs_mean": 0.39089111328125
+            },
+            "diff_of_means": {
+              "auc_test": 0.855,
+              "rho": 0.1630118326297746,
+              "Sbar": 0.2742041185678975,
+              "predicted_effect": 0.3626771099743621,
+              "measured_mean_effect": 0.362774658203125,
+              "measured_ci_lo": 0.33283270263671877,
+              "measured_ci_hi": 0.39069683837890623,
+              "measured_abs_mean": 0.362774658203125,
+              "next_token_kl": 0.0262011961749522
+            },
+            "gbar": {
+              "auc_test": 0.7727,
+              "rho": 1.0000000000000002,
+              "Sbar": 1.6821117470083171,
+              "predicted_effect": 2.224851436386576,
+              "measured_mean_effect": 2.197509765625,
+              "measured_ci_lo": 2.11506396484375,
+              "measured_ci_hi": 2.2732367858886717,
+              "measured_abs_mean": 2.197509765625,
+              "next_token_kl": 0.03984539282585805
+            },
+            "random": {
+              "auc_test": 0.5742,
+              "rho": 0.00863599724445787,
+              "Sbar": 0.014526712412034015,
+              "predicted_effect": 0.01921381087396257,
+              "measured_mean_effect": 0.0003076171875,
+              "measured_ci_lo": -0.017971893310546876,
+              "measured_ci_hi": 0.01844952392578123,
+              "measured_abs_mean": 0.07424560546875
+            },
+            "dark": {
+              "auc_test": 0.6065,
+              "rho": 0.9786969534361388,
+              "Sbar": 1.6462776421361809,
+              "predicted_effect": 2.177455322639559,
+              "measured_mean_effect": 2.157679443359375,
+              "measured_ci_lo": 2.077287689208984,
+              "measured_ci_hi": 2.232312530517578,
+              "measured_abs_mean": 2.157679443359375
+            }
+          },
+          "spearman_Sbar_vs_measured": 1.0,
+          "spearman_absauc_vs_measured": 0.08571428571428572
+        },
+        {
+          "layer": 5,
+          "alpha": 1.5362707358094232,
+          "resid_norm_mean": 15.36270735809423,
+          "r_eff": 1.5157042786329042,
+          "r_eff_over_d": 0.002960359919204891,
+          "gbar_norm": 1.758466885215772,
+          "directions": {
+            "fisher_probe": {
+              "auc_test": 0.87,
+              "rho": 0.13119103306038005,
+              "Sbar": 0.23069508727392588,
+              "predicted_effect": 0.3544101114739332,
+              "measured_mean_effect": 0.373404541015625,
+              "measured_ci_lo": 0.352310791015625,
+              "measured_ci_hi": 0.39878256225585934,
+              "measured_abs_mean": 0.373404541015625,
+              "next_token_kl": 0.0160133041087344
+            },
+            "logistic_probe": {
+              "auc_test": 0.9055,
+              "rho": 0.1916445792415932,
+              "Sbar": 0.3370006463274516,
+              "predicted_effect": 0.5177242309017253,
+              "measured_mean_effect": 0.520872802734375,
+              "measured_ci_lo": 0.49676181030273436,
+              "measured_ci_hi": 0.5456101379394531,
+              "measured_abs_mean": 0.520872802734375
+            },
+            "diff_of_means": {
+              "auc_test": 0.8656,
+              "rho": 0.1792326818449066,
+              "Sbar": 0.31517473577268235,
+              "predicted_effect": 0.48419372323403925,
+              "measured_mean_effect": 0.50265869140625,
+              "measured_ci_lo": 0.4702849731445312,
+              "measured_ci_hi": 0.5371870727539063,
+              "measured_abs_mean": 0.50265869140625,
+              "next_token_kl": 0.0333024748445799
+            },
+            "gbar": {
+              "auc_test": 0.7214,
+              "rho": 1.0,
+              "Sbar": 1.7584668852157719,
+              "predicted_effect": 2.7014812156469383,
+              "measured_mean_effect": 2.664178466796875,
+              "measured_ci_lo": 2.5811129455566406,
+              "measured_ci_hi": 2.749651885986328,
+              "measured_abs_mean": 2.664178466796875,
+              "next_token_kl": 0.028614323118138902
+            },
+            "random": {
+              "auc_test": 0.5993,
+              "rho": 0.05006031607856184,
+              "Sbar": 0.08802940808758569,
+              "predicted_effect": 0.13523700353558327,
+              "measured_mean_effect": 0.125601806640625,
+              "measured_ci_lo": 0.10945635986328126,
+              "measured_ci_hi": 0.14441812133789064,
+              "measured_abs_mean": 0.131859130859375
+            },
+            "dark": {
+              "auc_test": 0.5943,
+              "rho": 0.9796087189239302,
+              "Sbar": 1.7226094926963764,
+              "predicted_effect": 2.6463945528569592,
+              "measured_mean_effect": 2.614771728515625,
+              "measured_ci_lo": 2.528881256103516,
+              "measured_ci_hi": 2.7009168701171875,
+              "measured_abs_mean": 2.614771728515625
+            }
+          },
+          "spearman_Sbar_vs_measured": 1.0,
+          "spearman_absauc_vs_measured": -0.14285714285714285
+        }
+      ],
+      "aggregate": {
+        "fisher_probe": {
+          "mean_auc": 0.7496083333333333,
+          "mean_rho": 0.06723194959506947,
+          "mean_abs_measured": 0.116527099609375,
+          "max_abs_measured": 0.373404541015625,
+          "mean_next_token_kl": 0.010986156958602403,
+          "efficiency_vs_gbar": 0.08178404052176354
+        },
+        "logistic_probe": {
+          "mean_auc": 0.8098416666666667,
+          "mean_rho": 0.10324698050223108,
+          "mean_abs_measured": 0.19434997558593747,
+          "max_abs_measured": 0.520872802734375,
+          "mean_next_token_kl": null,
+          "efficiency_vs_gbar": 0.13640368920196894
+        },
+        "diff_of_means": {
+          "mean_auc": 0.7708750000000001,
+          "mean_rho": 0.11379614577086916,
+          "mean_abs_measured": 0.20127624511718753,
+          "max_abs_measured": 0.50265869140625,
+          "mean_next_token_kl": 0.018298051815185724,
+          "efficiency_vs_gbar": 0.14126486149500042
+        },
+        "gbar": {
+          "mean_auc": 0.6776416666666666,
+          "mean_rho": 1.0,
+          "mean_abs_measured": 1.4248146565755209,
+          "max_abs_measured": 2.664178466796875,
+          "mean_next_token_kl": 0.024556559161889407
+        },
+        "random": {
+          "mean_auc": 0.5142583333333334,
+          "mean_rho": 0.059380079493919206,
+          "mean_abs_measured": 0.06380716959635417,
+          "max_abs_measured": 0.125601806640625,
+          "mean_next_token_kl": null,
+          "efficiency_vs_gbar": 0.04478278581841086
+        },
+        "dark": {
+          "mean_auc": 0.5791083333333334,
+          "mean_rho": 0.9885352870973839,
+          "mean_abs_measured": 1.4045125325520835,
+          "max_abs_measured": 2.614771728515625,
+          "mean_next_token_kl": null,
+          "efficiency_vs_gbar": 0.9857510421234488
+        }
+      },
+      "mean_r_eff_over_d": 0.0090436292451902,
+      "wall_time_s": 518.0573227405548
+    }
+  ],
+  "partial": false,
+  "models_not_completed": []
+}

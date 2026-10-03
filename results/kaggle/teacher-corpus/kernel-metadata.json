@@ -1,0 +1,18 @@
+{
+ "id": "bleymambwe/latent-probe-teacher-corpus",
+ "title": "latent-probe-teacher-corpus",
+ "code_file": "script.py",
+ "language": "python",
+ "kernel_type": "script",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_internet": true,
+ "dataset_sources": [],
+ "competition_sources": [],
+ "kernel_sources": [
+  "bleymambwe/latent-probe-extract"
+ ],
+ "model_sources": [
+  "google/gemma-2/transformers/gemma-2-2b/2"
+ ]
+}

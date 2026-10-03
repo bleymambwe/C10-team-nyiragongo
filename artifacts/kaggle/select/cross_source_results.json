@@ -1,0 +1,3024 @@
+{
+ "positive_rate": 0.7058823529411765,
+ "pairs": [
+  "berkeley+/chat-",
+  "chat+/chat_aegis-",
+  "chat_aegis+/civil-",
+  "civil+/hatecheck-",
+  "hatecheck+/offensivelang-",
+  "offensivelang+/rtp-",
+  "rtp+/twitter-",
+  "twitter+/wiki-",
+  "wiki+/berkeley-"
+ ],
+ "results": [
+  {
+   "transform": "std",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "std|lda|0.02",
+   "mean_accuracy": 0.7670630322817645,
+   "worst_accuracy": 0.6332827516439049,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9424460431654677,
+     "auroc": 0.983906975139313
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7540650406504065,
+     "auroc": 0.7786313509745837
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.711728253385357,
+     "auroc": 0.722049987361548
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6332827516439049,
+     "auroc": 0.5696100320000443
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8943533697632058,
+     "auroc": 0.950118317545817
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7657512116316639,
+     "auroc": 0.8115271456232555
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7115772488906817,
+     "auroc": 0.7158705173427395
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7549004315499402,
+     "auroc": 0.7938017171793667
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7354629398552534,
+     "auroc": 0.7386775268910025
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "raw|lda|0.1",
+   "mean_accuracy": 0.7814570957492981,
+   "worst_accuracy": 0.6322711178553364,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9636055861193398,
+     "auroc": 0.9927997170608837
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7865853658536586,
+     "auroc": 0.8125662791566055
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7020885930686253,
+     "auroc": 0.7106667519381498
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6322711178553364,
+     "auroc": 0.5582792374334282
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9064966605950212,
+     "auroc": 0.9682958720322904
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8061389337641357,
+     "auroc": 0.8718614051852038
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7127874142799516,
+     "auroc": 0.7140506074857926
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7819372952737482,
+     "auroc": 0.8246788726249955
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7412028949338657,
+     "auroc": 0.7433819757965415
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "l2+batchstd|lda|0.9",
+   "mean_accuracy": 0.775431426058114,
+   "worst_accuracy": 0.6309387193022722,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9779940753279729,
+     "auroc": 0.9952124631230268
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7682926829268293,
+     "auroc": 0.7842921510542431
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6309387193022722,
+     "auroc": 0.5809812615915922
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6388467374810318,
+     "auroc": 0.5986722461615813
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8919247115968427,
+     "auroc": 0.9530300661583394
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8222940226171244,
+     "auroc": 0.8917750584655619
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.690802743041549,
+     "auroc": 0.6534608073682148
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8220766391098633,
+     "auroc": 0.8669390810077866
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7357125031195408,
+     "auroc": 0.7410561134173654
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "std|lda|0.9",
+   "mean_accuracy": 0.777624968375415,
+   "worst_accuracy": 0.629742033383915,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9796868387642826,
+     "auroc": 0.9973008643444956
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7764227642276422,
+     "auroc": 0.7905255034726544
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.644250631168235,
+     "auroc": 0.604505531987465
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.629742033383915,
+     "auroc": 0.5382951527342061
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.899210686095932,
+     "auroc": 0.9611062157571968
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8554119547657512,
+     "auroc": 0.917620923127216
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.6708350141185963,
+     "auroc": 0.6388804134822653
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8183330733634898,
+     "auroc": 0.869857383841068
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.724731719490891,
+     "auroc": 0.7277233540747479
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "batchstd|lda|0.9",
+   "mean_accuracy": 0.7746197274914534,
+   "worst_accuracy": 0.629742033383915,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.977147693609818,
+     "auroc": 0.9967022065800597
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7723577235772358,
+     "auroc": 0.7863334246097932
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6437915997245811,
+     "auroc": 0.6050471074187206
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.629742033383915,
+     "auroc": 0.5357106878053244
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8894960534304797,
+     "auroc": 0.9545685495619053
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8529886914378029,
+     "auroc": 0.913881170317097
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.6670028237192416,
+     "auroc": 0.6317979129923574
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8165652784277024,
+     "auroc": 0.8677186180231125
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7224856501123035,
+     "auroc": 0.7229880806677952
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "std|lda|0.1",
+   "mean_accuracy": 0.7741398946824246,
+   "worst_accuracy": 0.629742033383915,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9509098603470165,
+     "auroc": 0.9882148957093319
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7723577235772358,
+     "auroc": 0.7892658883274004
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7250401652513198,
+     "auroc": 0.7320528906525198
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.629742033383915,
+     "auroc": 0.5622337244792175
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8979963570127505,
+     "auroc": 0.956892263524797
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7778675282714055,
+     "auroc": 0.8337684197953077
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7139975796692215,
+     "auroc": 0.7212019890260631
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7598918525451047,
+     "auroc": 0.8007044635434283
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7394559520838533,
+     "auroc": 0.740739018546375
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "raw|lda|0.02",
+   "mean_accuracy": 0.7741176594186105,
+   "worst_accuracy": 0.629742033383915,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9500634786288616,
+     "auroc": 0.9877370046408916
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.774390243902439,
+     "auroc": 0.7975554504493291
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.715859536378242,
+     "auroc": 0.7232671362689056
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.629742033383915,
+     "auroc": 0.5635294998387212
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8943533697632058,
+     "auroc": 0.9583969926735502
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7810985460420032,
+     "auroc": 0.8398177194658888
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7156111335215812,
+     "auroc": 0.7232786106212032
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7649872614776686,
+     "auroc": 0.8036881054016128
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7409533316695782,
+     "auroc": 0.7423578673614954
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "raw|lda|0.3",
+   "mean_accuracy": 0.7820258695119825,
+   "worst_accuracy": 0.6292362164896308,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9712230215827338,
+     "auroc": 0.9954169038869624
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.790650406504065,
+     "auroc": 0.8110975579398073
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.677759926554969,
+     "auroc": 0.6763193477949708
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6292362164896308,
+     "auroc": 0.5494444894580387
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9064966605950212,
+     "auroc": 0.9689638509696353
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8247172859450727,
+     "auroc": 0.8935871765534237
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7008874546187979,
+     "auroc": 0.6937342249657065
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7993032808194249,
+     "auroc": 0.8444029898554458
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7379585724981282,
+     "auroc": 0.7401494530825964
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "std|lda|0.3",
+   "mean_accuracy": 0.7793232560404285,
+   "worst_accuracy": 0.6292362164896308,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9636055861193398,
+     "auroc": 0.9925581836688923
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7804878048780488,
+     "auroc": 0.7968434940628811
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7218269451457425,
+     "auroc": 0.7262374262630077
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6292362164896308,
+     "auroc": 0.5573439131368393
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9052823315118397,
+     "auroc": 0.9645402670494517
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7924071082390953,
+     "auroc": 0.8562454422008198
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7146026623638564,
+     "auroc": 0.7146479031941995
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7692507669110383,
+     "auroc": 0.814187584095674
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7372098827052658,
+     "auroc": 0.7403578747113766
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "std|lda|0.6",
+   "mean_accuracy": 0.780994255446589,
+   "worst_accuracy": 0.6287303995953465,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9729157850190436,
+     "auroc": 0.9955497472525576
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7784552845528455,
+     "auroc": 0.7969281322346967
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6970392471884324,
+     "auroc": 0.6947270754216116
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6287303995953465,
+     "auroc": 0.5522532350482897
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9101396478445659,
+     "auroc": 0.9680134022157003
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8190630048465266,
+     "auroc": 0.8768962016244625
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7025010084711577,
+     "auroc": 0.6951887615128356
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.784640981646129,
+     "auroc": 0.830450282496881
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7354629398552534,
+     "auroc": 0.7374973459804288
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "batchstd|lda|0.3",
+   "mean_accuracy": 0.7744644160912574,
+   "worst_accuracy": 0.6287303995953465,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9593736775285654,
+     "auroc": 0.9910977692666011
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7703252032520326,
+     "auroc": 0.7881257623658858
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7176956621528575,
+     "auroc": 0.718135112664947
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6287303995953465,
+     "auroc": 0.552904203506357
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8979963570127505,
+     "auroc": 0.959358100665847
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.784329563812601,
+     "auroc": 0.8467219993964845
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7071399757966922,
+     "auroc": 0.7042206055261611
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7686268392866428,
+     "auroc": 0.8110883163823399
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7359620663838283,
+     "auroc": 0.7368868558551065
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "batchstd|lda|0.02",
+   "mean_accuracy": 0.7593910236641022,
+   "worst_accuracy": 0.6287303995953465,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9365213711383834,
+     "auroc": 0.9799786070424236
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7479674796747967,
+     "auroc": 0.7629732891887182
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7057608446178564,
+     "auroc": 0.709230587287037
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6287303995953465,
+     "auroc": 0.5579542153211419
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8834244080145719,
+     "auroc": 0.94716215544012
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7512116316639742,
+     "auroc": 0.7889919719868232
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.6952400161355385,
+     "auroc": 0.6953722320203801
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7484531794311859,
+     "auroc": 0.7843396419911022
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7372098827052658,
+     "auroc": 0.7381298107503111
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "batchstd|lda|0.6",
+   "mean_accuracy": 0.7778094209977053,
+   "worst_accuracy": 0.627718765806778,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9720694033008886,
+     "auroc": 0.9945680865379639
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.774390243902439,
+     "auroc": 0.7914216723507007
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6947440899701629,
+     "auroc": 0.6896886981785402
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.627718765806778,
+     "auroc": 0.5486933957047172
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9028536733454766,
+     "auroc": 0.9623302516290869
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8150242326332795,
+     "auroc": 0.871096009253904
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.6968535699878984,
+     "auroc": 0.6864102488732118
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7839130660843342,
+     "auroc": 0.8283760744480506
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7327177439480909,
+     "auroc": 0.7333202135455459
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "batchstd|lda|0.1",
+   "mean_accuracy": 0.7679189280483446,
+   "worst_accuracy": 0.627718765806778,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9441388066017774,
+     "auroc": 0.986011766126667
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7621951219512195,
+     "auroc": 0.7773468422493839
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7190727564838192,
+     "auroc": 0.7212866045606031
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.627718765806778,
+     "auroc": 0.5553940885409526
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8894960534304797,
+     "auroc": 0.9526338977992226
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7689822294022617,
+     "auroc": 0.8187984069706038
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7051230334812424,
+     "auroc": 0.7069682049774643
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7558363229865336,
+     "auroc": 0.7951824044740331
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7387072622909908,
+     "auroc": 0.7384403807268417
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "l2+std|lda|0.9",
+   "mean_accuracy": 0.7778295257630473,
+   "worst_accuracy": 0.6263484048657333,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9788404570461278,
+     "auroc": 0.9960224626054552
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7723577235772358,
+     "auroc": 0.7896940579024669
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6263484048657333,
+     "auroc": 0.576712357969686
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.637329286798179,
+     "auroc": 0.5963739855382104
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8979963570127505,
+     "auroc": 0.9576792706238497
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8303715670436187,
+     "auroc": 0.8994800965624764
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.6948366276724486,
+     "auroc": 0.6609480697628846
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8234284822960537,
+     "auroc": 0.8694268858655101
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7389568255552783,
+     "auroc": 0.7466369231477681
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "std|logistic|0.05",
+   "mean_accuracy": 0.7621368930805497,
+   "worst_accuracy": 0.6262013151239252,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9331358442657639,
+     "auroc": 0.9790875213498266
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7540650406504065,
+     "auroc": 0.7826093450499116
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6979573100757401,
+     "auroc": 0.7075611949783217
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6262013151239252,
+     "auroc": 0.5439560828889567
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.899210686095932,
+     "auroc": 0.95344755299418
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7665589660743134,
+     "auroc": 0.8230434468277718
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7061315046389673,
+     "auroc": 0.7136019008426416
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7382623615660583,
+     "auroc": 0.7745514836620145
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7377090092338408,
+     "auroc": 0.7423292178249017
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "raw|lda|0.6",
+   "mean_accuracy": 0.7787616707277594,
+   "worst_accuracy": 0.6256954982296409,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9754549301735083,
+     "auroc": 0.9963718234045856
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7804878048780488,
+     "auroc": 0.7916955017301038
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6543493229286206,
+     "auroc": 0.6242661830555412
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6256954982296409,
+     "auroc": 0.5382862184770911
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8907103825136612,
+     "auroc": 0.9596299112440753
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8521809369951535,
+     "auroc": 0.9182700165966756
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.68152480839048,
+     "auroc": 0.6606296296296297
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8232205064212551,
+     "auroc": 0.8717735308250717
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.725230846019466,
+     "auroc": 0.7267430449312482
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "raw|logistic|0.002",
+   "mean_accuracy": 0.7737951908681925,
+   "worst_accuracy": 0.6256954982296409,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9449851883199323,
+     "auroc": 0.9868579956178942
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7682926829268293,
+     "auroc": 0.7945931144357871
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7135643791599725,
+     "auroc": 0.7259577561012254
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6256954982296409,
+     "auroc": 0.5409427736185559
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9101396478445659,
+     "auroc": 0.9641991714218713
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7891760904684976,
+     "auroc": 0.8448721615912691
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7240822912464704,
+     "auroc": 0.7371276699980404
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7437737222482192,
+     "auroc": 0.7839117742433304
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7444472173696032,
+     "auroc": 0.751988386587847
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "l2+batchstd|lda|0.6",
+   "mean_accuracy": 0.7782440372022602,
+   "worst_accuracy": 0.6251896813353566,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9729157850190436,
+     "auroc": 0.9929075444680227
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7784552845528455,
+     "auroc": 0.7950262627268427
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6740876750057379,
+     "auroc": 0.6661238223145319
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6251896813353566,
+     "auroc": 0.5722225320115972
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.912568306010929,
+     "auroc": 0.9679050332923544
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.784329563812601,
+     "auroc": 0.8593431739884829
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7238805970149254,
+     "auroc": 0.714829561042524
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.790568294077887,
+     "auroc": 0.8333241969810402
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7422011479910158,
+     "auroc": 0.7475249087846004
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "raw|logistic|0.05",
+   "mean_accuracy": 0.7620910694177955,
+   "worst_accuracy": 0.6251896813353566,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9331358442657639,
+     "auroc": 0.9791970739954798
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.758130081300813,
+     "auroc": 0.7839984068108835
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6947440899701629,
+     "auroc": 0.7046802370141175
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6251896813353566,
+     "auroc": 0.5430527986868491
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.896782027929569,
+     "auroc": 0.9533853741037357
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7673667205169629,
+     "auroc": 0.8239141436366837
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7069382815651473,
+     "auroc": 0.7139243092298648
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7385743253782561,
+     "auroc": 0.7741845799067889
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7379585724981282,
+     "auroc": 0.7425634390363736
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "std|logistic|0.002",
+   "mean_accuracy": 0.7715627843111287,
+   "worst_accuracy": 0.6241780475467881,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9458315700380872,
+     "auroc": 0.9865232993461346
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.758130081300813,
+     "auroc": 0.7851584476363546
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7232040394767042,
+     "auroc": 0.7386091510513263
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6241780475467881,
+     "auroc": 0.5385739631717599
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9101396478445659,
+     "auroc": 0.9621881284509284
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7794830371567044,
+     "auroc": 0.8344340156411094
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7224687373941105,
+     "auroc": 0.7347068391142465
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7386783133156554,
+     "auroc": 0.7797682149524231
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7419515847267282,
+     "auroc": 0.7501788908564404
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "batchstd|logistic|0.002",
+   "mean_accuracy": 0.7652176720683187,
+   "worst_accuracy": 0.6241780475467881,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9399068980110029,
+     "auroc": 0.9836844193709781
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7479674796747967,
+     "auroc": 0.774762888651017
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7163185678218958,
+     "auroc": 0.7261085039016779
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6241780475467881,
+     "auroc": 0.53148108725596
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8979963570127505,
+     "auroc": 0.9591218208821586
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7705977382875606,
+     "auroc": 0.8207354716221993
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7131908027430416,
+     "auroc": 0.7192968841857731
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.735350699318879,
+     "auroc": 0.7740371569414732
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7414524581981532,
+     "auroc": 0.7484351690611404
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "l2|lda|0.6",
+   "mean_accuracy": 0.7804772153430966,
+   "worst_accuracy": 0.6231664137582196,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9720694033008886,
+     "auroc": 0.993984955920156
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7723577235772358,
+     "auroc": 0.7982972791317119
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6561854487032361,
+     "auroc": 0.6449110181922648
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6231664137582196,
+     "auroc": 0.5729727015314241
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.912568306010929,
+     "auroc": 0.9708469830802356
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.802907915993538,
+     "auroc": 0.8755870131013151
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7285195643404598,
+     "auroc": 0.7205681951793063
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8103260021837467,
+     "auroc": 0.8539992196817289
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7461941602196157,
+     "auroc": 0.7522312326598117
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "l2+std|lda|0.6",
+   "mean_accuracy": 0.7816621808983537,
+   "worst_accuracy": 0.622154779969651,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9746085484553534,
+     "auroc": 0.9939426875765575
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7865853658536586,
+     "auroc": 0.8009310198899704
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.673628643562084,
+     "auroc": 0.6668270582658014
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.622154779969651,
+     "auroc": 0.5678681599404547
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9186399514268366,
+     "auroc": 0.971481207762768
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7924071082390953,
+     "auroc": 0.8685420700580884
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7295280354981848,
+     "auroc": 0.7229043699784441
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7917121613892788,
+     "auroc": 0.8354908145674828
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7456950336910407,
+     "auroc": 0.7518695885094059
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "l2|lda|0.3",
+   "mean_accuracy": 0.785012829301077,
+   "worst_accuracy": 0.6176024279210925,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9669911129919594,
+     "auroc": 0.9913479288511636
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7987804878048781,
+     "auroc": 0.8163949117522591
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6841863667661234,
+     "auroc": 0.6882908549379803
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6176024279210925,
+     "auroc": 0.5646515193012301
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9198542805100182,
+     "auroc": 0.9735633123227901
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7972536348949919,
+     "auroc": 0.8671000766967586
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7404195240016136,
+     "auroc": 0.738145453654713
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7923360890136744,
+     "auroc": 0.8351914503742683
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7476915398053406,
+     "auroc": 0.7545294204866236
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "l2+batchstd|lda|0.02",
+   "mean_accuracy": 0.7663162828631906,
+   "worst_accuracy": 0.6176024279210925,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.931443080829454,
+     "auroc": 0.9762658937598123
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.774390243902439,
+     "auroc": 0.7940554131089592
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6915308698645857,
+     "auroc": 0.7003237778515444
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6176024279210925,
+     "auroc": 0.5651807970158349
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9016393442622951,
+     "auroc": 0.9586403786161466
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7552504038772213,
+     "auroc": 0.8090989388186185
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7220653489310206,
+     "auroc": 0.7260238585145993
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7582280455467166,
+     "auroc": 0.79216313735237
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7446967806338907,
+     "auroc": 0.7525266528813896
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "l2+batchstd|lda|0.3",
+   "mean_accuracy": 0.7773443972054203,
+   "worst_accuracy": 0.6170966110268084,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9585272958104105,
+     "auroc": 0.9888299432396529
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.790650406504065,
+     "auroc": 0.8047546737696348
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.698416341519394,
+     "auroc": 0.7025527642680002
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6170966110268084,
+     "auroc": 0.5628317035502581
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9089253187613844,
+     "auroc": 0.966808908280807
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7746365105008077,
+     "auroc": 0.8483706653758141
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7307382008874547,
+     "auroc": 0.729820987654321
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7759059949045911,
+     "auroc": 0.8170886862809089
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7412028949338657,
+     "auroc": 0.749367103987093
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "l2+batchstd|lda|0.1",
+   "mean_accuracy": 0.7720101774056858,
+   "worst_accuracy": 0.6170966110268084,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9441388066017774,
+     "auroc": 0.9827027586563842
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.782520325203252,
+     "auroc": 0.8035099947723482
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6979573100757401,
+     "auroc": 0.7098962631802812
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6170966110268084,
+     "auroc": 0.5613224302534895
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9004250151791136,
+     "auroc": 0.9623213689304521
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7697899838449112,
+     "auroc": 0.8315508147458949
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.727914481645825,
+     "auroc": 0.7320856359004507
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7652992252898664,
+     "auroc": 0.802841015803346
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7429498377838782,
+     "auroc": 0.7507674063372025
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "batchstd|logistic|0.05",
+   "mean_accuracy": 0.7520866343257772,
+   "worst_accuracy": 0.616590794132524,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9204401184934405,
+     "auroc": 0.9713342994669013
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7357723577235772,
+     "auroc": 0.7674790271588957
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6906128069772779,
+     "auroc": 0.6941598677885957
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.616590794132524,
+     "auroc": 0.5283617992115056
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8858530661809351,
+     "auroc": 0.953168636257044
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7600969305331179,
+     "auroc": 0.7977728078557598
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.691407825736184,
+     "auroc": 0.68944890260631
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7275516040139344,
+     "auroc": 0.7590913823425153
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7404542051410032,
+     "auroc": 0.7446346805340424
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "l2+std|lda|0.1",
+   "mean_accuracy": 0.7757613222258772,
+   "worst_accuracy": 0.6130500758725341,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9441388066017774,
+     "auroc": 0.9848308403636803
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7886178861788617,
+     "auroc": 0.8095193049712479
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7048427817305486,
+     "auroc": 0.715731776519685
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6130500758725341,
+     "auroc": 0.5542123019791227
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9077109896782027,
+     "auroc": 0.9643448476794838
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.778675282714055,
+     "auroc": 0.8438788757009581
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7345703912868092,
+     "auroc": 0.742744708994709
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7690427910362398,
+     "auroc": 0.8101971639581917
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7412028949338657,
+     "auroc": 0.7528603974830708
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "l2+std|lda|0.3",
+   "mean_accuracy": 0.7812624781178652,
+   "worst_accuracy": 0.6125442589782498,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9610664409648751,
+     "auroc": 0.9901644152304057
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7967479674796748,
+     "auroc": 0.8105897289089143
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6979573100757401,
+     "auroc": 0.7063338947039303
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6125442589782498,
+     "auroc": 0.5570222798807
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.912568306010929,
+     "auroc": 0.9698912047071196
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7915993537964459,
+     "auroc": 0.8586524316644454
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7377974989915288,
+     "auroc": 0.7385482559278855
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7778817657151771,
+     "auroc": 0.8208610709516706
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7431994010481657,
+     "auroc": 0.7527359744956126
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "l2+batchstd|logistic|0.002",
+   "mean_accuracy": 0.7682200614761404,
+   "worst_accuracy": 0.6120384420839656,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.939060516292848,
+     "auroc": 0.9817875196245881
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7764227642276422,
+     "auroc": 0.8029722934455203
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.694285058526509,
+     "auroc": 0.7058486593597126
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6120384420839656,
+     "auroc": 0.553338593248844
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9028536733454766,
+     "auroc": 0.9627939284978291
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7568659127625202,
+     "auroc": 0.8192133238614931
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7428398547801532,
+     "auroc": 0.7502143836958651
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.74366973431082,
+     "auroc": 0.781180725399115
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7459445969553282,
+     "auroc": 0.7589760985616057
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "l2+std|lda|0.02",
+   "mean_accuracy": 0.7714189847181685,
+   "worst_accuracy": 0.6115326251896813,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.939060516292848,
+     "auroc": 0.9799346134603109
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7865853658536586,
+     "auroc": 0.800373403699186
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6970392471884324,
+     "auroc": 0.7071297618793835
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6115326251896813,
+     "auroc": 0.5582890959240379
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9064966605950212,
+     "auroc": 0.9586208366791498
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7641357027463651,
+     "auroc": 0.82614039278799
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7289229528035498,
+     "auroc": 0.7385106799921615
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7665470805386575,
+     "auroc": 0.8056670393083115
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7424507112553033,
+     "auroc": 0.7525380526969976
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "l2+batchstd|logistic|0.05",
+   "mean_accuracy": 0.7587233617328775,
+   "worst_accuracy": 0.6115326251896813,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9212865002115954,
+     "auroc": 0.9704311371047047
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7703252032520326,
+     "auroc": 0.7975454930173508
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.669497360569199,
+     "auroc": 0.6771570893594386
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6115326251896813,
+     "auroc": 0.5571572179709193
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8979963570127505,
+     "auroc": 0.9585657639476134
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7439418416801292,
+     "auroc": 0.7941336409585837
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7299314239612748,
+     "auroc": 0.7360415441896924
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7368065304424687,
+     "auroc": 0.7651446562781871
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7471924132767657,
+     "auroc": 0.7583081593655223
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "l2|lda|0.9",
+   "mean_accuracy": 0.7697866896825728,
+   "worst_accuracy": 0.6112003672251549,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9754549301735083,
+     "auroc": 0.9945654986801925
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7479674796747967,
+     "auroc": 0.7577356799681362
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6112003672251549,
+     "auroc": 0.559275608599832
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6186140617096612,
+     "auroc": 0.5722835314222444
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8809957498482088,
+     "auroc": 0.9437440930054077
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8311793214862682,
+     "auroc": 0.9076880642241054
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.6895925776522791,
+     "auroc": 0.6547365765236136
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.848593563146675,
+     "auroc": 0.8946472156200322
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7244821562266034,
+     "auroc": 0.7259721324007584
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "l2|lda|0.1",
+   "mean_accuracy": 0.7798239809814942,
+   "worst_accuracy": 0.611026808295397,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9534490055014812,
+     "auroc": 0.9862636509497438
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7967479674796748,
+     "auroc": 0.8214035000373404
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6993344044067018,
+     "auroc": 0.709273476812755
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.611026808295397,
+     "auroc": 0.5572477928533953
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9089253187613844,
+     "auroc": 0.9688661412846514
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7851373182552503,
+     "auroc": 0.8548671008625242
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7382008874546188,
+     "auroc": 0.7448777189888302
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7784017054021733,
+     "auroc": 0.8189086997414252
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7471924132767657,
+     "auroc": 0.7543429735024036
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "l2|lda|0.02",
+   "mean_accuracy": 0.7731931349903302,
+   "worst_accuracy": 0.6105209914011128,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.939060516292848,
+     "auroc": 0.9804452840605213
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7926829268292683,
+     "auroc": 0.8081352219262652
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6997934358503557,
+     "auroc": 0.7088438202030476
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6105209914011128,
+     "auroc": 0.556871937898903
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9064966605950212,
+     "auroc": 0.9610351541681175
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7665589660743134,
+     "auroc": 0.8326266125179169
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7327551432029044,
+     "auroc": 0.741931755829904
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7684188634118442,
+     "auroc": 0.8068701732064893
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7424507112553033,
+     "auroc": 0.7530417445497819
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "l2+std|logistic|0.002",
+   "mean_accuracy": 0.7731061729126957,
+   "worst_accuracy": 0.6069802731411229,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9441388066017774,
+     "auroc": 0.9843572623915257
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.782520325203252,
+     "auroc": 0.8088521570287023
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.703006655955933,
+     "auroc": 0.7142339423138417
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6069802731411229,
+     "auroc": 0.546250646578349
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9064966605950212,
+     "auroc": 0.96451184241382
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7681744749596123,
+     "auroc": 0.8317362700228833
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7515127067365873,
+     "auroc": 0.7612914462081128
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7479332397441897,
+     "auroc": 0.7877088856594668
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7471924132767657,
+     "auroc": 0.7609977658611372
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "raw|lda|0.9",
+   "mean_accuracy": 0.7648918393882266,
+   "worst_accuracy": 0.6061510213449621,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9754549301735083,
+     "auroc": 0.9962812483825889
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.75,
+     "auroc": 0.7662044758656742
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6061510213449621,
+     "auroc": 0.5488595446705831
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6140617096611026,
+     "auroc": 0.5298433455034346
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8664238008500303,
+     "auroc": 0.9291054056550813
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8909531502423264,
+     "auroc": 0.9481707508738402
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.6246470350947962,
+     "auroc": 0.560690868116794
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8717828731867103,
+     "auroc": 0.9240294511553159
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.6845520339406039,
+     "auroc": 0.6731137373852978
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "l2+std|logistic|0.05",
+   "mean_accuracy": 0.7657360921284355,
+   "worst_accuracy": 0.6049570055639858,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9365213711383834,
+     "auroc": 0.9773864361748011
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7764227642276422,
+     "auroc": 0.8064474372059446
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6791370208859306,
+     "auroc": 0.6854164953623479
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6049570055639858,
+     "auroc": 0.550520297245815
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9016393442622951,
+     "auroc": 0.9554124059322214
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7641357027463651,
+     "auroc": 0.8163026190057082
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7375958047599839,
+     "auroc": 0.7468247599451303
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7475172879945926,
+     "auroc": 0.7855067860397718
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7436985275767407,
+     "auroc": 0.755281433322816
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "l2|logistic|0.05",
+   "mean_accuracy": 0.7508433500063945,
+   "worst_accuracy": 0.5809042919439982,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9729157850190436,
+     "auroc": 0.9944654348463675
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7235772357723578,
+     "auroc": 0.7287346593313584
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.5809042919439982,
+     "auroc": 0.5161218935547955
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.5928174001011633,
+     "auroc": 0.5497522592117582
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.840922890103218,
+     "auroc": 0.9002650597272657
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8586429725363489,
+     "auroc": 0.928974558050645
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.6157724889068172,
+     "auroc": 0.5229731040564374
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8874850517339988,
+     "auroc": 0.9344311036050371
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.6845520339406039,
+     "auroc": 0.6744803652800916
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "std+abtt1|logistic|0.05",
+   "mean_accuracy": 0.7545928028747955,
+   "worst_accuracy": 0.5781487101669196,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9289039356749894,
+     "auroc": 0.9765048392940324
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7439024390243902,
+     "auroc": 0.7753702920016927
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6938260270828551,
+     "auroc": 0.7063009027610703
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.5781487101669196,
+     "auroc": 0.44925603824847893
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.896782027929569,
+     "auroc": 0.9512464202724501
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7835218093699515,
+     "auroc": 0.838346650489099
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.6895925776522791,
+     "auroc": 0.6879767293748775
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7391982530026517,
+     "auroc": 0.7764230990666702
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7374594459695533,
+     "auroc": 0.7422092197658703
+    }
+   }
+  },
+  {
+   "transform": "batchstd",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "batchstd|dom|0",
+   "mean_accuracy": 0.7563533049049267,
+   "worst_accuracy": 0.5712646316272665,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9788404570461278,
+     "auroc": 0.9974017907975777
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7560975609756098,
+     "auroc": 0.7595180602922507
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.5712646316272665,
+     "auroc": 0.49406424191113696
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.5988872028325746,
+     "auroc": 0.5046595231632939
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8494231936854888,
+     "auroc": 0.92083738976571
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8957996768982229,
+     "auroc": 0.9529116478487187
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.5742234772085518,
+     "auroc": 0.4677965902410347
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8881089793583944,
+     "auroc": 0.9382586188918689
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.6945345645121038,
+     "auroc": 0.6904023827414592
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "std+abtt1|lda|0.02",
+   "mean_accuracy": 0.7575465186691217,
+   "worst_accuracy": 0.5690440060698028,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9331358442657639,
+     "auroc": 0.980035539913393
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7560975609756098,
+     "auroc": 0.7739762515247318
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7236630709203581,
+     "auroc": 0.7408731596840489
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.5690440060698028,
+     "auroc": 0.44252576994041465
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8931390406800243,
+     "auroc": 0.9495373890550941
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7641357027463651,
+     "auroc": 0.808584221842231
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.6924162968939088,
+     "auroc": 0.6845209190672153
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7540685280507461,
+     "auroc": 0.7942737258785977
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7322186174195159,
+     "auroc": 0.7382577586807534
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "std+abtt1|logistic|0.002",
+   "mean_accuracy": 0.7624405462111302,
+   "worst_accuracy": 0.5685381891755185,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.939060516292848,
+     "auroc": 0.9847609682038542
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7560975609756098,
+     "auroc": 0.7753553558537253
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7186137250401653,
+     "auroc": 0.738355874443832
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.5685381891755185,
+     "auroc": 0.4353078144250051
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9052823315118397,
+     "auroc": 0.9599034983620304
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7956381260096931,
+     "auroc": 0.8481914967183846
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7020976200080677,
+     "auroc": 0.6988372525965119
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7374304580668642,
+     "auroc": 0.7800076438065323
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7392063888195658,
+     "auroc": 0.7493706289300771
+    }
+   }
+  },
+  {
+   "transform": "std",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "std|dom|0",
+   "mean_accuracy": 0.7597009759705995,
+   "worst_accuracy": 0.5680514115216893,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9830723656369023,
+     "auroc": 0.9978857202008178
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7621951219512195,
+     "auroc": 0.7658161360185208
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.5680514115216893,
+     "auroc": 0.4879993076767683
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.5988872028325746,
+     "auroc": 0.5039041163203307
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8615664845173042,
+     "auroc": 0.9285529017999901
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.9006462035541195,
+     "auroc": 0.9576643322352705
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.5738200887454619,
+     "auroc": 0.46736287477954147
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8915405812925701,
+     "auroc": 0.941091986201148
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.6975293236835538,
+     "auroc": 0.6959906923505512
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "std+abtt1|lda|0.1",
+   "mean_accuracy": 0.7634036675117287,
+   "worst_accuracy": 0.5644916540212443,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.946677951756242,
+     "auroc": 0.9851758880665252
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7642276422764228,
+     "auroc": 0.7840930024146773
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7319256369061281,
+     "auroc": 0.7522409142727206
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.5644916540212443,
+     "auroc": 0.4308376050891993
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8979963570127505,
+     "auroc": 0.9561869772531854
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7762520193861067,
+     "auroc": 0.8309999497070435
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.6970552642194433,
+     "auroc": 0.6883855575151872
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7597878646077055,
+     "auroc": 0.8010744141961883
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7322186174195159,
+     "auroc": 0.739976730876378
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "logistic",
+   "hyper": 0.05,
+   "key": "std+abtt4|logistic|0.05",
+   "mean_accuracy": 0.6985462756186077,
+   "worst_accuracy": 0.560858940362918,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.7528565382987727,
+     "auroc": 0.7870676120973724
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.6727642276422764,
+     "auroc": 0.6642105001120211
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7108101904980492,
+     "auroc": 0.7339768284896085
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6884167931208902,
+     "auroc": 0.6507706720995166
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.7704918032786885,
+     "auroc": 0.7993878044100822
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.5977382875605816,
+     "auroc": 0.5221705497020143
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7795482049213392,
+     "auroc": 0.8322575445816186
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.560858940362918,
+     "auroc": 0.4865558250482894
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7534314948839531,
+     "auroc": 0.761703204450668
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "std+abtt1|lda|0.3",
+   "mean_accuracy": 0.7670226768326087,
+   "worst_accuracy": 0.5579160343955488,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9568345323741008,
+     "auroc": 0.9904344150578818
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.766260162601626,
+     "auroc": 0.7907246521122202
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7314666054624742,
+     "auroc": 0.7492668175159808
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.5579160343955488,
+     "auroc": 0.4176398588633838
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9052823315118397,
+     "auroc": 0.9638722881121068
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7924071082390953,
+     "auroc": 0.8541614278170342
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.6916095199677289,
+     "auroc": 0.6794525769155398
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7694587427858368,
+     "auroc": 0.8147414032957953
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7319690541552284,
+     "auroc": 0.7392096432840198
+    }
+   }
+  },
+  {
+   "transform": "l2+std",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "l2+std|dom|0",
+   "mean_accuracy": 0.7638778996583083,
+   "worst_accuracy": 0.5572811617587737,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9754549301735083,
+     "auroc": 0.9968678294774252
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7601626016260162,
+     "auroc": 0.7571681063453736
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.5795271976130365,
+     "auroc": 0.503272039379183
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.7137076378351037,
+     "auroc": 0.7281293236798172
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8202792956891317,
+     "auroc": 0.8839759669705733
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8990306946688207,
+     "auroc": 0.9574584454447155
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.5572811617587737,
+     "auroc": 0.4017985008818342
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8654396090053553,
+     "auroc": 0.9136542181718219
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7040179685550287,
+     "auroc": 0.7123921770565361
+    }
+   }
+  },
+  {
+   "transform": "l2+batchstd",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "l2+batchstd|dom|0",
+   "mean_accuracy": 0.7612419080592199,
+   "worst_accuracy": 0.5564743848325938,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9737621667371985,
+     "auroc": 0.9965098424857236
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.758130081300813,
+     "auroc": 0.7470911851833412
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.5841175120495754,
+     "auroc": 0.5094285897010321
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.7111785533636823,
+     "auroc": 0.7240485247230919
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.811778992106861,
+     "auroc": 0.8754379170427009
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8949919224555735,
+     "auroc": 0.9527167626423919
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.5564743848325938,
+     "auroc": 0.40175827944346465
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8622159829459782,
+     "auroc": 0.9086333607258971
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.6985275767407038,
+     "auroc": 0.7051825436723561
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "std+abtt1|lda|0.6",
+   "mean_accuracy": 0.7694603871135788,
+   "worst_accuracy": 0.5538694992412747,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9678374947101143,
+     "auroc": 0.9941039973776374
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7642276422764228,
+     "auroc": 0.7896044410146623
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7126463162726647,
+     "auroc": 0.7226037444332442
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.5538694992412747,
+     "auroc": 0.40004799852615563
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.9101396478445659,
+     "auroc": 0.9676723065881199
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.815831987075929,
+     "auroc": 0.8751901702416577
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.682129891085115,
+     "auroc": 0.6561985106799921
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.7859928248323195,
+     "auroc": 0.831492764165235
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7324681806838034,
+     "auroc": 0.73580117341602
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "lda",
+   "hyper": 0.02,
+   "key": "std+abtt4|lda|0.02",
+   "mean_accuracy": 0.7008855976797969,
+   "worst_accuracy": 0.5527478812457755,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.758781210325857,
+     "auroc": 0.8068112416541587
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.6646341463414634,
+     "auroc": 0.6571855318513355
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7186137250401653,
+     "auroc": 0.7420258474107415
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6818411734951947,
+     "auroc": 0.6472930895369683
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.7789921068609593,
+     "auroc": 0.8013828585234823
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.6058158319870759,
+     "auroc": 0.5298166507405638
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7981040742234772,
+     "auroc": 0.8510151871448167
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.5527478812457755,
+     "auroc": 0.46359402762249596
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7484402295982031,
+     "auroc": 0.7599468828591698
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "std+abtt4|logistic|0.002",
+   "mean_accuracy": 0.7008788623711405,
+   "worst_accuracy": 0.5499402069359954,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.7579348286077021,
+     "auroc": 0.8071010817245484
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.6707317073170732,
+     "auroc": 0.6688556421298947
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.719990819371127,
+     "auroc": 0.7534210106904046
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6853818917551846,
+     "auroc": 0.6493984934377881
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.7644201578627808,
+     "auroc": 0.8001908003666778
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.598546042003231,
+     "auroc": 0.5289530263786557
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.8025413473174667,
+     "auroc": 0.8564313149127964
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.5499402069359954,
+     "auroc": 0.4732008044017826
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.758422760169703,
+     "auroc": 0.7686789916173106
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "std+abtt4|dom|0",
+   "mean_accuracy": 0.6643169468618193,
+   "worst_accuracy": 0.54224509956845,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.7977147693609818,
+     "auroc": 0.8668659317150597
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.6077235772357723,
+     "auroc": 0.5885539319409524
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.5753959146201515,
+     "auroc": 0.47548470239744833
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.7035912999494183,
+     "auroc": 0.695948437629489
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.599271402550091,
+     "auroc": 0.5642983023386369
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.5694668820678513,
+     "auroc": 0.5597943961073252
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.8487293263412666,
+     "auroc": 0.8996389868704684
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.54224509956845,
+     "auroc": 0.47395505477175925
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7347142500623908,
+     "auroc": 0.7410857379381889
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "logistic",
+   "hyper": 0.002,
+   "key": "l2|logistic|0.002",
+   "mean_accuracy": 0.733822273196497,
+   "worst_accuracy": 0.5417298937784522,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9636055861193398,
+     "auroc": 0.9923632317167849
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7113821138211383,
+     "auroc": 0.7208931816484528
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.594216203809961,
+     "auroc": 0.5394119211563625
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.5417298937784522,
+     "auroc": 0.4778259440351973
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8105646630236795,
+     "auroc": 0.8618580473696553
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8521809369951535,
+     "auroc": 0.9191352126134735
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.5877369907220653,
+     "auroc": 0.4790193023711542
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8973639057869287,
+     "auroc": 0.94431547358319
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.6456201647117544,
+     "auroc": 0.6252294119142623
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "lda",
+   "hyper": 0.1,
+   "key": "std+abtt4|lda|0.1",
+   "mean_accuracy": 0.7019882547312741,
+   "worst_accuracy": 0.5413092081318567,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.7621667371984765,
+     "auroc": 0.8214231492503838
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.6646341463414634,
+     "auroc": 0.6611485897786961
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7236630709203581,
+     "auroc": 0.7555472145156428
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6808295397066262,
+     "auroc": 0.6446845945372255
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.7777777777777778,
+     "auroc": 0.8038096117905389
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.5993537964458805,
+     "auroc": 0.5332750773254206
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.8132311415893505,
+     "auroc": 0.8675956790123457
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.5413092081318567,
+     "auroc": 0.452399778165026
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.754928874469678,
+     "auroc": 0.7667455228911673
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "lda",
+   "hyper": 0.3,
+   "key": "std+abtt4|lda|0.3",
+   "mean_accuracy": 0.7045268648952943,
+   "worst_accuracy": 0.5313263661415276,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.7867118070249682,
+     "auroc": 0.8465710884529786
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.6585365853658537,
+     "auroc": 0.65669263896841
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7268762910259353,
+     "auroc": 0.7570828625636872
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6808295397066262,
+     "auroc": 0.6463562248512215
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.7680631451123254,
+     "auroc": 0.8073502554664127
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.5993537964458805,
+     "auroc": 0.5262592098976538
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.8251311012505043,
+     "auroc": 0.8810667254556144
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.5313263661415276,
+     "auroc": 0.44118530720383453
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.763913151984028,
+     "auroc": 0.773205843395483
+    }
+   }
+  },
+  {
+   "transform": "l2",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "l2|dom|0",
+   "mean_accuracy": 0.7286326684274276,
+   "worst_accuracy": 0.5280728376327769,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9534490055014812,
+     "auroc": 0.9885288891189207
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7113821138211383,
+     "auroc": 0.7205396928132235
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.5960523295845765,
+     "auroc": 0.5414236683182941
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.5280728376327769,
+     "auroc": 0.45612186080242567
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.7959927140255009,
+     "auroc": 0.8499694435166959
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8432956381260097,
+     "auroc": 0.910700926647723
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.6038725292456636,
+     "auroc": 0.5093840877914952
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8914365933551708,
+     "auroc": 0.9397510257627947
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.6341402545545296,
+     "auroc": 0.6088382020420819
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "std+abtt1|lda|0.9",
+   "mean_accuracy": 0.7620532423720602,
+   "worst_accuracy": 0.5255437531613556,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9746085484553534,
+     "auroc": 0.9960224626054552
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7601626016260162,
+     "auroc": 0.7802693485350128
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6589396373651595,
+     "auroc": 0.6389432832972453
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.5255437531613556,
+     "auroc": 0.35142838746209487
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.899210686095932,
+     "auroc": 0.9610529195653873
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.8554119547657512,
+     "auroc": 0.9158653846153846
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.6425978217022993,
+     "auroc": 0.5912144326866549
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8192689648000832,
+     "auroc": 0.8711597111811973
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.722735213376591,
+     "auroc": 0.7253770920255365
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "lda",
+   "hyper": 0.6,
+   "key": "std+abtt4|lda|0.6",
+   "mean_accuracy": 0.7011802640626627,
+   "worst_accuracy": 0.5225913793999896,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.7994075327972916,
+     "auroc": 0.873597812397564
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.6463414634146342,
+     "auroc": 0.6410246197505663
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.7172366307092036,
+     "auroc": 0.7352340752967499
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6808295397066262,
+     "auroc": 0.6509977254613697
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.7583485124468731,
+     "auroc": 0.8030261577709401
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.5872374798061389,
+     "auroc": 0.5053554140367642
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.8352158128277531,
+     "auroc": 0.8893986380560455
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.5225913793999896,
+     "auroc": 0.4299445209438528
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.763414025455453,
+     "auroc": 0.778162213226201
+    }
+   }
+  },
+  {
+   "transform": "std+abtt4",
+   "probe": "lda",
+   "hyper": 0.9,
+   "key": "std+abtt4|lda|0.9",
+   "mean_accuracy": 0.6880591455544868,
+   "worst_accuracy": 0.5194717412780118,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.8137960220059247,
+     "auroc": 0.8909994306712903
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.6199186991869918,
+     "auroc": 0.603773866719773
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6644480146890062,
+     "auroc": 0.6484226298334466
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.6843702579666161,
+     "auroc": 0.6577584934747575
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.7255616272009715,
+     "auroc": 0.7489429588624461
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.555735056542811,
+     "auroc": 0.4812870910553977
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.8420734167002824,
+     "auroc": 0.896806192435822
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.5194717412780118,
+     "auroc": 0.4268952666212427
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.7671574744197655,
+     "auroc": 0.780461826029964
+    }
+   }
+  },
+  {
+   "transform": "std+abtt1",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "std+abtt1|dom|0",
+   "mean_accuracy": 0.7428520714434644,
+   "worst_accuracy": 0.4542235710672736,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.9686838764282691,
+     "auroc": 0.9947035177613305
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7621951219512195,
+     "auroc": 0.7653580941475193
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.6043148955703466,
+     "auroc": 0.5430095656331559
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.4542235710672736,
+     "auroc": 0.22956111540195068
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8615664845173042,
+     "auroc": 0.9276148888241439
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.9095315024232633,
+     "auroc": 0.9585821786908744
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.5320693828156515,
+     "auroc": 0.37973437193807563
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.8945562314771487,
+     "auroc": 0.9435444262139855
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.6985275767407038,
+     "auroc": 0.696476309495694
+    }
+   }
+  },
+  {
+   "transform": "raw",
+   "probe": "dom",
+   "hyper": 0.0,
+   "key": "raw|dom|0",
+   "mean_accuracy": 0.7016494078149672,
+   "worst_accuracy": 0.41173495194739507,
+   "n_folds": 9,
+   "per_pair": {
+    "berkeley+/chat-": {
+     "accuracy": 0.7926364790520525,
+     "auroc": 0.862682228318065
+    },
+    "chat+/chat_aegis-": {
+     "accuracy": 0.7317073170731707,
+     "auroc": 0.6901097806875607
+    },
+    "chat_aegis+/civil-": {
+     "accuracy": 0.5570346568739959,
+     "auroc": 0.4591087708826309
+    },
+    "civil+/hatecheck-": {
+     "accuracy": 0.41173495194739507,
+     "auroc": 0.09414088337621264
+    },
+    "hatecheck+/offensivelang-": {
+     "accuracy": 0.8421372191863995,
+     "auroc": 0.9182205467478664
+    },
+    "offensivelang+/rtp-": {
+     "accuracy": 0.7043618739903069,
+     "auroc": 0.6395024454950085
+    },
+    "rtp+/twitter-": {
+     "accuracy": 0.7557482855990318,
+     "auroc": 0.7482571526553008
+    },
+    "twitter+/wiki-": {
+     "accuracy": 0.9088025789008475,
+     "auroc": 0.9530885462798735
+    },
+    "wiki+/berkeley-": {
+     "accuracy": 0.6106813077115049,
+     "auroc": 0.5857800500076912
+    }
+   }
+  }
+ ]
+}

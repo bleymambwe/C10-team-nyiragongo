@@ -1,0 +1,111 @@
+{
+ "dropped": [
+  {
+   "source": "hu_berlin_toxicity",
+   "n": 3828,
+   "pos": 0,
+   "neg": 3828,
+   "reason": "fewer than 200 in a class"
+  }
+ ],
+ "rebalanced": [
+  {
+   "source": "aegis",
+   "from": 8000,
+   "to": 6152,
+   "rate_before": 0.6155
+  },
+  {
+   "source": "davidson",
+   "from": 16000,
+   "to": 8326,
+   "rate_before": 0.7398
+  },
+  {
+   "source": "hatecheck",
+   "from": 3700,
+   "to": 2326,
+   "rate_before": 0.6857
+  },
+  {
+   "source": "jigsaw_unintended",
+   "from": 10000,
+   "to": 6218,
+   "rate_before": 0.3109
+  },
+  {
+   "source": "jigsaw_wiki",
+   "from": 20000,
+   "to": 11314,
+   "rate_before": 0.2828
+  },
+  {
+   "source": "offensivelang",
+   "from": 8000,
+   "to": 3496,
+   "rate_before": 0.7815
+  },
+  {
+   "source": "toxic_chat",
+   "from": 8000,
+   "to": 1390,
+   "rate_before": 0.0869
+  },
+  {
+   "source": "tweeteval_offensive",
+   "from": 12000,
+   "to": 9246,
+   "rate_before": 0.3852
+  }
+ ],
+ "kept": [
+  {
+   "source": "aegis",
+   "n": 6152
+  },
+  {
+   "source": "berkeley_hate",
+   "n": 16000
+  },
+  {
+   "source": "civil_comments",
+   "n": 20000
+  },
+  {
+   "source": "davidson",
+   "n": 8326
+  },
+  {
+   "source": "hatecheck",
+   "n": 2326
+  },
+  {
+   "source": "jigsaw_unintended",
+   "n": 6218
+  },
+  {
+   "source": "jigsaw_wiki",
+   "n": 11314
+  },
+  {
+   "source": "offensivelang",
+   "n": 3496
+  },
+  {
+   "source": "real_toxicity_prompts",
+   "n": 14000
+  },
+  {
+   "source": "toxic_chat",
+   "n": 1390
+  },
+  {
+   "source": "tweeteval_hate",
+   "n": 10000
+  },
+  {
+   "source": "tweeteval_offensive",
+   "n": 9246
+  }
+ ]
+}

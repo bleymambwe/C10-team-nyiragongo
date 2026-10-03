@@ -1,0 +1,31 @@
+{
+ "dataset": "s-nlp/paradetox",
+ "fingerprint": "bce9331fed368fb3",
+ "revision": "0.0.0",
+ "raw_pairs": 19744,
+ "new_rows": 3000,
+ "excluded_duplicates": 10156,
+ "labels": {
+  "en_toxic_comment": 1,
+  "en_neutral_comment": 0
+ },
+ "excluded_transfer_families": [
+  "civil",
+  "wiki"
+ ],
+ "note": "New candidate corpus, not identified as competition source.",
+ "teacher": {
+  "model": "unitary/toxic-bert",
+  "revision": "4d6c22e74ba2fdd26bc4f7238f50766b045a0d94",
+  "max_length": 128,
+  "label_mapping": {
+   "0": "toxic",
+   "1": "severe_toxic",
+   "2": "obscene",
+   "3": "threat",
+   "4": "insult",
+   "5": "identity_hate"
+  },
+  "corpus_sha256": "13275c8d671062cd52851d678b78ebe86e9e8bf70e47453d224f3ff6d7b8795a"
+ }
+}

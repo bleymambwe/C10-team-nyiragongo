@@ -1,0 +1,49 @@
+{
+ "mental_health": [],
+ "toxicity": [
+  {
+   "dataset": "Multimodal-Fatima/Hatefulmemes_train",
+   "config": "__total__",
+   "split": "__total__",
+   "rows": 8500
+  },
+  {
+   "dataset": "Multimodal-Fatima/Hatefulmemes_train",
+   "config": "default",
+   "split": "train",
+   "rows": 8500,
+   "majority_rate": 0.6448,
+   "label_column": "label"
+  },
+  {
+   "dataset": "Multimodal-Fatima/Hatefulmemes_train",
+   "config": "default",
+   "split": "__config_total__",
+   "rows": 8500
+  },
+  {
+   "dataset": "Multimodal-Fatima/Hatefulmemes_train_embeddings",
+   "config": "__total__",
+   "split": "__total__",
+   "rows": 8500
+  },
+  {
+   "dataset": "Multimodal-Fatima/Hatefulmemes_train_embeddings",
+   "config": "default",
+   "split": "openai_clip_vit_large_patch14",
+   "rows": 8500
+  },
+  {
+   "dataset": "Multimodal-Fatima/Hatefulmemes_train_embeddings",
+   "config": "default",
+   "split": "__config_total__",
+   "rows": 8500
+  },
+  {
+   "dataset": "neuralcatcher/hateful_memes",
+   "config": "default",
+   "split": "train",
+   "rows": 8500
+  }
+ ]
+}
